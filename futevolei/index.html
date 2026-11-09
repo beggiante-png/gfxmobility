@@ -510,6 +510,88 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
   .marquee .track{animation:none}
   body::after{animation:none}
 }
+
+/* ===== refinamento premium ===== */
+:root{--gold:#d9b46c;--gold-line:rgba(217,180,108,.28)}
+.scene-head h2{font-size:clamp(40px,5.6vw,84px);line-height:.9}
+.scene-head h2 em{font-size:.7em;display:block;margin-top:.12em;line-height:1.05}
+.scene-head .eyebrow{display:flex;align-items:center;gap:12px}
+.scene-head .eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+.btn{box-shadow:0 8px 22px -14px rgba(240,136,74,.7),inset 0 1px 0 rgba(255,255,255,.35)}
+
+.facts{border-block:1px solid var(--line);background:var(--night)}
+.facts ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.facts li{display:flex;align-items:baseline;gap:14px;padding:26px 0 26px 24px;border-left:1px solid var(--line)}
+.facts li:first-child{border-left:0;padding-left:0}
+.facts b{font-family:var(--f-serif);font-style:italic;font-weight:400;font-size:46px;line-height:1;color:var(--gold)}
+.facts span{font-size:14px;color:var(--muted);line-height:1.3}
+@media (max-width:820px){.facts ul{grid-template-columns:1fr 1fr}.facts li:nth-child(3){border-left:0;padding-left:0}.facts li{padding:18px 0 18px 18px}.facts li:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+.manifesto{padding-block:clamp(90px,13vw,180px)}
+.manifesto .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.manifesto .eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+.mf{font-family:var(--f-serif);font-size:clamp(32px,4.4vw,64px);line-height:1.12;letter-spacing:-.01em;max-width:24ch;margin:0;color:var(--fg);text-wrap:pretty}
+.mf span{color:rgba(244,237,225,.26);transition:color .5s var(--ease)}
+.mf span.lit{color:var(--fg)}
+.sig{margin:34px 0 0;color:var(--muted);font-size:14px}
+.sig .mono{color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+
+.lv{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.lv>li{display:grid;grid-template-columns:120px minmax(0,1fr) minmax(0,.8fr);gap:28px;align-items:center;padding:34px 0;border-bottom:1px solid var(--line);transition:background .4s}
+.lv>li:hover{background:linear-gradient(90deg,transparent,rgba(217,180,108,.05),transparent)}
+.lv-n{font-family:var(--f-serif);font-style:italic;font-size:64px;line-height:1;color:var(--gold)}
+.lv-t h3{font-family:var(--f-display);font-weight:800;font-size:clamp(30px,3.2vw,44px);text-transform:uppercase;line-height:.95}
+.lv-t p{margin:8px 0 0;color:var(--muted);max-width:46ch}
+.lv ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.lv ul li{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--sand);border:1px solid var(--gold-line);border-radius:999px;padding:6px 11px}
+@media (max-width:820px){.lv>li{grid-template-columns:64px minmax(0,1fr);gap:8px 18px;padding:26px 0}.lv-n{font-size:44px;grid-row:span 2}.lv ul{justify-content:flex-start}}
+
+.interlude{position:relative;margin:0;height:clamp(380px,72vh,720px);overflow:hidden;isolation:isolate}
+.il-img{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.18);will-change:transform;z-index:-1}
+.interlude::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--night),transparent 22%,transparent 60%,rgba(11,14,24,.88))}
+.interlude figcaption{position:absolute;left:0;right:0;bottom:clamp(28px,6vw,64px);display:grid;gap:14px}
+.interlude .mono{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.interlude q{font-family:var(--f-serif);font-style:italic;font-size:clamp(30px,4.2vw,58px);line-height:1.1;max-width:20ch;quotes:none}
+
+.cast{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.cast{grid-template-columns:1fr}}
+.person{border:1px solid var(--line);border-radius:22px;padding:30px 28px;background:linear-gradient(180deg,rgba(255,255,255,.025),transparent);display:flex;flex-direction:column;gap:10px;transition:border-color .4s,transform .5s var(--ease)}
+.person:hover{border-color:var(--gold-line);transform:translateY(-4px)}
+.mono-badge{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-serif);font-style:italic;font-size:30px;color:var(--gold);border:1px solid var(--gold-line);box-shadow:inset 0 0 0 6px var(--night),inset 0 0 0 7px var(--gold-line);margin-bottom:14px}
+.person .role{margin:0;font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.person h3{font-family:var(--f-serif);font-weight:400;font-size:38px;line-height:1.05}
+.person p{margin:0;color:var(--muted);font-size:15.5px}
+.person .tag{margin-top:auto;padding-top:14px;font-size:12.5px;color:var(--dim);border-top:1px solid var(--line)}
+
+.plans{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:stretch}
+@media (max-width:1100px){.plans{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.plans{grid-template-columns:1fr}}
+.plan{position:relative;border:1px solid var(--line);border-radius:22px;padding:28px 24px 24px;display:flex;flex-direction:column;gap:12px;background:var(--night-2)}
+.plan.hot{border-color:var(--gold-line);background:radial-gradient(120% 70% at 50% 0%,rgba(217,180,108,.12),transparent 60%),var(--night-2);box-shadow:0 30px 60px -40px rgba(217,180,108,.5)}
+.plan .flag{position:absolute;top:-11px;left:24px;background:var(--gold);color:#1b140a;font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.plan-k{margin:0;font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.plan h3{font-family:var(--f-serif);font-weight:400;font-size:32px;line-height:1.05}
+.plan-p{display:flex;align-items:baseline;gap:6px;padding:10px 0 14px;border-bottom:1px solid var(--line)}
+.plan-p b{font-family:var(--f-display);font-weight:800;font-size:54px;line-height:1}
+.plan-p .cur,.plan-p .per{color:var(--muted);font-size:14px;font-weight:600}
+.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:14.5px;color:var(--muted);flex:1}
+.plan ul li{display:flex;gap:10px}
+.plan ul li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);margin-top:9px;flex:none}
+.plan .btn{margin-top:8px;width:100%}
+
+.voices .eyebrow{display:flex;align-items:center;gap:12px}
+.voices .eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+.voice{display:grid;margin-top:34px}
+.voice figure{grid-area:1/1;margin:0;opacity:0;transform:translateY(-10px);transition:opacity .35s ease,transform .35s ease;pointer-events:none}
+.voice figure.on{opacity:1;transform:none;pointer-events:auto;transition:opacity .9s var(--ease) .35s,transform .9s var(--ease) .35s}
+.voice blockquote{margin:0;font-family:var(--f-serif);font-size:clamp(30px,4vw,56px);line-height:1.15;max-width:26ch}
+.voice blockquote::before{content:"“";color:var(--gold)}
+.voice blockquote::after{content:"”";color:var(--gold)}
+.voice figcaption{margin-top:24px;color:var(--muted);font-size:15px}
+.voice figcaption b{color:var(--fg)}
+.voice-nav{display:flex;gap:10px;margin-top:30px}
+.voice-nav button{width:34px;height:3px;border:0;border-radius:2px;background:var(--line-2);cursor:pointer;padding:0}
+.voice-nav button[aria-pressed="true"]{background:var(--gold)}
 </style>
 
 <!-- ================= SITE PÚBLICO ================= -->
@@ -521,6 +603,7 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
         <span><b>Arena Beach</b><small>Futevôlei</small></span>
       </a>
       <ul>
+        <li><a href="#manifesto">A Arena</a></li>
         <li><a href="#metodo">Método</a></li>
         <li><a href="#horarios">Horários</a></li>
         <li><a href="#reposicao">Reposição</a></li>
@@ -543,15 +626,15 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
       <div class="phase wrap" id="ph1">
         <p class="eyebrow"><span class="dot"></span>Cena 01 · Vista aérea · fim de tarde</p>
         <h1><span class="l"><span>Arena</span></span><span class="l"><span>Beach</span></span><span class="l"><span><em>futevôlei na hora dourada.</em></span></span></h1>
-        <p class="lede">Três quadras na areia, aulas do primeiro toque ao circuito competitivo. Você reserva a vaga pelo celular, avisa quando não puder ir e ganha a reposição automaticamente.</p>
+        <p class="lede">Futevôlei ensinado com método, em três quadras oficiais e turmas de no máximo oito alunos. Do primeiro toque na bola ao jogo de competição.</p>
         <div class="cta">
-          <button class="btn" data-open="experimental">Agendar aula experimental grátis <span aria-hidden="true">→</span></button>
+          <button class="btn" data-open="experimental">Agendar aula experimental <span aria-hidden="true">→</span></button>
           <button class="btn ghost" data-open="login">Área do aluno</button>
         </div>
       </div>
       <div class="phase wrap" id="ph2" style="opacity:0;visibility:hidden">
         <p class="eyebrow"><span class="dot"></span>Descendo sobre a arena</p>
-        <h2 class="ph-t">Três quadras <em>oficiais, prontas para o jogo.</em></h2>
+        <h2 class="ph-t">Três quadras <em>com medida oficial.</em></h2>
         <dl class="ph-stats">
           <div><dt>Quadra</dt><dd class="tnum">18 × 9 m</dd></div>
           <div><dt>Rede</dt><dd class="tnum">2,20 m</dd></div>
@@ -561,38 +644,58 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
       </div>
       <div class="phase wrap" id="ph3" style="opacity:0;visibility:hidden">
         <p class="eyebrow"><span class="dot"></span>Pouso · na altura da rede</p>
-        <h2 class="ph-t">A bola já está <em>na areia esperando você.</em></h2>
+        <h2 class="ph-t">A primeira aula <em>é por nossa conta.</em></h2>
         <div class="cta" style="margin-top:24px">
-          <button class="btn" data-open="experimental">Agendar aula experimental grátis <span aria-hidden="true">→</span></button>
-          <a class="btn ghost" href="#metodo">Conhecer o método</a>
+          <button class="btn" data-open="experimental">Agendar aula experimental <span aria-hidden="true">→</span></button>
+          <a class="btn ghost" href="#manifesto">Conhecer a Arena</a>
         </div>
       </div>
       <div class="scrub wrap" aria-hidden="true"><span id="scrubLbl">Role para sobrevoar a arena</span><span class="strack"><i id="scrubBar"></i></span><span class="tnum" id="scrubPct">00%</span></div>
     </div>
   </header>
 
-  <div class="marquee" aria-hidden="true"><div class="track" id="mq"></div></div>
+  <div class="facts" aria-label="A Arena em números">
+    <div class="wrap"><ul>
+      <li><b class="tnum">3</b><span>quadras oficiais</span></li>
+      <li><b class="tnum">8</b><span>alunos por turma, no máximo</span></li>
+      <li><b class="tnum">4</b><span>níveis de treino</span></li>
+      <li><b class="tnum">6</b><span>dias por semana</span></li>
+    </ul></div>
+  </div>
+
+  <section class="manifesto" id="manifesto">
+    <div class="wrap">
+      <p class="eyebrow">A Arena</p>
+      <p class="mf" id="mf">Tem gente que chega pelo exercício e fica pelo fim de tarde. Aqui o futevôlei é ensinado com calma, corrigido de perto e jogado do jeito certo, com os pés na areia e o sol baixando atrás da rede.</p>
+      <p class="sig"><span class="mono">Rafa Moreira</span> · head coach</p>
+    </div>
+  </section>
 
   <section class="scene" id="metodo">
     <div class="wrap">
       <div class="scene-head rv">
-        <div><p class="eyebrow">Cena 02 · O método</p><h2>Quatro níveis. <em>Uma evolução que você enxerga.</em></h2></div>
-        <p>Cada aluno começa com uma avaliação de fundamentos. O professor registra sua nota em cada um e você acompanha a evolução na área do aluno, até a hora de subir de turma.</p>
+        <div><p class="eyebrow">O método</p><h2>Do primeiro toque <em>ao shark attack.</em></h2></div>
+        <p>Você é avaliado ao entrar, acompanha sua nota em cada fundamento e muda de turma quando estiver pronto. Nem antes, nem depois.</p>
       </div>
-      <div class="levels rv">
-        <article class="level"><span class="num">NÍVEL 1 DE 4</span><div class="meter"><i class="on"></i><i></i><i></i><i></i></div><h3>Iniciante</h3><p>Para quem nunca jogou. Domínio de bola, posição na areia e os primeiros toques sem deixar cair.</p><ul><li>Peito</li><li>Coxa</li><li>Saque por baixo</li></ul></article>
-        <article class="level"><span class="num">NÍVEL 2 DE 4</span><div class="meter"><i class="on"></i><i class="on"></i><i></i><i></i></div><h3>Intermediário</h3><p>Recepção do saque, levantamento para o parceiro e a primeira troca de bola de verdade por cima da rede.</p><ul><li>Recepção</li><li>Levantamento</li><li>Cabeça</li></ul></article>
-        <article class="level"><span class="num">NÍVEL 3 DE 4</span><div class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><h3>Avançado</h3><p>Ataque com direção, defesa de bola forte e leitura do jogo da dupla adversária.</p><ul><li>Ataque de cabeça</li><li>Ombro</li><li>Defesa</li></ul></article>
-        <article class="level"><span class="num">NÍVEL 4 DE 4</span><div class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div><h3>Competição</h3><p>Preparação para torneios: shark attack, tática de dupla, preparo físico e simulação de jogo.</p><ul><li>Shark attack</li><li>Pingo</li><li>Tática</li></ul></article>
-      </div>
+      <ol class="lv">
+        <li class="rv"><span class="lv-n">I</span><div class="lv-t"><h3>Iniciante</h3><p>Domínio de bola, posição na areia e os primeiros toques sem deixar cair.</p></div><ul><li>Peito</li><li>Coxa</li><li>Saque por baixo</li></ul></li>
+        <li class="rv"><span class="lv-n">II</span><div class="lv-t"><h3>Intermediário</h3><p>Recepção do saque, levantamento para o parceiro e a primeira troca de bola de verdade.</p></div><ul><li>Recepção</li><li>Levantamento</li><li>Cabeça</li></ul></li>
+        <li class="rv"><span class="lv-n">III</span><div class="lv-t"><h3>Avançado</h3><p>Ataque com direção, defesa de bola forte e leitura da dupla adversária.</p></div><ul><li>Ataque de cabeça</li><li>Ombro</li><li>Defesa</li></ul></li>
+        <li class="rv"><span class="lv-n">IV</span><div class="lv-t"><h3>Competição</h3><p>Tática de dupla, preparo físico e simulação de jogo para torneios.</p></div><ul><li>Shark attack</li><li>Pingo</li><li>Tática</li></ul></li>
+      </ol>
     </div>
   </section>
+
+  <figure class="interlude" aria-label="Quadra ao pôr do sol">
+    <div class="il-img" style="background-image:url(foto/shot3.webp)"></div>
+    <figcaption class="wrap"><span class="mono">18:00 · Quadra 2</span><q>O treino acaba quando o sol encosta no mar.</q></figcaption>
+  </figure>
 
   <section class="scene" id="horarios" style="padding-top:0">
     <div class="wrap">
       <div class="scene-head rv">
-        <div><p class="eyebrow">Cena 03 · Grade da semana</p><h2>Horários <em>com vaga em tempo real.</em></h2></div>
-        <p>Turmas de até 8 alunos por quadra. As vagas abaixo mostram a ocupação desta semana. Para reservar, entre na área do aluno.</p>
+        <div><p class="eyebrow">A semana</p><h2>Manhã cedo <em>ou fim de tarde.</em></h2></div>
+        <p>No máximo oito alunos por quadra. A ocupação abaixo é desta semana; alunos reservam pela área do aluno.</p>
       </div>
       <div class="days" id="pubDays" role="group" aria-label="Dia da semana"></div>
       <div class="slots rv" id="pubSlots"></div>
@@ -602,8 +705,8 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
   <section class="scene" id="reposicao" style="background:linear-gradient(180deg,var(--night),var(--night-2) 40%,var(--night))">
     <div class="wrap">
       <div class="scene-head rv">
-        <div><p class="eyebrow">Cena 04 · Faltou? Repõe.</p><h2>Reposição <em>sem planilha nem WhatsApp.</em></h2></div>
-        <p>Avisou com antecedência, ganhou crédito. O sistema controla prazo, validade e vaga, e o professor só faz a chamada.</p>
+        <div><p class="eyebrow">Faltas e reposição</p><h2>Faltou? <em>A aula continua sua.</em></h2></div>
+        <p>Avise com antecedência e a aula vira crédito para outro horário do seu nível. Sem mensagem, sem negociação.</p>
       </div>
       <div class="repo">
         <div class="timeline rv">
@@ -619,10 +722,10 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
           </div>
         </div>
         <ol class="rules rv">
-          <li><span class="k">1</span><div><b>Cancele pelo app</b><p id="rule1">Até 2 horas antes da aula, com um toque na área do aluno.</p></div></li>
+          <li><span class="k">1</span><div><b>Avise pela área do aluno</b><p id="rule1">Até 2 horas antes da aula, com um toque na área do aluno.</p></div></li>
           <li><span class="k">2</span><div><b>O crédito aparece na hora</b><p id="rule2">Ele vale por 30 dias e fica visível com a data de vencimento.</p></div></li>
-          <li><span class="k">3</span><div><b>Escolha outra turma do seu nível</b><p>Qualquer horário com vaga. Se estiver lotado, entre na lista de espera e seja chamado quando abrir.</p></div></li>
-          <li><span class="k">4</span><div><b>Choveu ou ventou demais?</b><p>Se o professor cancelar a aula por clima, todos os alunos marcados recebem crédito automaticamente.</p></div></li>
+          <li><span class="k">3</span><div><b>Escolha outro horário</b><p>Qualquer turma do seu nível com vaga. Se estiver cheia, você entra na lista de espera e é chamado quando abrir.</p></div></li>
+          <li><span class="k">4</span><div><b>Mudou o tempo?</b><p>Se a aula for cancelada por chuva ou vento, todos os alunos marcados recebem o crédito.</p></div></li>
         </ol>
       </div>
     </div>
@@ -631,24 +734,29 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
   <section class="scene" id="elenco">
     <div class="wrap">
       <div class="scene-head rv">
-        <div><p class="eyebrow">Cena 05 · Elenco</p><h2>Quem entra <em>em quadra com você.</em></h2></div>
-        <p>Três professores, cada um responsável por uma fase do aprendizado. Todos fazem a chamada e avaliam os fundamentos pelo sistema.</p>
+        <div><p class="eyebrow">Professores</p><h2>Três professores. <em>Um jeito de ensinar.</em></h2></div>
+        <p>Cada um conduz uma fase do aprendizado e acompanha de perto quem está nela.</p>
       </div>
-      <div class="credits">
-        <div class="credit rv"><div class="role">Head coach<small>Intermediário · Aulão de sábado</small></div><div class="portrait" data-i="RM" style="background:linear-gradient(160deg,#ffcf94,#f0884a 45%,#7d3b5c)"></div><div><h3>Rafa<br>Moreira</h3><p>Doze anos de circuito, campeão estadual de duplas em 2019. Cuida da transição de quem já troca bola para o jogo de verdade.</p></div></div>
-        <div class="credit rv"><div class="role">Iniciação<small>Turmas iniciantes</small></div><div class="portrait" data-i="BL" style="background:linear-gradient(160deg,#cfe9e6,#4d9aa3 50%,#1a2b48)"></div><div><h3>Bia<br>Lacerda</h3><p>Educadora física e especialista em quem nunca encostou o pé numa bola de futevôlei. Paciência de sobra.</p></div></div>
-        <div class="credit rv"><div class="role">Competição<small>Avançado · Competição</small></div><div class="portrait" data-i="TN" style="background:linear-gradient(160deg,#f5b0c0,#c25a76 45%,#231a36)"></div><div><h3>Thiago<br>Nunes</h3><p>Prepara as duplas do CT que disputam o circuito carioca. Treino tático, físico e muito shark attack.</p></div></div>
+      <div class="cast">
+        <article class="person rv"><div class="mono-badge" aria-hidden="true">RM</div><p class="role">Head coach</p><h3>Rafa Moreira</h3><p>Doze anos de circuito e campeão estadual de duplas em 2019. Conduz a passagem de quem já troca bola para o jogo de verdade.</p><span class="tag">Intermediário · Aulão de sábado</span></article>
+        <article class="person rv"><div class="mono-badge" aria-hidden="true">BL</div><p class="role">Iniciação</p><h3>Bia Lacerda</h3><p>Educadora física, especialista em quem nunca encostou o pé numa bola de futevôlei. Paciência de sobra.</p><span class="tag">Turmas iniciantes</span></article>
+        <article class="person rv"><div class="mono-badge" aria-hidden="true">TN</div><p class="role">Competição</p><h3>Thiago Nunes</h3><p>Prepara as duplas que disputam o circuito. Treino tático, físico e muito shark attack.</p><span class="tag">Avançado · Competição</span></article>
       </div>
     </div>
   </section>
 
+  <figure class="interlude" aria-label="Vista aérea das quadras">
+    <div class="il-img" style="background-image:url(foto/shot1.webp)"></div>
+    <figcaption class="wrap"><span class="mono">Vista aérea · três quadras</span><q>Areia fofa, rede na altura oficial e espaço para errar.</q></figcaption>
+  </figure>
+
   <section class="scene" id="planos" style="padding-top:0">
     <div class="wrap">
       <div class="scene-head rv">
-        <div><p class="eyebrow">Cena 06 · Ingressos</p><h2>Escolha <em>seu lugar na areia.</em></h2></div>
-        <p>Todos os planos incluem reserva online, reposição de faltas avisadas e avaliação de fundamentos. Cobrança mensal por Pix ou cartão.</p>
+        <div><p class="eyebrow">Planos</p><h2>Escolha <em>o seu ritmo.</em></h2></div>
+        <p>Todos incluem reposição de faltas avisadas e avaliação de fundamentos. Cobrança mensal por Pix ou cartão.</p>
       </div>
-      <div class="tickets" id="tickets"></div>
+      <div class="plans" id="tickets"></div>
     </div>
   </section>
 
@@ -657,9 +765,9 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
       <div class="event rv">
         <div class="event-grid">
           <div>
-            <p class="eyebrow"><span class="dot"></span>Cena 07 · Estreia</p>
+            <p class="eyebrow"><span class="dot"></span>Torneio · inscrições abertas</p>
             <h2>Duplas ao<br>pôr do sol <em>2ª edição</em></h2>
-            <p>Torneio interno com chaves por nível, do iniciante à competição. Duplas sorteadas ou formadas, arbitragem dos professores e premiação na areia.</p>
+            <p>Chaves separadas por nível, do iniciante à competição. Duplas formadas ou sorteadas, arbitragem dos professores e premiação na areia, com o sol se pondo.</p>
             <button class="btn" data-open="login" data-hint="Entre como aluno para se inscrever.">Inscrever minha dupla</button>
           </div>
           <div>
@@ -671,20 +779,21 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
     </div>
   </section>
 
-  <section class="scene" style="padding-top:0">
+  <section class="scene voices" style="padding-top:0">
     <div class="wrap">
-      <div class="scene-head rv"><div><p class="eyebrow">Cena 08 · Depoimentos</p><h2>Quem já <em>pisou na areia.</em></h2></div></div>
-      <div class="quotes">
-        <figure class="quote rv"><blockquote>Eu remarcava aula por mensagem e sempre perdia a reposição. Agora cancelo no app e o crédito já aparece.</blockquote><figcaption><b>Marina Costa</b>Intermediário · aluna desde 2024</figcaption></figure>
-        <figure class="quote rv"><blockquote>Comecei sem saber matar a bola no peito. Seis meses depois subi de turma e vi a evolução em cada fundamento.</blockquote><figcaption><b>Caio Ferreira</b>Avançado · aluno desde 2025</figcaption></figure>
-        <figure class="quote rv"><blockquote>Treinar às seis da manhã com o sol nascendo vira vício. A turma lotada tem lista de espera e quase sempre abre vaga.</blockquote><figcaption><b>Larissa Melo</b>Iniciante · aluna desde 2026</figcaption></figure>
+      <p class="eyebrow">Alunos</p>
+      <div class="voice rv" id="voice">
+        <figure data-i="0" class="on"><blockquote>Comecei sem saber matar a bola no peito. Seis meses depois subi de turma, e vi a evolução em cada fundamento.</blockquote><figcaption><b>Caio Ferreira</b> · Avançado, aluno desde 2025</figcaption></figure>
+        <figure data-i="1"><blockquote>Treinar às seis da manhã com o sol nascendo vira vício. É a melhor hora do meu dia.</blockquote><figcaption><b>Larissa Melo</b> · Iniciante, aluna desde 2026</figcaption></figure>
+        <figure data-i="2"><blockquote>Quando não posso ir, aviso e remarco em outro horário. Não perco aula e não preciso pedir favor pra ninguém.</blockquote><figcaption><b>Marina Costa</b> · Intermediário, aluna desde 2024</figcaption></figure>
       </div>
+      <div class="voice-nav" role="group" aria-label="Depoimentos"><button type="button" data-v="0" aria-pressed="true" aria-label="Depoimento 1"></button><button type="button" data-v="1" aria-pressed="false" aria-label="Depoimento 2"></button><button type="button" data-v="2" aria-pressed="false" aria-label="Depoimento 3"></button></div>
     </div>
   </section>
 
   <section class="scene" id="local" style="padding-top:0">
     <div class="wrap">
-      <div class="scene-head rv"><div><p class="eyebrow">Cena 09 · Locação</p><h2>Onde <em>a gente se encontra.</em></h2></div></div>
+      <div class="scene-head rv"><div><p class="eyebrow">Onde estamos</p><h2>Pé na areia, <em>em frente ao Posto 4.</em></h2></div></div>
       <div class="local">
         <div class="map rv" role="img" aria-label="Mapa ilustrativo: quadras na areia em frente ao Posto 4">
           <span class="lbl" style="left:22px;top:20px">Oceano Atlântico</span>
@@ -707,8 +816,8 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
     <div class="wrap">
       <h2>Fim<span>.</span></h2>
       <div class="row">
-        <p>A primeira aula é por nossa conta. Escolha um horário de iniciante, chegue 10 minutos antes e deixe a areia fazer o resto.</p>
-        <button class="btn" data-open="experimental">Quero minha aula experimental</button>
+        <p>A primeira aula é por nossa conta. Escolha um horário, chegue dez minutos antes e deixe o resto com a gente.</p>
+        <button class="btn" data-open="experimental">Agendar aula experimental</button>
       </div>
     </div>
   </section>
@@ -1003,9 +1112,11 @@ async function copyFrom(id){const el=document.getElementById(id);const txt=el.te
 
 /* ============ SITE PÚBLICO ============ */
 function initSite(){
-  // marquee
-  const words=["Shark attack","Peito","Pingo","Cabeça","Levantamento","Recepção","Ombro","Coxa","Saque","Defesa","Pôr do sol","Dupla"];
-  $("#mq").innerHTML=[...words,...words].map(w=>`<span>${w}</span>`).join("");
+  // manifesto: palavras acendem com a rolagem
+  const mf=$("#mf");mf.innerHTML=mf.textContent.split(" ").map(w=>`<span>${w}</span>`).join(" ");const mw=$$("#mf span");
+  const mfOn=()=>{const r=mf.getBoundingClientRect();const k=Math.max(0,Math.min(1,(innerHeight*.85-r.top)/(r.height+innerHeight*.45)));const n=Math.round(k*mw.length);mw.forEach((w,i)=>w.classList.toggle("lit",i<n))};addEventListener("scroll",mfOn,{passive:true});mfOn();
+  // intervalos de foto com parallax
+  const ils=$$(".interlude .il-img");const ilOn=()=>ils.forEach(el=>{const r=el.parentNode.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;const k=(r.top+r.height/2-innerHeight/2)/innerHeight;el.style.transform=`translate3d(0,${(k*-12).toFixed(2)}%,0) scale(1.18)`});addEventListener("scroll",ilOn,{passive:true});ilOn();
   // nav
   const nav=$("#nav");const onS=()=>{const f=$("#topo");nav.classList.toggle("solid",scrollY>f.offsetHeight-innerHeight-20)};addEventListener("scroll",onS,{passive:true});onS();
   // timecode
@@ -1015,14 +1126,19 @@ function initSite(){
   const target=new Date(2026,11,12,14,0,0);
   const cd=()=>{let s=Math.max(0,Math.floor((target-new Date())/1000));$("#cd-d").textContent=pad(Math.floor(s/86400));$("#cd-h").textContent=pad(Math.floor(s%86400/3600));$("#cd-m").textContent=pad(Math.floor(s%3600/60));$("#cd-s").textContent=pad(s%60)};cd();setInterval(cd,1000);
   // tickets
-  $("#tickets").innerHTML=PLANOS.map(p=>`<article class="ticket rv${p.hot?" hot":""}">
-    <div class="main"><span class="adm">Admite 1 · ${p.id==="exp"?"aula única":p.id==="livre"?"todas as turmas":p.semana+" aulas / semana"}</span>
-      <h3>${esc(p.nome)}</h3>
-      <div class="price">${p.preco?brl(p.preco).replace(",00",""):"Grátis"}${p.preco?" <small>/ mês</small>":""}</div>
-      <ul>${p.desc.map(d=>`<li>${esc(d)}</li>`).join("")}</ul>
-      <button class="btn sm" data-open="experimental" data-plano="${p.id}">${p.id==="exp"?"Agendar experimental":"Começar com esse plano"}</button></div>
-    <div class="stub" aria-hidden="true"><span class="code">${p.code} · ARENA BEACH</span><span class="barcode"></span></div></article>`).join("");
+  $("#tickets").innerHTML=PLANOS.map(p=>`<article class="plan rv${p.hot?" hot":""}">
+    ${p.hot?'<span class="flag">Mais escolhido</span>':""}
+    <p class="plan-k">${p.id==="exp"?"Primeira aula":p.id==="livre"?"Todas as turmas":p.semana+" vezes por semana"}</p>
+    <h3>${esc(p.nome)}</h3>
+    <div class="plan-p">${p.preco?`<span class="cur">R$</span><b class="tnum">${p.preco}</b><span class="per">/ mês</span>`:`<b>Cortesia</b>`}</div>
+    <ul>${p.desc.map(d=>`<li>${esc(d)}</li>`).join("")}</ul>
+    <button class="btn ${p.hot?"":"ghost"} sm" data-open="experimental" data-plano="${p.id}">${p.id==="exp"?"Agendar aula experimental":"Começar com este plano"}</button>
+  </article>`).join("");
   renderRules();renderPublicGrid();
+  // depoimento em destaque
+  let vi=0;const vset=i=>{vi=i;$$("#voice figure").forEach(f=>f.classList.toggle("on",+f.dataset.i===i));$$(".voice-nav button").forEach(b=>b.setAttribute("aria-pressed",String(+b.dataset.v===i)))};
+  $$(".voice-nav button").forEach(b=>b.addEventListener("click",()=>{vset(+b.dataset.v);clearInterval(vt)}));
+  const vt=setInterval(()=>vset((vi+1)%3),7000);
   // reveal
   if("IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion: reduce)").matches){
     const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.remove("pre");io.unobserve(en.target)}}),{rootMargin:"0px 0px -8% 0px"});
