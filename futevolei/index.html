@@ -2,9 +2,9 @@
 <html lang="pt-BR">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Solstício Futevôlei</title>
+<title>Arena Beach Futevôlei</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Centro de treinamento de futevôlei na orla. Aulas do iniciante ao competitivo, agendamento online, reposição de faltas e área do aluno.">
+<meta name="description" content="Arena Beach: centro de treinamento de futevôlei na orla. Aulas do iniciante ao competitivo, agendamento online, reposição de faltas e área do aluno.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Figtree:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap">
@@ -91,30 +91,46 @@ h1,h2,h3,h4{margin:0;text-wrap:balance}
 .nav .btn{margin-left:8px}
 @media (max-width:960px){.nav ul{display:none}.nav .btn{margin-left:auto}}
 
-/* Hero */
-.hero{position:relative;min-height:clamp(600px,86vh,880px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;isolation:isolate}
-#sky{position:absolute;inset:0;width:100%;height:100%;z-index:-2;display:block}
-.vignette{position:absolute;inset:0;z-index:-1;background:radial-gradient(120% 90% at 60% 55%,transparent 40%,rgba(5,6,12,.75) 100%),linear-gradient(180deg,rgba(11,14,24,.25),transparent 30%,transparent 55%,rgba(11,14,24,.92))}
-.hero::before,.hero::after{content:"";position:absolute;left:0;right:0;height:6%;background:var(--black);z-index:4;animation:lb 1.5s var(--ease) both}
-.hero::before{top:0}.hero::after{bottom:0}
+/* Abertura: sobrevoo de drone preso à rolagem */
+.flight{position:relative;height:440vh;background:var(--night)}
+.stage3d{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;isolation:isolate;background:linear-gradient(180deg,#1b1530,#6f3557 55%,#d6b487 56%)}
+#drone,#sky{position:absolute;inset:0;width:100%;height:100%;z-index:-2;display:block}
+.stage3d>.wrap{position:absolute;left:0;right:0}
+.dhud{top:calc(68px + env(safe-area-inset-top,0px) + 6% + 30px);display:flex;gap:22px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;color:rgba(244,237,225,.62);z-index:3}
+.dhud b{color:var(--fg);font-weight:600}
+@media (max-width:640px){.dhud .opt{display:none}}
+.reticle{position:absolute;left:50%;top:46%;width:72px;height:72px;transform:translate(-50%,-50%);z-index:2;opacity:.4;pointer-events:none;
+  background:linear-gradient(var(--fg),var(--fg)) top left/14px 1px no-repeat,linear-gradient(var(--fg),var(--fg)) top left/1px 14px no-repeat,linear-gradient(var(--fg),var(--fg)) top right/14px 1px no-repeat,linear-gradient(var(--fg),var(--fg)) top right/1px 14px no-repeat,linear-gradient(var(--fg),var(--fg)) bottom left/14px 1px no-repeat,linear-gradient(var(--fg),var(--fg)) bottom left/1px 14px no-repeat,linear-gradient(var(--fg),var(--fg)) bottom right/14px 1px no-repeat,linear-gradient(var(--fg),var(--fg)) bottom right/1px 14px no-repeat}
+.reticle::after{content:"";position:absolute;left:50%;top:50%;width:4px;height:4px;border-radius:50%;background:var(--ember-2);transform:translate(-50%,-50%)}
+.phase{bottom:calc(6% + 66px);z-index:3;will-change:opacity,transform}
+.ph-t{margin-top:16px;font-family:var(--f-display);font-weight:900;text-transform:uppercase;font-size:clamp(52px,9vw,140px);line-height:.84;letter-spacing:-.01em;max-width:12ch;text-shadow:0 4px 40px rgba(11,14,24,.45)}
+.ph-t em{display:block;font-family:var(--f-serif);font-style:italic;font-weight:400;text-transform:none;color:var(--ember-2);font-size:.42em;letter-spacing:0;line-height:1.05;margin-top:.25em;max-width:22ch}
+.ph-stats{display:flex;flex-wrap:wrap;gap:14px 34px;margin:26px 0 0}
+.ph-stats dt{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--sand)}
+.ph-stats dd{margin:4px 0 0;font-family:var(--f-display);font-weight:800;font-size:clamp(24px,2.6vw,34px);line-height:1}
+.scrub{bottom:calc(6% + 18px);display:flex;align-items:center;gap:14px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,237,225,.6);z-index:3}
+.strack{flex:1;height:2px;background:rgba(244,237,225,.16);border-radius:2px;overflow:hidden}
+.strack i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ember),var(--ember-2))}
+@media (max-width:600px){#scrubLbl{max-width:52vw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+.vignette{position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(120% 90% at 55% 45%,transparent 45%,rgba(5,6,12,.6) 100%),linear-gradient(180deg,rgba(11,14,24,.35),transparent 26%,transparent 48%,rgba(11,14,24,.85)),linear-gradient(90deg,rgba(11,14,24,.5),transparent 60%)}
+.stage3d::before,.stage3d::after{content:"";position:absolute;left:0;right:0;height:6%;background:var(--black);z-index:4;animation:lb 1.5s var(--ease) both}
+.stage3d::before{top:0}.stage3d::after{bottom:0}
 @keyframes lb{from{height:50%}to{height:6%}}
-.hud{position:absolute;top:calc(68px + env(safe-area-inset-top,0px) + 4%);left:0;right:0;display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;color:rgba(244,237,225,.7);z-index:3}
+.hud{top:calc(68px + env(safe-area-inset-top,0px) + 4%);left:0;right:0;display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;color:rgba(244,237,225,.7);z-index:3}
 .rec i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#ff4b3a;margin-right:8px;animation:blink 1.2s steps(2) infinite;vertical-align:0}
 @keyframes blink{50%{opacity:.15}}
 .hud .frame{position:absolute;inset:0}
-.hero>.wrap{width:100%}
-.hero-copy{position:relative;z-index:3;padding-top:calc(68px + 6vh + 56px);padding-bottom:calc(6% + 56px)}
-.hero h1{font-family:var(--f-display);font-weight:900;text-transform:uppercase;font-size:clamp(64px,13.5vw,212px);line-height:.8;letter-spacing:-.015em;margin:18px 0 0}
-.hero h1 .l{display:block;overflow:hidden;padding:.12em 0 .04em;margin-top:-.12em}
-.hero h1 .l>span{display:inline-block;animation:rise 1.2s var(--ease) both}
-.hero h1 .l:nth-child(2)>span{animation-delay:.12s}
-.hero h1 em{font-family:var(--f-serif);font-style:italic;font-weight:400;text-transform:none;font-size:.52em;letter-spacing:-.01em;color:var(--ember-2);display:inline-block;line-height:1}
+.flight h1{font-family:var(--f-display);font-weight:900;text-transform:uppercase;font-size:clamp(66px,10.5vw,160px);line-height:.8;letter-spacing:-.015em;margin:18px 0 0}
+.flight h1 .l{display:block;overflow:hidden;padding:.12em 0 .04em;margin-top:-.12em}
+.flight h1 .l>span{display:inline-block;animation:rise 1.2s var(--ease) both}
+.flight h1 .l:nth-child(2)>span{animation-delay:.12s}
+.flight h1 .l:nth-child(3)>span{animation-delay:.24s}
+.flight h1 em{font-family:var(--f-serif);font-style:italic;font-weight:400;text-transform:none;font-size:.36em;letter-spacing:-.01em;color:var(--ember-2);display:inline-block;line-height:1.1}
+.flight h1{text-shadow:0 6px 50px rgba(11,14,24,.35)}
 @keyframes rise{from{transform:translateY(105%)}to{transform:translateY(0)}}
-.hero .lede{max-width:52ch;font-size:clamp(16px,1.6vw,19px);color:rgba(244,237,225,.82);margin:22px 0 28px;animation:fade 1.2s .35s both}
+.flight .lede{max-width:52ch;font-size:clamp(16px,1.6vw,19px);color:rgba(244,237,225,.82);margin:22px 0 28px;animation:fade 1.2s .35s both}
 @keyframes fade{from{opacity:.0;transform:translateY(12px)}to{opacity:1;transform:none}}
 .cta{display:flex;flex-wrap:wrap;gap:12px;animation:fade 1.2s .5s both}
-.hud-b{position:absolute;bottom:calc(6% + 14px);left:0;right:0;display:flex;justify-content:space-between;gap:16px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,237,225,.5);z-index:3}
-@media (max-width:600px){.hud-b span:last-child{display:none}}
 
 /* Marquee */
 .marquee{border-block:1px solid var(--line);overflow:hidden;background:var(--night);padding-block:18px}
@@ -500,9 +516,9 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
 <div id="site">
   <nav class="nav" id="nav" aria-label="Principal">
     <div class="wrap">
-      <a class="brand" href="#topo" aria-label="Solstício, início">
-        <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb773"/><stop offset="1" stop-color="#e0623a"/></linearGradient></defs><path d="M3 22a14 14 0 0 1 28 0Z" fill="url(#lg)"/><path d="M1 25h32M5 29h24" stroke="#e9c98b" stroke-width="2" stroke-linecap="round"/></svg>
-        <span><b>Solstício</b><small>CT de futevôlei</small></span>
+      <a class="brand" href="#topo" aria-label="Arena Beach, início">
+        <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb773"/><stop offset="1" stop-color="#e0623a"/></linearGradient></defs><circle cx="17" cy="14" r="11" fill="url(#lg)"/><path d="M8 9c5 2 13 2 18 0M7 17c6 3 14 3 20 0M17 3c-4 6-4 16 0 22" stroke="#1b130d" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".7"/><path d="M2 29c5-2 10-2 15 0s10 2 15 0" stroke="#e9c98b" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        <span><b>Arena Beach</b><small>Futevôlei</small></span>
       </a>
       <ul>
         <li><a href="#metodo">Método</a></li>
@@ -516,20 +532,43 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
     </div>
   </nav>
 
-  <header class="hero" id="topo">
-    <canvas id="sky" aria-hidden="true"></canvas>
-    <div class="vignette" aria-hidden="true"></div>
-    <div class="hud wrap" aria-hidden="true"><span class="rec"><i></i>REC · CENA 01</span><span class="tnum" id="tc">00:00:00:00</span></div>
-    <div class="hero-copy wrap">
-      <p class="eyebrow"><span class="dot"></span>Ext. orla de Copacabana — fim de tarde</p>
-      <h1><span class="l"><span>Futevôlei</span></span><span class="l"><span><em>na hora dourada.</em></span></span></h1>
-      <p class="lede">Aulas do primeiro toque ao circuito competitivo, em três quadras na areia. Você reserva a vaga pelo celular, avisa quando não puder ir e ganha a reposição automaticamente.</p>
-      <div class="cta">
-        <button class="btn" data-open="experimental">Agendar aula experimental grátis <span aria-hidden="true">→</span></button>
-        <button class="btn ghost" data-open="login">Área do aluno</button>
+  <header class="flight" id="topo">
+    <div class="stage3d">
+      <canvas id="drone" aria-hidden="true"></canvas>
+      <canvas id="sky" aria-hidden="true" hidden></canvas>
+      <div class="vignette" aria-hidden="true"></div>
+      <div class="hud wrap" aria-hidden="true"><span class="rec"><i></i>REC · DRONE 01</span><span class="tnum" id="tc">00:00:00:00</span></div>
+      <div class="dhud wrap" aria-hidden="true"><span>ALT <b class="tnum" id="hAlt">80</b> m</span><span>VEL <b class="tnum" id="hVel">0,0</b> m/s</span><span class="opt">22°58′S · 43°11′W</span><span class="opt">4K · 60 fps</span></div>
+      <div class="reticle" aria-hidden="true"></div>
+      <div class="phase wrap" id="ph1">
+        <p class="eyebrow"><span class="dot"></span>Cena 01 · Vista aérea · fim de tarde</p>
+        <h1><span class="l"><span>Arena</span></span><span class="l"><span>Beach</span></span><span class="l"><span><em>futevôlei na hora dourada.</em></span></span></h1>
+        <p class="lede">Três quadras na areia, aulas do primeiro toque ao circuito competitivo. Você reserva a vaga pelo celular, avisa quando não puder ir e ganha a reposição automaticamente.</p>
+        <div class="cta">
+          <button class="btn" data-open="experimental">Agendar aula experimental grátis <span aria-hidden="true">→</span></button>
+          <button class="btn ghost" data-open="login">Área do aluno</button>
+        </div>
       </div>
+      <div class="phase wrap" id="ph2" style="opacity:0;visibility:hidden">
+        <p class="eyebrow"><span class="dot"></span>Descendo sobre a arena</p>
+        <h2 class="ph-t">Três quadras <em>oficiais, prontas para o jogo.</em></h2>
+        <dl class="ph-stats">
+          <div><dt>Quadra</dt><dd class="tnum">18 × 9 m</dd></div>
+          <div><dt>Rede</dt><dd class="tnum">2,20 m</dd></div>
+          <div><dt>Areia</dt><dd>Fofa e peneirada</dd></div>
+          <div><dt>Turmas</dt><dd class="tnum">Até 8 alunos</dd></div>
+        </dl>
+      </div>
+      <div class="phase wrap" id="ph3" style="opacity:0;visibility:hidden">
+        <p class="eyebrow"><span class="dot"></span>Pouso · na altura da rede</p>
+        <h2 class="ph-t">A bola já está <em>na areia esperando você.</em></h2>
+        <div class="cta" style="margin-top:24px">
+          <button class="btn" data-open="experimental">Agendar aula experimental grátis <span aria-hidden="true">→</span></button>
+          <a class="btn ghost" href="#metodo">Conhecer o método</a>
+        </div>
+      </div>
+      <div class="scrub wrap" aria-hidden="true"><span id="scrubLbl">Role para sobrevoar a arena</span><span class="strack"><i id="scrubBar"></i></span><span class="tnum" id="scrubPct">00%</span></div>
     </div>
-    <div class="hud-b wrap" aria-hidden="true"><span>Solstício CT · Rio de Janeiro</span><span>2.39 : 1 · 24 fps · ƒ/2.8</span></div>
   </header>
 
   <div class="marquee" aria-hidden="true"><div class="track" id="mq"></div></div>
@@ -675,7 +714,7 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
   </section>
   <footer class="foot">
     <div class="wrap">
-      <span>© 2026 Solstício CT de Futevôlei · site demonstrativo</span>
+      <span>© 2026 Arena Beach Futevôlei · site demonstrativo</span>
       <span>Os dados de exemplo ficam salvos só neste navegador · <button type="button" data-act="reset">Reiniciar demonstração</button></span>
     </div>
   </footer>
@@ -685,8 +724,8 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
 <div id="app" hidden>
   <aside class="rail">
     <a class="brand" href="#" data-act="home" aria-label="Voltar ao site">
-      <svg width="30" height="30" viewBox="0 0 34 34" aria-hidden="true"><path d="M3 22a14 14 0 0 1 28 0Z" fill="#f0884a"/><path d="M1 25h32M5 29h24" stroke="#e9c98b" stroke-width="2" stroke-linecap="round"/></svg>
-      <span><b>Solstício</b><small id="railRole">Área do aluno</small></span>
+      <svg width="30" height="30" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="14" r="11" fill="#f0884a"/><path d="M8 9c5 2 13 2 18 0M7 17c6 3 14 3 20 0M17 3c-4 6-4 16 0 22" stroke="#1b130d" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".7"/><path d="M2 29c5-2 10-2 15 0s10 2 15 0" stroke="#e9c98b" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      <span><b>Arena Beach</b><small id="railRole">Área do aluno</small></span>
     </a>
     <div class="me" id="meCard"></div>
     <nav class="menu" id="menu" aria-label="Seções"></nav>
@@ -756,6 +795,7 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
 
 <div class="toasts" id="toasts" aria-live="polite"></div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (()=>{
 "use strict";
@@ -788,16 +828,16 @@ const av=(name,cls="avatar")=>`<i class="${cls}" style="background:linear-gradie
 /* ---------- catálogo ---------- */
 const PLANOS=[
   {id:"exp",nome:"Experimental",preco:0,semana:1,desc:["1 aula para conhecer","Turmas de iniciante","Sem compromisso"],code:"EXP-001"},
-  {id:"2x",nome:"2x por semana",preco:220,semana:2,desc:["8 aulas no mês","Reposição de faltas avisadas","Avaliação de fundamentos"],code:"SOL-2X"},
-  {id:"3x",nome:"3x por semana",preco:290,semana:3,desc:["12 aulas no mês","Reposição de faltas avisadas","Prioridade na lista de espera"],code:"SOL-3X",hot:true},
-  {id:"livre",nome:"Livre",preco:360,semana:6,desc:["Todas as turmas do seu nível","Aulão de sábado incluso","10% off no torneio"],code:"SOL-LV"},
+  {id:"2x",nome:"2x por semana",preco:220,semana:2,desc:["8 aulas no mês","Reposição de faltas avisadas","Avaliação de fundamentos"],code:"AB-2X"},
+  {id:"3x",nome:"3x por semana",preco:290,semana:3,desc:["12 aulas no mês","Reposição de faltas avisadas","Prioridade na lista de espera"],code:"AB-3X",hot:true},
+  {id:"livre",nome:"Livre",preco:360,semana:6,desc:["Todas as turmas do seu nível","Aulão de sábado incluso","10% off no torneio"],code:"AB-LV"},
 ];
 const FUND=[["saque","Saque"],["recepcao","Recepção"],["levantamento","Levantamento"],["peito","Peito e coxa"],["cabeca","Cabeça"],["ataque","Ataque"],["shark","Shark attack"],["defesa","Defesa"]];
 const NIVEIS=["Iniciante","Intermediário","Avançado","Competição"];
 const USERS={aluno:{senha:"aluno",role:"aluno",ref:"a1"},professor:{senha:"professor",role:"professor",ref:"p1"},admin:{senha:"admin",role:"admin",ref:null}};
 
 /* ---------- estado ---------- */
-const KEY="solsticio-demo-v2";
+const KEY="arenabeach-demo-v1";
 let S;
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
 function load(){try{const r=localStorage.getItem(KEY);if(r){S=JSON.parse(r);if(S&&S.v===2)return}}catch(e){}S=seed();save()}
@@ -967,7 +1007,7 @@ function initSite(){
   const words=["Shark attack","Peito","Pingo","Cabeça","Levantamento","Recepção","Ombro","Coxa","Saque","Defesa","Pôr do sol","Dupla"];
   $("#mq").innerHTML=[...words,...words].map(w=>`<span>${w}</span>`).join("");
   // nav
-  const nav=$("#nav");const onS=()=>nav.classList.toggle("solid",scrollY>40);addEventListener("scroll",onS,{passive:true});onS();
+  const nav=$("#nav");const onS=()=>{const f=$("#topo");nav.classList.toggle("solid",scrollY>f.offsetHeight-innerHeight-20)};addEventListener("scroll",onS,{passive:true});onS();
   // timecode
   const tc=$("#tc");const t0=performance.now();const base=new Date();
   setInterval(()=>{const el=performance.now()-t0;const d=new Date(base.getTime()+el);const f=Math.floor((el%1000)/1000*24);tc.textContent=`${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}:${pad(f)}`},1000/24);
@@ -981,14 +1021,14 @@ function initSite(){
       <div class="price">${p.preco?brl(p.preco).replace(",00",""):"Grátis"}${p.preco?" <small>/ mês</small>":""}</div>
       <ul>${p.desc.map(d=>`<li>${esc(d)}</li>`).join("")}</ul>
       <button class="btn sm" data-open="experimental" data-plano="${p.id}">${p.id==="exp"?"Agendar experimental":"Começar com esse plano"}</button></div>
-    <div class="stub" aria-hidden="true"><span class="code">${p.code} · SOLSTÍCIO</span><span class="barcode"></span></div></article>`).join("");
+    <div class="stub" aria-hidden="true"><span class="code">${p.code} · ARENA BEACH</span><span class="barcode"></span></div></article>`).join("");
   renderRules();renderPublicGrid();
   // reveal
   if("IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion: reduce)").matches){
     const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.remove("pre");io.unobserve(en.target)}}),{rootMargin:"0px 0px -8% 0px"});
     $$(".rv").forEach(el=>{const r=el.getBoundingClientRect();if(r.top>innerHeight){el.classList.add("pre");io.observe(el)}});
   }
-  initSky();
+  if(!initDrone()){$("#drone").hidden=true;$("#sky").hidden=false;initSky();addEventListener("scroll",()=>updatePhases(flightProgress()),{passive:true});updatePhases(flightProgress())}
 }
 function renderRules(){const c=S.config;const dl=18-c.cancelHoras;
   $("#tlDl").textContent=`${pad(((dl%24)+24)%24)}:00 · prazo`;
@@ -1081,6 +1121,170 @@ function initSky(){
   }
 }
 
+/* ---------- sobrevoo de drone (Three.js) ---------- */
+const smooth=(a,b,x)=>{const t=Math.max(0,Math.min(1,(x-a)/(b-a)));return t*t*(3-2*t)};
+function flightProgress(){const f=$("#topo");const r=f.getBoundingClientRect();const span=r.height-innerHeight;return span>0?Math.max(0,Math.min(1,-r.top/span)):0}
+function updatePhases(p){
+  const o1=1-smooth(.12,.24,p),o2=smooth(.3,.38,p)*(1-smooth(.56,.64,p)),o3=smooth(.74,.86,p);
+  [["#ph1",o1],["#ph2",o2],["#ph3",o3]].forEach(([s,o])=>{const el=$(s);el.style.opacity=o.toFixed(3);el.style.transform=`translateY(${((1-o)*28).toFixed(1)}px)`;el.style.visibility=o<.02?"hidden":"visible";el.style.pointerEvents=o>.5?"auto":"none"});
+  $("#scrubBar").style.width=(p*100).toFixed(1)+"%";$("#scrubPct").textContent=pad(Math.round(p*100))+"%";
+  $("#scrubLbl").textContent=p<.02?"Role para sobrevoar a arena":p<.98?"Sobrevoando a Arena Beach":"Pouso concluído · continue rolando";
+}
+function initDrone(){
+  const cv=$("#drone");
+  if(!window.THREE)return false;
+  let R3;try{R3=new THREE.WebGLRenderer({canvas:cv,antialias:true,powerPreference:"high-performance"})}catch(e){return false}
+  if(!R3||!R3.getContext())return false;
+  const small=innerWidth<720;
+  R3.setPixelRatio(Math.min(devicePixelRatio||1,small?1.5:1.75));
+  R3.outputEncoding=THREE.sRGBEncoding;R3.toneMapping=THREE.ACESFilmicToneMapping;R3.toneMappingExposure=1.1;
+  R3.shadowMap.enabled=true;R3.shadowMap.type=THREE.PCFSoftShadowMap;
+  const scene=new THREE.Scene();const rnd=mulberry(11);
+  const aniso=R3.capabilities.getMaxAnisotropy();
+  const tex=(w,h,fn,rep)=>{const c=document.createElement("canvas");c.width=w;c.height=h;fn(c.getContext("2d"),w,h);const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;t.anisotropy=aniso;if(rep){t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(rep[0],rep[1])}t.userData={canvas:c,fn};return t};
+  const std=o=>new THREE.MeshStandardMaterial(o);
+  const add=(geo,mat,x,y,z,o={})=>{const m=new THREE.Mesh(geo,mat);m.position.set(x,y,z);if(o.cast!==false)m.castShadow=true;if(o.receive)m.receiveShadow=true;if(o.ry)m.rotation.y=o.ry;scene.add(m);return m};
+
+  /* céu e sol */
+  const skyT=tex(4,512,(g,w,h)=>{const gr=g.createLinearGradient(0,0,0,h);gr.addColorStop(0,"#0d1230");gr.addColorStop(.2,"#2a2350");gr.addColorStop(.36,"#7a3d66");gr.addColorStop(.46,"#e0805a");gr.addColorStop(.5,"#ffd29a");gr.addColorStop(1,"#ffd29a");g.fillStyle=gr;g.fillRect(0,0,w,h)});
+  scene.add(new THREE.Mesh(new THREE.SphereGeometry(520,32,24),new THREE.MeshBasicMaterial({map:skyT,side:THREE.BackSide,fog:false,depthWrite:false})));
+  const sunDir=new THREE.Vector3(.3,.075,-1).normalize();
+  const disk=new THREE.Mesh(new THREE.CircleGeometry(17,48),new THREE.MeshBasicMaterial({color:0xfff1d6,fog:false,toneMapped:false}));disk.position.copy(sunDir).multiplyScalar(470);disk.lookAt(0,0,0);scene.add(disk);
+  const glowT=tex(128,128,(g,w,h)=>{const r=g.createRadialGradient(64,64,0,64,64,64);r.addColorStop(0,"rgba(255,210,150,.95)");r.addColorStop(.2,"rgba(255,160,100,.45)");r.addColorStop(1,"rgba(255,140,90,0)");g.fillStyle=r;g.fillRect(0,0,w,h)});
+  const glow=new THREE.Sprite(new THREE.SpriteMaterial({map:glowT,blending:THREE.AdditiveBlending,depthWrite:false,fog:false,transparent:true}));glow.position.copy(sunDir).multiplyScalar(500);glow.material.toneMapped=false;glow.scale.set(260,260,1);scene.add(glow);
+  scene.fog=new THREE.Fog(0xd88d6c,140,470);
+
+  /* luz de fim de tarde */
+  scene.add(new THREE.HemisphereLight(0xffd6b6,0x4a3450,.7));
+  const sun=new THREE.DirectionalLight(0xffb27c,2.7);sun.position.set(40,46,-100);sun.castShadow=true;
+  const sm=small?1024:2048;sun.shadow.mapSize.set(sm,sm);Object.assign(sun.shadow.camera,{left:-46,right:46,top:40,bottom:-40,near:1,far:260});sun.shadow.bias=-.0004;sun.shadow.normalBias=.03;
+  scene.add(sun);scene.add(sun.target);
+
+  /* areia */
+  const sandFn=(base,ripple)=>(g,w,h)=>{g.fillStyle=base;g.fillRect(0,0,w,h);const id=g.getImageData(0,0,w,h),d=id.data;for(let i=0;i<d.length;i+=4){const n=(rnd()-.5)*40;d[i]+=n;d[i+1]+=n*.92;d[i+2]+=n*.8}g.putImageData(id,0,0);
+    for(let i=0;i<ripple;i++){g.strokeStyle=`rgba(120,88,58,${.05+rnd()*.07})`;g.lineWidth=1+rnd()*2.4;const x=rnd()*w,y=rnd()*h;g.beginPath();g.moveTo(x,y);g.bezierCurveTo(x+24,y+rnd()*8-4,x+48,y+rnd()*8-4,x+70+rnd()*50,y+rnd()*6-3);g.stroke()}
+    for(let i=0;i<140;i++){g.fillStyle=`rgba(105,76,50,${.07+rnd()*.12})`;g.beginPath();g.ellipse(rnd()*w,rnd()*h,3+rnd()*2,6+rnd()*3,rnd()*3,0,6.3);g.fill()}};
+  const sandT=tex(512,512,sandFn("#d6b487",260),[46,46]);
+  add(new THREE.PlaneGeometry(420,420),std({map:sandT,bumpMap:sandT,bumpScale:.035,roughness:1}),0,0,0,{cast:false,receive:true}).rotation.x=-Math.PI/2;
+  const rakeT=tex(512,512,(g,w,h)=>{sandFn("#e7cda4",40)(g,w,h);for(let y=0;y<h;y+=7){g.strokeStyle=`rgba(150,115,80,${.07+rnd()*.05})`;g.lineWidth=1.4;g.beginPath();g.moveTo(0,y+rnd()*2);for(let x=0;x<=w;x+=32)g.lineTo(x,y+Math.sin(x*.03+y)*1.4);g.stroke()}},[2,4]);
+  const rakeM=std({map:rakeT,bumpMap:rakeT,bumpScale:.02,roughness:1});
+
+  /* mar, areia molhada e espuma */
+  const SHORE=-24;
+  const seaBump=tex(256,256,(g,w,h)=>{g.fillStyle="#808080";g.fillRect(0,0,w,h);for(let i=0;i<900;i++){g.fillStyle=`rgba(${rnd()<.5?255:0},${rnd()<.5?255:0},${rnd()<.5?255:0},.18)`;g.fillRect(rnd()*w,rnd()*h,6+rnd()*26,1+rnd()*2)}},[60,24]);
+  seaBump.encoding=THREE.LinearEncoding;
+  const sea=add(new THREE.PlaneGeometry(1100,520),new THREE.MeshPhongMaterial({color:0x2b4c68,specular:0xffc896,shininess:70,emissive:0x0d1830,bumpMap:seaBump,bumpScale:.45}),0,.03,SHORE-260,{cast:false});sea.rotation.x=-Math.PI/2;
+  add(new THREE.PlaneGeometry(420,7),std({color:0xa98a68,roughness:.45,metalness:.05}),0,.012,SHORE+3,{cast:false,receive:true}).rotation.x=-Math.PI/2;
+  const foamT=tex(512,64,(g,w,h)=>{for(let i=0;i<700;i++){g.fillStyle=`rgba(255,248,236,${.25+rnd()*.5})`;g.beginPath();g.ellipse(rnd()*w,h*.5+(rnd()-.5)*h*.6,3+rnd()*14,1+rnd()*3,0,0,6.3);g.fill()}},[30,1]);
+  const foam=add(new THREE.PlaneGeometry(420,2.6),new THREE.MeshBasicMaterial({map:foamT,transparent:true,opacity:.75,depthWrite:false}),0,.05,SHORE+.4,{cast:false});foam.rotation.x=-Math.PI/2;
+
+  /* calçadão em ondas, rua e prédios */
+  const waveT=tex(256,256,(g,w,h)=>{g.fillStyle="#efe8db";g.fillRect(0,0,w,h);g.fillStyle="#1d1b22";for(let k=0;k<2;k++){g.beginPath();const y0=k*h/2;g.moveTo(0,y0);for(let x=0;x<=w;x+=4)g.lineTo(x,y0+h*.13+Math.sin(x/w*Math.PI*2)*h*.11);for(let x=w;x>=0;x-=4)g.lineTo(x,y0+h*.33+Math.sin(x/w*Math.PI*2)*h*.11);g.fill()}},[70,2]);
+  add(new THREE.PlaneGeometry(420,8),std({map:waveT,roughness:.8}),0,.02,31,{cast:false,receive:true}).rotation.x=-Math.PI/2;
+  const roadT=tex(256,64,(g,w,h)=>{g.fillStyle="#2a2a32";g.fillRect(0,0,w,h);g.fillStyle="#e9c98b";for(let x=0;x<w;x+=64)g.fillRect(x,h/2-1.5,34,3)},[60,1]);
+  add(new THREE.PlaneGeometry(420,11),std({map:roadT,roughness:.7}),0,.02,40.5,{cast:false,receive:true}).rotation.x=-Math.PI/2;
+  add(new THREE.PlaneGeometry(420,6),std({color:0xbab2a6,roughness:.9}),0,.03,49,{cast:false,receive:true}).rotation.x=-Math.PI/2;
+  const winT=tex(128,256,(g,w,h)=>{g.fillStyle="#3b3140";g.fillRect(0,0,w,h);for(let y=8;y<h-6;y+=16)for(let x=8;x<w-6;x+=20){const on=rnd();g.fillStyle=on<.3?`rgba(255,${190+rnd()*40|0},120,.95)`:on<.5?"#6c5a6e":"#2b2432";g.fillRect(x,y,12,9)}});
+  for(let x=-190;x<190;){const w=9+rnd()*10,h=16+rnd()*40,d=12+rnd()*6;const b=add(new THREE.BoxGeometry(w,h,d),std({map:winT,emissiveMap:winT,emissive:0xffc890,emissiveIntensity:.32,roughness:.8}),x+w/2,h/2,56+d/2,{cast:false});x+=w+1.5+rnd()*3}
+
+  /* quadras */
+  const COURTS=[-15,0,15];
+  const tapeM=std({color:0x2457b8,roughness:.6});
+  const postM=std({color:0xf0884a,roughness:.45,metalness:.25});
+  const netT=tex(1024,96,(g,w,h)=>{g.clearRect(0,0,w,h);g.strokeStyle="rgba(18,18,24,1)";g.lineWidth=2.4;for(let x=0;x<=w;x+=10){g.beginPath();g.moveTo(x,0);g.lineTo(x,h);g.stroke()}for(let y=0;y<=h;y+=10){g.beginPath();g.moveTo(0,y);g.lineTo(w,y);g.stroke()}});
+  const netM=std({map:netT,transparent:true,alphaTest:.35,side:THREE.DoubleSide,roughness:.9});
+  const netDepth=new THREE.MeshDepthMaterial({depthPacking:THREE.RGBADepthPacking,map:netT,alphaTest:.35});
+  const bandM=std({color:0xf6f1e6,roughness:.7});
+  const ropeM=new THREE.LineBasicMaterial({color:0x1a1a22});
+  COURTS.forEach(cx=>{
+    add(new THREE.PlaneGeometry(11.5,20.5),rakeM,cx,.01,0,{cast:false,receive:true}).rotation.x=-Math.PI/2;
+    [[-4.5,0,.07,18.07],[4.5,0,.07,18.07],[0,-9,9.07,.07],[0,9,9.07,.07]].forEach(([dx,dz,w,d])=>add(new THREE.BoxGeometry(w,.02,d),tapeM,cx+dx,.02,dz,{cast:false,receive:true}));
+    [-5.4,5.4].forEach(dx=>{add(new THREE.CylinderGeometry(.075,.08,2.8,14),postM,cx+dx,1.4,0);add(new THREE.SphereGeometry(.1,12,8),postM,cx+dx,2.82,0);
+      const pts=[new THREE.Vector3(cx+dx,2.7,0),new THREE.Vector3(cx+dx+Math.sign(dx)*2.2,0,0)];scene.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),ropeM))});
+    const net=add(new THREE.Mesh(new THREE.PlaneGeometry(10.8,1),netM).geometry,netM,cx,1.7,0);net.customDepthMaterial=netDepth;
+    add(new THREE.BoxGeometry(10.8,.075,.025),bandM,cx,2.2,0);add(new THREE.BoxGeometry(10.8,.045,.02),bandM,cx,1.2,0);
+  });
+
+  /* bolas de futevôlei */
+  const ballT=tex(256,128,(g,w,h)=>{g.fillStyle="#f6f1e4";g.fillRect(0,0,w,h);["#f0884a","#1f3f8f","#f6c74a"].forEach((c,i)=>{g.fillStyle=c;g.beginPath();for(let x=0;x<=w;x+=4){const y=h*(.12+i*.3)+Math.sin(x/w*Math.PI*4+i*2)*h*.07;x?g.lineTo(x,y):g.moveTo(x,y)}for(let x=w;x>=0;x-=4)g.lineTo(x,h*(.12+i*.3)+h*.13+Math.sin(x/w*Math.PI*4+i*2)*h*.07);g.fill()})});
+  const ballM=std({map:ballT,roughness:.42}),ballG=new THREE.SphereGeometry(.16,28,18);
+  const ball=(x,y,z)=>{const b=add(ballG,ballM,x,y,z);b.rotation.set(rnd()*6,rnd()*6,rnd()*6);return b};
+  COURTS.forEach((cx,i)=>{const n=4+(i===1?3:i);for(let k=0;k<n;k++)ball(cx+(rnd()-.5)*8.6,.15,(rnd()-.5)*17)});
+  for(let k=0;k<6;k++)ball((rnd()-.5)*50,.15,10+rnd()*4);
+  [[0,0],[.33,0],[-.33,0],[.16,.29],[-.16,.29],[.16,-.29],[-.16,-.29],[0,0,1],[.17,.1,1],[-.17,.1,1]].forEach(([dx,dz,up])=>ball(7.4+dx,.15+(up?.27:0),3.2+dz));
+  const coneM=std({color:0xf07a3a,roughness:.6});
+  [[-19.5,-6],[-19.5,6],[-10.5,-6],[10.5,6],[19.5,-6],[19.5,6]].forEach(([x,z])=>add(new THREE.ConeGeometry(.14,.36,14),coneM,x,.18,z));
+
+  /* faixa da arena */
+  const banner=(g,w,h)=>{g.fillStyle="#e2743e";g.fillRect(0,0,w,h);g.fillStyle="#1b130d";g.fillRect(0,h-6,w,6);g.fillStyle="#fff4e4";g.font=`900 ${h*.62}px "Big Shoulders Display", Impact, sans-serif`;g.textBaseline="middle";const s="ARENA BEACH  ✦  FUTEVÔLEI  ✦  ";let x=10;while(x<w){g.fillText(s,x,h*.5);x+=g.measureText(s).width}};
+  const banT=tex(2048,64,banner);
+  const banF=new THREE.Mesh(new THREE.PlaneGeometry(46,.9),std({map:banT,roughness:.8}));banF.position.set(0,.55,12.6);banF.castShadow=true;scene.add(banF);
+  const banB=new THREE.Mesh(new THREE.PlaneGeometry(46,.9),std({color:0xc8653a,roughness:.8}));banB.position.set(0,.55,12.58);banB.rotation.y=Math.PI;scene.add(banB);
+  for(let x=-23;x<=23;x+=5.75)add(new THREE.CylinderGeometry(.04,.04,1.1,8),postM,x,.55,12.65);
+
+  /* bandeiras de praia */
+  const flagT=tex(64,256,(g,w,h)=>{g.fillStyle="#f0884a";g.fillRect(0,0,w,h);g.save();g.translate(w*.55,h-12);g.rotate(-Math.PI/2);g.fillStyle="#fff4e4";g.font=`900 ${w*.55}px "Big Shoulders Display", Impact, sans-serif`;g.fillText("ARENA BEACH",0,0);g.restore()});
+  const flags=[];
+  [[-24,12.6],[24,12.6],[-24,-11],[24,-11]].forEach(([x,z])=>{add(new THREE.CylinderGeometry(.035,.035,3.6,8),bandM,x,1.8,z);
+    const f=new THREE.Mesh(new THREE.PlaneGeometry(.7,2.6),std({map:flagT,side:THREE.DoubleSide,roughness:.8}));f.geometry.translate(.35,0,0);f.position.set(x,2.25,z);f.castShadow=true;scene.add(f);flags.push(f)});
+
+  /* guarda-sóis e cadeiras */
+  const umbT=c=>tex(256,32,(g,w,h)=>{for(let i=0;i<8;i++){g.fillStyle=i%2?"#f8efe0":c;g.fillRect(i*w/8,0,w/8,h)}});
+  const umbMs=[std({map:umbT("#f0884a"),side:THREE.DoubleSide,roughness:.8}),std({map:umbT("#2f8f98"),side:THREE.DoubleSide,roughness:.8}),std({map:umbT("#c25a76"),side:THREE.DoubleSide,roughness:.8})];
+  const chairM=[std({color:0xf4efe6,roughness:.7}),std({color:0x2f8f98,roughness:.7})];
+  for(let x=-44;x<=44;x+=5.5){const z=18+(rnd()-.5)*2.4+((x/5.5)%2?2.6:0);if(Math.abs(x)<2)continue;
+    add(new THREE.CylinderGeometry(.035,.035,2.3,8),bandM,x,1.15,z);
+    const u=add(new THREE.ConeGeometry(1.5,.55,16,1,true),umbMs[Math.abs(Math.round(x/5.5))%3],x,2.3,z);u.rotation.z=(rnd()-.5)*.15;
+    if(rnd()<.75){const c=add(new THREE.BoxGeometry(.62,.14,1.6),chairM[rnd()<.5?0:1],x+.9,.2,z+.4,{ry:(rnd()-.5)*.5});const back=add(new THREE.BoxGeometry(.62,.7,.08),c.material,x+.9,.42,z-.35,{ry:c.rotation.y});back.rotation.x=-.5}}
+
+  /* palmeiras */
+  const trunkM=std({color:0x5d4636,roughness:.95}),leafM=std({color:0x3e6a3a,roughness:.85,side:THREE.DoubleSide});
+  function palm(x,z,h,lean){const g=new THREE.Group();const top=new THREE.Vector3(lean,h,lean*.3);
+    const curve=new THREE.QuadraticBezierCurve3(new THREE.Vector3(0,0,0),new THREE.Vector3(0,h*.6,0),top);
+    const tr=new THREE.Mesh(new THREE.TubeGeometry(curve,10,.2,8,false),trunkM);tr.castShadow=true;g.add(tr);
+    for(let i=0;i<9;i++){const a=i/9*Math.PI*2+rnd()*.3;const l=new THREE.Mesh(new THREE.SphereGeometry(1,10,6),leafM);l.scale.set(2.3,.05,.42);
+      const piv=new THREE.Group();piv.position.copy(top);piv.rotation.y=a;l.position.set(2,-.35,0);l.rotation.z=-.38;piv.add(l);l.castShadow=true;g.add(piv)}
+    g.position.set(x,0,z);g.rotation.y=rnd()*6;scene.add(g)}
+  for(let x=-84;x<=84;x+=14)palm(x+rnd()*3,26.2,7+rnd()*3,.6+rnd()*1.4);
+  palm(-36,-15,9,1.8);palm(-41,-11,7.5,-1.2);palm(37,-14,8.5,-1.6);
+
+  /* torres de luz */
+  const lampM=std({color:0x2a2a33,emissive:0xffe2b2,emissiveIntensity:1.6});
+  [[-26,-13],[26,-13],[-26,14],[26,14]].forEach(([x,z])=>{add(new THREE.CylinderGeometry(.12,.16,11,10),std({color:0x30303a,roughness:.6,metalness:.4}),x,5.5,z);const l=add(new THREE.BoxGeometry(1.6,.6,.35),lampM,x-Math.sign(x)*.3,11.1,z-Math.sign(z)*.3,{cast:false});l.lookAt(0,0,0)});
+
+  /* câmera e trajeto */
+  const cam=new THREE.PerspectiveCamera(42,1,.1,1400);
+  let curves;
+  function buildCurves(){const tall=innerWidth/innerHeight<.85;const k=tall?1.45:1;
+    curves={pos:new THREE.CatmullRomCurve3([new THREE.Vector3(0,80*k,4),new THREE.Vector3(-24,52*k,36),new THREE.Vector3(-31,20,31),new THREE.Vector3(-7,7.5,22),new THREE.Vector3(1.6,1.75,12.4)],false,"centripetal"),
+      look:new THREE.CatmullRomCurve3([new THREE.Vector3(0,0,0),new THREE.Vector3(0,0,0),new THREE.Vector3(0,.6,-2),new THREE.Vector3(0,1.4,-3),new THREE.Vector3(1.2,2.3,-30)],false,"centripetal")};
+    cam.fov=tall?52:42;}
+  function resize(){const w=cv.clientWidth,h=cv.clientHeight;R3.setSize(w,h,false);cam.aspect=w/h;buildCurves();cam.updateProjectionMatrix()}
+  resize();addEventListener("resize",resize);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{[banT,flagT].forEach(t=>{const c=t.userData.canvas;t.userData.fn(c.getContext("2d"),c.width,c.height);t.needsUpdate=true})});
+
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const hAlt=$("#hAlt"),hVel=$("#hVel");
+  let cur=flightProgress(),last=performance.now(),t0=last,prev=new THREE.Vector3(),vel=0,run=true,raf;
+  const P=new THREE.Vector3(),L=new THREE.Vector3();
+  function frame(now){
+    const dt=Math.min(.05,(now-last)/1000);last=now;const t=(now-t0)/1000;
+    const target=flightProgress();cur+=(target-cur)*(reduce?1:Math.min(1,dt*4.5));
+    const e=cur;curves.pos.getPoint(e,P);curves.look.getPoint(e,L);
+    if(!reduce){const intro=Math.max(0,1-t/2.8);P.y+=intro*intro*intro*70;P.x+=Math.sin(t*.45)*.35*(P.y/40+.05);P.y+=Math.sin(t*.7)*.25*(P.y/40+.1)}
+    cam.position.copy(P);cam.lookAt(L);
+    if(!reduce){seaBump.offset.x+=dt*.004;seaBump.offset.y+=dt*.002;foam.position.z=SHORE+.4+Math.sin(t*.8)*.7;foam.material.opacity=.55+.25*Math.sin(t*.8+1);flags.forEach((f,i)=>f.rotation.y=Math.sin(t*2+i)*.25)}
+    R3.render(scene,cam);
+    vel+=((prev.distanceTo(P)/Math.max(dt,.001))-vel)*.1;prev.copy(P);
+    hAlt.textContent=P.y<10?P.y.toFixed(1).replace(".",","):Math.round(P.y);hVel.textContent=Math.min(18,vel*.3).toFixed(1).replace(".",",");
+    updatePhases(cur);
+    if(run)raf=requestAnimationFrame(frame);
+  }
+  raf=requestAnimationFrame(frame);
+  if("IntersectionObserver" in window)new IntersectionObserver(([en])=>{const was=run;run=en.isIntersecting&&!$("#site").hidden;if(run&&!was){last=performance.now();raf=requestAnimationFrame(frame)}}).observe($("#topo"));
+  return true;
+}
+
 /* ---------- dialogs do site ---------- */
 let loginHint="";
 document.addEventListener("click",e=>{
@@ -1106,7 +1310,7 @@ function doLogin(){
   const acc=USERS[u];
   if(!u||!p){$("#lgErr").textContent="Preencha usuário e senha.";return}
   if(!acc||acc.senha!==p){$("#lgErr").textContent="Usuário ou senha incorretos. Experimente aluno / aluno.";return}
-  U={user:u,...acc};try{sessionStorage.setItem("solsticio-user",u)}catch(e){}
+  U={user:u,...acc};try{sessionStorage.setItem("arenabeach-user",u)}catch(e){}
   $("#dlgLogin").close();view=null;showApp();
 }
 $("#expForm").addEventListener("submit",e=>{e.preventDefault();
@@ -1254,7 +1458,7 @@ function vEvo(){
 }
 function vFin(){
   const a=A(U.ref),pl=PL(a.plano),ps=S.pagamentos.filter(p=>p.alunoId===a.id).sort((x,y)=>y.mes.localeCompare(x.mes));const pend=ps.find(p=>p.status!=="pago");
-  const pix="00020126580014BR.GOV.BCB.PIX0136solsticio-ct-demo-0000-exemplo520400005303986540"+String(pl.preco).length+pl.preco+".005802BR5915SOLSTICIO CT6014RIO DE JANEIRO62070503***6304DEMO";
+  const pix="00020126580014BR.GOV.BCB.PIX0136arenabeach-demo-0000-exemplo00520400005303986540"+String(pl.preco).length+pl.preco+".005802BR5911ARENA BEACH6014RIO DE JANEIRO62070503***6304DEMO";
   return head("Plano e pagamentos","Mensali<em>dade</em>")+
   `<div class="grid2"><section class="card"><div class="card-h"><h3>Histórico</h3></div><div class="tbl-wrap"><table class="tbl" style="min-width:480px"><thead><tr><th>Mês</th><th>Vencimento</th><th class="num">Valor</th><th>Situação</th></tr></thead><tbody>
     ${ps.map(p=>{const[y,m]=p.mes.split("-");return `<tr><td>${MESF[+m-1]} ${y}</td><td class="tnum">${p.venc.split("-").reverse().slice(0,2).join("/")}</td><td class="num">${brl(p.valor)}</td><td>${p.status==="pago"?'<span class="chip ok">Pago</span>':p.status==="pendente"?'<span class="chip warn">A vencer</span>':'<span class="chip bad">Em atraso</span>'}</td></tr>`}).join("")}
@@ -1428,7 +1632,7 @@ document.addEventListener("click",e=>{
   const b=e.target.closest("[data-act]");if(!b)return;const d=b.dataset;
   switch(d.act){
     case"home":e.preventDefault();showSite();break;
-    case"logout":U=null;view=null;try{sessionStorage.removeItem("solsticio-user")}catch(_){}showSite();toast("Você saiu da conta.");break;
+    case"logout":U=null;view=null;try{sessionStorage.removeItem("arenabeach-user")}catch(_){}showSite();toast("Você saiu da conta.");break;
     case"reset":ask({eyebrow:"Demonstração",title:"Restaurar dados?",body:"Todas as reservas, avisos e alterações feitas neste navegador serão apagadas e os dados de exemplo voltam ao início.",okLabel:"Restaurar",danger:true},()=>{S=seed();save();ui.avalAluno=null;if(U)renderApp();else{renderPublicGrid();renderRules()}toast("Dados de exemplo restaurados.")});break;
     case"week":ui.week=+d.w;renderApp();break;
     case"book":book(U.ref,d.t,d.d);renderApp();break;
@@ -1471,7 +1675,7 @@ document.addEventListener("change",e=>{const s=e.target.closest("[data-chg]");if
 
 /* ---------- boot ---------- */
 load();initSite();
-try{const u=sessionStorage.getItem("solsticio-user");if(u&&USERS[u]){U={user:u,...USERS[u]};showApp()}}catch(e){}
+try{const u=sessionStorage.getItem("arenabeach-user");if(u&&USERS[u]){U={user:u,...USERS[u]};showApp()}}catch(e){}
 })();
 </script>
 
