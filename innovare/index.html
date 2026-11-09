@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Innovare Vidros e Esquadrias | Tombos - MG</title>
+<meta name="description" content="Box de vidro, espelhos, guarda-corpo, esquadrias e portões de alumínio sob medida em Tombos, Carangola e região. Orçamento rápido pelo WhatsApp.">
+<meta name="theme-color" content="#0b1b3d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Innovare Vidros e Esquadrias · Tombos - MG">
+<meta property="og:description" content="Transformamos vidro e alumínio em soluções inteligentes. Peça seu orçamento pelo WhatsApp.">
+<meta property="og:image" content="/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Innovare Vidros e Esquadrias","image":"/assets/og.jpg","telephone":"+55 32 99809-8134","address":{"@type":"PostalAddress","streetAddress":"Av. Alfredo Vargas, 1329, São Sebastião","addressLocality":"Tombos","addressRegion":"MG","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"}],"areaServed":["Tombos","Carangola","Faria Lemos","Pedra Dourada","Porciúncula","Antônio Prado de Minas","Eugenópolis","Caiana","Espera Feliz","Natividade","Divino"],"sameAs":["https://instagram.com/vidracariainnovare"]}
+</script>
+<style>
+/* Layout: abertura 3D presa à rolagem (a casa recebe os vidros), depois seções claras de catálogo com uma faixa azul-noite de prova social. */
+:root{
+  color-scheme: light;
+  --navy:#0b1b3d;
+  --navy-2:#12285a;
+  --brand:#14397a;
+  --ice:#f4f7fb;
+  --ice-2:#e8eef6;
+  --glass:#bfe1e6;
+  --ink:#0f1b2e;
+  --muted:#5b6678;
+  --line:#dbe3ee;
+  --white:#ffffff;
+  --wa:#1fa855;
+  --wa-2:#22c063;
+  --gold:#c9a86a;
+  --f-serif:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
+  --f-sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;background:var(--ice)}
+body{margin:0;background:var(--ice);color:var(--ink);font-family:var(--f-sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--glass);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1220px;margin-inline:auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+@media (min-width:760px){.wrap{padding-left:max(36px,env(safe-area-inset-left,0px));padding-right:max(36px,env(safe-area-inset-right,0px))}}
+.eyebrow{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--brand);margin:0}
+h1,h2,h3{margin:0;text-wrap:balance;font-weight:500}
+.serif{font-family:var(--f-serif)}
+.h2{font-family:var(--f-serif);font-weight:500;font-size:clamp(36px,4.6vw,58px);line-height:1.04;letter-spacing:-.01em;margin-top:12px}
+.h2 em{font-style:italic;color:var(--brand)}
+.lead{color:var(--muted);font-size:17px;max-width:56ch;margin:0}
+.tnum{font-variant-numeric:tabular-nums}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;cursor:pointer;text-decoration:none;padding:14px 22px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn.wa{background:var(--wa);color:#fff;box-shadow:0 12px 28px -12px rgba(31,168,85,.7)}
+.btn.wa:hover{background:var(--wa-2)}
+.btn.navy{background:var(--navy);color:#fff;box-shadow:0 12px 28px -14px rgba(11,27,61,.7)}
+.btn.glass{background:rgba(255,255,255,.12);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4);backdrop-filter:blur(10px)}
+.btn.glass:hover{background:rgba(255,255,255,.2)}
+.btn.line{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 1px var(--line)}
+.btn.line:hover{box-shadow:inset 0 0 0 1px var(--brand)}
+.btn.sm{padding:10px 16px;font-size:14px}
+.btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
+
+/* Prévia */
+.preview{position:fixed;z-index:90;left:50%;top:calc(82px + env(safe-area-inset-top,0px));transform:translateX(-50%);background:#fff7e0;color:#5a4410;border:1px solid #f0d58c;border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:600;box-shadow:0 10px 30px -12px rgba(0,0,0,.35);max-width:calc(100vw - 110px);text-align:center;line-height:1.35}
+
+/* Nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;padding-top:env(safe-area-inset-top,0px);transition:background .35s,box-shadow .35s}
+.nav .wrap{display:flex;align-items:center;gap:22px;height:74px}
+.nav .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.nav .logo img{width:46px;height:46px;border-radius:10px}
+.nav .logo b{font-family:var(--f-serif);font-weight:600;font-size:22px;letter-spacing:.06em;line-height:1}
+.nav .logo small{display:block;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.22em;opacity:.75;margin-top:4px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav ul a{color:#fff;text-decoration:none;font-size:14.5px;font-weight:600;opacity:.88;text-shadow:0 1px 10px rgba(0,0,0,.35)}
+.nav ul a:hover{opacity:1}
+.nav.solid{background:rgba(255,255,255,.92);backdrop-filter:blur(14px) saturate(160%);box-shadow:0 1px 0 var(--line)}
+.nav.solid .logo,.nav.solid ul a{color:var(--navy);text-shadow:none}
+@media (max-width:980px){.nav ul{display:none}.nav .btn{margin-left:auto}}
+@media (max-width:520px){.nav .logo small{display:none}.nav .logo b{font-size:19px}.nav .logo img{width:40px;height:40px}.nav .btn.sm{padding:9px 13px;font-size:13px}.preview{top:auto;bottom:calc(58px + env(safe-area-inset-bottom,0px));font-size:11.5px;max-width:calc(100vw - 100px);left:calc(50% - 30px)}}
+
+/* Abertura 3D */
+.flight{position:relative;height:520vh;background:var(--navy)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;isolation:isolate;background:linear-gradient(180deg,#1b2b55,#6c7fa6 55%,#3e5b3c 56%)}
+#house{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:-2}
+.stage .shade{position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(8,18,40,.62),rgba(8,18,40,.15) 55%,transparent),linear-gradient(180deg,rgba(8,18,40,.45),transparent 22%,transparent 62%,rgba(8,18,40,.7))}
+.stage>.wrap{position:absolute;left:0;right:0}
+.ph{bottom:calc(64px + env(safe-area-inset-bottom,0px));z-index:3;color:#fff;will-change:opacity,transform}
+.ph .eyebrow{color:var(--glass)}
+.ph h1{font-family:var(--f-serif);font-weight:500;font-size:clamp(46px,7vw,98px);line-height:.98;letter-spacing:-.015em;margin:16px 0 18px;max-width:14ch;text-shadow:0 4px 40px rgba(5,12,30,.4)}
+.ph h1 em{font-style:italic;color:var(--glass)}
+.ph h2{font-family:var(--f-serif);font-weight:500;font-size:clamp(42px,6vw,84px);line-height:1;margin:14px 0 14px;max-width:13ch;text-shadow:0 4px 40px rgba(5,12,30,.4)}
+.ph h2 em{font-style:italic;color:var(--glass)}
+.ph p.txt{max-width:46ch;font-size:clamp(15.5px,1.4vw,18px);color:rgba(255,255,255,.88);margin:0 0 26px}
+.ph .row{display:flex;flex-wrap:wrap;gap:12px}
+.steps{top:calc(96px + env(safe-area-inset-top,0px));z-index:3;display:flex;justify-content:flex-end;pointer-events:none}
+.steps ol{list-style:none;margin:0;padding:14px 16px;display:grid;gap:8px;background:rgba(8,18,40,.38);border:1px solid rgba(255,255,255,.18);border-radius:14px;backdrop-filter:blur(10px);font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.steps li{display:flex;align-items:center;gap:10px;transition:color .3s}
+.steps li i{width:16px;height:16px;border-radius:50%;border:1px solid rgba(255,255,255,.4);display:grid;place-items:center;font-style:normal;font-size:10px;transition:all .3s}
+.steps li.on{color:#fff}
+.steps li.on i{background:var(--glass);border-color:var(--glass);color:var(--navy)}
+.steps li.now{color:#fff}
+.steps li.now i{border-color:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.15)}
+@media (max-width:720px){.steps{display:none}}
+.dims{position:absolute;z-index:2;pointer-events:none;font-family:var(--f-mono);font-size:11px;color:rgba(255,255,255,.8);letter-spacing:.06em;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.dims::before,.dims::after{content:"";height:1px;width:40px;background:rgba(255,255,255,.6)}
+.scrub{bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:3;display:flex;align-items:center;gap:14px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.strack{flex:1;height:2px;background:rgba(255,255,255,.2);border-radius:2px;overflow:hidden}
+.strack i{display:block;height:100%;width:0;background:var(--glass)}
+@media (max-width:600px){#scrubLbl{max-width:55vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
+
+/* Números */
+.stats{background:var(--navy);color:#fff;padding-block:42px}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.stat b{display:block;font-family:var(--f-serif);font-weight:500;font-size:clamp(44px,5vw,64px);line-height:1}
+.stat span{display:block;margin-top:8px;font-size:14px;color:rgba(255,255,255,.7)}
+.stat .stars{color:var(--gold);letter-spacing:2px;font-size:15px}
+@media (max-width:760px){.stats .wrap{grid-template-columns:1fr 1fr;gap:28px 18px}}
+
+section.sec{padding-block:clamp(72px,9vw,120px)}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 64px;align-items:end;margin-bottom:48px}
+@media (max-width:860px){.head{grid-template-columns:1fr;margin-bottom:32px}}
+
+/* Sobre */
+.about{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:center}
+.about figure{margin:0;position:relative}
+.about figure img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 30px 60px -30px rgba(11,27,61,.5)}
+.about figure figcaption{position:absolute;left:18px;bottom:18px;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);padding:10px 14px;border-radius:12px;font-size:13px;font-weight:600;color:var(--navy)}
+.about .txt p{color:var(--muted);font-size:17px;margin:18px 0 0;max-width:52ch}
+.checks{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}
+.checks li{display:flex;gap:10px;font-weight:600;font-size:15px}
+.checks li::before{content:"";flex:none;width:20px;height:20px;border-radius:6px;background:var(--glass) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230b1b3d' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12l5 5 9-10'/></svg>") center/13px no-repeat;margin-top:2px}
+@media (max-width:860px){.about{grid-template-columns:1fr;gap:32px}.about figure img{aspect-ratio:4/3}}
+@media (max-width:460px){.checks{grid-template-columns:1fr}}
+
+/* Soluções */
+.sol{background:#fff}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:1060px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.cards{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--ice);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 50px -28px rgba(11,27,61,.45)}
+.card .ph-img{aspect-ratio:16/11;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--navy-2),var(--brand))}
+.card .ph-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.card:hover .ph-img img{transform:scale(1.05)}
+.card .ph-img svg{position:absolute;inset:0;margin:auto;width:56px;height:56px;color:rgba(255,255,255,.8)}
+.card .body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-family:var(--f-sans);font-weight:800;font-size:17px}
+.card p{margin:0;color:var(--muted);font-size:14.5px;flex:1}
+.card button{align-self:flex-start;margin-top:6px;background:none;border:0;padding:0;color:var(--brand);font-weight:700;font-size:14px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.card button:hover{text-decoration:underline;text-underline-offset:4px}
+
+/* Orçamento */
+.quote{background:linear-gradient(180deg,var(--ice),var(--ice-2))}
+.qbox{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;align-items:start}
+.qform,.summary{min-width:0}
+@media (max-width:960px){.qbox{grid-template-columns:minmax(0,1fr)}}
+.qform{background:#fff;border:1px solid var(--line);border-radius:22px;padding:clamp(20px,3vw,34px);box-shadow:0 30px 60px -40px rgba(11,27,61,.35)}
+.qsteps{display:flex;gap:8px;margin-bottom:26px;flex-wrap:wrap}
+.qsteps button{flex:1;min-width:110px;display:flex;align-items:center;gap:10px;border:1px solid var(--line);background:var(--ice);border-radius:12px;padding:10px 12px;cursor:pointer;font-size:13.5px;font-weight:700;color:var(--muted);text-align:left}
+.qsteps button b{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid var(--line);font-size:12px;flex:none}
+.qsteps button[aria-current="step"]{border-color:var(--brand);color:var(--navy);background:#fff}
+.qsteps button[aria-current="step"] b{background:var(--brand);color:#fff;border-color:var(--brand)}
+.qsteps button.done b{background:var(--glass);border-color:var(--glass);color:var(--navy)}
+.qpane h3{font-family:var(--f-serif);font-size:30px;font-weight:500;margin-bottom:6px}
+.qpane .hint{color:var(--muted);font-size:14.5px;margin:0 0 20px}
+.opts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media (max-width:700px){.opts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.opt{position:relative;display:flex;flex-direction:column;gap:8px;border:1.5px solid var(--line);border-radius:14px;padding:14px 12px;cursor:pointer;background:#fff;transition:border-color .2s,box-shadow .2s,background .2s;font-weight:700;font-size:14px;line-height:1.25}
+.opt:hover{border-color:#a9bbd6}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt svg{width:28px;height:28px;color:var(--brand)}
+.opt:has(input:checked){border-color:var(--brand);background:#f1f6ff;box-shadow:0 0 0 3px rgba(20,57,122,.12)}
+.opt:has(input:focus-visible){outline:2px solid var(--brand);outline-offset:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips .opt{flex-direction:row;align-items:center;padding:9px 14px;border-radius:999px;font-size:13.5px}
+.chips .sw{width:16px;height:16px;border-radius:50%;border:1px solid rgba(0,0,0,.15);flex:none}
+.grp{margin-top:20px}
+.grp>p{font-weight:700;font-size:14px;margin:0 0 10px}
+.fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.fields.two{grid-template-columns:1fr 1fr}
+@media (max-width:600px){.fields,.fields.two{grid-template-columns:1fr}}
+.field{display:grid;gap:6px}
+.field label{font-size:13px;font-weight:700;color:var(--muted)}
+.input{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px;background:#fff;transition:border-color .2s,box-shadow .2s}
+.input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 4px rgba(20,57,122,.12)}
+textarea.input{min-height:84px;resize:vertical}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;cursor:pointer;margin-top:14px}
+.check input{accent-color:var(--brand);width:18px;height:18px;margin-top:2px}
+.qnav{display:flex;justify-content:space-between;gap:12px;margin-top:28px;flex-wrap:wrap}
+.err{color:#b4232a;font-size:14px;font-weight:600;margin:14px 0 0;min-height:1.2em}
+.summary{position:sticky;top:96px;background:var(--navy);color:#fff;border-radius:22px;padding:26px;overflow:hidden}
+.summary::before{content:"";position:absolute;inset:-30% -30% auto auto;width:280px;height:280px;background:radial-gradient(circle,rgba(191,225,230,.25),transparent 65%)}
+.summary h3{font-family:var(--f-serif);font-weight:500;font-size:28px}
+.summary dl{margin:18px 0;display:grid;gap:0}
+.summary dl div{display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px;padding:10px 0;border-top:1px solid rgba(255,255,255,.12);font-size:14px}
+.summary dt{color:rgba(255,255,255,.6)}
+.summary dd{margin:0;font-weight:600;overflow-wrap:anywhere}
+.summary .msg{background:rgba(255,255,255,.07);border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:12px;font-family:var(--f-mono);font-size:11.5px;white-space:pre-wrap;color:rgba(255,255,255,.85);max-height:220px;overflow:auto}
+.summary .btn{width:100%;margin-top:16px}
+@media (max-width:960px){.summary{position:relative;top:auto}}
+
+/* Galeria */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.filters button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font-weight:700;font-size:13.5px;cursor:pointer;color:var(--muted);transition:all .2s}
+.filters button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.filters button span{opacity:.6;font-weight:600;margin-left:4px}
+.gal{columns:3 280px;column-gap:16px}
+.gal figure{break-inside:avoid;margin:0 0 16px;position:relative;border-radius:16px;overflow:hidden;cursor:zoom-in;background:var(--ice-2);transition:opacity .35s,transform .35s}
+.gal figure img{width:100%;height:auto;transition:transform .8s var(--ease)}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figcaption{position:absolute;left:12px;bottom:12px;right:12px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.gal figcaption span{background:rgba(255,255,255,.9);backdrop-filter:blur(6px);color:var(--navy);font-size:12.5px;font-weight:700;padding:6px 10px;border-radius:999px}
+.lightbox{position:fixed;inset:0;z-index:120;background:rgba(5,10,24,.92);display:grid;place-items:center;padding:24px}
+.lightbox img{max-height:84vh;max-width:min(1100px,92vw);width:auto;border-radius:14px}
+.lightbox p{color:#fff;text-align:center;margin:14px 0 0;font-weight:600}
+.lightbox .x{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));right:16px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:22px;cursor:pointer}
+.lightbox .nv{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font-size:22px;cursor:pointer}
+.lightbox .prev{left:12px}.lightbox .next{right:12px}
+
+/* Avaliações */
+.reviews{background:var(--navy);color:#fff}
+.reviews .eyebrow{color:var(--glass)}
+.reviews .h2 em{color:var(--glass)}
+.reviews .lead{color:rgba(255,255,255,.72)}
+.gsum{display:flex;align-items:center;gap:18px;flex-wrap:wrap;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:18px 22px}
+.gsum .g{width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none}
+.gsum b{font-family:var(--f-serif);font-size:46px;font-weight:500;line-height:1}
+.gsum .stars{color:var(--gold);font-size:18px;letter-spacing:2px}
+.gsum small{color:rgba(255,255,255,.65);display:block}
+.revs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}
+@media (max-width:960px){.revs{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.revs{grid-template-columns:1fr}}
+.rev{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.rev .top{display:flex;align-items:center;gap:12px}
+.rev .av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:var(--navy);background:var(--glass);flex:none}
+.rev .top b{display:block;font-size:15px}
+.rev .top small{color:rgba(255,255,255,.6);font-size:12.5px}
+.rev .stars{color:var(--gold);letter-spacing:2px}
+.rev p{margin:0;font-family:var(--f-serif);font-size:21px;line-height:1.35}
+.rev .tag{align-self:flex-start;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--glass);border:1px solid rgba(191,225,230,.35);border-radius:999px;padding:4px 9px}
+
+/* Atendimento */
+.serve{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:stretch}
+@media (max-width:900px){.serve{grid-template-columns:1fr}}
+.panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px}
+.hours{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.hours b{font-family:var(--f-serif);font-size:30px;font-weight:500}
+.open{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:13.5px;border-radius:999px;padding:6px 12px}
+.open::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.open.y{color:#137a3c;background:#e3f6ea}
+.open.n{color:#8a5a0b;background:#fbf0d9}
+.cities{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
+.cities li{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:15px}
+.cities li span{color:var(--muted);font-weight:500;font-size:13px}
+.cities li.hq{color:var(--brand)}
+@media (max-width:460px){.cities{grid-template-columns:1fr}}
+.map{border-radius:20px;overflow:hidden;border:1px solid var(--line);min-height:380px;background:var(--ice-2);position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.addr{display:flex;gap:12px;align-items:flex-start;margin-top:18px;font-size:15px}
+.addr svg{width:20px;height:20px;color:var(--brand);flex:none;margin-top:3px}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px}
+@media (max-width:900px){.faq{grid-template-columns:1fr;gap:28px}}
+details{border-bottom:1px solid var(--line)}
+details:first-child{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;padding:20px 0;font-weight:700;font-size:17px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--f-serif);font-size:30px;line-height:.7;color:var(--brand);transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 20px;color:var(--muted);max-width:62ch}
+
+/* Contato */
+.cta{background:linear-gradient(135deg,var(--navy),var(--brand));color:#fff;border-radius:28px;padding:clamp(30px,5vw,64px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:36px;align-items:center;position:relative;overflow:hidden}
+.cta::after{content:"";position:absolute;right:-80px;top:-80px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(191,225,230,.3),transparent 65%)}
+.cta h2{font-family:var(--f-serif);font-weight:500;font-size:clamp(38px,5vw,62px);line-height:1.02}
+.cta h2 em{color:var(--glass)}
+.cta ul{list-style:none;margin:0;padding:0;display:grid;gap:14px;position:relative;z-index:1}
+.cta li a,.cta li span{display:flex;gap:12px;align-items:center;text-decoration:none;font-weight:600}
+.cta li svg{width:20px;height:20px;color:var(--glass);flex:none}
+.cta .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+@media (max-width:860px){.cta{grid-template-columns:1fr}}
+footer{padding-block:34px calc(34px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:13.5px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;align-items:center}
+footer img{width:36px;height:36px;border-radius:8px}
+footer .l{display:flex;gap:12px;align-items:center}
+
+.fab{position:fixed;z-index:80;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(31,168,85,.8);transition:transform .3s var(--ease)}
+.fab:hover{transform:scale(1.06)}
+.fab svg{width:28px;height:28px}
+
+.rv{transition:transform 1s var(--ease)}
+.rv.pre{transform:translateY(32px)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<p class="preview" id="previewNote">Prévia: números de mercado, obras e algumas avaliações são exemplos. Confirme antes de publicar.</p>
+
+<nav class="nav" id="nav" aria-label="Principal">
+  <div class="wrap">
+    <a class="logo" href="#topo" aria-label="Innovare, início"><img src="/assets/logo.webp" alt="" width="46" height="46"><span><b>INNOVARE</b><small>VIDROS E ESQUADRIAS</small></span></a>
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#solucoes">Soluções</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#atendimento">Atendimento</a></li>
+      <li><a href="#duvidas">Dúvidas</a></li>
+    </ul>
+    <a class="btn wa sm" href="#orcamento">Orçamento rápido</a>
+  </div>
+</nav>
+
+<header class="flight" id="topo">
+  <div class="stage">
+    <canvas id="house" aria-hidden="true"></canvas>
+    <div class="shade" aria-hidden="true"></div>
+    <div class="steps wrap" aria-hidden="true"><ol id="stepList">
+      <li data-s="0"><i>✓</i>Medição</li><li data-s="1"><i>2</i>Esquadrias</li><li data-s="2"><i>3</i>Vidros</li><li data-s="3"><i>4</i>Guarda-corpo e portão</li><li data-s="4"><i>5</i>Entrega</li>
+    </ol></div>
+    <div class="ph wrap" id="ph0">
+      <p class="eyebrow">Vidros e esquadrias · Tombos - MG</p>
+      <h1>Transformamos vidro e alumínio em <em>soluções inteligentes.</em></h1>
+      <p class="txt">Esquadrias modernas, vidros sob medida e acabamento premium. Role a tela e veja uma casa recebendo cada etapa do nosso trabalho.</p>
+      <div class="row"><a class="btn wa" href="#orcamento">Fazer orçamento rápido</a><a class="btn glass" data-wa href="#">Falar no WhatsApp</a></div>
+    </div>
+    <div class="ph wrap" id="ph1" style="opacity:0;visibility:hidden"><p class="eyebrow">Etapa 2 · Estrutura</p><h2>Esquadrias de <em>alumínio</em></h2><p class="txt">Perfis com acabamento preto, branco ou bronze, vedação eficiente e linhas retas que valorizam a fachada.</p></div>
+    <div class="ph wrap" id="ph2" style="opacity:0;visibility:hidden"><p class="eyebrow">Etapa 3 · Vidros</p><h2>Vidro temperado <em>sob medida</em></h2><p class="txt">Portas de correr, janelas e fachadas com vidro cortado na medida certa de cada vão.</p></div>
+    <div class="ph wrap" id="ph3" style="opacity:0;visibility:hidden"><p class="eyebrow">Etapa 4 · Segurança e acabamento</p><h2>Guarda-corpo, portão <em>e ACM</em></h2><p class="txt">Leveza na sacada, privacidade no portão de alumínio e revestimento em ACM amadeirado.</p></div>
+    <div class="ph wrap" id="ph4" style="opacity:0;visibility:hidden"><p class="eyebrow">Etapa 5 · Entrega</p><h2>Pronto para <em>morar.</em></h2><p class="txt">Da medição à instalação, com cuidado em cada encaixe. Agora é a sua vez.</p><div class="row"><a class="btn wa" href="#orcamento">Fazer orçamento rápido</a><a class="btn glass" href="#projetos">Ver obras reais</a></div></div>
+    <div class="scrub wrap" aria-hidden="true"><span id="scrubLbl">Role para construir</span><span class="strack"><i id="scrubBar"></i></span><span class="tnum" id="scrubPct">00%</span></div>
+  </div>
+</header>
+
+<section class="stats" aria-label="Números">
+  <div class="wrap">
+    <div class="stat"><b class="tnum" data-count="anos">0</b><span>anos de mercado</span></div>
+    <div class="stat"><b class="tnum" data-count="obras">0</b><span>obras entregues</span></div>
+    <div class="stat"><b class="tnum" id="nCidades">11</b><span>cidades atendidas na região</span></div>
+    <div class="stat"><b class="tnum" id="nNota">4,9</b><span><span class="stars">★★★★★</span> no Google</span></div>
+  </div>
+</section>
+
+<section class="sec" id="sobre">
+  <div class="wrap about">
+    <figure class="rv"><img src="/assets/p5.webp" alt="Fachada com esquadrias pretas e revestimento em ACM amadeirado" loading="lazy" width="824" height="1400"><figcaption>Fachada com esquadrias e ACM</figcaption></figure>
+    <div class="txt rv">
+      <p class="eyebrow">Sobre a Innovare</p>
+      <h2 class="h2">Precisão no detalhe. <em>Elegância no resultado.</em></h2>
+      <p>A Innovare transforma vidro e alumínio em soluções sob medida para residências e empresas, unindo funcionalidade, estética e um acabamento rigoroso.</p>
+      <p>Cada projeto é pensado para valorizar o espaço, da medição à instalação, com materiais de qualidade e cuidado em cada encaixe.</p>
+      <ul class="checks"><li>Medição no local</li><li>Vidro temperado e laminado</li><li>Instalação com equipe própria</li><li>Atendimento em 11 cidades</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec sol" id="solucoes">
+  <div class="wrap">
+    <div class="head rv"><div><p class="eyebrow">Soluções</p><h2 class="h2">O que <em>fazemos</em></h2></div><p class="lead">Escolha um serviço para começar o orçamento já com ele selecionado.</p></div>
+    <div class="cards" id="cards"></div>
+  </div>
+</section>
+
+<section class="sec quote" id="orcamento">
+  <div class="wrap">
+    <div class="head rv"><div><p class="eyebrow">Orçamento rápido</p><h2 class="h2">Monte seu pedido <em>em 1 minuto</em></h2></div><p class="lead">Responda quatro perguntas e envie tudo pronto pelo WhatsApp. Não sabe as medidas? Sem problema: marcamos uma visita técnica.</p></div>
+    <div class="qbox">
+      <form class="qform" id="qform" novalidate>
+        <div class="qsteps" role="group" aria-label="Etapas">
+          <button type="button" data-go="0"><b>1</b>Serviço</button>
+          <button type="button" data-go="1"><b>2</b>Medidas</button>
+          <button type="button" data-go="2"><b>3</b>Acabamento</button>
+          <button type="button" data-go="3"><b>4</b>Seus dados</button>
+        </div>
+        <div class="qpane" data-pane="0"><h3>Qual serviço você precisa?</h3><p class="hint">Escolha uma opção.</p><div class="opts" id="qServ"></div></div>
+        <div class="qpane" data-pane="1" hidden><h3>Quais as medidas?</h3><p class="hint">Em centímetros. Pode ser aproximado: confirmamos tudo na medição.</p>
+          <div class="fields"><div class="field"><label for="qL">Largura (cm)</label><input class="input" id="qL" inputmode="numeric" placeholder="Ex.: 120"></div><div class="field"><label for="qA">Altura (cm)</label><input class="input" id="qA" inputmode="numeric" placeholder="Ex.: 190"></div><div class="field"><label for="qQ">Quantidade</label><input class="input" id="qQ" inputmode="numeric" value="1"></div></div>
+          <label class="check" for="qVisita"><input type="checkbox" id="qVisita"><span>Não sei as medidas. Quero uma <b>visita técnica</b> para medir.</span></label>
+          <p class="hint" id="qArea" style="margin:14px 0 0"></p>
+        </div>
+        <div class="qpane" data-pane="2" hidden><h3>Como você imagina o acabamento?</h3><p class="hint">Se estiver em dúvida, deixe como está e conversamos no WhatsApp.</p><div id="qFin"></div></div>
+        <div class="qpane" data-pane="3" hidden><h3>Para quem é o orçamento?</h3><p class="hint">Usamos só para responder seu pedido.</p>
+          <div class="fields two"><div class="field"><label for="qNome">Seu nome</label><input class="input" id="qNome" autocomplete="name" placeholder="Nome e sobrenome"></div><div class="field"><label for="qCidade">Cidade</label><select class="input" id="qCidade"></select></div></div>
+          <div class="fields two" style="margin-top:12px"><div class="field"><label for="qBairro">Bairro</label><input class="input" id="qBairro" placeholder="Opcional"></div><div class="field"><label for="qPrazo">Para quando?</label><select class="input" id="qPrazo"><option>Sem pressa</option><option>Nos próximos 30 dias</option><option>Urgente</option><option>Obra ainda em andamento</option></select></div></div>
+          <div class="field" style="margin-top:12px"><label for="qObs">Observações</label><textarea class="input" id="qObs" placeholder="Ex.: banheiro da suíte, quero puxador comprido. Depois envio fotos do local."></textarea></div>
+        </div>
+        <p class="err" id="qErr" role="alert"></p>
+        <div class="qnav"><button type="button" class="btn line" id="qBack">Voltar</button><button type="button" class="btn navy" id="qNext">Continuar</button></div>
+      </form>
+      <aside class="summary" aria-live="polite">
+        <p class="eyebrow" style="color:var(--glass)">Resumo do pedido</p>
+        <h3 id="sTitle">Escolha um serviço</h3>
+        <dl id="sList"></dl>
+        <p style="font-size:13px;color:rgba(255,255,255,.65);margin:0 0 8px">Mensagem que será enviada:</p>
+        <div class="msg" id="sMsg"></div>
+        <a class="btn wa" id="sSend" target="_blank" rel="noopener" href="#" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.2 1.4 2.5 1.5.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg>Enviar pedido no WhatsApp</a>
+        <p style="font-size:12.5px;color:rgba(255,255,255,.6);margin:12px 0 0">Depois de enviar, mande fotos do local na mesma conversa.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="projetos">
+  <div class="wrap">
+    <div class="head rv"><div><p class="eyebrow">Projetos realizados</p><h2 class="h2">Nosso trabalho <em>em cada ambiente</em></h2></div><p class="lead">Obras reais da Innovare. Filtre por serviço e toque na foto para ampliar.</p></div>
+    <div class="filters" id="filters" role="group" aria-label="Filtrar por serviço"></div>
+    <div class="gal" id="gal"></div>
+  </div>
+</section>
+
+<section class="sec reviews" id="avaliacoes">
+  <div class="wrap">
+    <div class="head rv"><div><p class="eyebrow">Avaliações de clientes</p><h2 class="h2">Quem confia, <em>recomenda</em></h2></div>
+      <div class="gsum"><span class="g" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></span><div><b class="tnum" id="gNota">4,9</b></div><div><span class="stars">★★★★★</span><small id="gTotal">avaliações no Google</small></div><a class="btn glass sm" id="gLink" target="_blank" rel="noopener" href="#" style="margin-left:auto">Ver no Google</a></div>
+    </div>
+    <div class="revs" id="revs"></div>
+  </div>
+</section>
+
+<section class="sec" id="atendimento">
+  <div class="wrap">
+    <div class="head rv"><div><p class="eyebrow">Atendimento</p><h2 class="h2">Tombos <em>e região</em></h2></div><p class="lead">Atendemos Tombos e cidades vizinhas em Minas Gerais e no noroeste fluminense, com medição no local.</p></div>
+    <div class="serve">
+      <div class="panel rv">
+        <div class="hours"><div><p class="eyebrow">Horário</p><b>Seg a sex · 8h às 18h</b></div><span class="open" id="openNow">Verificando…</span></div>
+        <ul class="cities" id="cities"></ul>
+        <div class="addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Av. Alfredo Vargas, 1329, São Sebastião</b><br>Tombos - MG · <a href="https://maps.google.com/?q=Av.%20Alfredo%20Vargas%2C%201329%2C%20S%C3%A3o%20Sebasti%C3%A3o%2C%20Tombos%20-%20MG" target="_blank" rel="noopener">Abrir rota no mapa</a></div></div>
+      </div>
+      <div class="map rv"><iframe title="Mapa da Innovare em Tombos - MG" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Av.%20Alfredo%20Vargas%2C%201329%2C%20Tombos%20-%20MG&z=15&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="duvidas" style="padding-top:0">
+  <div class="wrap faq">
+    <div class="rv"><p class="eyebrow">Perguntas frequentes</p><h2 class="h2">Dúvidas <em>comuns</em></h2><p class="lead" style="margin-top:16px">Não achou sua resposta? Chame no WhatsApp que a gente explica.</p><a class="btn wa" data-wa href="#" style="margin-top:22px">Perguntar no WhatsApp</a></div>
+    <div class="rv">
+      <details><summary>Vocês fazem visita para medir?</summary><p>Sim. Fazemos a medição no local, em Tombos e nas cidades atendidas. As medidas que você informa no orçamento rápido servem só como referência inicial.</p></details>
+      <details><summary>Qual a diferença entre vidro temperado e laminado?</summary><p>O temperado é até cinco vezes mais resistente que o vidro comum e, se quebrar, se desfaz em pedaços pequenos e sem corte. O laminado tem uma película entre duas lâminas: se trincar, os cacos ficam presos. Por isso o laminado é muito usado em guarda-corpos, coberturas e fachadas.</p></details>
+      <details><summary>Qual vidro é usado no box de banheiro?</summary><p>Box de vidro deve ser feito com vidro de segurança, normalmente temperado de 8 mm. Também trabalhamos com opções incolor, fumê, bronze e jateado, com ferragens em várias cores.</p></details>
+      <details><summary>Quanto tempo leva para ficar pronto?</summary><p>Depende do serviço e da quantidade. Depois da medição informamos o prazo de produção e a data de instalação no próprio orçamento.</p></details>
+      <details><summary>Vocês atendem fora de Tombos?</summary><p>Sim. Atendemos as cidades listadas na seção de atendimento. Se a sua cidade não está na lista, pergunte no WhatsApp.</p></details>
+      <details><summary>Como limpar o vidro sem manchar?</summary><p>Use pano de microfibra, água e detergente neutro. Evite palha de aço, produtos abrasivos e álcool em excesso nas ferragens. No box, puxe a água com rodinho após o banho para evitar manchas de calcário.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contato" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta rv">
+      <div><p class="eyebrow" style="color:var(--glass)">Contato</p><h2>Vamos tirar seu projeto <em>do papel?</em></h2><div class="row"><a class="btn wa" href="#orcamento">Fazer orçamento rápido</a><a class="btn glass" data-wa href="#">Falar no WhatsApp</a></div></div>
+      <ul>
+        <li><a data-wa href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(32) 99809-8134</a></li>
+        <li><a href="https://instagram.com/vidracariainnovare" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@vidracariainnovare</a></li>
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Segunda a sexta, das 8h às 18h</span></li>
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Av. Alfredo Vargas, 1329, São Sebastião, Tombos - MG</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="l"><img src="/assets/logo.webp" alt="" width="36" height="36"><span>© 2026 Innovare Vidros e Esquadrias · CNPJ 69.574.166/0001-18</span></div>
+    <span>Desenvolvido por <b>NEXO</b> Soluções Empresariais</span>
+  </div>
+</footer>
+
+<a class="fab" data-wa href="#" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.2 1.4 2.5 1.5.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg></a>
+
+<div class="lightbox" id="lb" hidden role="dialog" aria-modal="true" aria-label="Foto ampliada"><button class="x" data-lb="close" aria-label="Fechar">×</button><button class="nv prev" data-lb="prev" aria-label="Foto anterior">‹</button><figure style="margin:0"><img id="lbImg" alt=""><p id="lbCap"></p></figure><button class="nv next" data-lb="next" aria-label="Próxima foto">›</button></div>
+
+<script src="/vendor/three.min.js"></script>
+<script>
+(()=>{
+"use strict";
+/* =========================================================
+   DADOS DA EMPRESA: edite aqui antes de publicar
+   ========================================================= */
+const CONFIG={
+  previa:true,                 // false esconde o aviso de prévia
+  whatsapp:"5532998098134",
+  anosMercado:8,               // EXEMPLO: confirmar
+  obrasEntregues:1200,         // EXEMPLO: confirmar
+  notaGoogle:4.9,              // EXEMPLO: confirmar
+  totalAvaliacoes:87,          // EXEMPLO: confirmar
+  linkGoogle:"https://www.google.com/maps/search/?api=1&query=Innovare%20Vidros%20e%20Esquadrias%20Tombos%20MG",
+  cidades:[["Tombos","sede"],["Carangola","MG"],["Faria Lemos","MG"],["Pedra Dourada","MG"],["Antônio Prado de Minas","MG"],["Eugenópolis","MG"],["Caiana","MG"],["Espera Feliz","MG"],["Divino","MG"],["Porciúncula","RJ"],["Natividade","RJ"]],
+  avaliacoes:[
+    {nome:"Mariana S.",quando:"Cliente Innovare",texto:"Serviço impecável do início ao fim. O box e o espelho do banheiro ficaram lindos, acabamento perfeito.",servico:"Box e espelho"},
+    {nome:"Carlos R.",quando:"Cliente Innovare",texto:"Equipe pontual, caprichosa e muito atenciosa. O portão de alumínio transformou a fachada da casa.",servico:"Portão de alumínio"},
+    {nome:"Patrícia L.",quando:"Cliente Innovare",texto:"Atendimento excelente e preço justo. O guarda-corpo da escada ficou exatamente como sonhávamos.",servico:"Guarda-corpo"},
+    {nome:"Exemplo · Rodrigo M.",quando:"EXEMPLO: trocar por avaliação real",texto:"Fizeram todas as janelas da obra. Mediram, entregaram no prazo combinado e deixaram tudo limpo.",servico:"Esquadrias"},
+    {nome:"Exemplo · Juliana F.",quando:"EXEMPLO: trocar por avaliação real",texto:"O espelho orgânico com LED virou o destaque do lavabo. Recomendo demais.",servico:"Espelho com LED"},
+    {nome:"Exemplo · André P.",quando:"EXEMPLO: trocar por avaliação real",texto:"Porta de vidro da área gourmet ficou perfeita, corre leve e sem barulho.",servico:"Porta de vidro"}
+  ]
+};
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const waLink=t=>"https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(t);
+const fmt=n=>n.toLocaleString("pt-BR");
+$("#previewNote").hidden=!CONFIG.previa;
+$$("[data-wa]").forEach(a=>{a.href=waLink("Olá! Vim pelo site e gostaria de um orçamento.");a.target="_blank";a.rel="noopener"});
+
+/* ---------- ícones ---------- */
+const IC={
+ box:'<path d="M4 3h16v18H4z"/><path d="M12 3v18M9 11v3"/>',
+ espelho:'<ellipse cx="12" cy="11" rx="6.5" ry="8"/><path d="M9 7.5c1-1 2.5-1.5 4-1"/><path d="M12 19v2"/>',
+ guarda:'<path d="M3 20h18M4 20V9M20 20V9M3 9h18"/><path d="M8 9v11M12 9v11M16 9v11" opacity=".45"/>',
+ esquadria:'<rect x="3" y="4" width="18" height="16" rx="1"/><path d="M12 4v16M3 12h18"/>',
+ portao:'<rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 8h18M3 12h18M3 16h18"/>',
+ porta:'<rect x="4" y="2" width="16" height="20" rx="1"/><path d="M12 2v20M14.5 11v3"/>',
+ acm:'<rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M3 15h18M9 3v6M15 9v6M9 15v6"/>',
+ projeto:'<path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/>'};
+const svg=k=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[k]}</svg>`;
+
+/* ---------- serviços ---------- */
+const CORES_VIDRO=[["Incolor","#e9f3f4"],["Fumê","#5d6164"],["Verde","#9fc4a6"],["Bronze","#9c7a5a"],["Jateado","#f4f4f2"]];
+const CORES_AL=[["Preto","#1d1d20"],["Branco","#f7f7f5"],["Natural fosco","#b9bcbf"],["Bronze","#7a5a3c"],["Dourado","#c9a86a"]];
+const SERV=[
+ {id:"box",nome:"Box de vidro",icon:"box",img:"p7",desc:"Banheiros elegantes com vidro temperado e ferragens finas.",fin:[["Modelo",["De correr","Abrir (pivotante)","Fixo / walk-in","Até o teto"]],["Vidro",CORES_VIDRO],["Ferragens",CORES_AL]]},
+ {id:"espelho",nome:"Espelhos",icon:"espelho",img:"p9",desc:"Formatos orgânicos, iluminação LED e cortes sob medida.",fin:[["Formato",["Retangular","Redondo","Orgânico","Oval"]],["Iluminação",["Sem LED","LED frontal","LED traseiro (difuso)"]],["Moldura",["Sem moldura","Alumínio preto","Alumínio dourado"]]]},
+ {id:"guarda",nome:"Guarda-corpo",icon:"guarda",img:"p4",desc:"Segurança e leveza para escadas, sacadas e varandas.",fin:[["Local",["Escada","Sacada / varanda","Piscina","Mezanino"]],["Vidro",[["Laminado incolor","#e9f3f4"],["Laminado fumê","#5d6164"],["Temperado incolor","#e9f3f4"]]],["Corrimão / perfis",CORES_AL]]},
+ {id:"esquadria",nome:"Esquadrias de alumínio",icon:"esquadria",img:"p10",desc:"Linhas modernas, vedação eficiente e durabilidade.",fin:[["Tipo",["Janela de correr","Maxim-ar","Veneziana","Basculante"]],["Cor do alumínio",CORES_AL],["Vidro",CORES_VIDRO]]},
+ {id:"portao",nome:"Portões de alumínio",icon:"portao",img:"p2",desc:"Design contemporâneo com automação e privacidade.",fin:[["Modelo",["Basculante","De correr","Pivotante","Social (pedestre)"]],["Acabamento",["Lambri horizontal","Frisado","Com vidro","ACM amadeirado"]],["Automação",["Sem motor","Com motor"]]]},
+ {id:"porta",nome:"Janelas e portas de vidro",icon:"porta",img:"p1",desc:"Mais luz natural e integração entre ambientes.",fin:[["Modelo",["Porta de correr","Porta pivotante","Janela de vidro","Fachada / pele de vidro"]],["Vidro",CORES_VIDRO],["Perfis",CORES_AL]]},
+ {id:"projeto",nome:"Projetos sob medida",icon:"projeto",img:null,desc:"Soluções exclusivas pensadas para cada espaço.",fin:[["Ambiente",["Residencial","Comercial","Área gourmet","Fachada"]]]},
+ {id:"acm",nome:"Móveis e acabamentos em ACM",icon:"acm",img:"p3",desc:"Revestimentos e peças com acabamento impecável.",fin:[["Aplicação",["Fachada","Móvel / armário","Portão","Painel interno"]],["Padrão",["Amadeirado","Preto fosco","Branco","Grafite"]]]}];
+$("#cards").innerHTML=SERV.map(s=>`<article class="card rv"><div class="ph-img">${s.img?`<img src="/assets/${s.img}.webp" alt="${esc(s.nome)} feito pela Innovare" loading="lazy">`:svg(s.icon)}</div><div class="body"><h3>${esc(s.nome)}</h3><p>${esc(s.desc)}</p><button type="button" data-quote="${s.id}">Pedir orçamento →</button></div></article>`).join("");
+
+/* ---------- orçamento rápido ---------- */
+const Q={step:0,serv:null,fin:{}};
+$("#qServ").innerHTML=SERV.map(s=>`<label class="opt"><input type="radio" name="qserv" value="${s.id}">${svg(s.icon)}<span>${esc(s.nome)}</span></label>`).join("");
+$("#qCidade").innerHTML=CONFIG.cidades.map(([c,u])=>`<option>${esc(c)}${u==="RJ"?" - RJ":" - MG"}</option>`).join("")+"<option>Outra cidade</option>";
+function renderFin(){
+  const s=SERV.find(x=>x.id===Q.serv);if(!s){$("#qFin").innerHTML='<p class="hint">Escolha um serviço primeiro.</p>';return}
+  $("#qFin").innerHTML=s.fin.map(([g,ops],gi)=>`<div class="grp"><p>${esc(g)}</p><div class="chips">${ops.map(o=>{const[n,c]=Array.isArray(o)?o:[o,null];return `<label class="opt"><input type="radio" name="fin${gi}" value="${esc(n)}"${Q.fin[g]===n?" checked":""}>${c?`<span class="sw" style="background:${c}"></span>`:""}${esc(n)}</label>`}).join("")}</div></div>`).join("");
+  $$("#qFin input").forEach((inp,i)=>inp.addEventListener("change",()=>{const g=s.fin[+inp.name.slice(3)][0];Q.fin[g]=inp.value;summary()}));
+}
+function vals(){const n=v=>Math.max(0,parseInt(String(v).replace(/\D/g,""),10)||0);return{L:n($("#qL").value),A:n($("#qA").value),Qt:Math.max(1,n($("#qQ").value)||1),visita:$("#qVisita").checked}}
+function message(){
+  const s=SERV.find(x=>x.id===Q.serv);const v=vals();const lines=["Olá, Innovare! Quero um orçamento pelo site.",""];
+  if(s)lines.push("• Serviço: "+s.nome);
+  if(v.visita)lines.push("• Medidas: preciso de visita técnica");else if(v.L&&v.A)lines.push(`• Medidas: ${v.L} × ${v.A} cm (${v.Qt} ${v.Qt>1?"unidades":"unidade"}) · aprox. ${(v.L*v.A*v.Qt/10000).toFixed(2).replace(".",",")} m²`);
+  Object.entries(Q.fin).forEach(([k,x])=>lines.push(`• ${k}: ${x}`));
+  const nome=$("#qNome").value.trim();if(nome)lines.push("• Nome: "+nome);
+  lines.push("• Cidade: "+$("#qCidade").value+($("#qBairro").value.trim()?" ("+$("#qBairro").value.trim()+")":""));
+  lines.push("• Prazo: "+$("#qPrazo").value);
+  const obs=$("#qObs").value.trim();if(obs)lines.push("• Obs.: "+obs);
+  return lines.join("\n");
+}
+function summary(){
+  const s=SERV.find(x=>x.id===Q.serv);const v=vals();
+  $("#sTitle").textContent=s?s.nome:"Escolha um serviço";
+  const rows=[];if(v.visita)rows.push(["Medidas","Visita técnica"]);else if(v.L&&v.A)rows.push(["Medidas",`${v.L} × ${v.A} cm · ${v.Qt}x`],["Área aprox.",(v.L*v.A*v.Qt/10000).toFixed(2).replace(".",",")+" m²"]);
+  Object.entries(Q.fin).forEach(([k,x])=>rows.push([k,x]));rows.push(["Cidade",$("#qCidade").value]);
+  $("#sList").innerHTML=rows.map(([a,b])=>`<div><dt>${esc(a)}</dt><dd>${esc(b)}</dd></div>`).join("");
+  $("#sMsg").textContent=message();
+  const ready=!!s&&$("#qNome").value.trim().length>=2;
+  const a=$("#sSend");a.href=ready?waLink(message()):"#";a.setAttribute("aria-disabled",String(!ready));
+  const ar=$("#qArea");ar.textContent=!v.visita&&v.L&&v.A?`Área aproximada: ${(v.L*v.A*v.Qt/10000).toFixed(2).replace(".",",")} m²`:"";
+}
+function check(step){
+  const v=vals();
+  if(step===0&&!Q.serv)return"Escolha um serviço para continuar.";
+  if(step===1&&!v.visita&&(!v.L||!v.A))return"Informe largura e altura, ou marque a visita técnica.";
+  if(step===1&&!v.visita&&(v.L>2000||v.A>1500))return"Confira as medidas: use centímetros (ex.: 120 para 1,20 m).";
+  if(step===3&&$("#qNome").value.trim().length<2)return"Escreva seu nome para sabermos quem atender.";
+  return"";
+}
+function goStep(n){
+  let err="";for(let i=0;i<n;i++){const e=check(i);if(e){err=e;n=i;break}}
+  $("#qErr").textContent=err;
+  Q.step=n;$$(".qpane").forEach(p=>p.hidden=+p.dataset.pane!==n);
+  $$(".qsteps button").forEach((b,i)=>{b.toggleAttribute("aria-current",false);if(i===n)b.setAttribute("aria-current","step");b.classList.toggle("done",i<n)});
+  $("#qBack").style.visibility=n===0?"hidden":"visible";
+  $("#qNext").textContent=n===3?"Enviar no WhatsApp":"Continuar";
+  if(n===2)renderFin();summary();
+}
+$("#qServ").addEventListener("change",e=>{Q.serv=e.target.value;Q.fin={};$("#qErr").textContent="";summary();setTimeout(()=>goStep(1),220)});
+$$(".qsteps button").forEach(b=>b.addEventListener("click",()=>goStep(+b.dataset.go)));
+$("#qBack").addEventListener("click",()=>goStep(Math.max(0,Q.step-1)));
+$("#qNext").addEventListener("click",()=>{const e=check(Q.step);$("#qErr").textContent=e;if(e)return;if(Q.step<3)goStep(Q.step+1);else{summary();window.open(waLink(message()),"_blank","noopener")}});
+$("#qform").addEventListener("input",()=>{summary();if($("#qErr").textContent&&!check(Q.step))$("#qErr").textContent=""});
+document.addEventListener("click",e=>{const b=e.target.closest("[data-quote]");if(!b)return;const id=b.dataset.quote;Q.serv=id;Q.fin={};const r=$(`#qServ input[value="${id}"]`);if(r)r.checked=true;goStep(1);$("#orcamento").scrollIntoView({behavior:"smooth"})});
+goStep(0);
+
+/* ---------- galeria ---------- */
+const FOTOS=[
+ ["p6","box","Box de vidro com nicho iluminado"],["p7","box","Box com perfis pretos"],["p9","espelho","Espelho orgânico e box de vidro"],
+ ["p4","guarda","Guarda-corpo de vidro na escada"],["p8","guarda","Guarda-corpo na varanda"],["p10","esquadria","Esquadria veneziana branca"],
+ ["p5","esquadria","Fachada com esquadrias pretas e ACM"],["p2","portao","Portão de alumínio e janelas de vidro"],["p1","porta","Porta de vidro para a área da piscina"],["p3","acm","Móveis em ACM amadeirado"]];
+const CAT={todos:"Todos",box:"Box",espelho:"Espelhos",guarda:"Guarda-corpo",esquadria:"Esquadrias",portao:"Portões",porta:"Portas e janelas",acm:"ACM"};
+let filt="todos",shown=[];
+function renderGal(){
+  $("#filters").innerHTML=Object.entries(CAT).map(([k,l])=>{const n=k==="todos"?FOTOS.length:FOTOS.filter(f=>f[1]===k).length;return n?`<button type="button" data-f="${k}" aria-pressed="${k===filt}">${l}<span>${n}</span></button>`:""}).join("");
+  shown=FOTOS.filter(f=>filt==="todos"||f[1]===filt);
+  $("#gal").innerHTML=shown.map(([f,c,t],i)=>`<figure data-i="${i}" tabindex="0" role="button" aria-label="Ampliar: ${esc(t)}"><img src="/assets/${f}.webp" alt="${esc(t)} · Innovare, Tombos - MG" loading="lazy"><figcaption><span>${esc(CAT[c])}</span></figcaption></figure>`).join("");
+}
+$("#filters").addEventListener("click",e=>{const b=e.target.closest("[data-f]");if(b){filt=b.dataset.f;renderGal()}});
+let lbi=0;
+function openLb(i){lbi=(i+shown.length)%shown.length;const[f,c,t]=shown[lbi];$("#lbImg").src="/assets/"+f+".webp";$("#lbImg").alt=t;$("#lbCap").textContent=t;$("#lb").hidden=false;document.body.style.overflow="hidden";$("#lb .x").focus()}
+function closeLb(){$("#lb").hidden=true;document.body.style.overflow=""}
+$("#gal").addEventListener("click",e=>{const f=e.target.closest("figure");if(f)openLb(+f.dataset.i)});
+$("#gal").addEventListener("keydown",e=>{const f=e.target.closest("figure");if(f&&(e.key==="Enter"||e.key===" ")){e.preventDefault();openLb(+f.dataset.i)}});
+$("#lb").addEventListener("click",e=>{const a=e.target.closest("[data-lb]");if(a){a.dataset.lb==="close"?closeLb():openLb(lbi+(a.dataset.lb==="next"?1:-1))}else if(e.target===$("#lb"))closeLb()});
+addEventListener("keydown",e=>{if($("#lb").hidden)return;if(e.key==="Escape")closeLb();if(e.key==="ArrowRight")openLb(lbi+1);if(e.key==="ArrowLeft")openLb(lbi-1)});
+renderGal();
+
+/* ---------- avaliações, números, atendimento ---------- */
+$("#revs").innerHTML=CONFIG.avaliacoes.map(r=>`<article class="rev rv"><div class="top"><span class="av">${esc(r.nome.replace("Exemplo · ","")[0])}</span><div><b>${esc(r.nome)}</b><small>${esc(r.quando)}</small></div></div><span class="stars" aria-label="5 de 5 estrelas">★★★★★</span><p>“${esc(r.texto)}”</p><span class="tag">${esc(r.servico)}</span></article>`).join("");
+const nota=CONFIG.notaGoogle.toFixed(1).replace(".",",");$("#gNota").textContent=nota;$("#nNota").textContent=nota;
+$("#gTotal").textContent=CONFIG.totalAvaliacoes+" avaliações no Google";$("#gLink").href=CONFIG.linkGoogle;
+$("#nCidades").textContent=CONFIG.cidades.length;
+$("#cities").innerHTML=CONFIG.cidades.map(([c,u])=>`<li class="${u==="sede"?"hq":""}">${esc(c)}<span>${u==="sede"?"Sede":u}</span></li>`).join("");
+function openState(){
+  const now=new Date(new Date().toLocaleString("en-US",{timeZone:"America/Sao_Paulo"}));const d=now.getDay(),m=now.getHours()*60+now.getMinutes();
+  const open=d>=1&&d<=5&&m>=480&&m<1080;const el=$("#openNow");el.className="open "+(open?"y":"n");
+  el.textContent=open?"Aberto agora":(d>=1&&d<=5&&m<480?"Fechado · abre hoje às 8h":d===5&&m>=1080||d===6||d===0?"Fechado · abre segunda às 8h":"Fechado · abre amanhã às 8h");
+}
+openState();setInterval(openState,60000);
+const counters=$$("[data-count]");
+function runCount(el){const target=el.dataset.count==="anos"?CONFIG.anosMercado:CONFIG.obrasEntregues;const pre=el.dataset.count==="obras"?"+":"";const t0=performance.now();
+  const step=t=>{const k=Math.min(1,(t-t0)/1600),e=1-Math.pow(1-k,3);el.textContent=pre+fmt(Math.round(target*e));if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)}
+counters.forEach(el=>el.textContent=(el.dataset.count==="obras"?"+":"")+fmt(el.dataset.count==="anos"?CONFIG.anosMercado:CONFIG.obrasEntregues));
+if("IntersectionObserver" in window){const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){runCount(en.target);io.unobserve(en.target)}}),{threshold:.6});counters.forEach(c=>io.observe(c))}
+
+/* ---------- nav e revelação ---------- */
+const nav=$("#nav");const onScroll=()=>{const f=$("#topo");nav.classList.toggle("solid",scrollY>f.offsetHeight-innerHeight-30)};addEventListener("scroll",onScroll,{passive:true});onScroll();
+if("IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion: reduce)").matches){
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.remove("pre");io.unobserve(en.target)}}),{rootMargin:"0px 0px -6% 0px"});
+  $$(".rv").forEach(el=>{if(el.getBoundingClientRect().top>innerHeight){el.classList.add("pre");io.observe(el)}});
+}
+
+/* =========================================================
+   ABERTURA 3D: a casa recebendo os vidros
+   ========================================================= */
+const smooth=(a,b,x)=>{const t=Math.max(0,Math.min(1,(x-a)/(b-a)));return t*t*(3-2*t)};
+function progress(){const f=$("#topo"),r=f.getBoundingClientRect(),span=r.height-innerHeight;return span>0?Math.max(0,Math.min(1,-r.top/span)):0}
+const PH=[[-1,0,.08,.14],[.15,.2,.3,.35],[.36,.41,.5,.55],[.56,.61,.7,.75],[.8,.86,2,3]];
+const STEP_AT=[0,.15,.36,.56,.8];
+function updateUI(p){
+  PH.forEach(([a,b,c,d],i)=>{const o=a<0?1-smooth(c,d,p):smooth(a,b,p)*(1-smooth(c,d,p));const el=$("#ph"+i);el.style.opacity=o.toFixed(3);el.style.transform=`translateY(${((1-o)*26).toFixed(1)}px)`;el.style.visibility=o<.02?"hidden":"visible";el.style.pointerEvents=o>.5?"auto":"none"});
+  $$("#stepList li").forEach((li,i)=>{const s=STEP_AT[i];const nx=STEP_AT[i+1]??2;li.classList.toggle("on",i===0||p>=nx-.02||(i===4&&p>.95));li.classList.toggle("now",p>=s&&p<nx-.02&&i>0);const ic=li.querySelector("i");ic.textContent=li.classList.contains("on")?"✓":String(i+1)});
+  $("#scrubBar").style.width=(p*100).toFixed(1)+"%";$("#scrubPct").textContent=String(Math.round(p*100)).padStart(2,"0")+"%";
+  $("#scrubLbl").textContent=p<.02?"Role para construir":p<.97?"Instalando o projeto":"Obra entregue · continue rolando";
+}
+function initHouse(){
+  const cv=$("#house");if(!window.THREE)return false;
+  let R;try{R=new THREE.WebGLRenderer({canvas:cv,antialias:true,powerPreference:"high-performance"})}catch(e){return false}
+  if(!R||!R.getContext())return false;
+  const small=innerWidth<720;
+  R.setPixelRatio(Math.min(devicePixelRatio||1,small?1.5:1.75));R.outputEncoding=THREE.sRGBEncoding;R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=.95;
+  R.shadowMap.enabled=true;R.shadowMap.type=THREE.PCFSoftShadowMap;
+  const scene=new THREE.Scene();
+  let seed=7;const rnd=()=>{seed=(seed*16807)%2147483647;return(seed-1)/2147483646};
+  const tex=(w,h,fn,rep)=>{const c=document.createElement("canvas");c.width=w;c.height=h;fn(c.getContext("2d"),w,h);const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;t.anisotropy=R.capabilities.getMaxAnisotropy();if(rep){t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(rep[0],rep[1])}return t};
+  const std=o=>new THREE.MeshStandardMaterial(o);
+  const box=(w,h,d,mat,x,y,z,o={})=>{const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);m.position.set(x,y,z);m.castShadow=o.cast!==false;m.receiveShadow=o.recv!==false;(o.parent||scene).add(m);return m};
+
+  /* céu de fim de tarde + reflexos */
+  const skyFn=(g,w,h)=>{const gr=g.createLinearGradient(0,0,0,h);gr.addColorStop(0,"#0f1d44");gr.addColorStop(.25,"#2b3f78");gr.addColorStop(.4,"#7487b8");gr.addColorStop(.47,"#f2b08a");gr.addColorStop(.5,"#ffd6a8");gr.addColorStop(.52,"#5d6b5a");gr.addColorStop(1,"#2c3a2c");g.fillStyle=gr;g.fillRect(0,0,w,h)};
+  const skyT=tex(4,512,skyFn);
+  const skyMesh=new THREE.Mesh(new THREE.SphereGeometry(400,32,20),new THREE.MeshBasicMaterial({map:skyT,side:THREE.BackSide,fog:false,depthWrite:false}));scene.add(skyMesh);
+  const envScene=new THREE.Scene();envScene.add(new THREE.Mesh(new THREE.SphereGeometry(50,32,20),new THREE.MeshBasicMaterial({map:skyT,side:THREE.BackSide})));
+  const pm=new THREE.PMREMGenerator(R);const envMap=pm.fromScene(envScene,.02).texture;
+  scene.fog=new THREE.Fog(0x8a93b3,140,520);
+
+  /* luzes */
+  scene.add(new THREE.HemisphereLight(0xbfd0ff,0x2e3a2a,.5));
+  const sun=new THREE.DirectionalLight(0xffc49a,2.8);sun.position.set(-45,28,30);sun.castShadow=true;
+  const sm=small?1024:2048;sun.shadow.mapSize.set(sm,sm);Object.assign(sun.shadow.camera,{left:-26,right:26,top:22,bottom:-14,near:1,far:140});sun.shadow.bias=-.0005;sun.shadow.normalBias=.03;scene.add(sun);
+  const sunDisk=new THREE.Mesh(new THREE.CircleGeometry(9,40),new THREE.MeshBasicMaterial({color:0xffe1b8,fog:false,toneMapped:false}));const sd=new THREE.Vector3(-.75,.06,-.66).normalize().multiplyScalar(360);sunDisk.position.copy(sd);sunDisk.lookAt(0,0,0);scene.add(sunDisk);
+
+  /* terreno, morros e árvores */
+  const grassT=tex(256,256,(g,w,h)=>{g.fillStyle="#4c6b3a";g.fillRect(0,0,w,h);for(let i=0;i<3000;i++){g.fillStyle=`rgba(${60+rnd()*40|0},${90+rnd()*50|0},${40+rnd()*30|0},.5)`;g.fillRect(rnd()*w,rnd()*h,1,2+rnd()*3)}},[60,60]);
+  const ground=new THREE.Mesh(new THREE.PlaneGeometry(400,400),std({map:grassT,roughness:1}));ground.rotation.x=-Math.PI/2;ground.receiveShadow=true;scene.add(ground);
+  const paveT=tex(256,256,(g,w,h)=>{g.fillStyle="#8d8a84";g.fillRect(0,0,w,h);g.strokeStyle="rgba(50,48,45,.5)";g.lineWidth=3;for(let y=0;y<h;y+=32){for(let x=(y/32%2)*32;x<w;x+=64){g.strokeRect(x,y,64,32)}}},[4,6]);
+  const pave=new THREE.Mesh(new THREE.PlaneGeometry(8,14),std({map:paveT,roughness:.9}));pave.rotation.x=-Math.PI/2;pave.position.set(12.5,.02,11);pave.receiveShadow=true;scene.add(pave);
+  const walkT=tex(128,128,(g,w,h)=>{g.fillStyle="#cfc8bb";g.fillRect(0,0,w,h);g.strokeStyle="rgba(90,85,78,.45)";g.lineWidth=2;g.strokeRect(1,1,w-2,h-2)},[1,7]);
+  const walk=new THREE.Mesh(new THREE.PlaneGeometry(2.2,13),std({map:walkT,roughness:.85}));walk.rotation.x=-Math.PI/2;walk.position.set(2,.02,11.2);walk.receiveShadow=true;scene.add(walk);
+  const hillM=std({color:0x3c5a36,roughness:1,flatShading:true});
+  [[-120,-140,90,30],[-30,-170,110,38],[80,-150,100,34],[170,-110,80,26],[-190,-60,70,22],[200,20,70,20],[-200,60,70,18]].forEach(([x,z,r,h])=>{const m=new THREE.Mesh(new THREE.SphereGeometry(r,14,8),hillM);m.scale.y=h/r;m.position.set(x,-2,z);scene.add(m)});
+  const leafM=std({color:0x355a32,roughness:.9,flatShading:true}),trunkM=std({color:0x4a3a2c,roughness:1});
+  const tree=(x,z,s)=>{const t=box(.25*s,2.2*s,.25*s,trunkM,x,1.1*s,z);const c=new THREE.Mesh(new THREE.IcosahedronGeometry(1.6*s,1),leafM);c.position.set(x,2.9*s,z);c.castShadow=true;scene.add(c)};
+  [[-17,-6,1.2],[-15,6,1],[17,-7,1.3],[-20,14,1.1],[22,2,1],[-12,-14,1.4],[14,-14,1.2],[30,-25,2],[-34,-20,2.2],[40,10,1.8],[-38,18,1.6]].forEach(a=>tree(...a));
+
+  /* casa */
+  const wallM=std({color:0xf1ede6,roughness:.85});
+  const wall2M=std({color:0xc9c2b6,roughness:.9});
+  const slabM=std({color:0xf6f3ee,roughness:.8});
+  const darkM=std({color:0x2b2f36,roughness:.7});
+  const woodT=tex(512,256,(g,w,h)=>{g.fillStyle="#9a6a43";g.fillRect(0,0,w,h);for(let y=0;y<h;y+=2){g.fillStyle=`rgba(${70+rnd()*60|0},${40+rnd()*35|0},${20+rnd()*20|0},${.15+rnd()*.25})`;g.fillRect(0,y,w,1+rnd()*2)}g.fillStyle="rgba(40,25,12,.6)";for(let x=0;x<w;x+=64)g.fillRect(x,0,2,h)},[1,1]);
+  const acmM=std({map:woodT,roughness:.6});
+  // piso térreo
+  box(16.4,.3,10.4,slabM,0,.15,0);
+  // paredes térreo (y .3 a 3.6)
+  const H1=3.3,Y1=.3;
+  box(16,H1,.25,wall2M,0,Y1+H1/2,-4.9);
+  box(.25,H1,10,wallM,-8,Y1+H1/2,0);box(.25,H1,10,wallM,8,Y1+H1/2,0);
+  const FZ=4.9;
+  box(1.5,H1,.3,wallM,-7.25,Y1+H1/2,FZ);                // pilar esquerdo
+  box(3,.9,.3,wallM,-5,Y1+.45,FZ);                      // abaixo da janela
+  box(3,.8,.3,wallM,-5,Y1+H1-.4,FZ);                    // acima da janela
+  box(2.5,H1,.3,wallM,-2.25,Y1+H1/2,FZ);                // pilar central
+  box(6,.7,.3,wallM,2,Y1+H1-.35,FZ);                    // verga da porta
+  const acmPanel=box(3,H1,.12,acmM,6.5,Y1+H1/2,FZ+.2);  // painel ACM
+  // laje superior com sacada
+  box(16.4,.3,12.2,slabM,0,Y1+H1+.15,.9);
+  const Y2=Y1+H1+.3,H2=3;
+  box(14,H2,.25,wall2M,-1,Y2+H2/2,-4.9);
+  box(.25,H2,7.4,wallM,-8,Y2+H2/2,-1.2);box(.25,H2,7.4,wallM,6,Y2+H2/2,-1.2);
+  const UZ=2.5;
+  box(1.2,H2,.3,wallM,-7.4,Y2+H2/2,UZ);box(1.2,H2,.3,wallM,5.4,Y2+H2/2,UZ);box(11.6,.4,.3,wallM,-1,Y2+H2-.2,UZ);
+  // cobertura
+  box(15.4,.4,8.6,slabM,-1,Y2+H2+.2,-1.1);
+  box(15.6,.12,8.8,darkM,-1,Y2+H2+.46,-1.1,{recv:false});
+  // muro e portão
+  const wallLowM=std({color:0xe5e0d6,roughness:.95});
+  box(10,1.1,.3,wallLowM,-6,.55,18);box(.3,1.1,.3,wallLowM,1,.55,18);
+  box(.4,2.4,.4,wallLowM,8.3,1.2,18);box(.4,2.4,.4,wallLowM,16.7,1.2,18);
+  // interior
+  const floorIn=new THREE.Mesh(new THREE.PlaneGeometry(15.6,9.6),new THREE.MeshPhysicalMaterial({color:0xe9e2d6,roughness:.18,metalness:.05,envMap,envMapIntensity:.6}));floorIn.rotation.x=-Math.PI/2;floorIn.position.set(0,.31,0);floorIn.receiveShadow=true;scene.add(floorIn);
+  const backPanel=new THREE.Mesh(new THREE.PlaneGeometry(15.5,3.2),std({color:0xcdb79a,roughness:.8,emissive:0xffb070,emissiveIntensity:0}));backPanel.position.set(0,1.9,-4.75);scene.add(backPanel);
+  const sofaM=std({color:0x3d4a5e,roughness:.9});box(4,.5,1.1,sofaM,1.5,.6,-3.6);box(4,.7,.25,sofaM,1.5,1.05,-4.1);box(.3,.65,1.1,sofaM,-.4,.75,-3.6);box(.3,.65,1.1,sofaM,3.4,.75,-3.6);
+  box(2.2,.06,1.2,std({color:0xc9b18c,roughness:.6}),1.5,.75,-1.9);
+  const rug=new THREE.Mesh(new THREE.PlaneGeometry(5,3.2),std({color:0xb9ad9c,roughness:1}));rug.rotation.x=-Math.PI/2;rug.position.set(1.5,.32,-2.4);scene.add(rug);
+  // espelho orgânico com LED
+  const mirrorShape=new THREE.Shape();for(let i=0;i<=48;i++){const a=i/48*Math.PI*2;const r=1+Math.sin(a*3)*.06+Math.cos(a*2)*.05;const px=Math.cos(a)*.75*r,py=Math.sin(a)*1*r;i?mirrorShape.lineTo(px,py):mirrorShape.moveTo(px,py)}
+  const mirror=new THREE.Mesh(new THREE.ShapeGeometry(mirrorShape),new THREE.MeshPhysicalMaterial({color:0xf2f5f7,metalness:1,roughness:.02,envMap,envMapIntensity:1}));mirror.position.set(-4.2,2,-4.72);scene.add(mirror);
+  const ledM=new THREE.MeshBasicMaterial({color:0xffe6c0,toneMapped:false,transparent:true,opacity:0});const led=new THREE.Mesh(new THREE.ShapeGeometry(mirrorShape),ledM);led.scale.set(1.06,1.06,1);led.position.set(-4.2,2,-4.735);scene.add(led);
+  box(.9,.04,.5,std({color:0x2b2f36}),-4.2,.9,-4.5);
+  // plantas
+  const pot=(x,z)=>{box(.5,.6,.5,std({color:0x2b2f36}),x,.6,z);const c=new THREE.Mesh(new THREE.IcosahedronGeometry(.55,1),leafM);c.position.set(x,1.3,z);scene.add(c)};pot(6.8,-4.1);pot(-7.2,3.8);
+  // pendentes
+  const pendants=[];[[0.5,-2],[2.5,-2]].forEach(([x,z])=>{box(.02,1,.02,darkM,x,3.1,z,{cast:false});const b=new THREE.Mesh(new THREE.SphereGeometry(.16,16,10),new THREE.MeshBasicMaterial({color:0xffe2b0,toneMapped:false,transparent:true,opacity:.2}));b.position.set(x,2.55,z);scene.add(b);pendants.push(b)});
+  const inLights=[new THREE.PointLight(0xffc183,0,14,1.6),new THREE.PointLight(0xffc183,0,12,1.6),new THREE.PointLight(0xffc183,0,12,1.6)];
+  inLights[0].position.set(1.5,2.6,-1.5);inLights[1].position.set(-4,2.6,-2);inLights[2].position.set(-1,5.8,-1.5);inLights.forEach(l=>scene.add(l));
+  const upPanel=new THREE.Mesh(new THREE.PlaneGeometry(13.5,2.9),std({color:0xd8cdbd,roughness:.9,emissive:0xffb070,emissiveIntensity:0}));upPanel.position.set(-1,Y2+1.5,-4.75);scene.add(upPanel);
+  // arandelas externas
+  const sconceM=new THREE.MeshBasicMaterial({color:0xffe3b6,toneMapped:false,transparent:true,opacity:.15});
+  const sconces=[[-6.6,2.6],[-3,2.6],[5.6,2.6]].map(([x,y])=>{const m=new THREE.Mesh(new THREE.BoxGeometry(.18,.4,.12),sconceM);m.position.set(x,y,FZ+.22);scene.add(m);return m});
+
+  /* esquadrias, vidros, guarda-corpo, portão */
+  const alM=std({color:0x1b1d22,metalness:.6,roughness:.35});
+  const glassM=()=>new THREE.MeshPhysicalMaterial({color:0xcfe9ee,metalness:.15,roughness:.03,envMap,envMapIntensity:1.6,transparent:true,opacity:0,depthWrite:false,side:THREE.DoubleSide});
+  const frames=[],glasses=[];
+  function opening(cx,cy,w,h,z,panels){
+    const g=new THREE.Group();g.position.set(cx,cy,z);scene.add(g);const p=.09;
+    box(w,p,p,alM,0,h/2-p/2,0,{parent:g});box(w,p,p,alM,0,-h/2+p/2,0,{parent:g});box(p,h,p,alM,-w/2+p/2,0,0,{parent:g});box(p,h,p,alM,w/2-p/2,0,0,{parent:g});
+    const pw=w/panels;for(let i=1;i<panels;i++)box(.06,h,.07,alM,-w/2+pw*i,0,i%2?.04:-.04,{parent:g});
+    frames.push(g);
+    for(let i=0;i<panels;i++){const m=new THREE.Mesh(new THREE.PlaneGeometry(pw-.1,h-.12),glassM());const tx=-w/2+pw*(i+.5);m.position.set(cx+tx,cy,z+(i%2?.04:-.04));m.userData={tx:cx+tx,from:(i%2?1:-1)*(pw*1.1)};scene.add(m);glasses.push(m)}
+  }
+  opening(-5,Y1+1.6,3,1.6,FZ,2);           // janela térreo
+  opening(2,Y1+1.3,6,2.6,FZ,3);            // porta de correr
+  opening(-1,Y2+1.3,11.6,2.6,UZ,4);        // pano de vidro superior
+  const door=glasses[glasses.length-4-2];  // painel central da porta
+  // guarda-corpo
+  const rail=[];const rg=new THREE.Group();scene.add(rg);
+  for(let x=-7.6;x<6.9;x+=1.62){const m=new THREE.Mesh(new THREE.PlaneGeometry(1.55,1.05),glassM());m.geometry.translate(0,.525,0);m.position.set(x+.8,Y2,6.88);m.userData={k:rail.length};scene.add(m);rail.push(m)}
+  const handrail=box(14.6,.06,.06,alM,-.4,Y2+1.08,6.88);handrail.scale.x=.001;
+  // portão de alumínio (lâminas)
+  const slatM=std({color:0xf4f4f2,metalness:.3,roughness:.4});const slats=[];
+  for(let i=0;i<14;i++){const s=box(8,.13,.06,slatM,12.5,.25+i*.155,18);s.scale.x=.001;slats.push(s)}
+  // medidas (cotas) que aparecem no início
+  const camera=new THREE.PerspectiveCamera(42,1,.1,900);
+
+  /* trajeto da câmera */
+  let curves;
+  function build(){const tall=innerWidth/innerHeight<.85;const k=tall?1.3:1;
+    curves={pos:new THREE.CatmullRomCurve3([[-26*k,11*k,36*k],[-15*k,7.5*k,30*k],[8*k,7*k,28*k],[15*k,5.5,20],[6,3.2,13],[2,1.75,8.6],[2,1.7,3.6],[1.4,1.65,.4]].map(a=>new THREE.Vector3(...a)),false,"centripetal"),
+      look:new THREE.CatmullRomCurve3([[0,3.5,0],[0,3.5,1],[0,3.8,3],[0,3.4,4],[1.2,2.3,4.8],[2,1.7,4.8],[0,1.7,-3],[-2.6,1.8,-4.7]].map(a=>new THREE.Vector3(...a)),false,"centripetal")};
+    camera.fov=tall?55:42;camera.updateProjectionMatrix()}
+  function resize(){const w=cv.clientWidth,h=cv.clientHeight;R.setSize(w,h,false);camera.aspect=w/h;build()}
+  resize();addEventListener("resize",resize);
+
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let cur=progress(),last=performance.now(),t0=last,run=true;
+  const P=new THREE.Vector3(),L=new THREE.Vector3();
+  function apply(p,t){
+    // etapa 2: esquadrias
+    frames.forEach((g,i)=>{const k=smooth(.17+i*.04,.27+i*.04,p);g.scale.set(Math.max(.001,k),Math.max(.001,k),1);g.visible=k>.002});
+    // etapa 3: vidros deslizam
+    glasses.forEach((m,i)=>{const k=smooth(.38+i*.012,.47+i*.012,p);m.material.opacity=.32*k;m.position.x=m.userData.tx+m.userData.from*(1-k);m.visible=k>.002});
+    // porta abre no final
+    const open=smooth(.86,.93,p);door.position.x-=1.95*open;
+    // etapa 4: guarda-corpo, portão, ACM
+    rail.forEach((m,i)=>{const k=smooth(.57+i*.008,.63+i*.008,p);m.scale.y=Math.max(.001,k);m.material.opacity=.3*k;m.visible=k>.002});
+    handrail.scale.x=Math.max(.001,smooth(.62,.67,p));
+    slats.forEach((s,i)=>{s.scale.x=Math.max(.001,smooth(.6+i*.006,.66+i*.006,p))});
+    acmPanel.scale.y=Math.max(.001,smooth(.58,.64,p));acmPanel.position.y=Y1+acmPanel.scale.y*H1/2;
+    // etapa 5: luzes
+    const lit=smooth(.76,.86,p);
+    inLights[0].intensity=1.2*lit;inLights[1].intensity=.8*lit;inLights[2].intensity=1.2*lit;
+    backPanel.material.emissiveIntensity=.22*lit;upPanel.material.emissiveIntensity=.25*lit;ledM.opacity=lit;
+    pendants.forEach(b=>b.material.opacity=.2+.8*lit);sconceM.opacity=.15+.85*lit;
+  }
+  function frame(now){
+    const dt=Math.min(.05,(now-last)/1000);last=now;const t=(now-t0)/1000;
+    cur+=(progress()-cur)*(reduce?1:Math.min(1,dt*4.5));
+    curves.pos.getPoint(cur,P);curves.look.getPoint(cur,L);
+    if(!reduce&&cur<.8){P.x+=Math.sin(t*.4)*.25;P.y+=Math.sin(t*.6)*.12}
+    camera.position.copy(P);camera.lookAt(L);apply(cur,t);R.render(scene,camera);updateUI(cur);
+    if(run)requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+  if("IntersectionObserver" in window)new IntersectionObserver(([en])=>{const was=run;run=en.isIntersecting;if(run&&!was){last=performance.now();requestAnimationFrame(frame)}}).observe($("#topo"));
+  return true;
+}
+if(!initHouse()){
+  $("#house").hidden=true;$(".stage").style.background="linear-gradient(180deg,#0f1d44,#2b3f78 40%,#7487b8 70%,#f2b08a) center/cover, url(/assets/p2.webp)";
+  $(".stage").style.backgroundImage="linear-gradient(90deg,rgba(8,18,40,.7),rgba(8,18,40,.2)),url(/assets/p2.webp)";$(".stage").style.backgroundSize="cover";$(".stage").style.backgroundPosition="center";
+  addEventListener("scroll",()=>updateUI(progress()),{passive:true});updateUI(progress());
+}
+})();
+</script>
+</body>
+</html>
