@@ -383,6 +383,11 @@
 "size": 95367
 },
 {
+"file": ".vercel/output/static/fotos/sucos-artificiais.jpg",
+"sha": "9e67276e7275350db288d72764d5ab12e79de75c",
+"size": 103817
+},
+{
 "file": ".vercel/output/static/fotos/x-recanto-gigante.jpg",
 "sha": "eda5aa497fb2de1ea58d820e8ef6fa8ec221ccee",
 "size": 103718
@@ -399,8 +404,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "944ef30d25642e1e4f05d863cc4291a7110c992d",
-"size": 277738
+"sha": "57c41bc61981ca556d50ab060a7c882f759f7a80",
+"size": 280878
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -424,8 +429,8 @@
 },
 {
 "file": ".vercel/output/static/painel.html",
-"sha": "432633016351a593fd6e6cae0222f08dd5d1091c",
-"size": 196250
+"sha": "09fa6fadcf5fa4bffb4bb352ee5d7fa817a2eb77",
+"size": 197807
 },
 {
 "file": ".vercel/output/static/painel.webmanifest",
@@ -444,8 +449,8 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "e83c8ae9b75437412dbb3d2a959fe352246eee93",
-"size": 1062
+"sha": "05647e729041c83becb8c5896e86cb907f473ce0",
+"size": 1073
 },
 {
 "file": ".vercel/output/static/templates/acai/u-spoon.jpg",
