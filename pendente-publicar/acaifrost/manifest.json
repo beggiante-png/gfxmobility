@@ -18,6 +18,11 @@
 "size": 346
 },
 {
+"file": ".vercel/output/static/fotos/acai.jpg",
+"sha": "44d5f8a8b649e9ccba7c73cc15560839899acffb",
+"size": 140611
+},
+{
 "file": ".vercel/output/static/fotos/hero.jpg",
 "sha": "f041cbb4de0f948d7f8908de288317c44eb344c1",
 "size": 267317
@@ -59,8 +64,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "7740fd20fb765526d596dca4ecbc451ac0d6cfa4",
-"size": 166211
+"sha": "9779cabf043116ef930b5f835b8a77e4a32f4625",
+"size": 166209
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
