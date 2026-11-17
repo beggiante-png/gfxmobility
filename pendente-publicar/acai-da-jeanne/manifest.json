@@ -1,0 +1,161 @@
+{
+"name": "acai-da-jeanne",
+"project": "prj_qonfxrLIVXfpqEQbaEiyf3plzGsF",
+"files": [
+{
+"file": ".vercel/output/config.json",
+"sha": "1081c780b93024b83f5e3eb11801b646af116181",
+"size": 326
+},
+{
+"file": ".vercel/output/static/COMO-CONFIGURAR-O-BANCO.txt",
+"sha": "59785c478f09b6e092bfd0411b26cc67290c1685",
+"size": 4474
+},
+{
+"file": ".vercel/output/static/COMO-PUBLICAR.txt",
+"sha": "16f29f868d9ef2ff5affb88ffd4c6035121fdfcb",
+"size": 10637
+},
+{
+"file": ".vercel/output/static/adm/index.html",
+"sha": "3ba5bde7ec76ea766105c4536c51c7a1deabd204",
+"size": 350
+},
+{
+"file": ".vercel/output/static/admin/index.html",
+"sha": "3ba5bde7ec76ea766105c4536c51c7a1deabd204",
+"size": 350
+},
+{
+"file": ".vercel/output/static/fotos/foto-1.webp",
+"sha": "dc2ccf9ddd2b1a7df6c3e7bce3000294656bb0f0",
+"size": 586174
+},
+{
+"file": ".vercel/output/static/fotos/foto-10.webp",
+"sha": "3fd0b220d5d00dd274aed0954c6311da76cd54cb",
+"size": 1022095
+},
+{
+"file": ".vercel/output/static/fotos/foto-11.webp",
+"sha": "d64b0bc6b48e277879c011eeac52d4d4fbf093c7",
+"size": 1027296
+},
+{
+"file": ".vercel/output/static/fotos/foto-12.webp",
+"sha": "77ef36fbc3e91932a0865ad61b178f714c1a614c",
+"size": 2280755
+},
+{
+"file": ".vercel/output/static/fotos/foto-13.webp",
+"sha": "2d94848d701c1dedddcbcf495fe3fb45783e7bf5",
+"size": 1034304
+},
+{
+"file": ".vercel/output/static/fotos/foto-14.webp",
+"sha": "d55bee7b3fe9b047fa7daacdd35c1661e44bcebc",
+"size": 991904
+},
+{
+"file": ".vercel/output/static/fotos/foto-15.webp",
+"sha": "d55bee7b3fe9b047fa7daacdd35c1661e44bcebc",
+"size": 991904
+},
+{
+"file": ".vercel/output/static/fotos/foto-16.webp",
+"sha": "5abe595e1235982bb7bbf9ffc64b7bcd44a0efbe",
+"size": 1269859
+},
+{
+"file": ".vercel/output/static/fotos/foto-17.webp",
+"sha": "1a1a723958f4611127800de75aa69eb8db8c2f3f",
+"size": 1433143
+},
+{
+"file": ".vercel/output/static/fotos/foto-18.webp",
+"sha": "d64b0bc6b48e277879c011eeac52d4d4fbf093c7",
+"size": 1027296
+},
+{
+"file": ".vercel/output/static/fotos/foto-2.webp",
+"sha": "1d6210ad79e10cda9ef39729c4a428182308d860",
+"size": 1261391
+},
+{
+"file": ".vercel/output/static/fotos/foto-3.webp",
+"sha": "4038686ba25b8f3a922ffaa9ea248c9a0d705814",
+"size": 1906582
+},
+{
+"file": ".vercel/output/static/fotos/foto-4.webp",
+"sha": "4679445327d2dfbcea40bd7d77d020148d246d0a",
+"size": 1789281
+},
+{
+"file": ".vercel/output/static/fotos/foto-5.webp",
+"sha": "8a6a6fd00df56c9b7c4d9450a1217d214cd51cc3",
+"size": 1261537
+},
+{
+"file": ".vercel/output/static/fotos/foto-6.webp",
+"sha": "54da9043ef7d4788496a101a446d40710e7e841c",
+"size": 1140969
+},
+{
+"file": ".vercel/output/static/fotos/foto-7.webp",
+"sha": "3fd0b220d5d00dd274aed0954c6311da76cd54cb",
+"size": 1022095
+},
+{
+"file": ".vercel/output/static/fotos/foto-8.webp",
+"sha": "d64b0bc6b48e277879c011eeac52d4d4fbf093c7",
+"size": 1027296
+},
+{
+"file": ".vercel/output/static/fotos/foto-9.webp",
+"sha": "54da9043ef7d4788496a101a446d40710e7e841c",
+"size": 1140969
+},
+{
+"file": ".vercel/output/static/icone-192.png",
+"sha": "3ed7785f0a2dd9282dec9ffba5c6224e0fc42eda",
+"size": 29036
+},
+{
+"file": ".vercel/output/static/icone-512.png",
+"sha": "f5e2fbf73759cb12bcd1c8e1705f5cdf89dea874",
+"size": 170870
+},
+{
+"file": ".vercel/output/static/index.html",
+"sha": "3648414aa181c772856aebd238602cde3e3c5b08",
+"size": 188868
+},
+{
+"file": ".vercel/output/static/manifest.webmanifest",
+"sha": "903e10152e38818b94a10e3003c6f5752590f459",
+"size": 636
+},
+{
+"file": ".vercel/output/static/painel.html",
+"sha": "d049e4517b5f9aaa494e03c9b7503faf5dc0290c",
+"size": 102751
+},
+{
+"file": ".vercel/output/static/projeto-crieai.json",
+"sha": "c2a0ae4916c5dcbcdb026941afdfa8bf2709ae30",
+"size": 13075
+},
+{
+"file": ".vercel/output/static/supabase.sql",
+"sha": "4f9f9c4a573e0dacbec924acc1d7849b23b5a0b5",
+"size": 11005
+},
+{
+"file": ".vercel/output/static/sw.js",
+"sha": "69607453cc63155309a4d677f647c3f6d8e3237e",
+"size": 1048
+}
+]
+}
