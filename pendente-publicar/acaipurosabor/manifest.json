@@ -78,6 +78,11 @@
 "size": 66139
 },
 {
+"file": ".vercel/output/static/fotos/t_about.jpg",
+"sha": "0955b489742bfb5975200662e3ae52189dc92ffb",
+"size": 77253
+},
+{
 "file": ".vercel/output/static/icone-192.png",
 "sha": "73eb05b01f0cc55393d89c38f2729e69698cb014",
 "size": 55690
@@ -89,8 +94,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "a19ccc4ba854be89cba070f61b9d14abc6505151",
-"size": 165466
+"sha": "b213a78cbbc54bffd88e79537cde087f7ee8c80a",
+"size": 165465
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
