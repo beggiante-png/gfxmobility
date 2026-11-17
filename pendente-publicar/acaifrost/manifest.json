@@ -19,8 +19,13 @@
 },
 {
 "file": ".vercel/output/static/fotos/acai.jpg",
-"sha": "44d5f8a8b649e9ccba7c73cc15560839899acffb",
-"size": 140611
+"sha": "2f956c895d363423a0c62f549e780747a81353ed",
+"size": 102605
+},
+{
+"file": ".vercel/output/static/fotos/acai_berries.jpg",
+"sha": "bb3ca723ee62557db83151e9e4c0317efb2e3806",
+"size": 95387
 },
 {
 "file": ".vercel/output/static/fotos/atend.jpg",
@@ -39,8 +44,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_n300.jpg",
-"sha": "38b6d50c80c3fff35b7f1e5a55e4a7c548b5c9f5",
-"size": 84122
+"sha": "5806369ebcf0da218ceac9a91714ea7a7142b504",
+"size": 62994
 },
 {
 "file": ".vercel/output/static/fotos/p_n500.jpg",

@@ -38,19 +38,24 @@
 "size": 68553
 },
 {
+"file": ".vercel/output/static/fotos/copo_t.jpg",
+"sha": "14a78cbe0480f324b555fe7587f1c7e8160137ff",
+"size": 65297
+},
+{
 "file": ".vercel/output/static/fotos/logo.png",
 "sha": "de054281d4120b23e2fc4a49a2743250499edf30",
 "size": 430145
 },
 {
 "file": ".vercel/output/static/fotos/p_bowl2.jpg",
-"sha": "27a32f39ad6fc7936253b5bae9ecde624b56478f",
-"size": 77599
+"sha": "cd7ee7030c3814723bc8394706ae8bdc82fbb8ab",
+"size": 86229
 },
 {
 "file": ".vercel/output/static/fotos/p_copo.jpg",
-"sha": "f5aa17e67357bd925d2209d706b85c4685efae59",
-"size": 54299
+"sha": "e101965fa37f7b9210546a83de17739b9b198c4d",
+"size": 59462
 },
 {
 "file": ".vercel/output/static/fotos/p_pic_esp.jpg",
@@ -74,8 +79,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_shake.jpg",
-"sha": "f36193c6969d8965cb46eba387a0d8a97f9ce836",
-"size": 47107
+"sha": "e539ddebef691934deece2f8e8545e64e4fbfab9",
+"size": 55155
 },
 {
 "file": ".vercel/output/static/fotos/pic_esp.jpg",
@@ -109,8 +114,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/t_about.jpg",
-"sha": "2a259b570a97c983a93573c04800b708188b7269",
-"size": 94872
+"sha": "ff19f8eff5670e54df9bdf531b247d105f918246",
+"size": 143907
 },
 {
 "file": ".vercel/output/static/fotos/t_atend.jpg",
@@ -124,8 +129,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/t_hor.jpg",
-"sha": "933e0834ff31182c99d74928cf26fd8d6a2030fe",
-"size": 69649
+"sha": "c6ca6ef9e029f68aed5de32cce570639b376e12f",
+"size": 170667
 },
 {
 "file": ".vercel/output/static/icone-192.png",
