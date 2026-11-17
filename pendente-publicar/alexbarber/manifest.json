@@ -1,0 +1,81 @@
+{
+"name": "alexbarber",
+"project": "prj_hUMzkv6A3Rworqq10Ra3U9Vhwy9h",
+"files": [
+{
+"file": "img/apple-touch-icon.png",
+"sha": "16d5b4523dd805a3178e72a7a42869a67d050241",
+"size": 15859
+},
+{
+"file": "img/espaco1.jpg",
+"sha": "7370c03ae4feee5ea2bfcdaf9ca93b6a25956234",
+"size": 141283
+},
+{
+"file": "img/g01.jpg",
+"sha": "7c95945aa27c81953d445ff6f480715fe86b7ebf",
+"size": 157455
+},
+{
+"file": "img/g02.jpg",
+"sha": "46b3a2664c9581ca494dd8bc4fbcaaffa5d5b6f2",
+"size": 69534
+},
+{
+"file": "img/g03.jpg",
+"sha": "5683d93438f38a1daa7406a4e8513baa9321f02b",
+"size": 77185
+},
+{
+"file": "img/g04.jpg",
+"sha": "e087d40bdbb91f0e9ff70ec22953e0690d511258",
+"size": 82834
+},
+{
+"file": "img/g05.jpg",
+"sha": "f05248a7610dd1e61942e38f2b42a66acb9b5956",
+"size": 72715
+},
+{
+"file": "img/g06.jpg",
+"sha": "f009b2dfe4734ec9ef97d0ae10f6ba52f39a8fe2",
+"size": 63306
+},
+{
+"file": "img/g07.jpg",
+"sha": "868d90d71ca0355f70b18701a0066819ce7af825",
+"size": 103555
+},
+{
+"file": "img/g08.jpg",
+"sha": "8f1d1e76b2869d58ecbf4bb923d9311ea6fbf6a5",
+"size": 131158
+},
+{
+"file": "img/icon-192.png",
+"sha": "395012528350bf75f72094c59cef1ce6d3d87a1a",
+"size": 17258
+},
+{
+"file": "img/og.jpg",
+"sha": "4cb713899c1298ea9062455a2be5f4c2a0ac1b67",
+"size": 74097
+},
+{
+"file": "img/perfil.jpg",
+"sha": "dfb6e1d853c37e3acc48622b82a559a9d2763b6a",
+"size": 39854
+},
+{
+"file": "index.html",
+"sha": "0f02fc94fa7275dbb1cec3d91529a56f4ea8ab1b",
+"size": 34588
+},
+{
+"file": "painel.html",
+"sha": "30273331474331414b6195ae015c5b33b1b54a1a",
+"size": 48460
+}
+]
+}
