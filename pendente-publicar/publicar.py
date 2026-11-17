@@ -23,6 +23,10 @@ if 'error' in me or me.get('user', {}).get('limited'):
 sites = [d for d in sorted(os.listdir(B)) if os.path.isfile(os.path.join(B, d, 'manifest.json'))]
 for site in sites:
     d = os.path.join(B, site); m = json.load(open(os.path.join(d, 'manifest.json')))
+    if not m.get('project'):
+        ex = api('GET', '/v9/projects/' + m['name'])
+        if 'error' in ex and '--novos' not in sys.argv:
+            print(site, 'PULADO: site novo (rode com --novos amanhã)'); continue
     alt = os.path.join(d, 'alterados')
     for r, _, fs in os.walk(alt):
         for fn in fs:
@@ -33,11 +37,12 @@ for site in sites:
                                    '-H', 'x-vercel-digest: ' + ent['sha'], '--data-binary', '@' + p],
                                   capture_output=True, text=True).stdout
             print(site, 'upload', rel, code)
-            assert code == '200', code
+            if code != '200': print(site, 'falhou no upload'); break
     body = dict(name=m['name'], target='production', files=m['files'], projectSettings=dict(framework=None))
     if m.get('project'): body['project'] = m['project']
     dep = api('POST', '/v13/deployments?skipAutoDetectionConfirmation=1', body)
-    did = dep.get('id'); assert did, dep
+    did = dep.get('id')
+    if not did: print(site, 'NÃO PUBLICOU:', (dep.get('error') or {}).get('message', dep)); continue
     for _ in range(60):
         s = api('GET', '/v13/deployments/' + did)
         if s.get('readyState') in ('READY', 'ERROR'): break
