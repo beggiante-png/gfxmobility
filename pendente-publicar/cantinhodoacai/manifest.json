@@ -43,6 +43,41 @@
 "size": 430145
 },
 {
+"file": ".vercel/output/static/fotos/p_bowl2.jpg",
+"sha": "27a32f39ad6fc7936253b5bae9ecde624b56478f",
+"size": 77599
+},
+{
+"file": ".vercel/output/static/fotos/p_copo.jpg",
+"sha": "f5aa17e67357bd925d2209d706b85c4685efae59",
+"size": 54299
+},
+{
+"file": ".vercel/output/static/fotos/p_pic_esp.jpg",
+"sha": "97e0046bee541c03c4765dd2b899a54eb36664cf",
+"size": 38544
+},
+{
+"file": ".vercel/output/static/fotos/p_pic_fruta.jpg",
+"sha": "a05184f315a068362275fa424526cbe950cde86d",
+"size": 46151
+},
+{
+"file": ".vercel/output/static/fotos/p_pic_qb.jpg",
+"sha": "dffa3af7fedc2da4d7a4585d92e78a08a53a2248",
+"size": 39126
+},
+{
+"file": ".vercel/output/static/fotos/p_pic_skimo.jpg",
+"sha": "1a910685875b8df188aa7bd661a881b84b926a76",
+"size": 37432
+},
+{
+"file": ".vercel/output/static/fotos/p_shake.jpg",
+"sha": "f36193c6969d8965cb46eba387a0d8a97f9ce836",
+"size": 47107
+},
+{
 "file": ".vercel/output/static/fotos/pic_esp.jpg",
 "sha": "c56918e3e9ace2b4889b67af31432d0776336daf",
 "size": 12233
@@ -73,6 +108,26 @@
 "size": 16727
 },
 {
+"file": ".vercel/output/static/fotos/t_about.jpg",
+"sha": "2a259b570a97c983a93573c04800b708188b7269",
+"size": 94872
+},
+{
+"file": ".vercel/output/static/fotos/t_atend.jpg",
+"sha": "692bf8ed9f29a31cf9fdbd5e4aa86be74c9a585e",
+"size": 44290
+},
+{
+"file": ".vercel/output/static/fotos/t_hero.jpg",
+"sha": "98efbab07c2062f05ee5b2b40b615d3d2dbfea3c",
+"size": 66066
+},
+{
+"file": ".vercel/output/static/fotos/t_hor.jpg",
+"sha": "933e0834ff31182c99d74928cf26fd8d6a2030fe",
+"size": 69649
+},
+{
 "file": ".vercel/output/static/icone-192.png",
 "sha": "b9cd554fbe941524e57a3b4685ea0c815e9fff4c",
 "size": 74372
@@ -84,8 +139,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "8eaa6f3b6ad981090eca131aadfd14c379556aa0",
-"size": 185665
+"sha": "b642c434a7cb9e226ed65a3e028d114167defe72",
+"size": 185712
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -94,8 +149,8 @@
 },
 {
 "file": ".vercel/output/static/painel.html",
-"sha": "69f6ff23378ecfd18ead9c00cc8c86b91c9b1c54",
-"size": 170742
+"sha": "134d859ba8e53d59f6f1ea60f075bc28500905bc",
+"size": 170762
 },
 {
 "file": ".vercel/output/static/sw.js",
