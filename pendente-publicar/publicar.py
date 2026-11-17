@@ -34,9 +34,9 @@ for site in sites:
                                   capture_output=True, text=True).stdout
             print(site, 'upload', rel, code)
             assert code == '200', code
-    dep = api('POST', '/v13/deployments?skipAutoDetectionConfirmation=1',
-              dict(name=m['name'], project=m['project'], target='production', files=m['files'],
-                   projectSettings=dict(framework=None)))
+    body = dict(name=m['name'], target='production', files=m['files'], projectSettings=dict(framework=None))
+    if m.get('project'): body['project'] = m['project']
+    dep = api('POST', '/v13/deployments?skipAutoDetectionConfirmation=1', body)
     did = dep.get('id'); assert did, dep
     for _ in range(60):
         s = api('GET', '/v13/deployments/' + did)

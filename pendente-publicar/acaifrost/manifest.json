@@ -1,0 +1,76 @@
+{
+"name": "acaifrost",
+"project": null,
+"files": [
+{
+"file": ".vercel/output/config.json",
+"sha": "1081c780b93024b83f5e3eb11801b646af116181",
+"size": 326
+},
+{
+"file": ".vercel/output/static/adm/index.html",
+"sha": "1c37fdb163b947e6436eb82c030415fdadd76cf5",
+"size": 346
+},
+{
+"file": ".vercel/output/static/admin/index.html",
+"sha": "1c37fdb163b947e6436eb82c030415fdadd76cf5",
+"size": 346
+},
+{
+"file": ".vercel/output/static/fotos/garrafa.jpg",
+"sha": "50daacfdcc523e93c255395b252a4fcf04c96af0",
+"size": 54986
+},
+{
+"file": ".vercel/output/static/fotos/logo.png",
+"sha": "2c32b653234aa8fabe4d768620e480ac75b4162a",
+"size": 307443
+},
+{
+"file": ".vercel/output/static/fotos/marca.png",
+"sha": "5eae17a785bf8707dd8d3e09aa3b989f123ab532",
+"size": 352811
+},
+{
+"file": ".vercel/output/static/fotos/mascote.jpg",
+"sha": "e5c81b6f0e7753a1f7ab8900c19cdd967afb4698",
+"size": 75623
+},
+{
+"file": ".vercel/output/static/fotos/sorteio.jpg",
+"sha": "9d73f9f02e879d23604d8df6d9356785f9494d96",
+"size": 96157
+},
+{
+"file": ".vercel/output/static/icone-192.png",
+"sha": "ee0112c00e1a26a9cc6a6d00d377cfd7a6e2dac1",
+"size": 63527
+},
+{
+"file": ".vercel/output/static/icone-512.png",
+"sha": "2c32b653234aa8fabe4d768620e480ac75b4162a",
+"size": 307443
+},
+{
+"file": ".vercel/output/static/index.html",
+"sha": "8067390b29f87713ff68f52a32622c1b0a68621e",
+"size": 166247
+},
+{
+"file": ".vercel/output/static/manifest.webmanifest",
+"sha": "3ad1bd71194adc1f6f0f88152d74d5238c1457f5",
+"size": 642
+},
+{
+"file": ".vercel/output/static/painel.html",
+"sha": "37a014f9b575a8b324fce14b1edf5822b7d279a1",
+"size": 145051
+},
+{
+"file": ".vercel/output/static/sw.js",
+"sha": "957e766d17a584748ff6796998d6b1f50a2e145c",
+"size": 1041
+}
+]
+}
