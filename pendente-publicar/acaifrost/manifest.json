@@ -23,6 +23,11 @@
 "size": 140611
 },
 {
+"file": ".vercel/output/static/fotos/atend.jpg",
+"sha": "d1de78de00ab7ee377ffd599dd783a17f52a518a",
+"size": 134051
+},
+{
 "file": ".vercel/output/static/fotos/hero.jpg",
 "sha": "f041cbb4de0f948d7f8908de288317c44eb344c1",
 "size": 267317
@@ -64,8 +69,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "9779cabf043116ef930b5f835b8a77e4a32f4625",
-"size": 166209
+"sha": "0f8944a608b5e1d8d1e7328ecf4935dabd524b1a",
+"size": 166206
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
