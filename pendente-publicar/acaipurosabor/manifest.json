@@ -18,6 +18,16 @@
 "size": 351
 },
 {
+"file": ".vercel/output/static/fotos/acai.jpg",
+"sha": "44d5f8a8b649e9ccba7c73cc15560839899acffb",
+"size": 140611
+},
+{
+"file": ".vercel/output/static/fotos/atend.jpg",
+"sha": "d1de78de00ab7ee377ffd599dd783a17f52a518a",
+"size": 134051
+},
+{
 "file": ".vercel/output/static/fotos/banner.jpg",
 "sha": "81c8e80024608b7edabf9d2bf04efcb88a4b4bff",
 "size": 104766
@@ -48,9 +58,24 @@
 "size": 29537
 },
 {
+"file": ".vercel/output/static/fotos/hero.jpg",
+"sha": "f041cbb4de0f948d7f8908de288317c44eb344c1",
+"size": 267317
+},
+{
 "file": ".vercel/output/static/fotos/logo.png",
 "sha": "8381e0366976d0bbd4bfc88cf61963d19305f17c",
 "size": 308094
+},
+{
+"file": ".vercel/output/static/fotos/p_n300.jpg",
+"sha": "5806369ebcf0da218ceac9a91714ea7a7142b504",
+"size": 62994
+},
+{
+"file": ".vercel/output/static/fotos/p_nut500.jpg",
+"sha": "b3c1a58175429edfa758aa48d82e1971c9bc6d0b",
+"size": 66139
 },
 {
 "file": ".vercel/output/static/icone-192.png",
@@ -64,8 +89,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "a086bab3f8ea3632083f18311767063c4a3d024b",
-"size": 165481
+"sha": "a19ccc4ba854be89cba070f61b9d14abc6505151",
+"size": 165466
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -74,8 +99,8 @@
 },
 {
 "file": ".vercel/output/static/painel.html",
-"sha": "fd50c541f4e5434e0b61630cf6b59c986d438678",
-"size": 145501
+"sha": "c42e70c00736f53d2193eff0870151b2f8e1322a",
+"size": 145499
 },
 {
 "file": ".vercel/output/static/sw.js",
