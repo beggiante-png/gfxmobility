@@ -1,0 +1,86 @@
+{
+"name": "acaipurosabor",
+"project": null,
+"files": [
+{
+"file": ".vercel/output/config.json",
+"sha": "1081c780b93024b83f5e3eb11801b646af116181",
+"size": 326
+},
+{
+"file": ".vercel/output/static/adm/index.html",
+"sha": "2e209b45edd9e5668e7f6b324b1c3cd80611cbfb",
+"size": 351
+},
+{
+"file": ".vercel/output/static/admin/index.html",
+"sha": "2e209b45edd9e5668e7f6b324b1c3cd80611cbfb",
+"size": 351
+},
+{
+"file": ".vercel/output/static/fotos/banner.jpg",
+"sha": "81c8e80024608b7edabf9d2bf04efcb88a4b4bff",
+"size": 104766
+},
+{
+"file": ".vercel/output/static/fotos/garrafa1.jpg",
+"sha": "895fbd8980106207b9793715dd37b0968461807f",
+"size": 47437
+},
+{
+"file": ".vercel/output/static/fotos/garrafa2.jpg",
+"sha": "98f60f745e8277ccc26a0a1ae6474e5448517ec1",
+"size": 53362
+},
+{
+"file": ".vercel/output/static/fotos/garrafa3.jpg",
+"sha": "6a190a45c947acc0cf220ba28f4af7666964018f",
+"size": 37179
+},
+{
+"file": ".vercel/output/static/fotos/garrafa4.jpg",
+"sha": "9c0301ecfd0ffb3a4b6668250fbcfb293ab74823",
+"size": 24364
+},
+{
+"file": ".vercel/output/static/fotos/garrafa5.jpg",
+"sha": "e521e90299a57aaf04e59ced18ce1a7c00fe0d7f",
+"size": 29537
+},
+{
+"file": ".vercel/output/static/fotos/logo.png",
+"sha": "8381e0366976d0bbd4bfc88cf61963d19305f17c",
+"size": 308094
+},
+{
+"file": ".vercel/output/static/icone-192.png",
+"sha": "73eb05b01f0cc55393d89c38f2729e69698cb014",
+"size": 55690
+},
+{
+"file": ".vercel/output/static/icone-512.png",
+"sha": "8381e0366976d0bbd4bfc88cf61963d19305f17c",
+"size": 308094
+},
+{
+"file": ".vercel/output/static/index.html",
+"sha": "7115594b4961c7d83558638075541419d8b95e2f",
+"size": 165515
+},
+{
+"file": ".vercel/output/static/manifest.webmanifest",
+"sha": "39e38f2c4eebc47c686c01908c474666ff9b0726",
+"size": 644
+},
+{
+"file": ".vercel/output/static/painel.html",
+"sha": "fd50c541f4e5434e0b61630cf6b59c986d438678",
+"size": 145501
+},
+{
+"file": ".vercel/output/static/sw.js",
+"sha": "716a6dfc9dc82cbd5e98593aa82ed5392d31f008",
+"size": 1041
+}
+]
+}
