@@ -18,9 +18,9 @@
 "size": 346
 },
 {
-"file": ".vercel/output/static/fotos/garrafa.jpg",
-"sha": "50daacfdcc523e93c255395b252a4fcf04c96af0",
-"size": 54986
+"file": ".vercel/output/static/fotos/hero.jpg",
+"sha": "f041cbb4de0f948d7f8908de288317c44eb344c1",
+"size": 267317
 },
 {
 "file": ".vercel/output/static/fotos/logo.png",
@@ -28,19 +28,24 @@
 "size": 307443
 },
 {
-"file": ".vercel/output/static/fotos/marca.png",
-"sha": "5eae17a785bf8707dd8d3e09aa3b989f123ab532",
-"size": 352811
+"file": ".vercel/output/static/fotos/p_n300.jpg",
+"sha": "38b6d50c80c3fff35b7f1e5a55e4a7c548b5c9f5",
+"size": 84122
 },
 {
-"file": ".vercel/output/static/fotos/mascote.jpg",
-"sha": "e5c81b6f0e7753a1f7ab8900c19cdd967afb4698",
-"size": 75623
+"file": ".vercel/output/static/fotos/p_n500.jpg",
+"sha": "740ed3c6c733ba7141ba0a2754278f17e1d70aad",
+"size": 64959
 },
 {
-"file": ".vercel/output/static/fotos/sorteio.jpg",
-"sha": "9d73f9f02e879d23604d8df6d9356785f9494d96",
-"size": 96157
+"file": ".vercel/output/static/fotos/p_nut300.jpg",
+"sha": "77491916aad115266f4e2aa8f4f03f0ea26f5eed",
+"size": 63457
+},
+{
+"file": ".vercel/output/static/fotos/p_nut500.jpg",
+"sha": "b3c1a58175429edfa758aa48d82e1971c9bc6d0b",
+"size": 66139
 },
 {
 "file": ".vercel/output/static/icone-192.png",
@@ -54,8 +59,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "8067390b29f87713ff68f52a32622c1b0a68621e",
-"size": 166247
+"sha": "7740fd20fb765526d596dca4ecbc451ac0d6cfa4",
+"size": 166211
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -64,7 +69,7 @@
 },
 {
 "file": ".vercel/output/static/painel.html",
-"sha": "37a014f9b575a8b324fce14b1edf5822b7d279a1",
+"sha": "a2c96031f3fe92483c562b0c6e8d5218d6efc610",
 "size": 145051
 },
 {
