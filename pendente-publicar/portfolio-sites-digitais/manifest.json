@@ -1,0 +1,51 @@
+{
+"name": "portfolio-sites-digitais",
+"project": null,
+"files": [
+{
+"file": "img/l_anacai.png",
+"sha": "a529bc857db82c73d143bf84f611bbfa0bfb1d4c",
+"size": 91831
+},
+{
+"file": "img/l_jeanne.png",
+"sha": "65bfb6e541fe8508be67d3b625f657fe2e9f2c5d",
+"size": 107332
+},
+{
+"file": "img/l_ph.png",
+"sha": "21e5c4c9474b626fa7339d8403996fac9ca5c4d0",
+"size": 121507
+},
+{
+"file": "img/l_recanto.png",
+"sha": "2f94370db840b21fd29be1e65e65e24850ce6481",
+"size": 154800
+},
+{
+"file": "img/s_anacai.jpg",
+"sha": "42e9f22a71e1c5c7908ac07051400e0a50de1542",
+"size": 126917
+},
+{
+"file": "img/s_jeanne.jpg",
+"sha": "a1c16606e7ea20fd3060aeefbfacb62da5668e4d",
+"size": 104602
+},
+{
+"file": "img/s_ph.jpg",
+"sha": "64ff7b032ea71da303dec4d9f00987bd8e45a975",
+"size": 129904
+},
+{
+"file": "img/s_recanto.jpg",
+"sha": "449438ceff8b6caa36dbfa3c6123d959784e2a8f",
+"size": 131286
+},
+{
+"file": "index.html",
+"sha": "6fb5ca66a2d49469e6d5ab6812ab8e0d4bb52375",
+"size": 16928
+}
+]
+}
