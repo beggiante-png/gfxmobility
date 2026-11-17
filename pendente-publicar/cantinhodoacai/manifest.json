@@ -1,0 +1,106 @@
+{
+"name": "cantinhodoacai",
+"project": null,
+"files": [
+{
+"file": ".vercel/output/config.json",
+"sha": "1081c780b93024b83f5e3eb11801b646af116181",
+"size": 326
+},
+{
+"file": ".vercel/output/static/adm/index.html",
+"sha": "9a46dc15ba33929cc3d586248ac43fb1e015c4fa",
+"size": 352
+},
+{
+"file": ".vercel/output/static/admin/index.html",
+"sha": "9a46dc15ba33929cc3d586248ac43fb1e015c4fa",
+"size": 352
+},
+{
+"file": ".vercel/output/static/fotos/bowl.jpg",
+"sha": "975bc5a603ea8fa5192c0a8ec2e6e9f807989894",
+"size": 30778
+},
+{
+"file": ".vercel/output/static/fotos/bowl2.jpg",
+"sha": "d03655a91c65f2014da0dc84f88c98bca1792ba2",
+"size": 34283
+},
+{
+"file": ".vercel/output/static/fotos/bowl3.jpg",
+"sha": "caec83775222fced50bc9e6e16ea887e4c5a3147",
+"size": 28710
+},
+{
+"file": ".vercel/output/static/fotos/copo.jpg",
+"sha": "38e08b7fa00cb21fe14efbf46c98b2f92d68f184",
+"size": 68553
+},
+{
+"file": ".vercel/output/static/fotos/logo.png",
+"sha": "de054281d4120b23e2fc4a49a2743250499edf30",
+"size": 430145
+},
+{
+"file": ".vercel/output/static/fotos/pic_esp.jpg",
+"sha": "c56918e3e9ace2b4889b67af31432d0776336daf",
+"size": 12233
+},
+{
+"file": ".vercel/output/static/fotos/pic_fruta.jpg",
+"sha": "c3102218d789afaf9f9703c4e5eb4efeb31b2063",
+"size": 15684
+},
+{
+"file": ".vercel/output/static/fotos/pic_qb.jpg",
+"sha": "b7643afc1d746836077fa034010750bfccef772b",
+"size": 12315
+},
+{
+"file": ".vercel/output/static/fotos/pic_skimo.jpg",
+"sha": "91295060bbd799425100b130884901c2e3de3093",
+"size": 11518
+},
+{
+"file": ".vercel/output/static/fotos/picole.jpg",
+"sha": "946b944e22224c3b8e33b2ae7d28942bdd025730",
+"size": 34152
+},
+{
+"file": ".vercel/output/static/fotos/shake.jpg",
+"sha": "e3620247b426f720ed99f5507c6a32018faff003",
+"size": 16727
+},
+{
+"file": ".vercel/output/static/icone-192.png",
+"sha": "b9cd554fbe941524e57a3b4685ea0c815e9fff4c",
+"size": 74372
+},
+{
+"file": ".vercel/output/static/icone-512.png",
+"sha": "de054281d4120b23e2fc4a49a2743250499edf30",
+"size": 430145
+},
+{
+"file": ".vercel/output/static/index.html",
+"sha": "8eaa6f3b6ad981090eca131aadfd14c379556aa0",
+"size": 185665
+},
+{
+"file": ".vercel/output/static/manifest.webmanifest",
+"sha": "f29ece3fd69d234e03458df99b2f9c77b7d06db0",
+"size": 658
+},
+{
+"file": ".vercel/output/static/painel.html",
+"sha": "69f6ff23378ecfd18ead9c00cc8c86b91c9b1c54",
+"size": 170742
+},
+{
+"file": ".vercel/output/static/sw.js",
+"sha": "c32182e0aefbc51f1d0e433e2aac58f837fc8eff",
+"size": 1041
+}
+]
+}
