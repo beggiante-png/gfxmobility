@@ -149,8 +149,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "26b5825c524b52b85072a75f23e7a2c8ff5ab0f7",
-"size": 186001
+"sha": "9a1c55f99bd58bb42f5597a8698b0dc176e45cd3",
+"size": 186013
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -159,13 +159,23 @@
 },
 {
 "file": ".vercel/output/static/painel.html",
-"sha": "134d859ba8e53d59f6f1ea60f075bc28500905bc",
-"size": 170762
+"sha": "c83bc45de6def83eeecbfffd2c1c49fe630a5953",
+"size": 171170
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "af1822fe4fc2618593620779052f4fb13dd221a9",
+"sha": "c00072151d98063664aad0be032f091a5ed39dbe",
 "size": 1041
+},
+{
+"file": ".vercel/output/static/fotos/p_copo300.jpg",
+"sha": "a645ffaddcb4cdba63947bfca027225a2637d55f",
+"size": 163639
+},
+{
+"file": ".vercel/output/static/fotos/p_copo500.jpg",
+"sha": "cf6aa5398b1108f6d85551fbbeb2228e1c697623",
+"size": 100194
 }
 ]
 }
