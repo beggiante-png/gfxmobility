@@ -120,6 +120,24 @@ section.s{padding:120px 0}
 .final p{color:#ffffff99;max-width:520px;margin:0 auto 36px}
 footer{background:var(--ink);color:#ffffff66;font-size:12px;letter-spacing:.06em;border-top:1px solid #ffffff14}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0}
+/* planos */
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
+.plan{display:flex;flex-direction:column;padding:34px 30px;border:1px solid var(--line);border-radius:26px;background:#fff}
+.plan.hi{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:0 40px 80px -40px #0a0b0f80;position:relative}
+.plan.hi .badge{position:absolute;top:-13px;left:30px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 12px;border-radius:99px}
+.plan h3{font-family:"Instrument Serif";font-weight:400;font-size:32px;line-height:1}
+.plan .sub{color:var(--mut);font-size:14px;margin:8px 0 22px}
+.plan.hi .sub{color:#ffffff99}
+.price{white-space:nowrap;font-family:"Instrument Serif";font-size:clamp(44px,12vw,54px);line-height:1;letter-spacing:-.02em}
+.price small{font-family:Inter;font-size:14px;color:var(--mut);letter-spacing:0;margin-left:4px}
+.plan.hi .price small{color:#ffffff80}
+.plan ul{list-style:none;display:grid;gap:11px;margin:24px 0 30px;font-size:14px}
+.plan li{display:flex;gap:10px;align-items:flex-start}
+.plan li:before{content:"✓";color:var(--gold);font-weight:700}
+.plan .link{margin-top:auto;justify-content:center}
+.plan.hi .link{background:#fff;color:var(--ink);border-color:#fff}
+.note{margin-top:22px;text-align:center;color:var(--mut);font-size:13px}
+@media (max-width:900px){.plans{grid-template-columns:1fr}}
 /* reveal */
 .rv{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
@@ -149,7 +167,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 <body>
 <nav class="nav" id="nav"><div class="wrap">
  <a class="logo" href="#top"><span class="mark">CT</span><b>Company Transformation</b></a>
- <ul><li><a href="#clientes">Clientes</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#processo">Processo</a></li></ul>
+ <ul><li><a href="#clientes">Clientes</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#planos">Planos</a></li><li><a href="#processo">Processo</a></li></ul>
  <a class="go" href="#clientes">Ver cases</a>
 </div></nav>
 
@@ -235,6 +253,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
    <div class="svc rv"><span class="n">02</span><h3>Agenda online</h3><p>Seus clientes marcam horário sozinhos, a qualquer hora, e você acompanha tudo.</p></div>
    <div class="svc rv"><span class="n">03</span><h3>Painel de gestão</h3><p>Pedidos, balcão, entregas, cupons, fidelidade e faturamento em um só lugar.</p></div>
   </div>
+ </div>
+</section>
+
+<section class="s" id="planos">
+ <div class="wrap">
+  <div class="head rv"><div><span class="eyebrow">Planos</span><h2>Investimento <em>simples</em>,<br>sem comissão.</h2></div><p>Você paga uma vez pelo site. Se quiser, conta com a gente todo mês para manter tudo atualizado.</p></div>
+  <div class="plans">
+   <div class="plan rv"><h3>Essencial</h3><p class="sub">Para começar a vender online</p><div class="price">R$ 249,90<small style="display:block;margin:8px 0 0">pagamento único</small></div>
+    <ul><li>Cardápio digital ou agenda online com a sua marca</li><li>Pedidos direto no seu WhatsApp</li><li>Painel de pedidos e produtos</li><li>Publicado e pronto para usar</li></ul>
+    <a class="link" href="#clientes">Ver exemplos</a></div>
+   <div class="plan hi rv"><span class="badge">Mais escolhido</span><h3>Essencial + Cuidado</h3><p class="sub">Site sempre atualizado, sem dor de cabeça</p><div class="price">R$ 29,90<small>/mês</small></div>
+    <ul><li>Tudo do Essencial</li><li>Alterações de preços e produtos</li><li>Troca de fotos e banners</li><li>Suporte pelo WhatsApp</li></ul>
+    <a class="link" href="#clientes">Ver exemplos</a></div>
+   <div class="plan rv"><h3>Premium</h3><p class="sub">Para quem quer crescer mais rápido</p><div class="price">R$ 49,90<small>/mês</small></div>
+    <ul><li>Tudo do Cuidado</li><li>Promoções e cupons sob demanda</li><li>Novas funções: fidelidade, mesas, motoboy</li><li>Atendimento prioritário</li></ul>
+    <a class="link" href="#clientes">Ver exemplos</a></div>
+  </div>
+  <p class="note rv">Os planos mensais são opcionais. O site é seu desde o primeiro pagamento.</p>
  </div>
 </section>
 
