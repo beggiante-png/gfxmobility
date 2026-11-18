@@ -89,38 +89,38 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_b1.jpg",
-"sha": "e278bfe9a97483547326458af59dc9311e20aabb",
-"size": 64102
+"sha": "6e75d01719d9baba9bf1250b15d42d2f9fe98bee",
+"size": 113281
 },
 {
 "file": ".vercel/output/static/fotos/p_b2.jpg",
-"sha": "30634c47bea05f6d57c87c38d3f2dd5daa00bf01",
-"size": 57789
+"sha": "a1308d96aebfc039d8a72aa39936b7c0c177bcb6",
+"size": 125442
 },
 {
 "file": ".vercel/output/static/fotos/p_b3.jpg",
-"sha": "ddd10d15fa28d6f5e0502b3f65d0afaf5185be20",
-"size": 62493
+"sha": "056b1f718100a500e98a898935617ac37077bf49",
+"size": 144685
 },
 {
 "file": ".vercel/output/static/fotos/p_b4.jpg",
-"sha": "6cb2c9c18f197f7acabff3504481cbad0ca0186d",
-"size": 78998
+"sha": "e5fdddda7878a18687d02da876ece60273d3a20f",
+"size": 155187
 },
 {
 "file": ".vercel/output/static/fotos/p_barca.jpg",
-"sha": "410cf442725d6bbde069f2e43981d045eb5b3b43",
-"size": 58418
+"sha": "9d61cb7a00c937db547e5b6993ac3f61ef4658d0",
+"size": 156970
 },
 {
 "file": ".vercel/output/static/fotos/p_bsorv.jpg",
-"sha": "dd52bf9bb3b5ac0382f9cbac5e5972de39ca1228",
-"size": 62969
+"sha": "fc95796c23fa91f2bf712a289b2878a9ebf08cf4",
+"size": 118666
 },
 {
 "file": ".vercel/output/static/fotos/p_casa.jpg",
-"sha": "e39ba27882c6ed98eae61b02fb8e2db4a65e4b84",
-"size": 68613
+"sha": "10cd717414866375de3623ef183dcf942cb8c39f",
+"size": 171823
 },
 {
 "file": ".vercel/output/static/fotos/p_copo.jpg",
@@ -179,7 +179,7 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "999eb1b6ce89f7b1df1502968137d665045dd11e",
+"sha": "14dc7dead4076243980b0267c021aa7364df78b0",
 "size": 1041
 }
 ]
