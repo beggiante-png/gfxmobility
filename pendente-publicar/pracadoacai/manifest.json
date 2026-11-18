@@ -124,13 +124,13 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_copo.jpg",
-"sha": "5fbe300119738ee98ac5694c2b1f14369a17ab8b",
-"size": 104623
+"sha": "a645ffaddcb4cdba63947bfca027225a2637d55f",
+"size": 163639
 },
 {
 "file": ".vercel/output/static/fotos/p_copos.jpg",
-"sha": "4f7560c0724a2c93dada7f5f68c78b472ddda90f",
-"size": 51634
+"sha": "cf6aa5398b1108f6d85551fbbeb2228e1c697623",
+"size": 100194
 },
 {
 "file": ".vercel/output/static/fotos/t_about.jpg",
@@ -179,7 +179,7 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "d675b6d4a3874dfa29fe3c768fce2f8026b17852",
+"sha": "999eb1b6ce89f7b1df1502968137d665045dd11e",
 "size": 1041
 }
 ]
