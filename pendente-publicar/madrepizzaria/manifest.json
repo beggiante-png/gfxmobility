@@ -194,7 +194,7 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "96ab46d27abcb593aff6d3a6c9bed42f021a2d73",
+"sha": "9b32e5d4ebd5d1e0c58ce10a5e622f613ef5dce9",
 "size": 198949
 },
 {
@@ -209,13 +209,18 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "fcaaa29b9c29c9471e3fd9943b8e6dc06c561372",
+"sha": "2973ddcb23f47ed413d4d83f360f69e9c66504c3",
 "size": 1041
 },
 {
 "file": ".vercel/output/static/fotos/t_pizza.jpg",
 "sha": "ec53f728ac23498ecca76e259481d672ac55e4c3",
 "size": 236322
+},
+{
+"file": ".vercel/output/static/fotos/t_natal.jpg",
+"sha": "ce2ecea0f11abe1384f610092e9a50fcba03da9b",
+"size": 120002
 }
 ]
 }
