@@ -194,8 +194,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "863ed75e00d587e4d3531128207e7b29e2759972",
-"size": 198947
+"sha": "96ab46d27abcb593aff6d3a6c9bed42f021a2d73",
+"size": 198949
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -209,8 +209,13 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "7f4ea72603d18b4556fdf77d9f3057e4f854eafd",
+"sha": "fcaaa29b9c29c9471e3fd9943b8e6dc06c561372",
 "size": 1041
+},
+{
+"file": ".vercel/output/static/fotos/t_pizza.jpg",
+"sha": "ec53f728ac23498ecca76e259481d672ac55e4c3",
+"size": 236322
 }
 ]
 }
