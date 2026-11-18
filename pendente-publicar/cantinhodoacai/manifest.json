@@ -69,13 +69,13 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_pic_qb.jpg",
-"sha": "dffa3af7fedc2da4d7a4585d92e78a08a53a2248",
-"size": 39126
+"sha": "92966078f3fc79fa724eeea194c6578ad9b777fe",
+"size": 121612
 },
 {
 "file": ".vercel/output/static/fotos/p_pic_skimo.jpg",
-"sha": "1a910685875b8df188aa7bd661a881b84b926a76",
-"size": 37432
+"sha": "f39085fde29603403b3f3b9644a201c6c32caae5",
+"size": 201821
 },
 {
 "file": ".vercel/output/static/fotos/p_shake.jpg",
@@ -164,7 +164,7 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "c00072151d98063664aad0be032f091a5ed39dbe",
+"sha": "538892dde6f2cd7c843f849dbe0e6d1d1af56953",
 "size": 1041
 },
 {
