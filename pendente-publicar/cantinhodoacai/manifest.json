@@ -84,23 +84,23 @@
 },
 {
 "file": ".vercel/output/static/fotos/pic_esp.jpg",
-"sha": "c56918e3e9ace2b4889b67af31432d0776336daf",
-"size": 12233
+"sha": "6889c15201096e65f88e55bcfa5871f4cca88849",
+"size": 177083
 },
 {
 "file": ".vercel/output/static/fotos/pic_fruta.jpg",
-"sha": "c3102218d789afaf9f9703c4e5eb4efeb31b2063",
-"size": 15684
+"sha": "00a98bdaa178a89bbcc376e7af75e4089b468f0b",
+"size": 185675
 },
 {
 "file": ".vercel/output/static/fotos/pic_qb.jpg",
-"sha": "b7643afc1d746836077fa034010750bfccef772b",
-"size": 12315
+"sha": "92966078f3fc79fa724eeea194c6578ad9b777fe",
+"size": 121612
 },
 {
 "file": ".vercel/output/static/fotos/pic_skimo.jpg",
-"sha": "91295060bbd799425100b130884901c2e3de3093",
-"size": 11518
+"sha": "f39085fde29603403b3f3b9644a201c6c32caae5",
+"size": 201821
 },
 {
 "file": ".vercel/output/static/fotos/picole.jpg",
@@ -159,12 +159,12 @@
 },
 {
 "file": ".vercel/output/static/painel.html",
-"sha": "276e91baf671d3278e4c59ef683e99757140be29",
-"size": 194033
+"sha": "17b9185a7ceb08e397da612506e1a536eac984dc",
+"size": 194062
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "a5bc11312b31b454f55a0d72abd3a0ea98e3b56d",
+"sha": "3112414489826a515430b968015d8e80c0e44945",
 "size": 1042
 },
 {
