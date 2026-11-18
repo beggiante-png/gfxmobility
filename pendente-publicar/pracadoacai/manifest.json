@@ -1,0 +1,181 @@
+{
+"name": "pracadoacai",
+"project": null,
+"files": [
+{
+"file": ".vercel/output/config.json",
+"sha": "1081c780b93024b83f5e3eb11801b646af116181",
+"size": 326
+},
+{
+"file": ".vercel/output/static/adm/index.html",
+"sha": "a722802801df8e6aff2beb24a51bb03f94f4515f",
+"size": 350
+},
+{
+"file": ".vercel/output/static/admin/index.html",
+"sha": "a722802801df8e6aff2beb24a51bb03f94f4515f",
+"size": 350
+},
+{
+"file": ".vercel/output/static/fotos/arca.jpg",
+"sha": "d34151a2f00c5bc2bbfa3d4070f14669d13811b2",
+"size": 19141
+},
+{
+"file": ".vercel/output/static/fotos/b1.jpg",
+"sha": "cf179136327932614a81cadfa90503c8f006eb4f",
+"size": 11625
+},
+{
+"file": ".vercel/output/static/fotos/b2.jpg",
+"sha": "d029e88317cea86e654f75f7a08b416791aee36b",
+"size": 13136
+},
+{
+"file": ".vercel/output/static/fotos/b3.jpg",
+"sha": "2b4086d28623cdb1f73ba8b1525d8a0680e0aecc",
+"size": 17667
+},
+{
+"file": ".vercel/output/static/fotos/b4.jpg",
+"sha": "c172a786a53afda6411471ea1b0f1e685676a436",
+"size": 19300
+},
+{
+"file": ".vercel/output/static/fotos/barca.jpg",
+"sha": "b8bc736a3a1410514d261cd493d935c2d31212c0",
+"size": 15887
+},
+{
+"file": ".vercel/output/static/fotos/bsorv.jpg",
+"sha": "8c4badc7c73cf43d6dd5b25722b7b05f873f2ede",
+"size": 9002
+},
+{
+"file": ".vercel/output/static/fotos/casa.jpg",
+"sha": "5f449180722116c6c40cfab57ac5e73f906f6b54",
+"size": 19479
+},
+{
+"file": ".vercel/output/static/fotos/copo.jpg",
+"sha": "165242de56be18b281d547322eee35ad35f68e6c",
+"size": 173126
+},
+{
+"file": ".vercel/output/static/fotos/copos.jpg",
+"sha": "2761316eeb639a4d6e7906ceb0dbbabf7451c019",
+"size": 7239
+},
+{
+"file": ".vercel/output/static/fotos/garrafa.jpg",
+"sha": "c3f56f9e6880f61c013c41beacbf7439f97b0625",
+"size": 114900
+},
+{
+"file": ".vercel/output/static/fotos/garrafa_t.jpg",
+"sha": "4d8e8b8bac2b43a7d6d434045bd6458b2d65d5ac",
+"size": 105081
+},
+{
+"file": ".vercel/output/static/fotos/logo.png",
+"sha": "e098cfe75210c40552e4d937420e7f3e3a414ce0",
+"size": 231739
+},
+{
+"file": ".vercel/output/static/fotos/p_arca.jpg",
+"sha": "ce78b1342f10642276d341d6c06eabec9f4a20a7",
+"size": 61133
+},
+{
+"file": ".vercel/output/static/fotos/p_b1.jpg",
+"sha": "e278bfe9a97483547326458af59dc9311e20aabb",
+"size": 64102
+},
+{
+"file": ".vercel/output/static/fotos/p_b2.jpg",
+"sha": "30634c47bea05f6d57c87c38d3f2dd5daa00bf01",
+"size": 57789
+},
+{
+"file": ".vercel/output/static/fotos/p_b3.jpg",
+"sha": "ddd10d15fa28d6f5e0502b3f65d0afaf5185be20",
+"size": 62493
+},
+{
+"file": ".vercel/output/static/fotos/p_b4.jpg",
+"sha": "6cb2c9c18f197f7acabff3504481cbad0ca0186d",
+"size": 78998
+},
+{
+"file": ".vercel/output/static/fotos/p_barca.jpg",
+"sha": "410cf442725d6bbde069f2e43981d045eb5b3b43",
+"size": 58418
+},
+{
+"file": ".vercel/output/static/fotos/p_bsorv.jpg",
+"sha": "dd52bf9bb3b5ac0382f9cbac5e5972de39ca1228",
+"size": 62969
+},
+{
+"file": ".vercel/output/static/fotos/p_casa.jpg",
+"sha": "e39ba27882c6ed98eae61b02fb8e2db4a65e4b84",
+"size": 68613
+},
+{
+"file": ".vercel/output/static/fotos/p_copo.jpg",
+"sha": "5fbe300119738ee98ac5694c2b1f14369a17ab8b",
+"size": 104623
+},
+{
+"file": ".vercel/output/static/fotos/p_copos.jpg",
+"sha": "4f7560c0724a2c93dada7f5f68c78b472ddda90f",
+"size": 51634
+},
+{
+"file": ".vercel/output/static/fotos/t_about.jpg",
+"sha": "ae7e74c202ddfa81be75e1880f7ccc066bf44f8a",
+"size": 126950
+},
+{
+"file": ".vercel/output/static/fotos/t_atend.jpg",
+"sha": "17a4cbfd582d6a33f48e89700a4ad4d00866c632",
+"size": 47619
+},
+{
+"file": ".vercel/output/static/fotos/t_hor.jpg",
+"sha": "aee8e460966e5f9543f3add488b356b6b538efb6",
+"size": 78022
+},
+{
+"file": ".vercel/output/static/icone-192.png",
+"sha": "edadd6f56c0b93f029e772d0ff006a176781c228",
+"size": 50633
+},
+{
+"file": ".vercel/output/static/icone-512.png",
+"sha": "e098cfe75210c40552e4d937420e7f3e3a414ce0",
+"size": 231739
+},
+{
+"file": ".vercel/output/static/index.html",
+"sha": "488040e520a2f3bfdc902386962ed3894050b974",
+"size": 184256
+},
+{
+"file": ".vercel/output/static/manifest.webmanifest",
+"sha": "36e53f3c989cb07fa68842c108c25f62cfb7c8a4",
+"size": 652
+},
+{
+"file": ".vercel/output/static/painel.html",
+"sha": "5d87f810fc1bf97ef4c1fe0f01cd4e0267b3d370",
+"size": 166843
+},
+{
+"file": ".vercel/output/static/sw.js",
+"sha": "f9466d994584fd2b02cae48e275fb4bd655de4a5",
+"size": 1041
+}
+]
+}

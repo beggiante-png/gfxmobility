@@ -1,0 +1,351 @@
+{
+"name": "painelrecanto",
+"project": "prj_JmMz2zV8rCwUOUAFkWz2maSwawXw",
+"files": [
+{
+"file": "fotos/foto-1.png",
+"sha": "b416312e8d2c78339f2d148293b8c333a333916a",
+"size": 2073294
+},
+{
+"file": "fotos/foto-10.png",
+"sha": "0828ff2f139bc27d90895dc78c2ebe54a57a1779",
+"size": 936007
+},
+{
+"file": "fotos/foto-11.png",
+"sha": "f248714cce5a2a13464e433c9580b19182031709",
+"size": 993342
+},
+{
+"file": "fotos/foto-12.png",
+"sha": "5c409f3d54f9f1a613917a29583e05ed342cbb0b",
+"size": 1004307
+},
+{
+"file": "fotos/foto-13.png",
+"sha": "00e3f9103740f8632e18c3bd9815c4450168d8f7",
+"size": 1391388
+},
+{
+"file": "fotos/foto-14.png",
+"sha": "1db64e391a4ce457dbc78b936d406bbdee573aa4",
+"size": 1458665
+},
+{
+"file": "fotos/foto-15.png",
+"sha": "cca3c5f273d4ec6779ccafc10b0e8b154d21df10",
+"size": 1449292
+},
+{
+"file": "fotos/foto-16.png",
+"sha": "fc098a4cf2104d4e3824e43422bdd84c650de371",
+"size": 1456161
+},
+{
+"file": "fotos/foto-17.png",
+"sha": "3a366deb8cd2820ef45b40cd32eb29d9a5514182",
+"size": 1414285
+},
+{
+"file": "fotos/foto-18.png",
+"sha": "3a366deb8cd2820ef45b40cd32eb29d9a5514182",
+"size": 1414285
+},
+{
+"file": "fotos/foto-19.png",
+"sha": "5a618314648dd09b037748cf738c3653b0caecc3",
+"size": 1416488
+},
+{
+"file": "fotos/foto-2.png",
+"sha": "a77a21abb589e4b28c91d4ab6073d1924fbd3a01",
+"size": 1699707
+},
+{
+"file": "fotos/foto-20.png",
+"sha": "f41d519d1f0707361688841e31a266f48841c473",
+"size": 976450
+},
+{
+"file": "fotos/foto-21.png",
+"sha": "ec8cf7a7d77e8618c80b87e1a1907b5e4f312d2e",
+"size": 1432154
+},
+{
+"file": "fotos/foto-22.png",
+"sha": "0e0af8ee5c26661b1257807d64d971cc84a7c7d3",
+"size": 1289437
+},
+{
+"file": "fotos/foto-23.png",
+"sha": "0e0af8ee5c26661b1257807d64d971cc84a7c7d3",
+"size": 1289437
+},
+{
+"file": "fotos/foto-24.png",
+"sha": "4d1789191fca1e30163d69a81229eaaa61f714b3",
+"size": 1501852
+},
+{
+"file": "fotos/foto-25.png",
+"sha": "79726a9d265ee4aefa9186976f629c0e0fd8114f",
+"size": 1260021
+},
+{
+"file": "fotos/foto-26.png",
+"sha": "108f3ebb3d8e193e812b75d7f9cdc9567547dc9d",
+"size": 1418221
+},
+{
+"file": "fotos/foto-27.png",
+"sha": "50303d93857b9c7a53834414769f62c0d1542b3b",
+"size": 1537424
+},
+{
+"file": "fotos/foto-28.png",
+"sha": "029eda6b5403673403eaa066886ea9f8824c660b",
+"size": 1506122
+},
+{
+"file": "fotos/foto-29.png",
+"sha": "ca892f5042389df018428152cae8d0b225b350c6",
+"size": 1240150
+},
+{
+"file": "fotos/foto-3.png",
+"sha": "45575398f862636c5bdfbcae03a2cc12c2199331",
+"size": 1235591
+},
+{
+"file": "fotos/foto-30.png",
+"sha": "ab72c5f0ed0e00d76aa129b09dc800eacdf9faf1",
+"size": 1663873
+},
+{
+"file": "fotos/foto-31.png",
+"sha": "ea4090e46734aea32398ba04f7bbb5188e9e4708",
+"size": 1375312
+},
+{
+"file": "fotos/foto-32.png",
+"sha": "4952ef2e4fff33c7c7d3e0235e3c253a285c8fcd",
+"size": 59683
+},
+{
+"file": "fotos/foto-33.png",
+"sha": "dab6246c0775c667a2c2bd7ae18c356a1cbba233",
+"size": 83095
+},
+{
+"file": "fotos/foto-34.png",
+"sha": "e5bee0f3be2a3e89ca247383a087fc6119dc74fe",
+"size": 880120
+},
+{
+"file": "fotos/foto-35.png",
+"sha": "6c98bdba69921676ad943b36ed7e939a0fb2125e",
+"size": 143367
+},
+{
+"file": "fotos/foto-36.png",
+"sha": "1975fa330c5a58543fb36c09a8adb3daca012b36",
+"size": 1384433
+},
+{
+"file": "fotos/foto-37.png",
+"sha": "0c0fec9246d31136eb0a622f72d08cbf07fedb49",
+"size": 1222464
+},
+{
+"file": "fotos/foto-38.png",
+"sha": "70ebedf4343e7fbb6910d770719feefab3b0311a",
+"size": 1125639
+},
+{
+"file": "fotos/foto-39.png",
+"sha": "e1649b4f6b62ae53081f68108a535743e13f0440",
+"size": 1199179
+},
+{
+"file": "fotos/foto-4.png",
+"sha": "c5fb8ca4dba99e8ae34ff3a46737be1046fcb117",
+"size": 1100960
+},
+{
+"file": "fotos/foto-40.png",
+"sha": "ac238dbadf4174a77f1e0f6b54be5b1be7165975",
+"size": 1654283
+},
+{
+"file": "fotos/foto-41.png",
+"sha": "9e76cbec209a748cf027cfb776a7762fe5d2954d",
+"size": 1258744
+},
+{
+"file": "fotos/foto-42.png",
+"sha": "8ce2ba1058031740be23ad2fb5d9dd52837dfb29",
+"size": 980956
+},
+{
+"file": "fotos/foto-43.png",
+"sha": "df6c1e33f1b448670e7c1d65256ee245c695d438",
+"size": 1186680
+},
+{
+"file": "fotos/foto-44.png",
+"sha": "17c1a3022cc96e375abfdb6f594a08c7479a88e1",
+"size": 1107177
+},
+{
+"file": "fotos/foto-45.png",
+"sha": "4456fff3bf50263734af933c746d57d89742308f",
+"size": 1381474
+},
+{
+"file": "fotos/foto-46.png",
+"sha": "a177c20bfd04c8dc845d802895ec7cd195b01d42",
+"size": 1472911
+},
+{
+"file": "fotos/foto-47.png",
+"sha": "3b113254450b3f2fb0f2eaa2db73106ee9a0d611",
+"size": 192776
+},
+{
+"file": "fotos/foto-48.png",
+"sha": "bb1312068c236f2fbcbd32148072e727287a853f",
+"size": 122501
+},
+{
+"file": "fotos/foto-49.png",
+"sha": "7af0cff27026338a8e0ad3cddc752f0a4f5f9e2c",
+"size": 218686
+},
+{
+"file": "fotos/foto-5.png",
+"sha": "e4b7acd002b887f1f573c31f835fce4b86237b28",
+"size": 729113
+},
+{
+"file": "fotos/foto-50.png",
+"sha": "9c91b5b5a5ae6f92f5e6e517b9ccda655ad72505",
+"size": 303941
+},
+{
+"file": "fotos/foto-51.png",
+"sha": "9fe30d131df3e66f928374575e9121383f366a30",
+"size": 842180
+},
+{
+"file": "fotos/foto-52.png",
+"sha": "ce85e667e9d582862dc0ab202867ea749e12b345",
+"size": 337322
+},
+{
+"file": "fotos/foto-53.png",
+"sha": "762063c64ae17cead9cc6089a356e817f29a389b",
+"size": 537983
+},
+{
+"file": "fotos/foto-54.png",
+"sha": "665204d736f4e1e1d086978d8f9c7c12a5e31973",
+"size": 114544
+},
+{
+"file": "fotos/foto-55.png",
+"sha": "9a595ab2b7ac8cc57de9c6a09d67424289cdc477",
+"size": 201617
+},
+{
+"file": "fotos/foto-56.png",
+"sha": "d8e5f7095a7381458474947137cef016c480262b",
+"size": 55143
+},
+{
+"file": "fotos/foto-57.png",
+"sha": "4f549b02a5e7fd21720f473c68e6c6f0fd9958fb",
+"size": 184081
+},
+{
+"file": "fotos/foto-58.png",
+"sha": "51709ee5d7d4c8ce7dadfbe883273613283a7adb",
+"size": 2012148
+},
+{
+"file": "fotos/foto-59.png",
+"sha": "71abdb449425dbddad2ceedece58066f71b9e602",
+"size": 1656116
+},
+{
+"file": "fotos/foto-6.png",
+"sha": "41ac1bad342df553d415b2b456d2ca01d8c0d689",
+"size": 1753220
+},
+{
+"file": "fotos/foto-60.png",
+"sha": "a3f737189455eeaf8069afd29b644485fee6359f",
+"size": 1452514
+},
+{
+"file": "fotos/foto-7.png",
+"sha": "187092f4a3b27b5bd6677272dd7899db37b18202",
+"size": 991089
+},
+{
+"file": "fotos/foto-8.png",
+"sha": "2b42ce797cedb02e6da0849efef09883ffb23acc",
+"size": 1188863
+},
+{
+"file": "fotos/foto-9.png",
+"sha": "c74aa4b9de9921482cab7da24b7a929b9398e658",
+"size": 1208433
+},
+{
+"file": "fotos/promo-xrecanto-gigante.jpg",
+"sha": "37cac7ea04fe112f0afc2075e51ec13b5216bc96",
+"size": 205466
+},
+{
+"file": "icone-192.png",
+"sha": "fad9552243d5f5148ba51cd1d93aff627f631634",
+"size": 40813
+},
+{
+"file": "index.html",
+"sha": "ac4ded173b74cb6b5b7b2a06d386f71d85339f4d",
+"size": 196730
+},
+{
+"file": "painel-180.png",
+"sha": "a9b6d3f6f14828badfedaee8db634cc0a76348fc",
+"size": 31391
+},
+{
+"file": "painel-192.png",
+"sha": "2b58872f7fd00c16de707c4474d88e1e51223b6b",
+"size": 39574
+},
+{
+"file": "painel-512.png",
+"sha": "5ba88c0cba6c5ab80d46e07e33dcc88755fec548",
+"size": 222841
+},
+{
+"file": "painel.webmanifest",
+"sha": "748e75a36dc472fefb2d3bb34847aa063f632a24",
+"size": 614
+},
+{
+"file": "sw.js",
+"sha": "7567d7d31dc47f90c9167653cae78aebc00e205c",
+"size": 534
+},
+{
+"file": "vercel.json",
+"sha": "a3658c77c292b0028a7a3b8121414576e6fdd370",
+"size": 92
+}
+]
+}

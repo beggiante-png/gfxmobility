@@ -1,0 +1,31 @@
+{
+ "name": "Dalaká Açaí",
+ "short_name": "Dalaká Açaí",
+ "description": "Dalaká Açaí Joinville: não dá para viver sem! Rua Minas Gerais, 2080 - Nova Brasília.",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "lang": "pt-BR",
+ "background_color": "#f8f1f8",
+ "theme_color": "#5e0a5f",
+ "icons": [
+  {
+   "src": "icone-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icone-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icone-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
