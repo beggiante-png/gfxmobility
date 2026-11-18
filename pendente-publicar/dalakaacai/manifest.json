@@ -64,8 +64,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_c4.jpg",
-"sha": "7da0b9e32495086c08cb012359e203214de0e980",
-"size": 144779
+"sha": "87c71c718a5edf9dcc107491f06f83702cf6177e",
+"size": 131430
 },
 {
 "file": ".vercel/output/static/fotos/t_about.jpg",
@@ -109,7 +109,7 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "ca5ea5e7037dc8425227e61043e0114366af9c96",
+"sha": "22540d8e9d987fad6d9820adc89c99d03febac48",
 "size": 1041
 },
 {
