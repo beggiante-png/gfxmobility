@@ -149,8 +149,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "72043a3dfa03018e77c05e56da2ed283942f746b",
-"size": 185797
+"sha": "26b5825c524b52b85072a75f23e7a2c8ff5ab0f7",
+"size": 186001
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -164,7 +164,7 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "842c471152d54ecdd31308bbb019705c67845e0e",
+"sha": "af1822fe4fc2618593620779052f4fb13dd221a9",
 "size": 1041
 }
 ]
