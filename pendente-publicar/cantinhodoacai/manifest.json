@@ -59,13 +59,13 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_pic_esp.jpg",
-"sha": "97e0046bee541c03c4765dd2b899a54eb36664cf",
-"size": 38544
+"sha": "6889c15201096e65f88e55bcfa5871f4cca88849",
+"size": 177083
 },
 {
 "file": ".vercel/output/static/fotos/p_pic_fruta.jpg",
-"sha": "a05184f315a068362275fa424526cbe950cde86d",
-"size": 46151
+"sha": "00a98bdaa178a89bbcc376e7af75e4089b468f0b",
+"size": 185675
 },
 {
 "file": ".vercel/output/static/fotos/p_pic_qb.jpg",
@@ -164,8 +164,8 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "52117806fb8fe61b3cdb35ea15b76d643bf6c577",
-"size": 1041
+"sha": "a5bc11312b31b454f55a0d72abd3a0ea98e3b56d",
+"size": 1042
 },
 {
 "file": ".vercel/output/static/fotos/p_copo300.jpg",
