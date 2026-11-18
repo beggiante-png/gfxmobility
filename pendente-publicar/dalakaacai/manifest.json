@@ -94,8 +94,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "1f50738232493a9222d270915ddb49630aef94dd",
-"size": 170907
+"sha": "03cce3170d4d11bba13a97428553509370398d6e",
+"size": 171301
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -109,8 +109,18 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "731bbbbe2ab564816cc7dc21d0d1e100fcc29145",
+"sha": "bf7074b02ca016188c3fbc419c21faa1886c1ed6",
 "size": 1041
+},
+{
+"file": ".vercel/output/static/fotos/t_big.jpg",
+"sha": "fea8337b621bba36b4d4ee5924be11baa5173511",
+"size": 241970
+},
+{
+"file": ".vercel/output/static/fotos/t_tigela.jpg",
+"sha": "f5978cc2ce292acde25040d17ac871dc15c74ee2",
+"size": 221053
 }
 ]
 }
