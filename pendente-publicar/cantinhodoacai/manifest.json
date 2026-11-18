@@ -123,6 +123,11 @@
 "size": 44290
 },
 {
+"file": ".vercel/output/static/fotos/t_big.jpg",
+"sha": "f041cbb4de0f948d7f8908de288317c44eb344c1",
+"size": 267317
+},
+{
 "file": ".vercel/output/static/fotos/t_hero.jpg",
 "sha": "98efbab07c2062f05ee5b2b40b615d3d2dbfea3c",
 "size": 66066
@@ -144,8 +149,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "7d626bd2f29de84985d3010fd1732fc62c9487e6",
-"size": 185500
+"sha": "72043a3dfa03018e77c05e56da2ed283942f746b",
+"size": 185797
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -159,7 +164,7 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "db659cf561b3cd9f605d4d71766cf711c86156e9",
+"sha": "842c471152d54ecdd31308bbb019705c67845e0e",
 "size": 1041
 }
 ]
