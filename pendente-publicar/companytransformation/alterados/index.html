@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Company Transformation</title>
+<meta name="description" content="Company Transformation: sites, cardápios digitais e agendas online que transformam pequenos negócios em marcas digitais.">
+<meta name="theme-color" content="#0a0b0f">
+<meta property="og:title" content="Company Transformation">
+<meta property="og:description" content="Transformamos negócios locais em marcas digitais: cardápios, agendas e painéis de gestão.">
+<meta property="og:image" content="img/s_recanto.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a0b0f;--ink2:#14161d;--paper:#f6f4ef;--paper2:#ecE8df;--tx:#14151a;--mut:#6b6e78;--line:#dcd8cf;--gold:#b8955a;--gold2:#d9bd85}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--tx);font-family:Inter,system-ui,sans-serif;font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,calc(100% - 40px));margin:0 auto}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.eyebrow:before{content:"";width:28px;height:1px;background:currentColor}
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:30;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.solid{background:#0a0b0fd9;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-color:#ffffff14}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:12px;color:#fff}
+.mark{width:34px;height:34px;border:1px solid var(--gold2);display:grid;place-items:center;font-family:"Instrument Serif";font-size:19px;color:var(--gold2);letter-spacing:-.04em}
+.logo b{font-weight:500;font-size:14px;letter-spacing:.24em;text-transform:uppercase}
+.nav ul{display:flex;gap:34px;list-style:none;font-size:13px;color:#ffffffb3}
+.nav ul a:hover{color:#fff}
+.nav .go{font-size:13px;font-weight:500;color:var(--ink);background:#fff;padding:10px 18px;border-radius:99px}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;background:var(--ink);color:#fff;overflow:hidden;padding:140px 0 72px}
+.hero:before{content:"";position:absolute;inset:-20%;background:radial-gradient(40% 50% at 78% 22%,#b8955a40,transparent 70%),radial-gradient(35% 45% at 12% 85%,#3a4a7a55,transparent 70%);filter:blur(10px);animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-4%,3%) scale(1.06)}}
+.grid-lines{position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:80px 80px;mask-image:linear-gradient(to bottom,transparent,#000 30%,#000 70%,transparent)}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:clamp(54px,10.5vw,148px);line-height:.92;letter-spacing:-.03em;margin:26px 0 30px}
+.hero h1 em{font-style:italic;color:var(--gold2)}
+.hrow{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;border-top:1px solid #ffffff1f;padding-top:28px}
+.hrow p{max-width:480px;color:#ffffffa6;font-size:clamp(15px,1.8vw,17px);font-weight:300}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 26px;border-radius:99px;font-size:14px;font-weight:500;transition:transform .25s,background .25s}
+.btn.w{background:#fff;color:var(--ink)}
+.btn.w:hover{transform:translateY(-2px)}
+.btn.d{background:var(--ink);color:#fff}
+.btn.d:hover{background:#000}
+.btn span{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;font-size:12px}
+.btn.d span{background:#fff;color:var(--ink)}
+/* faixa de números */
+.kpis{background:var(--ink);color:#fff;border-top:1px solid #ffffff14}
+.kpis .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.kpi{padding:34px 0;border-right:1px solid #ffffff14;padding-left:28px}
+.kpi:first-child{padding-left:0}.kpi:last-child{border-right:0}
+.kpi b{display:block;font-family:"Instrument Serif";font-weight:400;font-size:clamp(40px,5vw,58px);line-height:1;color:var(--gold2)}
+.kpi small{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#ffffff80}
+/* seções */
+section.s{padding:120px 0}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
+.head h2{font-family:"Instrument Serif";font-weight:400;font-size:clamp(42px,6vw,78px);line-height:.98;letter-spacing:-.02em;margin-top:16px}
+.head h2 em{font-style:italic;color:var(--gold)}
+.head p{color:var(--mut);font-size:16px;max-width:440px;justify-self:end}
+/* faixa de logos */
+.brands{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:72px}
+.brand{display:flex;flex-direction:column;align-items:center;gap:14px;padding:30px 10px;border-right:1px solid var(--line);transition:background .3s}
+.brand:last-child{border-right:0}
+.brand:hover{background:#fff}
+.brand img{width:clamp(66px,10vw,92px);aspect-ratio:1;border-radius:50%;filter:grayscale(1) contrast(1.05);opacity:.85;transition:filter .4s,opacity .4s,transform .4s}
+.brand:hover img{filter:none;opacity:1;transform:scale(1.05)}
+.brand span{font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);text-align:center}
+/* cases */
+.cases{display:grid;gap:22px}
+.case{display:grid;grid-template-columns:1.05fr 1fr;background:#fff;border:1px solid var(--line);border-radius:28px;overflow:hidden;transition:box-shadow .4s,transform .4s}
+.case:hover{box-shadow:0 40px 80px -40px #0a0b0f40;transform:translateY(-3px)}
+.case:nth-child(even){grid-template-columns:1fr 1.05fr}
+.case:nth-child(even) .vis{order:2}
+.vis{position:relative;background:var(--ink2);display:grid;place-items:center;padding:42px 20px;overflow:hidden;min-height:440px}
+.vis:before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(#b8955a55,transparent 65%);filter:blur(20px)}
+.phone{position:relative;width:min(230px,62%);aspect-ratio:9/19.5;border-radius:34px;padding:9px;background:#1c1e25;box-shadow:0 0 0 1px #ffffff1a,0 40px 70px -20px #000;transform:rotate(-3deg);transition:transform .6s}
+.case:hover .phone{transform:rotate(0) translateY(-6px)}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:26px;display:block}
+.info{padding:48px 44px;display:flex;flex-direction:column}
+.info .who{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.info .who img{width:52px;height:52px;border-radius:50%}
+.info .who small{display:block;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.info .who b{font-weight:500;font-size:15px}
+.info h3{font-family:"Instrument Serif";font-weight:400;font-size:clamp(32px,3.6vw,46px);line-height:1.02;letter-spacing:-.01em;margin-bottom:16px}
+.info p{color:var(--mut);font-size:15px;margin-bottom:24px}
+.feats{list-style:none;display:grid;gap:10px;margin-bottom:32px;font-size:14px}
+.feats li{display:flex;gap:12px;align-items:center;padding-bottom:10px;border-bottom:1px solid #ecE8df}
+.feats li:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+.link{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:99px;font-size:13px;font-weight:500;border:1px solid var(--line);transition:border-color .2s,background .2s}
+.link:hover{border-color:var(--tx)}
+.link.p{background:var(--ink);color:#fff;border-color:var(--ink)}
+.link.p:hover{background:#000}
+.link svg{width:16px;height:16px}
+/* serviços */
+.dark{background:var(--ink);color:#fff}
+.dark .head p{color:#ffffff99}
+.svcs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #ffffff1f}
+.svc{padding:38px 32px 40px 0;border-right:1px solid #ffffff1f;margin-right:32px}
+.svc:last-child{border-right:0;margin-right:0}
+.svc .n{font-family:"Instrument Serif";font-size:18px;color:var(--gold2)}
+.svc h3{font-family:"Instrument Serif";font-weight:400;font-size:34px;line-height:1.05;margin:18px 0 12px}
+.svc p{color:#ffffff99;font-size:14.5px}
+/* processo */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.step{padding:28px 24px;border:1px solid var(--line);border-radius:22px;background:#fff}
+.step b{font-family:"Instrument Serif";font-weight:400;font-size:46px;color:var(--gold);line-height:1}
+.step h4{font-size:16px;font-weight:600;margin:14px 0 6px}
+.step p{font-size:14px;color:var(--mut)}
+/* final */
+.final{background:var(--ink);color:#fff;text-align:center;padding:140px 0;position:relative;overflow:hidden}
+.final:before{content:"";position:absolute;left:50%;top:100%;width:900px;height:900px;transform:translate(-50%,-50%);background:radial-gradient(#b8955a40,transparent 60%)}
+.final .wrap{position:relative}
+.final h2{font-family:"Instrument Serif";font-weight:400;font-size:clamp(48px,8vw,110px);line-height:.95;letter-spacing:-.02em;margin:22px 0 24px}
+.final h2 em{font-style:italic;color:var(--gold2)}
+.final p{color:#ffffff99;max-width:520px;margin:0 auto 36px}
+footer{background:var(--ink);color:#ffffff66;font-size:12px;letter-spacing:.06em;border-top:1px solid #ffffff14}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0}
+/* reveal */
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.hero:before{animation:none}}
+@media (max-width:900px){
+ .nav ul{display:none}
+ .head{grid-template-columns:1fr}.head p{justify-self:start}
+ .case,.case:nth-child(even){grid-template-columns:1fr}
+ .case:nth-child(even) .vis{order:0}
+ .vis{min-height:380px}
+ .info{padding:32px 24px}
+ .svcs{grid-template-columns:1fr}.svc{border-right:0;margin-right:0;padding:30px 0;border-bottom:1px solid #ffffff1f}
+ .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .kpis .wrap{grid-template-columns:repeat(2,1fr)}
+ .kpi{padding:24px 0 24px 20px}.kpi:nth-child(odd){padding-left:0}.kpi:nth-child(2){border-right:0}
+ .kpi:nth-child(-n+2){border-bottom:1px solid #ffffff14}
+ section.s{padding:84px 0}
+}
+@media (max-width:560px){
+ .brands{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .brand:nth-child(2){border-right:0}.brand:nth-child(-n+2){border-bottom:1px solid var(--line)}
+ .steps{grid-template-columns:1fr}
+ .logo b{font-size:11px;letter-spacing:.18em}
+}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav"><div class="wrap">
+ <a class="logo" href="#top"><span class="mark">CT</span><b>Company Transformation</b></a>
+ <ul><li><a href="#clientes">Clientes</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#processo">Processo</a></li></ul>
+ <a class="go" href="#clientes">Ver cases</a>
+</div></nav>
+
+<header class="hero" id="top">
+ <div class="grid-lines" aria-hidden="true"></div>
+ <div class="wrap">
+  <span class="eyebrow">Estúdio de transformação digital</span>
+  <h1 class="rv">Transformamos negócios<br>locais em <em>marcas digitais.</em></h1>
+  <div class="hrow rv">
+   <p>Cardápios digitais, agendas online e painéis de gestão sob medida. Seu cliente pede, agenda e paga pelo celular, enquanto você acompanha tudo em um só lugar.</p>
+   <a class="btn w" href="#clientes">Conheça os cases <span>↓</span></a>
+  </div>
+ </div>
+</header>
+
+<div class="kpis"><div class="wrap">
+ <div class="kpi"><b>4</b><small>Marcas transformadas</small></div>
+ <div class="kpi"><b>24/7</b><small>Recebendo pedidos</small></div>
+ <div class="kpi"><b>100%</b><small>Mobile first</small></div>
+ <div class="kpi"><b>0%</b><small>Comissão por pedido</small></div>
+</div></div>
+
+<section class="s" id="clientes">
+ <div class="wrap">
+  <div class="head rv"><div><span class="eyebrow">Clientes</span><h2>Marcas que já<br><em>confiam</em> na gente.</h2></div><p>Toque em uma marca para abrir o site. Todos estão no ar, recebendo pedidos e agendamentos reais.</p></div>
+  <div class="brands rv">
+   <a class="brand" href="https://cardapioacaidajeanne.vercel.app" target="_blank" rel="noopener"><img src="img/l_jeanne.png" alt="Açaí da Jeanne"><span>Açaí da Jeanne</span></a>
+   <a class="brand" href="https://cardapiorecantodolanche.vercel.app" target="_blank" rel="noopener"><img src="img/l_recanto.png" alt="Recanto do Lanche"><span>Recanto do Lanche</span></a>
+   <a class="brand" href="https://phducortebarber.vercel.app" target="_blank" rel="noopener"><img src="img/l_ph.png" alt="PH du Corte Barber"><span>PH du Corte</span></a>
+   <a class="brand" href="https://cardapioanacai.vercel.app" target="_blank" rel="noopener"><img src="img/l_anacai.png" alt="Anaçaí"><span>Anaçaí</span></a>
+  </div>
+
+  <div class="cases">
+   <article class="case rv">
+    <div class="vis"><div class="phone"><img src="img/s_jeanne.jpg" alt="Site do Açaí da Jeanne" loading="eager"></div></div>
+    <div class="info">
+     <div class="who"><img src="img/l_jeanne.png" alt=""><div><small>Case 01 · Cardápio digital</small><b>Açaí da Jeanne</b></div></div>
+     <h3>Do Instagram para um delivery próprio.</h3>
+     <p>Açaí na garrafa, copos e trufados com adicionais, pedido pronto no WhatsApp e programa de fidelidade que faz o cliente voltar.</p>
+     <ul class="feats"><li>Cardápio com adicionais pagos e grátis</li><li>Painel de pedidos em tempo real</li><li>Fidelidade: 10 pedidos, 1 açaí grátis</li></ul>
+     <div class="acts"><a class="link p" href="https://cardapioacaidajeanne.vercel.app" target="_blank" rel="noopener">Visitar site ↗</a><a class="link" href="https://www.instagram.com/acainagarrafajeanne/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>Instagram</a></div>
+    </div>
+   </article>
+   <article class="case rv">
+    <div class="vis"><div class="phone"><img src="img/s_recanto.jpg" alt="Site do Recanto do Lanche" loading="eager"></div></div>
+    <div class="info">
+     <div class="who"><img src="img/l_recanto.png" alt=""><div><small>Case 02 · Cardápio + gestão</small><b>Recanto do Lanche</b></div></div>
+     <h3>Uma operação inteira em um só painel.</h3>
+     <p>Lanches, açaí e porções com pedido online. Balcão, mesas e entregas no mesmo lugar, com envio direto ao motoboy e faturamento do dia.</p>
+     <ul class="feats"><li>Pedidos de balcão, mesa e entrega</li><li>Despacho para o motoboy em um toque</li><li>Faturamento e histórico de vendas</li></ul>
+     <div class="acts"><a class="link p" href="https://cardapiorecantodolanche.vercel.app" target="_blank" rel="noopener">Visitar site ↗</a><a class="link" href="https://www.instagram.com/recantodolanche2025/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>Instagram</a></div>
+    </div>
+   </article>
+   <article class="case rv">
+    <div class="vis"><div class="phone"><img src="img/s_ph.jpg" alt="Site da PH du Corte Barber" loading="eager"></div></div>
+    <div class="info">
+     <div class="who"><img src="img/l_ph.png" alt=""><div><small>Case 03 · Agenda online</small><b>PH du Corte Barber</b></div></div>
+     <h3>Uma agenda que se preenche sozinha.</h3>
+     <p>Barbearia com agendamento online por dia e horário, galeria de cortes e painel para o barbeiro controlar a agenda sem responder mensagem.</p>
+     <ul class="feats"><li>Agendamento 24 horas por dia</li><li>Galeria de cortes</li><li>Painel do barbeiro</li></ul>
+     <div class="acts"><a class="link p" href="https://phducortebarber.vercel.app" target="_blank" rel="noopener">Visitar site ↗</a><a class="link" href="https://www.instagram.com/phsucessada__/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>Instagram</a></div>
+    </div>
+   </article>
+   <article class="case rv">
+    <div class="vis"><div class="phone"><img src="img/s_anacai.jpg" alt="Site do Anaçaí" loading="eager"></div></div>
+    <div class="info">
+     <div class="who"><img src="img/l_anacai.png" alt=""><div><small>Case 04 · Cardápio digital</small><b>Anaçaí</b></div></div>
+     <h3>Açaí gourmet com experiência de app.</h3>
+     <p>Cardápio com adicionais, taxa de entrega por bairro, cupons de desconto, caixa do dia e pedido no balcão direto pelo painel.</p>
+     <ul class="feats"><li>Taxa de entrega por bairro</li><li>Cupons e promoções</li><li>Caixa e controle do dia</li></ul>
+     <div class="acts"><a class="link p" href="https://cardapioanacai.vercel.app" target="_blank" rel="noopener">Visitar site ↗</a><a class="link" href="https://www.instagram.com/anacai__/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>Instagram</a></div>
+    </div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="s dark" id="servicos">
+ <div class="wrap">
+  <div class="head rv"><div><span class="eyebrow">Serviços</span><h2>Tudo que seu negócio<br>precisa para <em>crescer.</em></h2></div><p>Soluções completas, com a identidade da sua marca e pensadas para o celular do seu cliente.</p></div>
+  <div class="svcs">
+   <div class="svc rv"><span class="n">01</span><h3>Cardápio digital</h3><p>Fotos, adicionais e pedido que chega pronto no WhatsApp. Sem comissão por venda.</p></div>
+   <div class="svc rv"><span class="n">02</span><h3>Agenda online</h3><p>Seus clientes marcam horário sozinhos, a qualquer hora, e você acompanha tudo.</p></div>
+   <div class="svc rv"><span class="n">03</span><h3>Painel de gestão</h3><p>Pedidos, balcão, entregas, cupons, fidelidade e faturamento em um só lugar.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="s" id="processo">
+ <div class="wrap">
+  <div class="head rv"><div><span class="eyebrow">Processo</span><h2>Do primeiro contato<br>ao <em>ar</em> em dias.</h2></div><p>Um processo simples, sem burocracia, e você acompanha cada etapa.</p></div>
+  <div class="steps">
+   <div class="step rv"><b>01</b><h4>Conversa</h4><p>Entendemos seu negócio, seus produtos e o seu cliente.</p></div>
+   <div class="step rv"><b>02</b><h4>Prévia</h4><p>Você recebe uma prévia com a sua marca antes de fechar.</p></div>
+   <div class="step rv"><b>03</b><h4>Ajustes</h4><p>Refinamos cores, fotos, preços e textos até ficar do seu jeito.</p></div>
+   <div class="step rv"><b>04</b><h4>No ar</h4><p>Seu site publicado, com painel e suporte para começar a vender.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="final">
+ <div class="wrap rv">
+  <span class="eyebrow">Próximo case</span>
+  <h2>A próxima marca<br>pode ser a <em>sua.</em></h2>
+  <p>Vamos transformar o seu negócio em uma marca digital que vende todos os dias.</p>
+  <a class="btn w" href="#clientes">Ver os cases <span>↑</span></a>
+ </div>
+</section>
+<footer><div class="wrap"><span>© Company Transformation</span><span>Sites · Cardápios · Agendas</span></div></footer>
+
+<script>
+(function(){var n=document.getElementById('nav');function f(){n.classList.toggle('solid',scrollY>40)}addEventListener('scroll',f,{passive:true});f();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});})();
+</script>
+</body>
+</html>
