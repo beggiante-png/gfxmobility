@@ -1,0 +1,216 @@
+{
+"name": "madrepizzaria",
+"project": null,
+"files": [
+{
+"file": ".vercel/output/config.json",
+"sha": "1081c780b93024b83f5e3eb11801b646af116181",
+"size": 326
+},
+{
+"file": ".vercel/output/static/adm/index.html",
+"sha": "6b5562d2434e5c86792fdb2b58936067ca437449",
+"size": 348
+},
+{
+"file": ".vercel/output/static/admin/index.html",
+"sha": "6b5562d2434e5c86792fdb2b58936067ca437449",
+"size": 348
+},
+{
+"file": ".vercel/output/static/fotos/logo.png",
+"sha": "291623972c701437aaee7eddd25fd3c8bd83a194",
+"size": 652343
+},
+{
+"file": ".vercel/output/static/fotos/p_4queijos.jpg",
+"sha": "8d02727e87315f56d93fa9c72b499d5fc6e44b83",
+"size": 201266
+},
+{
+"file": ".vercel/output/static/fotos/p_alhobacon.jpg",
+"sha": "a7268e2f91c788e478876aaeb4197973f437467c",
+"size": 166601
+},
+{
+"file": ".vercel/output/static/fotos/p_amora.jpg",
+"sha": "8cca570e0b5ab32f98f8b9ba513194357fad6555",
+"size": 211979
+},
+{
+"file": ".vercel/output/static/fotos/p_avela.jpg",
+"sha": "4a496a491f0f16bc5b2e064738eaa55da108f2fc",
+"size": 196172
+},
+{
+"file": ".vercel/output/static/fotos/p_banana.jpg",
+"sha": "70bde4b7beedfdd5ffad6700e0af88fbacb86667",
+"size": 207692
+},
+{
+"file": ".vercel/output/static/fotos/p_calabacon.jpg",
+"sha": "171e3bc01e5d0c3f2800714da95464eb0b44de85",
+"size": 182576
+},
+{
+"file": ".vercel/output/static/fotos/p_calabresa.jpg",
+"sha": "8eab9be1d6375715ef0ce8cf591816d51771cd9b",
+"size": 181411
+},
+{
+"file": ".vercel/output/static/fotos/p_catuperu.jpg",
+"sha": "d4241fe7288a2a2d9620ed6113681b3ebeecac83",
+"size": 151102
+},
+{
+"file": ".vercel/output/static/fotos/p_cheddarbacon.jpg",
+"sha": "6fc46f8f9e326f29473f0ef2bdc67ebd5b7b6763",
+"size": 149762
+},
+{
+"file": ".vercel/output/static/fotos/p_coca2l.jpg",
+"sha": "3ffcd7395494af18576f33934591f0c5d070c737",
+"size": 35646
+},
+{
+"file": ".vercel/output/static/fotos/p_cocalata.jpg",
+"sha": "c2cfaffa056aafb393745b9e4e56dded2a5108e4",
+"size": 34494
+},
+{
+"file": ".vercel/output/static/fotos/p_costelinha.jpg",
+"sha": "378d21552690b9d01cf3ab1be0bac481dab75526",
+"size": 207581
+},
+{
+"file": ".vercel/output/static/fotos/p_damadre.jpg",
+"sha": "afc52b155c0286b7859e58db94e7f9f2f1a4434c",
+"size": 152646
+},
+{
+"file": ".vercel/output/static/fotos/p_frangocatu.jpg",
+"sha": "28d6b318f0de5abe9b142e91bb94f7ffc0474289",
+"size": 187563
+},
+{
+"file": ".vercel/output/static/fotos/p_guar1l.jpg",
+"sha": "9b6241d3f390c938b0e78a9e5d6cbd3111fb21ec",
+"size": 41714
+},
+{
+"file": ".vercel/output/static/fotos/p_guar2l.jpg",
+"sha": "9b6241d3f390c938b0e78a9e5d6cbd3111fb21ec",
+"size": 41714
+},
+{
+"file": ".vercel/output/static/fotos/p_guarlata.jpg",
+"sha": "d241e085c9536dbc8d94f70a5ab1aa9caf5397a6",
+"size": 33976
+},
+{
+"file": ".vercel/output/static/fotos/p_lombo.jpg",
+"sha": "f941bbb9a158f0844556946de36868fd82f70ac4",
+"size": 185695
+},
+{
+"file": ".vercel/output/static/fotos/p_marguerita.jpg",
+"sha": "36efde3ab69b4ce8c0202a3753101c80eb85a3af",
+"size": 160679
+},
+{
+"file": ".vercel/output/static/fotos/p_pacoca.jpg",
+"sha": "4a496a491f0f16bc5b2e064738eaa55da108f2fc",
+"size": 196172
+},
+{
+"file": ".vercel/output/static/fotos/p_palmito.jpg",
+"sha": "21aa46789ab6a7b57ab039a530efea338c0be3d5",
+"size": 162916
+},
+{
+"file": ".vercel/output/static/fotos/p_portuguesa.jpg",
+"sha": "7ccd9280d3b9e58e089d88fe5b98809d688c90c7",
+"size": 171130
+},
+{
+"file": ".vercel/output/static/fotos/p_suco.jpg",
+"sha": "3da4f6bfb96f788d49f95d0e851a5bcfb4795632",
+"size": 84711
+},
+{
+"file": ".vercel/output/static/fotos/p_suprema.jpg",
+"sha": "afc52b155c0286b7859e58db94e7f9f2f1a4434c",
+"size": 152646
+},
+{
+"file": ".vercel/output/static/fotos/p_trancada.jpg",
+"sha": "8c3a4aabec9ce85802f92b2fd67400eb412215df",
+"size": 228483
+},
+{
+"file": ".vercel/output/static/fotos/p_vaquinha.jpg",
+"sha": "3c7d011d3975c687241fd68de81a6eeb15b9b179",
+"size": 209479
+},
+{
+"file": ".vercel/output/static/fotos/p_vegetariana.jpg",
+"sha": "766e25af6f3c5dc8635fc2bb7f09806b8ca4ab8d",
+"size": 206166
+},
+{
+"file": ".vercel/output/static/fotos/t_about.jpg",
+"sha": "a64682fdfbb79ddc6cacafbad6fa61689c436a98",
+"size": 218104
+},
+{
+"file": ".vercel/output/static/fotos/t_atend.jpg",
+"sha": "ec53f728ac23498ecca76e259481d672ac55e4c3",
+"size": 236322
+},
+{
+"file": ".vercel/output/static/fotos/t_big.jpg",
+"sha": "5d28fba8fde3985e1ca05993443a701a9cd52a04",
+"size": 270359
+},
+{
+"file": ".vercel/output/static/fotos/t_hero.jpg",
+"sha": "e19c5c4319267e27990d396332bda948f37941bf",
+"size": 258350
+},
+{
+"file": ".vercel/output/static/fotos/t_hor.jpg",
+"sha": "e26a21b07698ab00cbd231a2678af251049b5433",
+"size": 210926
+},
+{
+"file": ".vercel/output/static/icone-192.png",
+"sha": "d5fabf265b02022f0f2016b05b90fa53f870e418",
+"size": 49449
+},
+{
+"file": ".vercel/output/static/icone-512.png",
+"sha": "66a97506ee84c9bd0f30933128e185fed778fd21",
+"size": 301106
+},
+{
+"file": ".vercel/output/static/index.html",
+"sha": "0da3a22a5f4e39bddb80c5f8b6dab72019a69a80",
+"size": 198947
+},
+{
+"file": ".vercel/output/static/manifest.webmanifest",
+"sha": "78fbe0d319569f58efa94f09816df62c60d73fef",
+"size": 657
+},
+{
+"file": ".vercel/output/static/painel.html",
+"sha": "8dda70e99e67a4d22e316607977be3c52a82f8e3",
+"size": 163374
+},
+{
+"file": ".vercel/output/static/sw.js",
+"sha": "7f4ea72603d18b4556fdf77d9f3057e4f854eafd",
+"size": 1041
+}
+]
+}
