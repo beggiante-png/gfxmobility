@@ -129,8 +129,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_guar1l.jpg",
-"sha": "9b6241d3f390c938b0e78a9e5d6cbd3111fb21ec",
-"size": 41714
+"sha": "144a2aeffbdf3f1b15c1bf603cb4930d9bae7ead",
+"size": 61015
 },
 {
 "file": ".vercel/output/static/fotos/p_guar2l.jpg",
@@ -229,8 +229,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "24b2061d049aebc1b984a7a08eef834f42350819",
-"size": 210952
+"sha": "969f7e5deb78a8e2dbb9a1bec350f23210da4d8b",
+"size": 210960
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -244,7 +244,7 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "d7a37c24cf755cf3906aa0dd49802975ea44a49a",
+"sha": "47ac9af6b8397560cef53f8289107ba7ab131b07",
 "size": 1042
 },
 {
