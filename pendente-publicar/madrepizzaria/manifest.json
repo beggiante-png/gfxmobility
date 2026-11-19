@@ -74,8 +74,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_cocalata.jpg",
-"sha": "9449ef116e13cf9b2461ac81177a6818077f754c",
-"size": 118094
+"sha": "4e08fb2a2afaeb0c4ed1c7739751c3177b901081",
+"size": 162149
 },
 {
 "file": ".vercel/output/static/fotos/p_costelinha.jpg",
@@ -129,8 +129,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_guar1l.jpg",
-"sha": "6d5677de1677c341b0472db2659918655fc199ac",
-"size": 120742
+"sha": "99ddf4f2e4c318b353237338b197002b9e47db60",
+"size": 156547
 },
 {
 "file": ".vercel/output/static/fotos/p_guar2l.jpg",
@@ -229,7 +229,7 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "5758d8a536e6fdd8af8dc2591e4256491fa8416d",
+"sha": "ccbdcc904fa854691e3d45357253f95b2de7c1ed",
 "size": 210976
 },
 {
@@ -244,7 +244,7 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "91e793ee44656c7d3578fe101178789f00c8eb4e",
+"sha": "fda6c72c41295e30c72ce184b996ac2bee7edf56",
 "size": 1042
 },
 {
