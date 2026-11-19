@@ -74,8 +74,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_cocalata.jpg",
-"sha": "c2cfaffa056aafb393745b9e4e56dded2a5108e4",
-"size": 34494
+"sha": "9449ef116e13cf9b2461ac81177a6818077f754c",
+"size": 118094
 },
 {
 "file": ".vercel/output/static/fotos/p_costelinha.jpg",
@@ -129,8 +129,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_guar1l.jpg",
-"sha": "144a2aeffbdf3f1b15c1bf603cb4930d9bae7ead",
-"size": 61015
+"sha": "6d5677de1677c341b0472db2659918655fc199ac",
+"size": 120742
 },
 {
 "file": ".vercel/output/static/fotos/p_guar2l.jpg",
@@ -139,8 +139,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_guarlata.jpg",
-"sha": "d241e085c9536dbc8d94f70a5ab1aa9caf5397a6",
-"size": 33976
+"sha": "62bac10952d14b0333f0089588bb2759a767dc96",
+"size": 84926
 },
 {
 "file": ".vercel/output/static/fotos/p_lombo.jpg",
@@ -229,8 +229,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "969f7e5deb78a8e2dbb9a1bec350f23210da4d8b",
-"size": 210960
+"sha": "5758d8a536e6fdd8af8dc2591e4256491fa8416d",
+"size": 210976
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -244,7 +244,7 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "47ac9af6b8397560cef53f8289107ba7ab131b07",
+"sha": "91e793ee44656c7d3578fe101178789f00c8eb4e",
 "size": 1042
 },
 {
