@@ -3,6 +3,7 @@
 #   python3 pendente-publicar/publicar.py            -> publica só os sites que mudaram
 #   python3 pendente-publicar/publicar.py --todos    -> publica todos, mesmo sem mudança
 #   python3 pendente-publicar/publicar.py --novos    -> também cria sites novos
+#   python3 pendente-publicar/publicar.py madrepizzaria  -> publica só esse site
 # Sites iguais ao que já está no ar são pulados (não gastam o limite de 100 deploys/dia da Vercel).
 # Para cada site: envia só os arquivos alterados e cria um deploy de produção
 # reaproveitando os demais arquivos (já existentes na Vercel) pelo manifest.json.
@@ -40,6 +41,9 @@ def no_ar(proj):
 
 
 sites = [d for d in sorted(os.listdir(B)) if os.path.isfile(os.path.join(B, d, 'manifest.json'))]
+# Só alguns sites: python3 pendente-publicar/publicar.py madrepizzaria
+SO = [x for x in sys.argv[1:] if not x.startswith('--')]
+if SO: sites = [d for d in sites if d in SO]
 for site in sites:
     d = os.path.join(B, site); m = json.load(open(os.path.join(d, 'manifest.json')))
     ex = api('GET', '/v9/projects/' + (m.get('project') or m['name']))
