@@ -78,6 +78,11 @@
 "size": 162149
 },
 {
+"file": ".vercel/output/static/fotos/p_combo_missao.jpg",
+"sha": "ae29af367a02e1bc3d4b34fe016e35d4c225b624",
+"size": 196587
+},
+{
 "file": ".vercel/output/static/fotos/p_costelinha.jpg",
 "sha": "378d21552690b9d01cf3ab1be0bac481dab75526",
 "size": 207581
@@ -218,6 +223,16 @@
 "size": 210926
 },
 {
+"file": ".vercel/output/static/fotos/t_natal.jpg",
+"sha": "ce2ecea0f11abe1384f610092e9a50fcba03da9b",
+"size": 120002
+},
+{
+"file": ".vercel/output/static/fotos/t_pizza.jpg",
+"sha": "ec53f728ac23498ecca76e259481d672ac55e4c3",
+"size": 236322
+},
+{
 "file": ".vercel/output/static/icone-192.png",
 "sha": "d5fabf265b02022f0f2016b05b90fa53f870e418",
 "size": 49449
@@ -229,8 +244,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "c08c84ed023d606dde308af1e696abd096d0e10d",
-"size": 236916
+"sha": "a2376918dcb3e04046f83a0dedaff702ba0a3133",
+"size": 244508
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -239,23 +254,13 @@
 },
 {
 "file": ".vercel/output/static/painel.html",
-"sha": "95b13cb5aef04e6a87a3e822fb8abd7c15df376b",
-"size": 251839
+"sha": "7f2dd8665bb41afba1f5b964660983cf86ec43e2",
+"size": 257483
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "6682bc833568523d68fb05e54587fd8d57c01ff0",
+"sha": "59a337c94bc38806e4edebccbe4a85f03638fd77",
 "size": 1042
-},
-{
-"file": ".vercel/output/static/fotos/t_pizza.jpg",
-"sha": "ec53f728ac23498ecca76e259481d672ac55e4c3",
-"size": 236322
-},
-{
-"file": ".vercel/output/static/fotos/t_natal.jpg",
-"sha": "ce2ecea0f11abe1384f610092e9a50fcba03da9b",
-"size": 120002
 }
 ]
 }
