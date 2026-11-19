@@ -244,8 +244,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "4c2766afc0940d3aa40244d3f4a082cc0e6b492e",
-"size": 245435
+"sha": "a09551cd7ebcb13f4b51ae053ac45d9b20e88279",
+"size": 248429
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -259,8 +259,18 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "eab4da8cc28fd81f7b41f02eef64d9401e8a6090",
+"sha": "512974cffcd98e62ddd71900b6ff1fc58578ab9b",
 "size": 1042
+},
+{
+"file": ".vercel/output/static/fotos/tema_disco.webp",
+"sha": "a7a3a28cfca4529ebfdd575adeeba9a732b6fdc0",
+"size": 67036
+},
+{
+"file": ".vercel/output/static/fotos/tema_cor.jpg",
+"sha": "9c9811417f2139b32033330f7598f62f3a21366f",
+"size": 16078
 }
 ]
 }
