@@ -229,8 +229,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "54c134efd9de046df1436e40615f3d30dc2380ad",
-"size": 207763
+"sha": "e68e21e75228a4af442e3f54339646cd17e7f883",
+"size": 209685
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -239,13 +239,23 @@
 },
 {
 "file": ".vercel/output/static/painel.html",
-"sha": "325e1e3e769081c99068553a888ac24b95d212a6",
-"size": 166392
+"sha": "118a94373de2625d20d69ec44ef9cc5cb52554ce",
+"size": 166783
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "7f4ea72603d18b4556fdf77d9f3057e4f854eafd",
+"sha": "13bb2aff230dc33821321dc614b8e284fb1215bb",
 "size": 1041
+},
+{
+"file": ".vercel/output/static/fotos/t_pizza.jpg",
+"sha": "ec53f728ac23498ecca76e259481d672ac55e4c3",
+"size": 236322
+},
+{
+"file": ".vercel/output/static/fotos/t_natal.jpg",
+"sha": "ce2ecea0f11abe1384f610092e9a50fcba03da9b",
+"size": 120002
 }
 ]
 }
