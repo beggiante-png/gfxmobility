@@ -83,6 +83,41 @@
 "size": 207581
 },
 {
+"file": ".vercel/output/static/fotos/p_cz_avela.jpg",
+"sha": "cbffb182570e299e1b4e9df395e9fc2716203d8d",
+"size": 200870
+},
+{
+"file": ".vercel/output/static/fotos/p_cz_calabresa.jpg",
+"sha": "0b6d86203d35aa6f5c3610fc8409e9f96a2e9cbf",
+"size": 142317
+},
+{
+"file": ".vercel/output/static/fotos/p_cz_calbacon.jpg",
+"sha": "4f30329939d25d2be65df33c48a4e4c60f559446",
+"size": 151807
+},
+{
+"file": ".vercel/output/static/fotos/p_cz_costelinha.jpg",
+"sha": "f46f58dd3a56e4f7444490abb77fa8b0ca7992b4",
+"size": 150990
+},
+{
+"file": ".vercel/output/static/fotos/p_cz_frango.jpg",
+"sha": "e108c3af3762f02c9127b0d50535b02c5e4d0846",
+"size": 152140
+},
+{
+"file": ".vercel/output/static/fotos/p_cz_frangobacon.jpg",
+"sha": "f57974c4f09a2acf415b0a59a212484c56bfedfc",
+"size": 173005
+},
+{
+"file": ".vercel/output/static/fotos/p_cz_marguerita.jpg",
+"sha": "f6f2384d2d322fd12004154f9837b2498db68e33",
+"size": 116408
+},
+{
 "file": ".vercel/output/static/fotos/p_damadre.jpg",
 "sha": "afc52b155c0286b7859e58db94e7f9f2f1a4434c",
 "size": 152646
@@ -194,8 +229,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "863ed75e00d587e4d3531128207e7b29e2759972",
-"size": 198947
+"sha": "54c134efd9de046df1436e40615f3d30dc2380ad",
+"size": 207763
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -204,8 +239,8 @@
 },
 {
 "file": ".vercel/output/static/painel.html",
-"sha": "7ac00f572208b95d6a7fadcd24cb22b077e3ec53",
-"size": 163374
+"sha": "325e1e3e769081c99068553a888ac24b95d212a6",
+"size": 166392
 },
 {
 "file": ".vercel/output/static/sw.js",
