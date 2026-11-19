@@ -29,8 +29,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_alhobacon.jpg",
-"sha": "a7268e2f91c788e478876aaeb4197973f437467c",
-"size": 166601
+"sha": "ba8054f55b0ec2aaa3e5927faedf979748c120de",
+"size": 178182
 },
 {
 "file": ".vercel/output/static/fotos/p_amora.jpg",
@@ -54,18 +54,18 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_calabresa.jpg",
-"sha": "8eab9be1d6375715ef0ce8cf591816d51771cd9b",
-"size": 181411
+"sha": "fbea158d617ca5441ac23c8021442d4d8fe79c86",
+"size": 209432
 },
 {
 "file": ".vercel/output/static/fotos/p_catuperu.jpg",
-"sha": "d4241fe7288a2a2d9620ed6113681b3ebeecac83",
-"size": 151102
+"sha": "0242967c4faa8a72399c5888148c1d90b86de441",
+"size": 159750
 },
 {
 "file": ".vercel/output/static/fotos/p_cheddarbacon.jpg",
-"sha": "6fc46f8f9e326f29473f0ef2bdc67ebd5b7b6763",
-"size": 149762
+"sha": "d17d4222d8fcb6ed3ee0c83caf6a46e7b1905b0b",
+"size": 172413
 },
 {
 "file": ".vercel/output/static/fotos/p_coca2l.jpg",
@@ -119,8 +119,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_damadre.jpg",
-"sha": "afc52b155c0286b7859e58db94e7f9f2f1a4434c",
-"size": 152646
+"sha": "441538a7d5f45bd801199e65041d5f0a60c902df",
+"size": 175089
 },
 {
 "file": ".vercel/output/static/fotos/p_frangocatu.jpg",
@@ -149,8 +149,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_marguerita.jpg",
-"sha": "36efde3ab69b4ce8c0202a3753101c80eb85a3af",
-"size": 160679
+"sha": "469b58c59ef99ce7b7f7f44c5eafa74d6bfceae3",
+"size": 177137
 },
 {
 "file": ".vercel/output/static/fotos/p_pacoca.jpg",
@@ -159,8 +159,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_palmito.jpg",
-"sha": "21aa46789ab6a7b57ab039a530efea338c0be3d5",
-"size": 162916
+"sha": "93374709905861afabf926f8eb775fa4474283b2",
+"size": 168798
 },
 {
 "file": ".vercel/output/static/fotos/p_portuguesa.jpg",
@@ -174,8 +174,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_suprema.jpg",
-"sha": "afc52b155c0286b7859e58db94e7f9f2f1a4434c",
-"size": 152646
+"sha": "441538a7d5f45bd801199e65041d5f0a60c902df",
+"size": 175089
 },
 {
 "file": ".vercel/output/static/fotos/p_trancada.jpg",
@@ -244,7 +244,7 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "44130cb3439632c64783d05082f130207ba11f8f",
+"sha": "883be7cdaf69593b49c5ce982c68b77f65aa2544",
 "size": 1041
 },
 {
