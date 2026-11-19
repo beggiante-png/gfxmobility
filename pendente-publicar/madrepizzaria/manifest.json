@@ -189,8 +189,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_vegetariana.jpg",
-"sha": "766e25af6f3c5dc8635fc2bb7f09806b8ca4ab8d",
-"size": 206166
+"sha": "34f154fce1562576f5098238328ed131b6042cd0",
+"size": 199155
 },
 {
 "file": ".vercel/output/static/fotos/t_about.jpg",
@@ -244,7 +244,7 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "ccee8aa2c6ec52505dfc1ecfe5d9ac6e27673f9d",
+"sha": "456f9a4bdcf772e130fa6b4ac9e7223885e3bde2",
 "size": 1042
 },
 {
