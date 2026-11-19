@@ -229,8 +229,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "e68e21e75228a4af442e3f54339646cd17e7f883",
-"size": 209685
+"sha": "18846b314f877b9b0d81c33b18979c07399a9b18",
+"size": 209817
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -239,12 +239,12 @@
 },
 {
 "file": ".vercel/output/static/painel.html",
-"sha": "118a94373de2625d20d69ec44ef9cc5cb52554ce",
-"size": 166783
+"sha": "7727f7dfd39afeef8fb86882b2226b21e83a2587",
+"size": 168017
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "13bb2aff230dc33821321dc614b8e284fb1215bb",
+"sha": "b08ee232b7912bb9551ceecef4c3d7384006c1cc",
 "size": 1041
 },
 {
