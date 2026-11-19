@@ -184,8 +184,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/p_vaquinha.jpg",
-"sha": "3c7d011d3975c687241fd68de81a6eeb15b9b179",
-"size": 209479
+"sha": "2e75f589d5b201cecd8a851bdd6d526045e2b694",
+"size": 189227
 },
 {
 "file": ".vercel/output/static/fotos/p_vegetariana.jpg",
@@ -229,8 +229,8 @@
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "b27a1a2ad775135916dd461a2de381cc7c1e8001",
-"size": 210944
+"sha": "24b2061d049aebc1b984a7a08eef834f42350819",
+"size": 210952
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -244,7 +244,7 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "5e8bdaa6ce6cbc8d36e85792613c4b10ddedb994",
+"sha": "d7a37c24cf755cf3906aa0dd49802975ea44a49a",
 "size": 1042
 },
 {
