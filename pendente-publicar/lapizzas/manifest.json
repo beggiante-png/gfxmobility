@@ -1,0 +1,236 @@
+{
+"name": "lapizzas",
+"project": "prj_QS9rXN40YPxripUi1DylkIqHGqYK",
+"files": [
+{
+"file": ".vercel/output/config.json",
+"sha": "1081c780b93024b83f5e3eb11801b646af116181",
+"size": 326
+},
+{
+"file": ".vercel/output/static/adm/index.html",
+"sha": "3c62c1d0a8f45e827d8a67e2043afaa68a9d684f",
+"size": 346
+},
+{
+"file": ".vercel/output/static/admin/index.html",
+"sha": "3c62c1d0a8f45e827d8a67e2043afaa68a9d684f",
+"size": 346
+},
+{
+"file": ".vercel/output/static/fotos/ai1.jpg",
+"sha": "de945e9dd3ddd6f0d9795d7025d3a571a4febfaa",
+"size": 82229
+},
+{
+"file": ".vercel/output/static/fotos/ai2.jpg",
+"sha": "843dbf341b1d4edc5f3d044c68302ced65073ec9",
+"size": 85233
+},
+{
+"file": ".vercel/output/static/fotos/ai3.jpg",
+"sha": "a814552915423696a5ca9d8e6715a86310342256",
+"size": 92039
+},
+{
+"file": ".vercel/output/static/fotos/ai4.jpg",
+"sha": "05af9161020c0f8526b32c2996540b74c4380721",
+"size": 80179
+},
+{
+"file": ".vercel/output/static/fotos/b01.jpg",
+"sha": "a41b5aaf0e96310ddab9941df90ae18ffa503c09",
+"size": 100471
+},
+{
+"file": ".vercel/output/static/fotos/b02.jpg",
+"sha": "6ad76a067c260009bc0c5ecf7d0fe058bb4700f1",
+"size": 107924
+},
+{
+"file": ".vercel/output/static/fotos/b03.jpg",
+"sha": "46e2bc1f5700b4e8fd60b55b107b1d00aee0a416",
+"size": 90227
+},
+{
+"file": ".vercel/output/static/fotos/b04.jpg",
+"sha": "ccaae3f040be3ebd80827c240b7ca29eb75dea9d",
+"size": 124388
+},
+{
+"file": ".vercel/output/static/fotos/d01.jpg",
+"sha": "897d0a6ac7c8a160e68326e03c035b37bc13522b",
+"size": 94193
+},
+{
+"file": ".vercel/output/static/fotos/d02.jpg",
+"sha": "4a8fc07d92cd09169cd9f9f84efaf9685199e0cc",
+"size": 82418
+},
+{
+"file": ".vercel/output/static/fotos/g01.jpg",
+"sha": "58d05f5d04be2d94c4abd9ed265da9e08d902480",
+"size": 67801
+},
+{
+"file": ".vercel/output/static/fotos/g02.jpg",
+"sha": "9432a900869e8d2e5d4124f5074a13eaf4e7f1c3",
+"size": 59882
+},
+{
+"file": ".vercel/output/static/fotos/g03.jpg",
+"sha": "adad6b0960da1e03018fd9634a6053936d4828b9",
+"size": 64959
+},
+{
+"file": ".vercel/output/static/fotos/i-caipira.jpg",
+"sha": "12283fa93cb95eacddb08a710e81a1a292e040f6",
+"size": 107223
+},
+{
+"file": ".vercel/output/static/fotos/i-canadense.jpg",
+"sha": "9845bdc26fbc54a1eaf3d96e5d68012393fcf9e6",
+"size": 81895
+},
+{
+"file": ".vercel/output/static/fotos/i-carnes.jpg",
+"sha": "4b86630a870cb8613289c679945eae8360cb938a",
+"size": 94200
+},
+{
+"file": ".vercel/output/static/fotos/i-cheddar.jpg",
+"sha": "42c2c5e8f1ede6f48df8df4ff2fec5de99235c45",
+"size": 110938
+},
+{
+"file": ".vercel/output/static/fotos/i-lombinho.jpg",
+"sha": "a8c2650f68858fda50c777f7ee1037eaf1b261bf",
+"size": 97467
+},
+{
+"file": ".vercel/output/static/fotos/i-milho.jpg",
+"sha": "0361a4edb00855e92b0cf4830b44a3e78bc73df8",
+"size": 96107
+},
+{
+"file": ".vercel/output/static/fotos/i-pepperoni.jpg",
+"sha": "b324890e6a3b1c5fb1004a1ee051a345203ca2c4",
+"size": 90627
+},
+{
+"file": ".vercel/output/static/fotos/i-peru.jpg",
+"sha": "5e15c13089e195a81083f6e86d0437f17bbfef11",
+"size": 102096
+},
+{
+"file": ".vercel/output/static/fotos/i-queijos.jpg",
+"sha": "b12bb05f2404e35efd518b4479bea0510483d50c",
+"size": 111322
+},
+{
+"file": ".vercel/output/static/fotos/logo.png",
+"sha": "db5753c94c4c2fd61ebcc3f5f5dbacdfc2173586",
+"size": 168651
+},
+{
+"file": ".vercel/output/static/fotos/m01.jpg",
+"sha": "0ab5bdd449f6013cfa4508d9bb16b05d3d9cecfd",
+"size": 73243
+},
+{
+"file": ".vercel/output/static/fotos/m02.jpg",
+"sha": "19e413a7ae5b0a013e7722b3b34997b13804aef4",
+"size": 88106
+},
+{
+"file": ".vercel/output/static/fotos/m03.jpg",
+"sha": "4d2fb0aa45c454ed606df88a0d5013250d34ac54",
+"size": 79595
+},
+{
+"file": ".vercel/output/static/fotos/m04.jpg",
+"sha": "b4a2d2c5627a4b31de05063e1256b79690fee500",
+"size": 86564
+},
+{
+"file": ".vercel/output/static/fotos/n01.jpg",
+"sha": "0fe149787a350743c5b32df25500ad1fcd81f390",
+"size": 69169
+},
+{
+"file": ".vercel/output/static/fotos/n02.jpg",
+"sha": "dc64b6a238e1850af6d0727f61e94f17a1d4ee4c",
+"size": 66458
+},
+{
+"file": ".vercel/output/static/fotos/p01.jpg",
+"sha": "8deee28ccba755dfafa373ef02a6622508bf8fae",
+"size": 89749
+},
+{
+"file": ".vercel/output/static/fotos/p02.jpg",
+"sha": "2f7336466e16d82abe6fc7921cd2aa4a07cddaed",
+"size": 94775
+},
+{
+"file": ".vercel/output/static/fotos/p03.jpg",
+"sha": "a8e0f4da4a6f1fda790565b02de5484243ba79e2",
+"size": 114633
+},
+{
+"file": ".vercel/output/static/fotos/r01.jpg",
+"sha": "f606425995062093faa51f078339a3709951ba91",
+"size": 81583
+},
+{
+"file": ".vercel/output/static/icone-192.png",
+"sha": "a15e84a0b815724e82b60b02943db6ffaa4573e0",
+"size": 49325
+},
+{
+"file": ".vercel/output/static/icone-512.png",
+"sha": "7a3bfb920f1b2421f779ba11ba3237f1da2cefa1",
+"size": 256152
+},
+{
+"file": ".vercel/output/static/img/apple-touch-icon.png",
+"sha": "b831311a67b4691d30e8469495075ad790dd7226",
+"size": 41463
+},
+{
+"file": ".vercel/output/static/img/icon-192.png",
+"sha": "deca5f2c359ca5388ef294cc293fdf8cbf48fe45",
+"size": 46176
+},
+{
+"file": ".vercel/output/static/img/logo.jpg",
+"sha": "a8a37004f80a837256ecfbd6e953bca2a8754e98",
+"size": 31072
+},
+{
+"file": ".vercel/output/static/img/og.jpg",
+"sha": "39b3697c680c984e9edf8eb21e423e48919d8501",
+"size": 106895
+},
+{
+"file": ".vercel/output/static/index.html",
+"sha": "4ecdf12a99aa9223b51c4e7bf50080ffb696eb58",
+"size": 53520
+},
+{
+"file": ".vercel/output/static/manifest.webmanifest",
+"sha": "f23555d0b6feace09d0cc11300c8c04c3a55d0fb",
+"size": 602
+},
+{
+"file": ".vercel/output/static/painel.html",
+"sha": "1e813d9488dfb0385edf9cbe57e7a906ac8d332b",
+"size": 138381
+},
+{
+"file": ".vercel/output/static/sw.js",
+"sha": "1f2a61ae6078f92eae5c51aee061ca396213909f",
+"size": 1041
+}
+]
+}
