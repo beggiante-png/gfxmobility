@@ -125,7 +125,7 @@ footer{text-align:center;color:var(--mut);font-size:13px;padding:32px 16px 10px}
 (function(){
 var SU="https://hkqicvssabntmaoifyau.supabase.co",SK="sb_publishable_iqgTbGd-MkhvwLTQidXimA_WH6ThyPG";
 var $=function(i){return document.getElementById(i)},D=null,CART=[],F={modo:"entrega",periodo:"",pagamento:"Pix"};
-var CATS=["Pizzas G","Brotinhos","Mini pizzas pré-assadas","Mini pizzas assadas","Mini pizzas","Pizzas doces","Bebidas"],ICO={"Mini pizzas pré-assadas":"🧊","Mini pizzas assadas":"🔥","Pizzas doces":"🍫","Bebidas":"🥤","Buquês":"💐","Românticos":"❤️","Chocolates":"🍫","Café da manhã":"☕","Pizzas G":"🍕","Brotinhos":"🌱","Mini pizzas":"🥟","Flores avulsas":"🌼","Ursinhos e presentes":"🧸","Flores e plantas":"🌸","Plantas e vasos":"🪴","Jardim":"🌿","Noivas":"👰"};
+var CATS=["Combos","Pizzas G","Brotinhos","Mini pizzas pré-assadas","Mini pizzas assadas","Mini pizzas","Pizzas doces","Bebidas"],ICO={"Combos":"🎁","Mini pizzas pré-assadas":"🧊","Mini pizzas assadas":"🔥","Pizzas doces":"🍫","Bebidas":"🥤","Buquês":"💐","Românticos":"❤️","Chocolates":"🍫","Café da manhã":"☕","Pizzas G":"🍕","Brotinhos":"🌱","Mini pizzas":"🥟","Flores avulsas":"🌼","Ursinhos e presentes":"🧸","Flores e plantas":"🌸","Plantas e vasos":"🪴","Jardim":"🌿","Noivas":"👰"};
 function brl(v){return"R$ "+Number(v||0).toFixed(2).replace(".",",")}
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function img(p){return p.foto?(p.foto.indexOf("http")===0?p.foto:p.foto):""}
