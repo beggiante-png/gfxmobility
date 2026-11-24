@@ -3,7 +3,7 @@
 import json, os, subprocess, time
 P = 'hkqicvssabntmaoifyau'
 D = os.path.dirname(os.path.abspath(__file__))
-FOTOS = {'Pizza G Três Queijos': 'Pizza-G-Tres-Queijos.jpg', 'Pizza G Pepperoni': 'Pizza-G-Pepperoni.jpg'}
+FOTOS = {'Três Queijos': 'Pizza-G-Tres-Queijos.jpg', 'Pepperoni': 'Pizza-G-Pepperoni.jpg'}
 
 
 def api(m, u, data=None):
