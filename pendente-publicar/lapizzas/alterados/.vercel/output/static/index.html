@@ -100,6 +100,28 @@ footer{text-align:center;color:var(--mut);font-size:13px;padding:32px 16px 10px}
 .cupmsg{display:block;margin-top:6px;font-size:13px;color:#b42318}
 .f select.bzerr{border-color:#e5484d}
 .og h4 small{font:600 12px Inter;color:var(--mut)}.cl small.det{color:var(--tx);font-weight:600}
+.gal{max-width:980px;margin:26px auto 4px;padding:0 16px}
+.gal-h{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:12px}
+.gal-h h2{font-family:"Playfair Display",Georgia,serif;font-size:26px;color:var(--br);line-height:1.1}
+.gal-h p{color:var(--mut);font-size:14px;margin-top:4px}
+.gal-h small{color:var(--wine);font-weight:700;font-size:13px;white-space:nowrap}
+.gal-s{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.gal-s::-webkit-scrollbar{display:none}
+.gal-i{flex:0 0 78%;max-width:340px;scroll-snap-align:start;position:relative;border:0;padding:0;background:#2a1208;border-radius:22px;overflow:hidden;cursor:pointer;box-shadow:0 14px 30px #7b5f4b33;aspect-ratio:4/5}
+.gal-i img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.gal-i:hover img{transform:scale(1.04)}
+.gal-i span{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;color:#fff;font:600 15px/1.3 inherit;text-align:left;background:linear-gradient(transparent,rgba(20,8,2,.85))}
+@media(min-width:760px){.gal-i{flex-basis:31%}}
+.lb{position:fixed;inset:0;z-index:90;background:rgba(15,6,2,.96);display:none;flex-direction:column}
+.lb.on{display:flex}
+.lb-s{flex:1;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.lb-s::-webkit-scrollbar{display:none}
+.lb-f{flex:0 0 100%;scroll-snap-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 16px 28px;gap:16px}
+.lb-f img{max-width:100%;max-height:68vh;border-radius:18px;object-fit:contain;box-shadow:0 20px 60px #000}
+.lb-f p{color:#ffe6c8;font-size:16px;text-align:center;max-width:520px}
+.lb-f .btn{min-width:200px}
+.lb-x{position:absolute;top:14px;right:14px;z-index:2;width:44px;height:44px;border-radius:50%;border:0;background:#fff2;color:#fff;font-size:26px;cursor:pointer}
+.lb-n{position:absolute;top:24px;left:20px;color:#f2c08f;font-size:14px;font-weight:600}
 [hidden]{display:none!important}
 </style>
 </head>
@@ -112,6 +134,8 @@ footer{text-align:center;color:var(--mut);font-size:13px;padding:32px 16px 10px}
   
   <div class="aviso" id="aviso" hidden></div>
 </header>
+<section class="gal" id="gal" hidden><div class="gal-h"><div><h2>Do nosso forno 🔥</h2><p>Feito com amor, do jeitinho de casa</p></div><small>deslize →</small></div><div class="gal-s" id="galS"></div></section>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Fotos"><button class="lb-x" type="button" data-lbx aria-label="Fechar">×</button><span class="lb-n" id="lbN"></span><div class="lb-s" id="lbS"></div></div>
 <nav class="tabs" aria-label="Categorias"><div class="in" id="tabs"></div></nav>
 <main class="wrap" id="cat"><p style="text-align:center;color:var(--mut);padding:30px">Carregando catálogo…</p></main>
 <section class="wrap"><div class="how"><div><b>🍕</b>Escolha suas pizzas</div><div><b>📲</b>Faça o pedido pelo site</div><div><b>🛵</b>Receba em casa</div></div></section>
@@ -162,7 +186,7 @@ var BORDA={id:"bd",min:0,max:1,name:"Quer borda recheada?",choices:[{id:"bd0",na
 function comBorda(p,l,o){if(p.category!=="Pizzas G")return o;o=o.filter(function(g){return g.id!=="bd"&&g.id!=="mm"});var me=Number(p.price)||0,out=l.filter(function(x){return x&&x.category==="Pizzas G"&&x.available!==false&&x.id!==p.id}).map(function(x,i){var d=Math.max(0,(Number(x.price)||0)-me);return{id:"mm"+i,name:x.name.replace(/^Pizza G /,""),price:d}});var MM={id:"mm",min:0,max:1,name:"Quer meio a meio? Escolha o sabor da outra metade",choices:out};return o.concat(out.length?[MM]:[],[BORDA])}
 function nomeP(p){return(p.categoria==="Pizzas G"?"Pizza G ":p.categoria==="Brotinhos"?"Brotinho ":"")+p.nome}
 function hojeL(){var d=new Date();return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2)}
-function conv(l,c){var base=Number(c.fee)||0;window.__BAIRROS=(Array.isArray(c.bairros)?c.bairros:[]).filter(function(x){return x&&x.n&&x.on!==false}).map(function(x){return{n:String(x.n),fee:x.fee==null||x.fee===""?base:Number(x.fee)||0}});window.__PROMOS=(Array.isArray(c.promos)?c.promos:[]).filter(function(x){return x&&x.on!==false});return{produtos:l.filter(function(p){return p&&p.available!==false}).map(function(p,i){return{o:comBorda(p,l,(c.opts&&Array.isArray(c.opts[p.id])?c.opts[p.id]:SEEDO[p.id])||[]),id:i+1,uid:p.id,nome:p.name,descricao:p.description||"",preco:Number(p.price)||0,categoria:p.category||"Outros",foto:p.image||"",emoji:null}}),config:{whatsapp:"5533998590562",taxa:Number(c.fee)||0,aviso:c.aviso||"",aberto:c.open!==false,entrega:true},hoje:hojeL()}}
+function conv(l,c){var base=Number(c.fee)||0;window.__BAIRROS=(Array.isArray(c.bairros)?c.bairros:[]).filter(function(x){return x&&x.n&&x.on!==false}).map(function(x){return{n:String(x.n),fee:x.fee==null||x.fee===""?base:Number(x.fee)||0}});window.__PROMOS=(Array.isArray(c.promos)?c.promos:[]).filter(function(x){return x&&x.on!==false});window.__GAL=l.filter(function(p){return p&&p.category==="Galeria"&&p.image}).map(function(p){return{nome:p.name,descricao:p.description||"",foto:p.image}});return{produtos:l.filter(function(p){return p&&p.available!==false&&p.category!=="Galeria"}).map(function(p,i){return{o:comBorda(p,l,(c.opts&&Array.isArray(c.opts[p.id])?c.opts[p.id]:SEEDO[p.id])||[]),id:i+1,uid:p.id,nome:p.name,descricao:p.description||"",preco:Number(p.price)||0,categoria:p.category||"Outros",foto:p.image||"",emoji:null}}),config:{whatsapp:"5533998590562",taxa:Number(c.fee)||0,aviso:c.aviso||"",aberto:c.open!==false,entrega:true},hoje:hojeL()}}
 function go(d){D=d;if(F.bairro&&!BZ().some(function(x){return x.n===F.bairro}))F.bairro="";load();render();bar()}
 rpc("lps_store_public").then(function(d){d=d||{};go(conv(Array.isArray(d.products)&&d.products.length?d.products:SEED,d.cfg||{}))}).catch(function(){go(conv(SEED,{open:true,fee:5}))});
 function puid(id){var p=prod(id);return p?p.uid:""}
@@ -206,9 +230,20 @@ function pedir(){var c=D.config,ent=F.modo==="entrega"&&c.entrega,PC=promoCalc()
  var pay=F.pagamento==="Cartão"?"Cartão na entrega":F.pagamento;
  return rpc("lps_order_new",{p_data:{items:it,subtotal:s,fee:tx,discount:CD,total:Math.max(0,s-PC.discount-CD)+tx,mode:ent?"Entrega":"Retirada",payment:pay,name:F.cliente.trim(),phone:F.telefone,address:ent?endC():"",reserva:RESV,reserva_dia:RDIA,note:nota,coupon:CD>0?CUP.code:"",promos:PC.applied,pagina:location.href}}).then(function(r){
   CUP=null;F.cupcode="";return{reserva:RESV,uid:r.id,mode:ent?"Entrega":"Retirada",num:r.num,total:Math.max(0,s-PC.discount-CD)+tx,taxa:tx,itens:it.map(function(i){return{qtd:i.qty,nome:i.name+(i.detail?" ("+i.detail+")":"")}})}})}
-function render(){var c=D.config,av=$("aviso");
+function galItens(){return window.__GAL||[]}
+function galAlvo(g){var n=(g.descricao||"").trim().toLowerCase();if(!n)return null;var ok=D.produtos.filter(function(p){return p.categoria!=="Galeria"&&p.nome.toLowerCase()===n});return ok.filter(function(p){return p.categoria==="Pizzas G"})[0]||ok[0]||null}
+function drawGal(){var G=galItens(),s=$("gal");if(!G.length){s.hidden=true;return}s.hidden=false;
+ $("galS").innerHTML=G.map(function(g,i){return'<button type="button" class="gal-i" data-g="'+i+'"><img src="'+esc(img(g))+'" alt="'+esc(g.nome)+'" loading="lazy"><span>'+esc(g.nome)+'</span></button>'}).join("");
+ $("lbS").innerHTML=G.map(function(g,i){var a=galAlvo(g);return'<div class="lb-f"><img src="'+esc(img(g))+'" alt="'+esc(g.nome)+'" loading="lazy"><p>'+esc(g.nome)+'</p>'+(a?'<button type="button" class="btn" data-gp="'+a.id+'">Quero essa 🍕</button>':'')+'</div>'}).join("")}
+function lbOpen(i){var l=$("lb"),s=$("lbS"),n=galItens().length;l.classList.add("on");document.body.style.overflow="hidden";s.scrollLeft=s.clientWidth*i;$("lbN").textContent=(i+1)+" / "+n}
+function lbClose(){$("lb").classList.remove("on");document.body.style.overflow=""}
+$("galS").addEventListener("click",function(e){var b=e.target.closest("[data-g]");if(b)lbOpen(+b.dataset.g)});
+$("lb").addEventListener("click",function(e){if(e.target.closest("[data-lbx]"))return lbClose();var b=e.target.closest("[data-gp]");if(b){lbClose();openP(+b.dataset.gp)}});
+$("lbS").addEventListener("scroll",function(){var s=$("lbS");$("lbN").textContent=(Math.round(s.scrollLeft/s.clientWidth)+1)+" / "+galItens().length});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&$("lb").classList.contains("on"))lbClose()});
+function render(){drawGal();var c=D.config,av=$("aviso");
  var ml=modoLoja();if(ml==="reserva"){av.hidden=false;av.className="aviso reserva";av.innerHTML="⏰ <b>Abrimos hoje às 14h.</b><br>Já dá para <b>reservar seu pedido</b> para hoje ou outro dia: monte o carrinho e escolha quando!"}else if(ml==="fechado"){av.hidden=false;av.className="aviso reserva";av.innerHTML="🌙 <b>Encerramos por hoje</b> (funcionamos das 14h às 22h).<br>Você já pode <b>reservar seu pedido</b> para amanhã ou outro dia!"}else if(ml==="pausa"){av.hidden=false;av.className="aviso fechado";av.className="aviso reserva";av.innerHTML="⏰ <b>Estamos fechados neste momento</b>, mas você já pode fazer seu pedido agora!<br>Ele fica <b>reservado</b> e a gente prepara <b>assim que a loja abrir</b>. Se preferir, escolha outro dia e horário."}else if(c.aviso){av.hidden=false;av.textContent=c.aviso}
- var cats=CATS.concat(D.produtos.map(function(p){return p.categoria}).filter(function(x,i,a){return x!=="Adicionais"&&CATS.indexOf(x)<0&&a.indexOf(x)===i})).filter(function(k){return D.produtos.some(function(p){return p.categoria===k})});
+ var cats=CATS.concat(D.produtos.map(function(p){return p.categoria}).filter(function(x,i,a){return x!=="Adicionais"&&x!=="Galeria"&&CATS.indexOf(x)<0&&a.indexOf(x)===i})).filter(function(k){return D.produtos.some(function(p){return p.categoria===k})});
  $("tabs").innerHTML=cats.map(function(k,i){return'<button type="button" data-c="'+i+'" aria-pressed="'+(i===0)+'">'+(ICO[k]||"🌸")+" "+esc(k)+'</button>'}).join("");
  var PR=window.__PROMOS||[];$("cat").innerHTML=(PR.length?'<div class="pbox"><b>🔥 Promoções</b>'+PR.map(function(N){return'<span>'+esc(ptext(N))+'</span>'}).join("")+'</div>':'')+cats.map(function(k,i){return'<section class="sec"><h2 id="c'+i+'">'+(ICO[k]||"🌸")+" "+esc(k)+'</h2><div class="grid">'+D.produtos.filter(function(p){return p.categoria===k}).map(function(p){
   return'<button type="button" class="pd" data-p="'+p.id+'">'+(img(p)?'<img src="'+esc(img(p))+'" alt="'+esc(p.nome)+'" loading="lazy">':'<img alt="" src="img/logo.jpg">')+(function(){var N=PR.filter(function(N){return N.t!=="pedido"&&N.t!=="frete"&&pmatch(N,p.uid)})[0];return N?'<em class="ptag">🔥 '+esc(N.t==="qtd"?(N.q||2)+"+ por "+brl(N.v||0)+" cada":N.t==="leve"?"Leve "+(N.q||3)+", pague "+(N.pay==null?2:N.pay):(N.u==="R$"?brl(N.v||0):(N.v||0)+"%")+" OFF")+'</em>':''})()+'<div class="b"><b>'+esc(p.nome)+'</b>'+(p.descricao?'<small>'+esc(p.descricao)+'</small>':'')+'<div class="pr"><span>'+((p.o||[]).some(function(g){return g.choices.some(function(c){return Number(c.price)>0})})?'<small style="font-weight:600;color:var(--mut);font-size:11px;display:block;-webkit-line-clamp:1">a partir de</small>':'')+(Number(p.preco)>0?brl(p.preco):"Sob consulta")+'</span><i>+</i></div></div></button>'}).join("")+'</div></section>'}).join("");
