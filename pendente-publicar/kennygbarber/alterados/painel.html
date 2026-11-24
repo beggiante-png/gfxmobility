@@ -98,6 +98,15 @@ details.card summary:after{content:" ▾";color:var(--mut)}
 .svr.dirty{border-color:var(--gold)}
 .g2>*{min-width:0}input[type=date],input[type=time]{min-width:0;-webkit-appearance:none;appearance:none;min-height:46px}
 .tag.brinde{background:#3a2e12;color:var(--gold)}
+.eqc{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:10px;align-items:center}
+.eqav{width:44px;height:44px;border-radius:50%;background:#ffffff14;border:1px solid var(--line);display:grid;place-items:center;font-weight:800;font-size:18px}
+.eqc input[data-en]{width:100%;min-width:0;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:#ffffff08;color:var(--tx);font:inherit;font-weight:700}
+.eqr{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;flex-wrap:wrap}
+.eqpc{display:inline-flex!important;align-items:center;gap:4px;font-weight:700;color:var(--tx)!important;font-size:15px!important}
+.eqpc input{width:64px;padding:9px 8px;border-radius:12px;border:1px solid var(--line);background:#ffffff08;color:var(--tx);font:inherit;font-weight:700;text-align:center}
+.eqs{font-size:12px;color:var(--mut);line-height:1.45}.eqs b{color:var(--tx)}
+.eqc.off{opacity:.55}
+.eqnew input#eqn{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:#ffffff08;color:var(--tx);font:inherit}
 .brow{display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
 .chips button{border:1px solid var(--line);background:#151210;border-radius:999px;padding:7px 11px;font-size:13px}
@@ -188,6 +197,22 @@ details.card summary:after{content:" ▾";color:var(--mut)}
     <div class="msg" id="svmsg"></div>
   </section>
 
+
+  <!-- EQUIPE -->
+  <section class="pane wrap" id="p-equipe">
+    <h2 style="font-size:30px;margin-bottom:4px">Equipe</h2>
+    <p class="sm" style="margin-bottom:12px">Adicione os barbeiros da barbearia e a porcentagem de cada um. O que sobra fica para a barbearia. Barbeiro desligado some do site, mas o histórico continua no painel.</p>
+    <div id="eqlist"><p class="sm">Carregando…</p></div>
+    <div class="card eqnew">
+      <b>➕ Novo barbeiro</b>
+      <div class="g2" style="margin-top:10px"><label class="f"><span>Nome</span><input id="eqn" maxlength="40" placeholder="Ex.: João"></label><label class="f"><span>Porcentagem dele</span><span class="eqpc"><input id="eqp" inputmode="decimal" value="60" aria-label="Porcentagem do novo barbeiro">%</span></label></div>
+      <p class="sm" id="eqprev"></p>
+      <button class="btn" id="eqadd" type="button" style="width:100%;margin-top:8px">Adicionar à equipe</button>
+    </div>
+    <button class="btn" id="eqsave" style="width:100%">Salvar alterações da equipe</button>
+    <div class="msg" id="eqmsg"></div>
+  </section>
+
   <!-- HORÁRIOS -->
   <section class="pane wrap" id="p-horarios">
     <h2 style="font-size:30px;margin-bottom:12px">Funcionamento</h2>
@@ -215,8 +240,8 @@ details.card summary:after{content:" ▾";color:var(--mut)}
     </div>
     <div class="card">
       <b>💈 Barbeiros</b>
-      <div id="cbarb" style="margin-top:8px"></div><button class="btn g" id="cbadd" type="button" style="margin-top:8px">+ Adicionar barbeiro</button>
-      <p class="sm">Desligue para tirar um barbeiro do site sem perder o histórico.</p>
+      <p class="sm" style="margin:4px 0 10px">Os barbeiros da equipe e a porcentagem de cada um ficam na aba <b>Equipe</b>.</p><button class="btn g" type="button" data-goto="equipe">Abrir Equipe →</button>
+      <div id="cbarb" hidden></div><button id="cbadd" type="button" hidden></button>
     </div>
     <button class="btn" id="csave" style="width:100%">Salvar funcionamento</button><div class="msg" id="cmsg"></div>
     <details class="card" style="margin-top:16px"><summary>🔒 Trocar senha e e-mail do painel</summary>
@@ -250,6 +275,7 @@ details.card summary:after{content:" ▾";color:var(--mut)}
   <button role="tab" aria-selected="true" data-t="agenda"><i>📅</i>Agenda</button>
   <button role="tab" aria-selected="false" data-t="precos"><i>💲</i>Preços</button>
   <button role="tab" aria-selected="false" data-t="horarios"><i>🕘</i>Horários</button>
+  <button role="tab" aria-selected="false" data-t="equipe"><i>👥</i>Equipe</button>
   <button role="tab" aria-selected="false" data-t="resumo"><i>💰</i>Faturamento</button>
 </nav>
 <div class="toast" id="toast"></div>
@@ -284,10 +310,33 @@ sb.auth.getSession().then(function(r){if(r.data.session)start();else show(false)
 
 function start(){show(true);sb.auth.getUser().then(function(r){var u=r.data&&r.data.user;if(u&&$("curmail"))$("curmail").textContent=u.email})["catch"](function(){});cur=cur||hoje();loadCfg().then(function(){loadDay();clearInterval(poll);poll=setInterval(function(){if(!document.hidden&&$("p-agenda").classList.contains("on"))loadDay(true)},30000)})}
 
+/* equipe */
+var EQM={};
+function pcv(v){v=parseFloat(String(v).replace(",","."));return v>=0&&v<=100?Math.round(v*100)/100:NaN}
+function eqPrev(p){p=pcv(p);return isNaN(p)?"Use uma porcentagem de 0 a 100.":"A cada R$ 100 em serviços: <b>"+brl(p)+"</b> para ele e <b>"+brl(100-p)+"</b> para a barbearia."}
+function renderEq(){var d=new Date(),ini=iso(new Date(d.getFullYear(),d.getMonth(),1));$("eqprev").innerHTML=eqPrev($("eqp").value);
+ drawEq();sb.from("kgb_agendamentos").select("barbeiro_id,total,status").gte("dia",ini).lte("dia",hoje()).eq("status","atendido").then(function(r){if(r.error)return;EQM={};r.data.forEach(function(a){EQM[a.barbeiro_id]=(EQM[a.barbeiro_id]||0)+(+a.total||0)});drawEq()})}
+function drawEq(){var keep={};[].forEach.call(document.querySelectorAll("#eqlist [data-en]"),function(x){keep[x.dataset.en]={n:x.value,p:document.querySelector('[data-ec="'+x.dataset.en+'"]').value,a:document.querySelector('[data-ea="'+x.dataset.en+'"]').checked}});
+ $("eqlist").innerHTML=BB.length?BB.map(function(b){var k=keep[b.id]||{n:b.nome,p:b.comissao==null?60:b.comissao,a:b.ativo},pc=pcv(k.p),m=EQM[b.id]||0;
+  return '<div class="card"><div class="eqc'+(k.a?"":" off")+'" data-row="'+b.id+'"><span class="eqav">'+esc((k.n||"?").trim().charAt(0).toUpperCase()||"?")+'</span><input data-en="'+b.id+'" value="'+esc(k.n)+'" maxlength="40" aria-label="Nome do barbeiro"><label class="sw" title="Atendendo no site"><input type="checkbox" data-ea="'+b.id+'"'+(k.a?" checked":"")+' aria-label="Atendendo"><span></span></label></div>'+
+  '<div class="eqr"><span class="eqpc">Porcentagem <input data-ec="'+b.id+'" inputmode="decimal" value="'+String(k.p).replace(".",",")+'" aria-label="Porcentagem de '+esc(k.n)+'">%</span><span class="sm">'+(k.a?"Atendendo no site":"Desligado do site")+'</span></div>'+
+  '<p class="eqs" style="margin-top:8px">'+(isNaN(pc)?"Use uma porcentagem de 0 a 100.":"Este mês: <b>"+brl(m)+"</b> em atendimentos · <b>"+brl(m*pc/100)+"</b> para ele · <b>"+brl(m-m*pc/100)+"</b> para a barbearia")+'</p></div>'}).join(""):'<p class="sm">Nenhum barbeiro ainda.</p>'}
+$("eqlist").oninput=function(e){if(e.target.matches("[data-en],[data-ec]"))clearTimeout(drawEq._t),drawEq._t=setTimeout(function(){var a=document.activeElement,id=a&&a.dataset?(a.dataset.en||a.dataset.ec):null,isN=a&&a.dataset&&a.dataset.en,pos=a&&a.selectionStart;drawEq();if(id){var n=document.querySelector(isN?'[data-en="'+id+'"]':'[data-ec="'+id+'"]');if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}}},600)};
+$("eqlist").onchange=function(e){if(e.target.matches("[data-ea]"))drawEq()};
+$("eqp").oninput=function(){$("eqprev").innerHTML=eqPrev(this.value)};
+$("eqadd").onclick=function(){var n=$("eqn").value.trim(),p=pcv($("eqp").value);if(!n)return msg("eqmsg","Digite o nome do novo barbeiro.");if(isNaN(p))return msg("eqmsg","Use uma porcentagem de 0 a 100.");
+ if(BB.some(function(b){return b.nome.toLowerCase()===n.toLowerCase()}))return msg("eqmsg","Já existe um barbeiro com esse nome.");
+ var bt=this;bt.disabled=true;sb.from("kgb_barbeiros").insert({nome:n.slice(0,40),ativo:true,comissao:p,ordem:(BB.reduce(function(a,b){return Math.max(a,b.ordem||0)},0))+1}).then(function(r){bt.disabled=false;if(r.error)return msg("eqmsg","Erro: "+r.error.message);
+  $("eqn").value="";msg("eqmsg",n+" entrou na equipe ✓ Já aparece no site para agendar.",1);toast(n+" adicionado ✓");loadCfg().then(renderEq)})};
+$("eqsave").onclick=function(){var rows=BB.map(function(b){return{id:b.id,nome:document.querySelector('[data-en="'+b.id+'"]').value.trim(),comissao:pcv(document.querySelector('[data-ec="'+b.id+'"]').value),ativo:document.querySelector('[data-ea="'+b.id+'"]').checked,ordem:b.ordem}});
+ if(rows.some(function(r){return !r.nome}))return msg("eqmsg","Todo barbeiro precisa de nome.");if(rows.some(function(r){return isNaN(r.comissao)}))return msg("eqmsg","Use porcentagens de 0 a 100.");if(!rows.some(function(r){return r.ativo}))return msg("eqmsg","Deixe pelo menos um barbeiro atendendo.");
+ var bt=this;bt.disabled=true;sb.from("kgb_barbeiros").upsert(rows).then(function(r){bt.disabled=false;if(r.error)return msg("eqmsg","Erro: "+r.error.message);msg("eqmsg","Equipe salva ✓ O site já está atualizado.",1);toast("Equipe salva ✓");loadCfg().then(renderEq)})};
+document.addEventListener("click",function(e){var g=e.target.closest("[data-goto]");if(g){var t=document.querySelector('#tabs [data-t="'+g.dataset.goto+'"]');if(t)t.click()}});
+
 /* abas */
 $("tabs").onclick=function(e){var b=e.target.closest("button");if(!b)return;[].forEach.call(this.children,function(x){x.setAttribute("aria-selected",x===b)});
  document.querySelectorAll(".pane").forEach(function(p){p.classList.toggle("on",p.id==="p-"+b.dataset.t)});scrollTo(0,0);
- if(b.dataset.t==="agenda")loadDay();if(b.dataset.t==="precos")renderSv();if(b.dataset.t==="horarios")renderCfg();if(b.dataset.t==="resumo")loadRes()};
+ if(b.dataset.t==="agenda")loadDay();if(b.dataset.t==="equipe"){$("eqmsg").textContent="";renderEq()}if(b.dataset.t==="precos")renderSv();if(b.dataset.t==="horarios")renderCfg();if(b.dataset.t==="resumo")loadRes()};
 
 function loadCfg(){return Promise.all([sb.from("kgb_config").select("*").eq("id",1).single(),sb.from("kgb_servicos").select("*").order("ordem").order("id"),sb.from("kgb_barbeiros").select("*").order("ordem").order("id")]).then(function(r){
  if(r[0].error||r[1].error||r[2].error){toast("Sem permissão. Entre de novo.",1);return}CFG=r[0].data;SV=r[1].data;BB=r[2].data;
@@ -414,7 +463,7 @@ $("csave").onclick=function(){var dias=[].map.call(document.querySelectorAll("#c
  if(!dias.length)return msg("cmsg","Marque pelo menos um dia.");if(!ab||!fe||fe<=ab)return msg("cmsg","Confira o horário de abrir e fechar.");if((ai&&!af)||(!ai&&af)||(ai&&af<=ai))return msg("cmsg","Confira o horário de almoço.");
  if(wa&&wa.length<10)return msg("cmsg","WhatsApp precisa de DDD.");if(wa&&wa.length<=11)wa="55"+wa;
  var fid=parseInt($("cfid").value,10);if(!(fid>=0&&fid<=50))return msg("cmsg","Cartão fidelidade: use um número de 0 a 50.");
- var bb=BB.map(function(b,i){return{id:b.id,nome:document.querySelector('[data-bi="'+i+'"]').value.trim(),ativo:document.querySelector('[data-ba="'+i+'"]').checked,ordem:b.ordem}});
+ var bb=BB.map(function(b){return{id:b.id,nome:b.nome,ativo:b.ativo,ordem:b.ordem}});
  if(bb.some(function(b){return !b.nome}))return msg("cmsg","Todo barbeiro precisa de nome.");if(!bb.some(function(b){return b.ativo}))return msg("cmsg","Deixe pelo menos um barbeiro ligado.");
  var b=this;b.disabled=true;var nb=[].map.call(document.querySelectorAll("[data-bn]"),function(x){return x.value.trim()}).filter(Boolean).map(function(n,i){return{nome:n.slice(0,40),ativo:true,ordem:BB.length+i+1}});
  (nb.length?sb.from("kgb_barbeiros").insert(nb):Promise.resolve({})).then(function(ri){if(ri.error){b.disabled=false;return msg("cmsg","Erro: "+ri.error.message)}return sb.from("kgb_barbeiros").upsert(bb)}).then(function(rb){if(rb.error){b.disabled=false;return msg("cmsg","Erro: "+rb.error.message)}
