@@ -129,8 +129,8 @@
 },
 {
 "file": ".vercel/output/static/fotos/logo.png",
-"sha": "db5753c94c4c2fd61ebcc3f5f5dbacdfc2173586",
-"size": 168651
+"sha": "80766e37da1eb68e8542750f3ad7d9920f831332",
+"size": 110453
 },
 {
 "file": ".vercel/output/static/fotos/m01.jpg",
@@ -184,38 +184,38 @@
 },
 {
 "file": ".vercel/output/static/icone-192.png",
-"sha": "a15e84a0b815724e82b60b02943db6ffaa4573e0",
-"size": 49325
+"sha": "6591c5082ad7ff94d6e6cfda4a24d3ed289052f7",
+"size": 40447
 },
 {
 "file": ".vercel/output/static/icone-512.png",
-"sha": "7a3bfb920f1b2421f779ba11ba3237f1da2cefa1",
-"size": 256152
+"sha": "51a096acbec5dda6434cf65347f97b365bcdb1b3",
+"size": 171812
 },
 {
 "file": ".vercel/output/static/img/apple-touch-icon.png",
-"sha": "b831311a67b4691d30e8469495075ad790dd7226",
-"size": 41463
+"sha": "52e965e888720fae7805c8d8ad66568ede860688",
+"size": 36653
 },
 {
 "file": ".vercel/output/static/img/icon-192.png",
-"sha": "deca5f2c359ca5388ef294cc293fdf8cbf48fe45",
-"size": 46176
+"sha": "6591c5082ad7ff94d6e6cfda4a24d3ed289052f7",
+"size": 40447
 },
 {
 "file": ".vercel/output/static/img/logo.jpg",
-"sha": "a8a37004f80a837256ecfbd6e953bca2a8754e98",
-"size": 31072
+"sha": "0e5d1ee0c3b68c21973c708043829e9492bb9b37",
+"size": 109478
 },
 {
 "file": ".vercel/output/static/img/og.jpg",
-"sha": "39b3697c680c984e9edf8eb21e423e48919d8501",
-"size": 106895
+"sha": "5d0963776a9e6f13183c2a1ab306dcefbb468aec",
+"size": 77364
 },
 {
 "file": ".vercel/output/static/index.html",
-"sha": "0f9cc5ef537f50dcf7f30d0eddb13007305a1524",
-"size": 57347
+"sha": "36e576120fe228b0492a1ed69abb8357943a96f3",
+"size": 57352
 },
 {
 "file": ".vercel/output/static/manifest.webmanifest",
@@ -229,7 +229,7 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "76c6b5c9c2927c360cff618fc41e635b289ad91e",
+"sha": "5cab208fd29c043b428f3aae2ba0a5476a11773a",
 "size": 1041
 }
 ]
