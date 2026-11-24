@@ -23,6 +23,11 @@
 "size": 107332
 },
 {
+"file": "img/l_lapizzas.png",
+"sha": "617ec461e0284dc92555219e38f123a8aac1a905",
+"size": 62642
+},
+{
 "file": "img/l_ph.png",
 "sha": "21e5c4c9474b626fa7339d8403996fac9ca5c4d0",
 "size": 121507
@@ -53,6 +58,11 @@
 "size": 104602
 },
 {
+"file": "img/s_lapizzas.jpg",
+"sha": "443ae15c14f11935de88b69297ee18f5be480a84",
+"size": 141249
+},
+{
 "file": "img/s_ph.jpg",
 "sha": "64ff7b032ea71da303dec4d9f00987bd8e45a975",
 "size": 129904
@@ -64,8 +74,8 @@
 },
 {
 "file": "index.html",
-"sha": "1439f2459913de995de5033b946384550cf628b1",
-"size": 26219
+"sha": "f388da081ea0eb7863ca4e5b08e536431a27b321",
+"size": 27474
 }
 ]
 }
