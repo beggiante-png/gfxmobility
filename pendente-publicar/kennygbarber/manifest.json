@@ -3,6 +3,11 @@
 "project": null,
 "files": [
 {
+"file": "img/ambiente.jpg",
+"sha": "2894b664a392aa20f6ba2144ad66bc3524a78f94",
+"size": 95754
+},
+{
 "file": "img/apple-touch-icon.png",
 "sha": "16c366ef80315e58f09191cabfcbaceb22d276b5",
 "size": 23387
@@ -64,8 +69,8 @@
 },
 {
 "file": "index.html",
-"sha": "cb5e2213eecc7019739828e1e7aeeeed1e6c29ff",
-"size": 33678
+"sha": "2dc29c236660777783936f3086b5a8ef7745fe62",
+"size": 34452
 },
 {
 "file": "painel.html",
