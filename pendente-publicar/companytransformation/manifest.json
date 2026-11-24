@@ -13,6 +13,11 @@
 "size": 101590
 },
 {
+"file": "img/l_eton.png",
+"sha": "c1e1ee105fd37e7eec77455ca19ed9fa8b63ade0",
+"size": 94102
+},
+{
 "file": "img/l_jeanne.png",
 "sha": "65bfb6e541fe8508be67d3b625f657fe2e9f2c5d",
 "size": 107332
@@ -38,6 +43,11 @@
 "size": 149942
 },
 {
+"file": "img/s_eton.jpg",
+"sha": "2a6b58197a217793305440c4a820e9d99d847798",
+"size": 252929
+},
+{
 "file": "img/s_jeanne.jpg",
 "sha": "a1c16606e7ea20fd3060aeefbfacb62da5668e4d",
 "size": 104602
@@ -54,8 +64,8 @@
 },
 {
 "file": "index.html",
-"sha": "8015e0e5fcb96b603a7982341808c92bba546d2a",
-"size": 24977
+"sha": "052fea410c42c6b82c84d7a90117557c1523d455",
+"size": 25866
 }
 ]
 }
