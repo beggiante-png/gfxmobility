@@ -23,14 +23,19 @@
 "size": 31412
 },
 {
+"file": "img/perfil_sem_ponteiro.jpg",
+"sha": "10295fab44a01e2ba75595475505caa36321dcaa",
+"size": 32780
+},
+{
 "file": "img/promo.jpg",
 "sha": "4c5856ca70a3613e4121611a5ef8070ae6ba4d4f",
 "size": 133796
 },
 {
 "file": "index.html",
-"sha": "ec91f3e0aa4fab28e5e4ce296fa93da5aaa8d506",
-"size": 43640
+"sha": "33271c918a1b19d931dab4bae968c5c8423e0ef7",
+"size": 44875
 },
 {
 "file": "painel.html",

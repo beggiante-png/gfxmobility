@@ -191,12 +191,27 @@ footer{text-align:center;color:#7f8bb0;font-size:12px;padding:30px 18px 10px}
 .vmc{position:relative;width:100%;max-width:520px;max-height:92vh;overflow:auto;background:var(--card);border-radius:24px 24px 0 0;border:1px solid var(--line)}@media(min-width:720px){.vm{align-items:center}.vmc{border-radius:24px}}
 .vmc img{display:block;width:100%;aspect-ratio:1;object-fit:cover;background:#0a1633}.vmb{padding:16px 18px 22px}.vmb small{color:var(--gold);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px}.vmb h3{font-size:22px;margin:4px 0 6px;color:var(--cream)}.vmb p{color:var(--mut);font-size:14px;line-height:1.5}.vmb p:empty{display:none}.vmb>b{display:block;font-size:20px;color:var(--gold);margin:10px 0 14px}
 .vmx{position:absolute;top:10px;right:10px;width:40px;height:40px;border-radius:50%;border:0;background:#000a;color:#fff;font-size:24px;cursor:pointer;z-index:2}
+.av i{position:relative}
+.clk{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.clk .hh,.clk .mh{transform-box:view-box;transform-origin:202px 378.8px}
+.clk .hh{transform:rotate(311.5deg)}.clk .mh{transform:rotate(46.5deg)}
+@media (prefers-reduced-motion:no-preference){
+.clk .mh{animation:clkm 2.2s cubic-bezier(.45,0,.2,1) .35s both}
+.clk .hh{animation:clkh 2.2s cubic-bezier(.45,0,.2,1) .35s both}
+.av i{animation:avin .7s ease-out both}
+}
+@keyframes clkm{from{transform:rotate(-313.5deg)}to{transform:rotate(46.5deg)}}
+@keyframes clkh{from{transform:rotate(281.5deg)}to{transform:rotate(311.5deg)}}
+@keyframes avin{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <div class="av"><i><img src="img/perfil.jpg" alt="Ótica e Relojoaria Espera Feliz" width="150" height="150"></i></div>
+  <div class="av"><i><img src="img/perfil_sem_ponteiro.jpg" alt="Ótica e Relojoaria Espera Feliz" width="150" height="150"><svg class="clk" viewBox="0 0 832 832" aria-hidden="true"><defs><linearGradient id="gh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ecc96a"/><stop offset="1" stop-color="#c99a3a"/></linearGradient></defs>
+<g class="hh"><line x1="202" y1="386" x2="202" y2="325" stroke="#dcb45a" stroke-width="7" stroke-linecap="round"/></g>
+<g class="mh"><line x1="202" y1="388" x2="202" y2="303" stroke="#dcb45a" stroke-width="6" stroke-linecap="round"/></g>
+<circle cx="202" cy="378.8" r="10.5" fill="#dcb45a"/></svg></i></div>
   <h1>Ótica e Relojoaria <span>Espera Feliz</span></h1>
   <p class="sub">Seu olhar em boas mãos 💙</p>
   <div class="hcta"><a class="btn" href="#app" data-go="Exame de vista">👁️ Agendar exame de vista</a><a class="btn alt" href="#vitrine">Ver armações</a></div>
