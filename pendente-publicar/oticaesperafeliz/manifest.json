@@ -1,0 +1,41 @@
+{
+"name": "oticaesperafeliz",
+"project": null,
+"files": [
+{
+"file": "img/apple-touch-icon.png",
+"sha": "41c73f57bb30f1e05fa196918e1615dfc944149d",
+"size": 26979
+},
+{
+"file": "img/icon-192.png",
+"sha": "e13d2606c728eb432fbe32867dd24fb8e24d3713",
+"size": 29629
+},
+{
+"file": "img/og.jpg",
+"sha": "42a49d7fca844e86cb8bc5251ad79b1dca7cf7ca",
+"size": 46149
+},
+{
+"file": "img/perfil.jpg",
+"sha": "824058690adef9fe06cf3beedc68680715dba7c0",
+"size": 31412
+},
+{
+"file": "img/promo.jpg",
+"sha": "4c5856ca70a3613e4121611a5ef8070ae6ba4d4f",
+"size": 133796
+},
+{
+"file": "index.html",
+"sha": "ec91f3e0aa4fab28e5e4ce296fa93da5aaa8d506",
+"size": 43640
+},
+{
+"file": "painel.html",
+"sha": "3341621e13cc6a4748db7f5fdc4680594f5e1ed8",
+"size": 69597
+}
+]
+}

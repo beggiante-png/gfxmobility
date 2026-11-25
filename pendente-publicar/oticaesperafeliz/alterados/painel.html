@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Painel · Ótica Espera Feliz</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#071230">
+<link rel="icon" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#061026;--card:#0e1c40;--card2:#13234d;--line:#22356b;--tx:#f3f5fb;--mut:#a9b3cf;--red:#e3bd57;--gold:#e3bd57;--ok:#3fbf7f;--warn:#e9a23b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--tx);font:15px/1.45 Inter,system-ui,sans-serif;padding-bottom:calc(env(safe-area-inset-bottom) + 84px)}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+h1,h2{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.03em;line-height:1}
+.top{position:sticky;top:0;z-index:10;background:#071230ee;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:calc(env(safe-area-inset-top) + 10px) 0 10px}
+.top .wrap{display:flex;align-items:center;gap:10px}
+.top h1{font-size:26px;flex:1}
+.top h1 span{color:var(--red)}
+.sm{font-size:12px;color:var(--mut)}
+.ib{border:1px solid var(--line);background:#ffffff08;border-radius:10px;padding:8px 12px;font-size:13px;font-weight:600}
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:10;background:#071230f5;border-top:1px solid var(--line);display:flex;padding:6px 6px calc(env(safe-area-inset-bottom) + 6px)}
+.tabs button{flex:1;border:0;background:none;padding:8px 2px;border-radius:12px;font-size:12px;font-weight:700;color:var(--mut);display:flex;flex-direction:column;align-items:center;gap:3px}
+.tabs button i{font-style:normal;font-size:19px}
+.tabs button[aria-selected=true]{color:#fff;background:#16264f}
+.pane{display:none;padding-top:16px;padding-bottom:16px}
+.pane.on{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:12px}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.btn{border:0;border-radius:12px;padding:11px 14px;font-weight:700;background:var(--red);color:#061026}
+.btn.g{background:#ffffff10;border:1px solid var(--line);color:var(--tx)}
+.btn.ok{background:#1f6b45}
+.btn.wa{background:#1fa855}
+.btn.sm2{padding:8px 11px;font-size:13px}
+.btn:disabled{opacity:.5}
+input,select,textarea{width:100%;background:#151210;border:1.5px solid var(--line);border-radius:12px;padding:11px 12px;font-size:16px}
+input:focus,select:focus{outline:none;border-color:var(--red)}
+label.f{display:block;margin-bottom:10px}
+label.f span{display:block;font-size:12px;color:var(--mut);margin-bottom:5px}
+.msg{font-size:14px;min-height:20px;margin-top:6px}
+.msg.e{color:#ff8b80}.msg.s{color:#8fe3b5}
+
+/* login */
+#login{max-width:380px;margin:12vh auto 0;padding:0 16px;text-align:center}
+#login h1{font-size:46px;margin-bottom:4px}
+#login h1 span{color:var(--red)}
+#login .card{text-align:left;margin-top:18px}
+
+/* agenda */
+.dnav{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.dnav b{flex:1;text-align:center;font:400 24px "Bebas Neue";letter-spacing:.04em;text-transform:capitalize}
+.dnav button{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:#ffffff08;font-size:20px}
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;margin-bottom:12px}
+.week button{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:6px 0;display:flex;flex-direction:column;align-items:center;font-size:11px;color:var(--mut)}
+.week button b{font-size:17px;color:var(--tx)}
+.week button em{font-style:normal;font-size:10px;font-weight:700;color:var(--gold);min-height:13px}
+.week button.on{background:var(--red);border-color:var(--red);color:#061026}
+.week button.on b,.week button.on em{color:#fff}
+.week button.off{opacity:.45}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;text-align:center}
+.kpi b{display:block;font-size:19px}
+.kpi span{font-size:11px;color:var(--mut)}
+.ag{display:flex;gap:12px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:14px;padding:12px;margin-bottom:10px}
+.ag.atendido{border-left-color:var(--ok);opacity:.8}
+.ag.faltou{border-left-color:#8b3a33;opacity:.65}
+.ag.cancelado{border-left-color:#555;opacity:.45}
+.ag .t{flex:none;text-align:center;min-width:54px}
+.ag .t b{display:block;font-size:20px}
+.ag .t small{color:var(--mut);font-size:12px}
+.ag .c{flex:1;min-width:0}
+.ag .c b{font-size:16px}
+.ag .c p{color:var(--mut);font-size:13px;margin:2px 0 8px}
+.tag{display:inline-block;font-size:11px;font-weight:700;border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:2px}
+.tag.marcado{background:#3a2e12;color:var(--gold)}.tag.atendido{background:#173826;color:#8fe3b5}.tag.faltou{background:#3a1715;color:#ff8b80}.tag.cancelado{background:#2a2a2a;color:#aaa}.tag.painel{background:#1c2740;color:#9dbaff}
+.free{border:1px dashed var(--line);border-radius:12px;padding:9px 12px;margin-bottom:8px;color:var(--mut);font-size:13px;display:flex;justify-content:space-between;align-items:center}
+.blk{background:#2a1d1b;border:1px solid #5a2f2a;border-radius:12px;padding:9px 12px;margin-bottom:8px;font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.vazio{color:var(--mut);text-align:center;padding:18px;border:1px dashed var(--line);border-radius:14px;margin-bottom:12px}
+details.card summary{cursor:pointer;font-weight:700;list-style:none}
+details.card summary::-webkit-details-marker{display:none}
+details.card summary:after{content:" ▾";color:var(--mut)}
+.bsel{display:flex;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:5px;margin-bottom:12px}
+.bsel button{flex:1;border:0;background:none;border-radius:10px;padding:11px 6px;font-weight:800;font-size:16px;color:var(--mut)}
+.bsel button[aria-selected=true]{background:var(--red);color:#061026}
+.bsel button small{display:block;font-size:11px;font-weight:600;opacity:.85}
+.bn{color:var(--gold)}
+.btn.del{color:#ff8b80;border-color:#5a2f2a}
+.dv{display:grid;grid-template-columns:minmax(0,1.6fr) 74px minmax(0,1fr) minmax(0,1fr);gap:6px;align-items:center;padding:8px 0;border-top:1px solid var(--line);font-size:14px}.dv small{display:block}.dvh{font-size:12px;color:var(--mut,#999);border-top:0;padding-top:0}.dvt{font-weight:800}.dvv{text-align:right;font-weight:700;white-space:nowrap;font-size:13px}.dvh span:nth-child(n+3){text-align:right}.dvp{display:flex;align-items:center;gap:3px}.dvp input{width:48px;padding:6px;border-radius:9px;border:1px solid var(--line);background:transparent;color:inherit;font:inherit;text-align:center}.dvr{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.dvr div{border:1px solid var(--line);border-radius:12px;padding:10px}.dvr small{display:block;font-size:12px;opacity:.75}.dvr b{font-size:18px}
+.rb{margin-bottom:10px}.rbt{display:flex;justify-content:space-between;font-size:15px;margin-bottom:5px}
+.rbb{height:8px;border-radius:9px;background:#151210;overflow:hidden;flex:1}.rbb i{display:block;height:100%;background:linear-gradient(90deg,var(--red),var(--gold));border-radius:9px}
+.rd{display:grid;grid-template-columns:76px 1fr 64px;gap:8px;align-items:center;font-size:13px;padding:4px 0}.rd b{text-align:right}.rd.fut{opacity:.4}
+#per{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-left:-16px;margin-right:-16px;padding:0 16px}#per::-webkit-scrollbar{display:none}#per button{flex:none}
+.svr.dirty{border-color:var(--gold)}
+.g2>*{min-width:0}input[type=date],input[type=time]{min-width:0;-webkit-appearance:none;appearance:none;min-height:46px}
+.tag.brinde{background:#3a2e12;color:var(--gold)}
+.eqc{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:10px;align-items:center}
+.eqav{width:44px;height:44px;border-radius:50%;background:#ffffff14;border:1px solid var(--line);display:grid;place-items:center;font-weight:800;font-size:18px}
+.eqc input[data-en]{width:100%;min-width:0;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:#ffffff08;color:var(--tx);font:inherit;font-weight:700}
+.eqr{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;flex-wrap:wrap}
+.eqpc{display:inline-flex!important;align-items:center;gap:4px;font-weight:700;color:var(--tx)!important;font-size:15px!important}
+.eqpc input{width:64px;padding:9px 8px;border-radius:12px;border:1px solid var(--line);background:#ffffff08;color:var(--tx);font:inherit;font-weight:700;text-align:center}
+.eqs{font-size:12px;color:var(--mut);line-height:1.45}.eqs b{color:var(--tx)}
+.eqc.off{opacity:.55}
+.eqnew input#eqn{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:#ffffff08;color:var(--tx);font:inherit}
+.vrow{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.vpimg{margin:10px 0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0a1633;min-height:60px;display:grid;place-items:center}.vpimg img{display:block;width:100%;height:auto;max-height:280px;object-fit:contain}.vpimg img:not([src]),.vpimg img[src=""]{display:none}
+.vfile{display:flex;justify-content:center;cursor:pointer}
+.vfrow{display:flex;gap:10px;align-items:center;margin:10px 0}.vfph{width:86px;height:86px;flex:none;border-radius:14px;border:1px dashed var(--line);display:grid;place-items:center;overflow:hidden;font-size:12px;color:var(--mut);background:#0a1633}.vfph img{width:100%;height:100%;object-fit:cover}
+#vform select,#vform input:not([type=file]),#vpromo input#vptxt{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:#ffffff08;color:var(--tx);font:inherit}
+#vform select option{background:#0e1c40}
+.vcat{margin:16px 0 6px;font-size:13px;color:var(--gold);font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.vit2{display:grid;grid-template-columns:54px minmax(0,1fr) auto auto;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}.vit2 img,.vit2 .vph{width:54px;height:54px;border-radius:12px;object-fit:cover;background:#0a1633;display:grid;place-items:center}.vit2 b{display:block;font-size:14px;line-height:1.25}.vit2 small{color:var(--mut);font-size:12px}.vit2.off{opacity:.5}
+.brow{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.chips button{border:1px solid var(--line);background:#151210;border-radius:999px;padding:7px 11px;font-size:13px}
+.chips button[aria-pressed=true]{background:var(--red);border-color:var(--red);color:#061026}
+
+/* preços */
+.svr{display:grid;grid-template-columns:1fr;gap:8px}
+.svr .row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}.svr .row2 [data-k=descricao]{grid-column:1/-1}
+.svr .head{display:flex;align-items:center;gap:8px}
+.svr .head input{font-weight:700}
+.sw{position:relative;flex:none;width:46px;height:28px}
+.sw input{position:absolute;opacity:0;inset:0;cursor:pointer;z-index:1;width:100%;height:100%}
+.sw span{position:absolute;inset:0;border-radius:99px;background:#3a332e;transition:.2s}
+.sw span:after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;transition:.2s}
+.sw input:checked+span{background:var(--ok)}
+.sw input:checked+span:after{transform:translateX(18px)}
+.pre{position:relative}.pre input{padding-left:36px}.pre:before{content:"R$";position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--mut);font-size:14px}
+.suf{position:relative}.suf input{padding-right:40px}.suf:after{content:"min";position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--mut);font-size:13px}
+.days{display:flex;flex-wrap:wrap;gap:6px}
+.days label{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:14px}
+.days input{width:auto}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.list{margin-top:6px}
+.list div{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.list div:last-child{border:0}
+.big{font:400 40px "Bebas Neue";letter-spacing:.02em;color:var(--gold)}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom) + 86px);transform:translateX(-50%) translateY(20px);background:#1f6b45;color:#fff;border-radius:12px;padding:10px 16px;font-weight:700;font-size:14px;opacity:0;transition:.3s;z-index:30;pointer-events:none;max-width:90vw}
+.toast.on{opacity:1;transform:translateX(-50%)}
+.toast.e{background:#8b2a24}
+#login h1,.top h1{font-family:"Cinzel","Bebas Neue",sans-serif!important;letter-spacing:.01em}#login h1 span,.top h1 span{color:var(--gold)!important}
+</style>
+</head>
+<body>
+
+<div id="login" hidden>
+  <h1>Ótica <span>Espera Feliz</span></h1>
+  <p class="sm">Painel do profissional</p>
+  <form class="card" id="lf">
+    <label class="f"><span>E-mail</span><input id="le" type="email" autocomplete="username" required></label>
+    <label class="f"><span>Senha</span><input id="lp" type="password" autocomplete="current-password" required></label>
+    <button class="btn" style="width:100%" id="lb">Entrar</button>
+    <div class="msg e" id="lm"></div>
+  </form>
+</div>
+
+<div id="main" hidden>
+  <div class="top"><div class="wrap"><h1>Ótica <span>Espera Feliz</span></h1><span class="sm" id="sync"></span><button class="ib" id="sair">Sair</button></div></div>
+
+  <!-- AGENDA -->
+  <section class="pane wrap on" id="p-agenda">
+    <div class="bsel" id="bsel" role="tablist" aria-label="Profissional"></div>
+    <div class="dnav"><button id="dp" aria-label="Dia anterior">‹</button><b id="dl"></b><button id="dn" aria-label="Próximo dia">›</button></div>
+    <div class="row" style="margin:-4px 0 10px;justify-content:center;gap:8px"><button class="ib" id="dh">Hoje</button><input type="date" id="dpick" style="width:auto;padding:7px 10px;font-size:14px"></div>
+    <div class="week" id="week"></div>
+    <div class="kpis"><div class="kpi"><b id="k1">0</b><span>agendados</span></div><div class="kpi"><b id="k2">R$ 0</b><span>previsto</span></div><div class="kpi"><b id="k3">R$ 0</b><span>recebido</span></div></div>
+    <div id="lista"></div>
+
+    <details class="card" id="enc">
+      <summary>+ Encaixar cliente <span class="bn"></span></summary>
+      <div style="margin-top:12px">
+        <div class="chips" id="encsv"></div>
+        <div class="g2"><label class="f"><span>Data</span><input type="date" id="encd"></label><label class="f"><span>Horário</span><input type="time" id="ench" step="300"></label></div>
+        <div class="g2"><label class="f"><span>Nome</span><input id="encn" maxlength="80"></label><label class="f"><span>WhatsApp</span><input id="enct" inputmode="tel" placeholder="(32) 9…"></label></div>
+        <button class="btn" id="encb" style="width:100%">Encaixar</button><div class="msg" id="encm"></div>
+      </div>
+    </details>
+    <details class="card" id="blq">
+      <summary>⛔ Folgas e bloqueios <span class="bn"></span></summary>
+      <div style="margin-top:12px">
+        <div class="chips" id="bltp"><button type="button" data-t="dia" aria-pressed="true">Folga (dia inteiro)</button><button type="button" data-t="hora" aria-pressed="false">Só alguns horários</button></div>
+        <div class="g2"><label class="f"><span id="bld1l">Do dia</span><input type="date" id="bld1"></label><label class="f" id="bld2w"><span>Até o dia (opcional)</span><input type="date" id="bld2"></label></div>
+        <div class="g2" id="blhr" style="display:none"><label class="f"><span>Das</span><input type="time" id="bli" step="300"></label><label class="f"><span>Até</span><input type="time" id="blf" step="300"></label></div>
+        <label class="f" style="display:flex;align-items:center;gap:8px"><input type="checkbox" id="bltd" style="width:auto"> <span style="margin:0;font-size:14px;color:var(--tx)">Ótica toda fechada (vale para todos os profissionais)</span></label>
+        <label class="f"><span>Motivo (opcional)</span><input id="blm" maxlength="80" placeholder="Ex.: férias, feriado, médico"></label>
+        <button class="btn" id="blb" style="width:100%">Salvar folga</button><div class="msg" id="blmsg"></div>
+        <div style="margin-top:14px"><b style="font-size:14px">Próximas folgas e bloqueios</b><div id="blprox" style="margin-top:8px"></div></div>
+      </div>
+    </details>
+  </section>
+
+  <!-- PREÇOS -->
+  <section class="pane wrap" id="p-precos">
+    <h2 style="font-size:30px;margin-bottom:4px">Serviços e preços</h2>
+    <p class="sm" style="margin-bottom:12px">Toque no preço, digite o novo valor e toque fora: <b>salva sozinho</b> e o site do cliente já mostra o preço novo.</p>
+    <div id="svlist"></div>
+    <button class="btn g" id="svadd" style="width:100%;margin-bottom:10px">+ Novo serviço</button>
+    <button class="btn" id="svsave" style="width:100%;position:sticky;bottom:calc(env(safe-area-inset-bottom) + 76px);z-index:5;box-shadow:0 10px 30px #000c">Salvar preços</button>
+    <div class="msg" id="svmsg"></div>
+  </section>
+
+
+  <!-- EQUIPE -->
+  <section class="pane wrap" id="p-equipe">
+    <h2 style="font-size:30px;margin-bottom:4px">Equipe</h2>
+    <p class="sm" style="margin-bottom:12px">Adicione os profissionais da ótica e a porcentagem de cada um. O que sobra fica para a ótica. Profissional desligado some do site, mas o histórico continua no painel.</p>
+    <div id="eqlist"><p class="sm">Carregando…</p></div>
+    <div class="card eqnew">
+      <b>➕ Novo profissional</b>
+      <div class="g2" style="margin-top:10px"><label class="f"><span>Nome</span><input id="eqn" maxlength="40" placeholder="Ex.: João"></label><label class="f"><span>Porcentagem dele</span><span class="eqpc"><input id="eqp" inputmode="decimal" value="60" aria-label="Porcentagem do novo profissional">%</span></label></div>
+      <p class="sm" id="eqprev"></p>
+      <button class="btn" id="eqadd" type="button" style="width:100%;margin-top:8px">Adicionar à equipe</button>
+    </div>
+    <button class="btn" id="eqsave" style="width:100%">Salvar alterações da equipe</button>
+    <div class="msg" id="eqmsg"></div>
+  </section>
+
+
+  <!-- VITRINE -->
+  <section class="pane wrap" id="p-vitrine">
+    <h2 style="font-size:30px;margin-bottom:4px">Vitrine</h2>
+    <p class="sm" style="margin-bottom:12px">Óculos, lentes e relógios que aparecem no site. Mudou aqui, muda no site na hora.</p>
+    <div class="card" id="vpromo">
+      <div class="vrow"><b>🔥 Promoção do site</b><label class="sw" title="Mostrar no site"><input type="checkbox" id="vpon" aria-label="Mostrar promoção no site"><span></span></label></div>
+      <div class="vpimg"><img id="vpimg" alt="Imagem da promoção"><span id="vpnone" class="sm">Sem imagem</span></div>
+      <label class="btn g vfile">Trocar imagem da promoção<input type="file" accept="image/*" id="vpfile" hidden></label>
+      <label class="f" style="margin-top:10px"><span>Frase abaixo da imagem (opcional)</span><input id="vptxt" maxlength="160" placeholder="Ex.: Óculos completo a partir de 10x de R$ 49,90"></label>
+      <button class="btn" id="vpsave" type="button" style="width:100%">Salvar promoção</button><div class="msg" id="vpmsg"></div>
+    </div>
+    <div class="card" id="vform">
+      <b id="vftit">➕ Nova peça na vitrine</b>
+      <div class="vfrow"><div class="vfph" id="vfph"><span>Sem foto</span></div><label class="btn g vfile" style="flex:1">Escolher foto<input type="file" accept="image/*" id="vffile" hidden></label></div>
+      <label class="f"><span>Nome</span><input id="vfn" maxlength="80" placeholder="Ex.: Armação acetato preta quadrada"></label>
+      <div class="g2"><label class="f"><span>Categoria</span><select id="vfc"><option>Masculino</option><option>Feminino</option><option>Infantil</option><option>Óculos de sol</option><option>Lentes de contato</option><option>Relógios</option></select></label>
+      <label class="f"><span>Preço (vazio = "Consulte")</span><input id="vfp" inputmode="decimal" placeholder="Ex.: 199,90"></label></div>
+      <label class="f"><span>Detalhes (opcional)</span><input id="vfd" maxlength="200" placeholder="Ex.: Acetato leve, cabe lente de grau"></label>
+      <button class="btn" id="vfsave" type="button" style="width:100%">Adicionar à vitrine</button>
+      <button class="btn g" id="vfcancel" type="button" style="width:100%;margin-top:8px" hidden>Cancelar edição</button>
+      <div class="msg" id="vfmsg"></div>
+    </div>
+    <div id="vlist"><p class="sm">Carregando…</p></div>
+  </section>
+
+  <!-- HORÁRIOS -->
+  <section class="pane wrap" id="p-horarios">
+    <h2 style="font-size:30px;margin-bottom:12px">Funcionamento</h2>
+    <div class="card">
+      <p class="sm" style="margin-bottom:8px">Dias que abre</p>
+      <div class="days" id="cdias"></div>
+    </div>
+    <div class="card">
+      <div class="g2"><label class="f"><span>Abre</span><input type="time" id="cab"></label><label class="f"><span>Fecha</span><input type="time" id="cfe"></label></div>
+      <div class="g2"><label class="f"><span>Almoço início</span><input type="time" id="cai"></label><label class="f"><span>Almoço fim</span><input type="time" id="caf"></label></div>
+      <p class="sm">Deixe o almoço em branco se não para.</p>
+    </div>
+    <div class="card">
+      <div class="g2">
+        <label class="f"><span>Horários de</span><select id="civ"><option value="15">15 em 15 min</option><option value="20">20 em 20 min</option><option value="30">30 em 30 min</option><option value="40">40 em 40 min</option><option value="45">45 em 45 min</option><option value="60">1 em 1 hora</option></select></label>
+        <label class="f"><span>Cliente marca até</span><select id="cme"><option value="1">1 mês à frente</option><option value="2">2 meses</option><option value="3">3 meses</option><option value="4">4 meses</option><option value="6">6 meses</option><option value="12">12 meses</option></select></label>
+      </div>
+      <label class="f"><span>WhatsApp da ótica (para o cliente avisar que marcou)</span><input id="cwa" inputmode="tel" placeholder="(33) 9 9999-9999"></label>
+      <label class="f"><span>Aviso no topo do site (opcional)</span><input id="cav" maxlength="200" placeholder="Ex.: Feriado dia 15: fechado"></label>
+    </div>
+    <div class="card">
+      <b>🎁 Cartão fidelidade</b>
+      <label class="f" style="margin-top:8px"><span>A cada quantos atendimentos o cliente ganha 1 atendimento grátis? (0 = desligado)</span><input id="cfid" type="number" min="0" max="50" inputmode="numeric"></label>
+      <p class="sm">O sistema conta sozinho pelo WhatsApp do cliente. Só contam os marcados como <b>Atendido</b>.</p>
+    </div>
+    <div class="card">
+      <b>👓 Profissionais</b>
+      <p class="sm" style="margin:4px 0 10px">Os profissionais da equipe e a porcentagem de cada um ficam na aba <b>Equipe</b>.</p><button class="btn g" type="button" data-goto="equipe">Abrir Equipe →</button>
+      <div id="cbarb" hidden></div><button id="cbadd" type="button" hidden></button>
+    </div>
+    <button class="btn" id="csave" style="width:100%">Salvar funcionamento</button><div class="msg" id="cmsg"></div>
+    <details class="card" style="margin-top:16px"><summary>🔒 Trocar senha e e-mail do painel</summary>
+      <div style="margin-top:12px"><p class="sm" style="margin:0 0 10px">E-mail atual: <b id="curmail">…</b></p><label class="f"><span>Novo e-mail</span><input type="email" id="ne" autocomplete="email" inputmode="email" placeholder="novo@email.com"></label><label class="f"><span>Senha atual (para confirmar)</span><input type="password" id="nep" autocomplete="current-password"></label><button class="btn g" id="neb" style="width:100%">Trocar e-mail</button><div class="msg" id="nem"></div><hr style="border:0;border-top:1px solid var(--line);margin:16px 0"><label class="f"><span>Nova senha (mínimo 8)</span><input type="password" id="np" autocomplete="new-password"></label><button class="btn g" id="npb" style="width:100%">Trocar senha</button><div class="msg" id="npm"></div></div>
+    </details>
+  </section>
+
+  <!-- RESUMO -->
+  <section class="pane wrap" id="p-resumo">
+    <h2 style="font-size:30px;margin-bottom:12px">Faturamento</h2>
+    <div class="bsel" id="rbs" aria-label="Profissional"></div>
+    <div class="chips" id="per">
+      <button aria-pressed="false" data-p="hoje">Hoje</button>
+      <button aria-pressed="true" data-p="semana">Esta semana</button>
+      <button aria-pressed="false" data-p="semant">Semana passada</button>
+      <button aria-pressed="false" data-p="mes">Este mês</button>
+      <button aria-pressed="false" data-p="mesant">Mês passado</button>
+    </div>
+    <p class="sm" id="rper" style="margin:-2px 0 10px"></p>
+    <div class="card"><span class="sm" id="rlab">Faturado (atendidos)</span><div class="big" id="rfat">R$ 0,00</div><span class="sm" id="rsub"></span><div class="sm" id="rcmp" style="margin-top:4px"></div></div>
+    <div class="kpis"><div class="kpi"><b id="r1">0</b><span>atendidos</span></div><div class="kpi"><b id="r2">0</b><span>faltas</span></div><div class="kpi"><b id="r4">R$ 0</b><span>ainda a receber</span></div></div>
+    <div class="card" id="rbarc"><b>Por profissional</b><div id="rbar" style="margin-top:8px"></div></div>
+    <div class="card" id="rdivc"><b>💸 Divisão do faturamento</b><p class="sm" style="margin:2px 0 10px">Coloque a porcentagem de cada profissional. O resto fica para a ótica.</p><div id="rdiv"></div><button class="btn" id="rdsave" type="button" style="margin-top:10px">Salvar porcentagens</button><p class="sm" id="rdmsg" style="margin-top:6px"></p></div>
+    <div class="card"><b>Dia a dia</b><div id="rdia" style="margin-top:8px"></div></div>
+    <div class="card"><b>Serviços mais feitos</b><div class="list" id="rtop"></div></div>
+    <div class="card"><b>Clientes que mais vieram</b><div class="list" id="rcli"></div></div>
+  </section>
+</div>
+
+<nav class="tabs" id="tabs" hidden role="tablist">
+  <button role="tab" aria-selected="true" data-t="agenda"><i>📅</i>Agenda</button>
+  <button role="tab" aria-selected="false" data-t="vitrine"><i>🕶️</i>Vitrine</button>
+  <button role="tab" aria-selected="false" data-t="precos"><i>💲</i>Serviços</button>
+  <button role="tab" aria-selected="false" data-t="horarios"><i>🕘</i>Horários</button>
+  <button role="tab" aria-selected="false" data-t="equipe"><i>👥</i>Equipe</button>
+  <button role="tab" aria-selected="false" data-t="resumo"><i>💰</i>Faturamento</button>
+</nav>
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+(function(){
+var SU="https://hkqicvssabntmaoifyau.supabase.co",SK="sb_publishable_iqgTbGd-MkhvwLTQidXimA_WH6ThyPG",EMAIL="beggiante@gmail.com";
+var sb=supabase.createClient(SU,SK),$=function(i){return document.getElementById(i)};
+var MES=["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],WD=["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"],WDL=["domingo","segunda","terça","quarta","quinta","sexta","sábado"];
+var CFG=null,SV=[],BB=[],BAR=null,cur=null,dayAg=[],dayBl=[],weekCount={},poll=0;
+function brl(v){return "R$ "+Number(v||0).toFixed(2).replace(".",",")}
+function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function pd(s){var p=s.split("-");return new Date(+p[0],+p[1]-1,+p[2])}
+function add(s,n){var d=pd(s);d.setDate(d.getDate()+n);return iso(d)}
+function mm(t){var p=t.split(":");return +p[0]*60+ +p[1]}
+function hh(m){return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0")}
+function t5(t){return(t||"").slice(0,5)}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function fone(t){t=String(t||"").replace(/\D/g,"");return t.length===11?"("+t.slice(0,2)+") "+t.slice(2,7)+"-"+t.slice(7):t.length===10?"("+t.slice(0,2)+") "+t.slice(2,6)+"-"+t.slice(6):t}
+function hoje(){return iso(new Date(new Date().toLocaleString("en-US",{timeZone:"America/Sao_Paulo"})))}
+function toast(t,e){var x=$("toast");x.textContent=t;x.className="toast on"+(e?" e":"");clearTimeout(x._t);x._t=setTimeout(function(){x.className="toast"+(e?" e":"")},2400)}
+function msg(id,t,ok){var m=$(id);m.textContent=t;m.className="msg "+(ok?"s":"e")}
+
+/* login */
+function show(logged){$("login").hidden=logged;$("main").hidden=!logged;$("tabs").hidden=!logged}
+$("lf").onsubmit=function(e){e.preventDefault();var b=$("lb");b.disabled=true;$("lm").textContent="";
+ sb.auth.signInWithPassword({email:$("le").value.trim().toLowerCase(),password:$("lp").value}).then(function(r){b.disabled=false;if(r.error){$("lm").textContent="E-mail ou senha incorretos.";return}try{localStorage.setItem("oef_email",$("le").value.trim().toLowerCase())}catch(e){}start()})};
+(function(){var m=EMAIL;try{m=localStorage.getItem("oef_email")||EMAIL}catch(e){}$("le").value=m})();
+$("sair").onclick=function(){sb.auth.signOut().then(function(){clearInterval(poll);show(false)})};
+sb.auth.getSession().then(function(r){if(r.data.session)start();else show(false)});
+
+function start(){show(true);sb.auth.getUser().then(function(r){var u=r.data&&r.data.user;if(u&&$("curmail"))$("curmail").textContent=u.email})["catch"](function(){});cur=cur||hoje();loadCfg().then(function(){loadDay();clearInterval(poll);poll=setInterval(function(){if(!document.hidden&&$("p-agenda").classList.contains("on"))loadDay(true)},30000)})}
+
+/* equipe */
+var EQM={};
+function pcv(v){v=parseFloat(String(v).replace(",","."));return v>=0&&v<=100?Math.round(v*100)/100:NaN}
+function eqPrev(p){p=pcv(p);return isNaN(p)?"Use uma porcentagem de 0 a 100.":"A cada R$ 100 em serviços: <b>"+brl(p)+"</b> para ele e <b>"+brl(100-p)+"</b> para a ótica."}
+function renderEq(){var d=new Date(),ini=iso(new Date(d.getFullYear(),d.getMonth(),1));$("eqprev").innerHTML=eqPrev($("eqp").value);
+ drawEq();sb.from("oef_agendamentos").select("barbeiro_id,total,status").gte("dia",ini).lte("dia",hoje()).eq("status","atendido").then(function(r){if(r.error)return;EQM={};r.data.forEach(function(a){EQM[a.barbeiro_id]=(EQM[a.barbeiro_id]||0)+(+a.total||0)});drawEq()})}
+function drawEq(){var keep={};[].forEach.call(document.querySelectorAll("#eqlist [data-en]"),function(x){keep[x.dataset.en]={n:x.value,p:document.querySelector('[data-ec="'+x.dataset.en+'"]').value,a:document.querySelector('[data-ea="'+x.dataset.en+'"]').checked}});
+ $("eqlist").innerHTML=BB.length?BB.map(function(b){var k=keep[b.id]||{n:b.nome,p:b.comissao==null?60:b.comissao,a:b.ativo},pc=pcv(k.p),m=EQM[b.id]||0;
+  return '<div class="card"><div class="eqc'+(k.a?"":" off")+'" data-row="'+b.id+'"><span class="eqav">'+esc((k.n||"?").trim().charAt(0).toUpperCase()||"?")+'</span><input data-en="'+b.id+'" value="'+esc(k.n)+'" maxlength="40" aria-label="Nome do profissional"><label class="sw" title="Atendendo no site"><input type="checkbox" data-ea="'+b.id+'"'+(k.a?" checked":"")+' aria-label="Atendendo"><span></span></label></div>'+
+  '<div class="eqr"><span class="eqpc">Porcentagem <input data-ec="'+b.id+'" inputmode="decimal" value="'+String(k.p).replace(".",",")+'" aria-label="Porcentagem de '+esc(k.n)+'">%</span><span class="sm">'+(k.a?"Atendendo no site":"Desligado do site")+'</span></div>'+
+  '<p class="eqs" style="margin-top:8px">'+(isNaN(pc)?"Use uma porcentagem de 0 a 100.":"Este mês: <b>"+brl(m)+"</b> em atendimentos · <b>"+brl(m*pc/100)+"</b> para ele · <b>"+brl(m-m*pc/100)+"</b> para a ótica")+'</p></div>'}).join(""):'<p class="sm">Nenhum profissional ainda.</p>'}
+$("eqlist").oninput=function(e){if(e.target.matches("[data-en],[data-ec]"))clearTimeout(drawEq._t),drawEq._t=setTimeout(function(){var a=document.activeElement,id=a&&a.dataset?(a.dataset.en||a.dataset.ec):null,isN=a&&a.dataset&&a.dataset.en,pos=a&&a.selectionStart;drawEq();if(id){var n=document.querySelector(isN?'[data-en="'+id+'"]':'[data-ec="'+id+'"]');if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}}},600)};
+$("eqlist").onchange=function(e){if(e.target.matches("[data-ea]"))drawEq()};
+$("eqp").oninput=function(){$("eqprev").innerHTML=eqPrev(this.value)};
+$("eqadd").onclick=function(){var n=$("eqn").value.trim(),p=pcv($("eqp").value);if(!n)return msg("eqmsg","Digite o nome do novo profissional.");if(isNaN(p))return msg("eqmsg","Use uma porcentagem de 0 a 100.");
+ if(BB.some(function(b){return b.nome.toLowerCase()===n.toLowerCase()}))return msg("eqmsg","Já existe um profissional com esse nome.");
+ var bt=this;bt.disabled=true;sb.from("oef_barbeiros").insert({nome:n.slice(0,40),ativo:true,comissao:p,ordem:(BB.reduce(function(a,b){return Math.max(a,b.ordem||0)},0))+1}).then(function(r){bt.disabled=false;if(r.error)return msg("eqmsg","Erro: "+r.error.message);
+  $("eqn").value="";msg("eqmsg",n+" entrou na equipe ✓ Já aparece no site para agendar.",1);toast(n+" adicionado ✓");loadCfg().then(renderEq)})};
+$("eqsave").onclick=function(){var rows=BB.map(function(b){return{id:b.id,nome:document.querySelector('[data-en="'+b.id+'"]').value.trim(),comissao:pcv(document.querySelector('[data-ec="'+b.id+'"]').value),ativo:document.querySelector('[data-ea="'+b.id+'"]').checked,ordem:b.ordem}});
+ if(rows.some(function(r){return !r.nome}))return msg("eqmsg","Todo profissional precisa de nome.");if(rows.some(function(r){return isNaN(r.comissao)}))return msg("eqmsg","Use porcentagens de 0 a 100.");if(!rows.some(function(r){return r.ativo}))return msg("eqmsg","Deixe pelo menos um profissional atendendo.");
+ var bt=this;bt.disabled=true;sb.from("oef_barbeiros").upsert(rows).then(function(r){bt.disabled=false;if(r.error)return msg("eqmsg","Erro: "+r.error.message);msg("eqmsg","Equipe salva ✓ O site já está atualizado.",1);toast("Equipe salva ✓");loadCfg().then(renderEq)})};
+document.addEventListener("click",function(e){var g=e.target.closest("[data-goto]");if(g){var t=document.querySelector('#tabs [data-t="'+g.dataset.goto+'"]');if(t)t.click()}});
+
+/* vitrine */
+var VL=[],VED=null,VFOTO=null,VPF=null;
+function vbr(v){return v==null?"Consulte":brl(v)}
+function shrink(f,max){return new Promise(function(ok,no){var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var k=Math.min(1,max/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);c.getContext("2d").drawImage(im,0,0,c.width,c.height);c.toBlob(function(b){b?ok(b):no(new Error("img"))},"image/jpeg",.85)};im.onerror=no;im.src=r.result};r.onerror=no;r.readAsDataURL(f)})}
+function upFoto(b,pasta){var path=pasta+"/"+Date.now().toString(36)+Math.random().toString(36).slice(2,6)+".jpg";return sb.storage.from("oef").upload(path,b,{contentType:"image/jpeg",upsert:false}).then(function(r){if(r.error)throw r.error;return sb.storage.from("oef").getPublicUrl(path).data.publicUrl})}
+function loadVit(){
+ $("vpon").checked=!!(CFG&&CFG.promo_on);$("vptxt").value=(CFG&&CFG.promo_txt)||"";VPF=null;var pi=(CFG&&CFG.promo_img)||"";$("vpimg").src=pi;$("vpnone").hidden=!!pi;
+ sb.from("oef_vitrine").select("*").order("categoria").order("ordem").order("id").then(function(r){if(r.error)return toast("Erro ao carregar a vitrine",1);VL=r.data;drawVit()})}
+function drawVit(){var C=["Masculino","Feminino","Infantil","Óculos de sol","Lentes de contato","Relógios"];
+ $("vlist").innerHTML=VL.length?C.map(function(c){var it=VL.filter(function(x){return x.categoria===c});if(!it.length)return"";
+  return '<div class="card"><div class="vcat">'+esc(c)+' · '+it.length+'</div>'+it.map(function(x){return '<div class="vit2'+(x.ativo?"":" off")+'">'+(x.foto?'<img src="'+esc(x.foto)+'" alt="">':'<span class="vph">'+(c==="Relógios"?"⌚":"👓")+'</span>')+'<div><b>'+esc(x.nome)+'</b><small>'+vbr(x.preco)+(x.ativo?"":" · escondido")+'</small></div><label class="sw" title="Mostrar no site"><input type="checkbox" data-von="'+x.id+'"'+(x.ativo?" checked":"")+' aria-label="Mostrar no site"><span></span></label><button class="ib" type="button" data-ved="'+x.id+'">Editar</button></div>'}).join("")+'</div>'}).join(""):'<p class="sm" style="text-align:center;padding:14px">Nenhuma peça ainda. Adicione a primeira acima.</p>'}
+function vReset(){VED=null;VFOTO=null;$("vfn").value="";$("vfp").value="";$("vfd").value="";$("vffile").value="";$("vfph").innerHTML="<span>Sem foto</span>";$("vftit").textContent="➕ Nova peça na vitrine";$("vfsave").textContent="Adicionar à vitrine";$("vfcancel").hidden=true;var d=$("vfdel");if(d)d.remove()}
+$("vffile").onchange=function(){var f=this.files[0];if(!f)return;shrink(f,1200).then(function(b){VFOTO=b;$("vfph").innerHTML='<img src="'+URL.createObjectURL(b)+'" alt="">'}).catch(function(){msg("vfmsg","Não consegui ler essa foto. Tente outra.")})};
+$("vpfile").onchange=function(){var f=this.files[0];if(!f)return;shrink(f,1400).then(function(b){VPF=b;$("vpimg").src=URL.createObjectURL(b);$("vpnone").hidden=true;msg("vpmsg","Toque em Salvar promoção para publicar a imagem.",1)}).catch(function(){msg("vpmsg","Não consegui ler essa imagem.")})};
+$("vpsave").onclick=function(){var bt=this;bt.disabled=true;msg("vpmsg","Salvando…",1);(VPF?upFoto(VPF,"promo"):Promise.resolve(null)).then(function(u){var up={promo_on:$("vpon").checked,promo_txt:$("vptxt").value.trim()||null};if(u)up.promo_img=u;
+ return sb.from("oef_config").update(up).eq("id",1)}).then(function(r){bt.disabled=false;if(r.error)return msg("vpmsg","Erro: "+r.error.message);VPF=null;msg("vpmsg","Promoção salva ✓ O site já está atualizado.",1);loadCfg().then(loadVit)}).catch(function(e){bt.disabled=false;msg("vpmsg","Erro ao enviar a imagem: "+(e.message||e))})};
+$("vfsave").onclick=function(){var n=$("vfn").value.trim(),pv=$("vfp").value.trim().replace(/\./g,"").replace(",","."),pr=pv?parseFloat(pv):null;
+ if(!n)return msg("vfmsg","Digite o nome da peça.");if(pv&&!(pr>=0&&pr<=99999))return msg("vfmsg","Preço inválido. Ex.: 199,90");
+ var bt=this;bt.disabled=true;msg("vfmsg","Salvando…",1);(VFOTO?upFoto(VFOTO,"vitrine"):Promise.resolve(null)).then(function(u){var row={nome:n,categoria:$("vfc").value,preco:pr,detalhe:$("vfd").value.trim()||null};if(u)row.foto=u;
+  if(VED)return sb.from("oef_vitrine").update(row).eq("id",VED);row.ordem=VL.length+1;return sb.from("oef_vitrine").insert(row)}).then(function(r){bt.disabled=false;if(r.error)return msg("vfmsg","Erro: "+r.error.message);
+  msg("vfmsg",(VED?"Peça atualizada ✓":"Peça adicionada ✓")+" Já aparece no site.",1);toast("Vitrine atualizada ✓");vReset();loadVit()}).catch(function(e){bt.disabled=false;msg("vfmsg","Erro ao enviar a foto: "+(e.message||e))})};
+$("vfcancel").onclick=function(){vReset();$("vfmsg").textContent=""};
+$("vlist").onclick=function(e){var b=e.target.closest("[data-ved]");if(!b)return;var x=VL.filter(function(v){return v.id===+b.dataset.ved})[0];if(!x)return;vReset();VED=x.id;
+ $("vfn").value=x.nome;$("vfc").value=x.categoria;$("vfp").value=x.preco==null?"":String(x.preco).replace(".",",");$("vfd").value=x.detalhe||"";if(x.foto)$("vfph").innerHTML='<img src="'+esc(x.foto)+'" alt="">';
+ $("vftit").textContent="✏️ Editar peça";$("vfsave").textContent="Salvar alterações";$("vfcancel").hidden=false;
+ var d=document.createElement("button");d.className="btn g";d.id="vfdel";d.type="button";d.style.cssText="width:100%;margin-top:8px;color:#ff8b80";d.textContent="Excluir peça";$("vfcancel").after(d);
+ d.onclick=function(){if(!d.dataset.ok){d.dataset.ok=1;d.textContent="Toque de novo para confirmar";return}sb.from("oef_vitrine").delete().eq("id",x.id).then(function(r){if(r.error)return msg("vfmsg","Erro: "+r.error.message);toast("Peça excluída");vReset();loadVit()})};
+ $("vform").scrollIntoView({behavior:"smooth",block:"start"})};
+$("vlist").onchange=function(e){var i=e.target.closest("[data-von]");if(!i)return;sb.from("oef_vitrine").update({ativo:i.checked}).eq("id",+i.dataset.von).then(function(r){if(r.error){i.checked=!i.checked;return toast("Erro ao salvar",1)}toast(i.checked?"Aparece no site ✓":"Escondida do site");var x=VL.filter(function(v){return v.id===+i.dataset.von})[0];if(x)x.ativo=i.checked;drawVit()})};
+
+/* abas */
+$("tabs").onclick=function(e){var b=e.target.closest("button");if(!b)return;[].forEach.call(this.children,function(x){x.setAttribute("aria-selected",x===b)});
+ document.querySelectorAll(".pane").forEach(function(p){p.classList.toggle("on",p.id==="p-"+b.dataset.t)});scrollTo(0,0);
+ if(b.dataset.t==="agenda")loadDay();if(b.dataset.t==="vitrine"){$("vfmsg").textContent="";$("vpmsg").textContent="";loadVit()}if(b.dataset.t==="equipe"){$("eqmsg").textContent="";renderEq()}if(b.dataset.t==="precos")renderSv();if(b.dataset.t==="horarios")renderCfg();if(b.dataset.t==="resumo")loadRes()};
+
+function loadCfg(){return Promise.all([sb.from("oef_config").select("*").eq("id",1).single(),sb.from("oef_servicos").select("*").order("ordem").order("id"),sb.from("oef_barbeiros").select("*").order("ordem").order("id")]).then(function(r){
+ if(r[0].error||r[1].error||r[2].error){toast("Sem permissão. Entre de novo.",1);return}CFG=r[0].data;SV=r[1].data;BB=r[2].data;
+ var keep;try{keep=+localStorage.getItem("oef_pb")}catch(e){}var act=BB.filter(function(b){return b.ativo});
+ if(!BAR||!act.some(function(b){return b.id===BAR}))BAR=(act.filter(function(b){return b.id===keep})[0]||act[0]||BB[0]||{}).id;renderBsel();renderEnc()})}
+function bnm(id){var b=BB.filter(function(x){return x.id===id})[0];return b?b.nome:""}
+function renderBsel(){$("bsel").innerHTML=BB.filter(function(b){return b.ativo}).map(function(b){return '<button role="tab" data-b="'+b.id+'" aria-selected="'+(b.id===BAR)+'">'+esc(b.nome)+'<small>clientes do '+esc(b.nome)+'</small></button>'}).join("");$("bsel").style.display=BB.filter(function(b){return b.ativo}).length<2?"none":"";
+ document.querySelectorAll(".bn").forEach(function(x){x.textContent="· "+bnm(BAR)})}
+$("bsel").onclick=function(e){var b=e.target.closest("button");if(!b)return;BAR=+b.dataset.b;try{localStorage.setItem("oef_pb",BAR)}catch(e){}renderBsel();dayAg=[];loadDay()};
+
+/* agenda */
+function loadDay(silent){if(!$("enc").open||!$("encd").value)$("encd").value=cur;var d=cur,w0=add(d,-pd(d).getDay()),w6=add(w0,6);
+ return Promise.all([sb.from("oef_agendamentos").select("*").eq("dia",d).eq("barbeiro_id",BAR).order("hora"),sb.from("oef_bloqueios").select("*").eq("dia",d).or("barbeiro_id.is.null,barbeiro_id.eq."+BAR).order("hora_ini",{nullsFirst:true}),
+  sb.from("oef_agendamentos").select("dia").gte("dia",w0).lte("dia",w6).eq("barbeiro_id",BAR).in("status",["marcado","atendido"])]).then(function(r){
+  if(r[0].error){if(!silent)toast("Erro ao carregar agenda",1);return}
+  var old=dayAg.length;dayAg=r[0].data;dayBl=r[1].data||[];weekCount={};(r[2].data||[]).forEach(function(x){weekCount[x.dia]=(weekCount[x.dia]||0)+1});
+  if(silent&&dayAg.length>old)toast("Novo agendamento! 👓");
+  renderDay();$("sync").textContent="atualizado "+new Date().toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"})})}
+function renderDay(){var d=pd(cur),h=hoje();
+ $("dl").textContent=(cur===h?"Hoje, ":cur===add(h,1)?"Amanhã, ":WDL[d.getDay()]+", ")+d.getDate()+" de "+MES[d.getMonth()];$("dpick").value=cur;
+ var w0=add(cur,-d.getDay()),wh="";for(var i=0;i<7;i++){var ds=add(w0,i),dd=pd(ds),fech=CFG&&CFG.dias.indexOf(i)<0,n=weekCount[ds]||0;
+  wh+='<button data-d="'+ds+'" class="'+(ds===cur?"on":"")+(fech?" off":"")+'">'+WD[i]+'<b>'+dd.getDate()+'</b><em>'+(n?n+" 👁":"")+'</em></button>'}$("week").innerHTML=wh;
+ var at=dayAg.filter(function(a){return a.status!=="cancelado"&&a.status!=="faltou"}),prev=0,rec=0;at.forEach(function(a){prev+= +a.total;if(a.status==="atendido")rec+= +a.total});
+ $("k1").textContent=at.length;$("k2").textContent=brl(prev).replace(",00","");$("k3").textContent=brl(rec).replace(",00","");
+ var h2="",fech=CFG&&CFG.dias.indexOf(d.getDay())<0,dayOff=dayBl.some(function(b){return !b.hora_ini});
+ if(fech)h2+='<div class="vazio">A ótica não abre nesse dia da semana.</div>';
+ dayBl.forEach(function(b){h2+='<div class="blk"><span>⛔ '+(b.hora_ini?t5(b.hora_ini)+"–"+t5(b.hora_fim):(b.barbeiro_id?"Folga do "+esc(bnm(b.barbeiro_id)):"Ótica fechada o dia todo"))+(b.hora_ini&&!b.barbeiro_id?" · ótica toda":"")+(b.motivo?" · "+esc(b.motivo):"")+'</span><button class="btn g sm2" data-unbl="'+b.id+'">Liberar</button></div>'});
+ /* linha do tempo: agendamentos + horários livres */
+ var items=dayAg.slice().sort(function(a,b){return a.hora<b.hora?-1:1});
+ if(!fech&&!dayOff&&CFG){var a=mm(t5(CFG.abre)),f=mm(t5(CFG.fecha)),occ=[];items.forEach(function(x){if(x.status==="marcado"||x.status==="atendido")occ.push([mm(t5(x.hora)),mm(t5(x.hora))+x.duracao_min])});
+  dayBl.forEach(function(b){if(b.hora_ini)occ.push([mm(t5(b.hora_ini)),mm(t5(b.hora_fim))])});if(CFG.almoco_ini&&CFG.almoco_fim)occ.push([mm(t5(CFG.almoco_ini)),mm(t5(CFG.almoco_fim))]);
+  occ.sort(function(x,y){return x[0]-y[0]});var gaps=[],t=a;occ.forEach(function(o){if(o[0]>t)gaps.push([t,Math.min(o[0],f)]);t=Math.max(t,o[1])});if(t<f)gaps.push([t,f]);
+  var ev=items.map(function(x){return{k:mm(t5(x.hora)),ag:x}}).concat(gaps.filter(function(g){return g[1]-g[0]>=CFG.intervalo_min}).map(function(g){return{k:g[0],gap:g}}));
+  ev.sort(function(x,y){return x.k-y.k||(x.gap?1:-1)});
+  ev.forEach(function(e){if(e.gap)h2+='<div class="free"><span>Livre '+hh(e.gap[0])+'–'+hh(e.gap[1])+'</span><button class="btn g sm2" data-encaixe="'+hh(e.gap[0])+'">Encaixar</button></div>';else h2+=agCard(e.ag)})}
+ else items.forEach(function(x){h2+=agCard(x)});
+ if(!items.length&&!fech&&!dayOff)h2+='<div class="vazio" style="margin-top:4px">Nenhum agendamento nesse dia ainda.</div>';
+ $("lista").innerHTML=h2;if($("blq").open)loadProx()}
+function agCard(a){var ini=mm(t5(a.hora)),fim=hh(ini+a.duracao_min),sv=(a.servicos||[]).map(function(s){return s.nome}).join(" + "),tel=String(a.telefone).replace(/\D/g,"");
+ var d=pd(a.dia),q="Olá, "+a.nome.split(" ")[0]+"! Aqui é o "+bnm(a.barbeiro_id)+", passando pra lembrar do seu horário na Ótica Espera Feliz: "+(a.dia===hoje()?"hoje":WDL[d.getDay()]+" ("+d.getDate()+"/"+(d.getMonth()+1)+")")+" às "+t5(a.hora)+" 👁️ "+sv+". Te esperamos!";
+ var b='<div class="row">';
+ if(a.status==="marcado")b+='<button class="btn ok sm2" data-st="atendido" data-id="'+a.id+'">✓ Atendido</button><button class="btn g sm2" data-st="faltou" data-id="'+a.id+'">Faltou</button><a class="btn wa sm2" target="_blank" rel="noopener" href="https://wa.me/55'+tel.replace(/^55/,"")+'?text='+encodeURIComponent(q)+'" style="text-decoration:none">Lembrar</a><button class="btn g sm2" data-st="cancelado" data-id="'+a.id+'">Cancelar</button>';
+ else b+='<button class="btn g sm2" data-st="marcado" data-id="'+a.id+'">Desfazer</button>';
+ b+='<button class="btn g sm2 del" data-delag="'+a.id+'" data-nm="'+esc(a.nome)+'" aria-label="Excluir agendamento">🗑 Excluir</button></div>';
+ return '<div class="ag '+a.status+'"><div class="t"><b>'+t5(a.hora)+'</b><small>até '+fim+'</small></div><div class="c"><b>'+esc(a.nome)+'</b><span class="tag '+a.status+'">'+a.status+'</span>'+(a.origem==="painel"?'<span class="tag painel">encaixe</span>':"")+(a.brinde?'<span class="tag brinde">🎁 grátis</span>':"")+'<p>'+esc(sv)+' · <b style="color:var(--gold)">'+brl(a.total)+'</b><br><a href="tel:'+tel+'" style="color:var(--mut)">'+fone(tel)+'</a></p>'+b+'</div></div>'}
+$("lista").addEventListener("click",function(e){var x=e.target.closest("[data-delag]");if(!x)return;
+ if(!confirm("Excluir o agendamento de "+x.dataset.nm+"? Ele some da agenda e do resumo, e o horário fica livre. Não dá para desfazer."))return;x.disabled=true;
+ sb.from("oef_agendamentos").delete().eq("id",x.dataset.delag).then(function(r){if(r.error){x.disabled=false;toast("Erro ao excluir",1);return}toast("Agendamento excluído");loadDay()})});
+$("lista").onclick=function(e){var s=e.target.closest("[data-st]"),u=e.target.closest("[data-unbl]"),en=e.target.closest("[data-encaixe]");
+ if(s){var st=s.dataset.st;if(st==="cancelado"&&!confirm("Cancelar este agendamento? O horário fica livre de novo."))return;s.disabled=true;
+  sb.from("oef_agendamentos").update({status:st}).eq("id",s.dataset.id).then(function(r){if(r.error){toast("Erro ao salvar",1);s.disabled=false;return}toast(st==="atendido"?"Marcado como atendido ✓":st==="marcado"?"Desfeito":"Salvo");loadDay()})}
+ if(u){sb.from("oef_bloqueios").delete().eq("id",u.dataset.unbl).then(function(r){if(r.error){toast("Erro",1);return}toast("Horário liberado");loadDay()})}
+ if(en){$("enc").open=true;$("encd").value=cur;$("ench").value=en.dataset.encaixe;$("enc").scrollIntoView({behavior:"smooth",block:"center"})}};
+$("week").onclick=function(e){var b=e.target.closest("button");if(!b)return;cur=b.dataset.d;loadDay()};
+$("dp").onclick=function(){cur=add(cur,-1);loadDay()};$("dn").onclick=function(){cur=add(cur,1);loadDay()};$("dh").onclick=function(){cur=hoje();loadDay()};
+$("dpick").onchange=function(){if(this.value){cur=this.value;loadDay()}};
+
+/* encaixe */
+var encSel={};
+function renderEnc(){$("encsv").innerHTML=SV.filter(function(s){return s.ativo}).map(function(s){return '<button type="button" data-id="'+s.id+'" aria-pressed="'+(!!encSel[s.id])+'">'+esc(s.nome)+' · '+brl(s.preco).replace(",00","")+'</button>'}).join("")}
+$("encsv").onclick=function(e){var b=e.target.closest("button");if(!b)return;var id=b.dataset.id;encSel[id]?delete encSel[id]:encSel[id]=1;b.setAttribute("aria-pressed",!!encSel[id])};
+$("enct").oninput=$("np").oninput=null;
+$("encb").onclick=function(){var ids=Object.keys(encSel),dd=$("encd").value||cur,h=$("ench").value,n=$("encn").value.trim(),t=$("enct").value.replace(/\D/g,"");
+ if(!ids.length)return msg("encm","Escolha o serviço.");if(!dd)return msg("encm","Escolha a data.");if(!h)return msg("encm","Escolha o horário.");if(n.length<2)return msg("encm","Informe o nome.");
+ var ss=SV.filter(function(s){return ids.indexOf(String(s.id))>=0}),dur=0,tot=0;ss.forEach(function(s){dur+=s.duracao_min;tot+= +s.preco});dur=Math.ceil(dur/CFG.intervalo_min)*CFG.intervalo_min;
+ var a=mm(h),b=a+dur,bt=this;bt.disabled=true;
+ (dd===cur?Promise.resolve({data:dayAg}):sb.from("oef_agendamentos").select("nome,hora,duracao_min,status").eq("dia",dd).eq("barbeiro_id",BAR)).then(function(q){
+ var conf=(q.data||[]).filter(function(x){return(x.status==="marcado"||x.status==="atendido")&&a<mm(t5(x.hora))+x.duracao_min&&b>mm(t5(x.hora))});
+ if(conf.length&&!confirm("Esse horário bate com "+conf[0].nome+" ("+t5(conf[0].hora)+" do dia "+pd(dd).getDate()+"/"+(pd(dd).getMonth()+1)+"). Encaixar mesmo assim?")){bt.disabled=false;return}
+ sb.from("oef_agendamentos").insert({dia:dd,hora:h,duracao_min:dur,servicos:ss.map(function(s){return{nome:s.nome,preco:+s.preco}}),total:tot,nome:n,telefone:t.length>=8?t:"00000000",origem:"painel",barbeiro_id:BAR}).then(function(r){bt.disabled=false;
+  if(r.error)return msg("encm","Erro: "+r.error.message);toast("Encaixado ✓ "+pd(dd).getDate()+"/"+(pd(dd).getMonth()+1)+" às "+h);encSel={};renderEnc();$("encn").value="";$("enct").value="";$("ench").value="";$("enc").open=false;cur=dd;loadDay()})})};
+
+/* folgas e bloqueios */
+var blT="dia";
+$("bltp").onclick=function(e){var b=e.target.closest("button");if(!b)return;blT=b.dataset.t;[].forEach.call(this.children,function(x){x.setAttribute("aria-pressed",x===b)});
+ $("blhr").style.display=blT==="hora"?"":"none";$("bld2w").style.display=blT==="hora"?"none":"";$("bld1l").textContent=blT==="hora"?"Dia":"Do dia";$("bld1").parentNode.style.gridColumn=blT==="hora"?"1/-1":"";$("blb").textContent=blT==="hora"?"Bloquear horário":"Salvar folga"};
+$("blq").addEventListener("toggle",function(){if(this.open){if(!$("bld1").value)$("bld1").value=cur;loadProx()}});
+function loadProx(){var h=hoje();sb.from("oef_bloqueios").select("*").gte("dia",h).or("barbeiro_id.is.null,barbeiro_id.eq."+BAR).order("dia").order("hora_ini",{nullsFirst:true}).limit(60).then(function(r){
+ if(r.error)return;var L=r.data,out=[],k=0;
+ while(k<L.length){var x=L[k],e=k;if(!x.hora_ini){while(e+1<L.length&&!L[e+1].hora_ini&&L[e+1].barbeiro_id===x.barbeiro_id&&(L[e+1].motivo||"")===(x.motivo||"")&&L[e+1].dia===add(L[e].dia,1))e++}
+  var ids=L.slice(k,e+1).map(function(y){return y.id}).join(","),d1=pd(x.dia),d2=pd(L[e].dia),lab=WD[d1.getDay()]+" "+d1.getDate()+"/"+(d1.getMonth()+1)+(e>k?" a "+WD[d2.getDay()]+" "+d2.getDate()+"/"+(d2.getMonth()+1):"");
+  out.push('<div class="blk"><span>'+lab+' · '+(x.hora_ini?t5(x.hora_ini)+"–"+t5(x.hora_fim):"dia inteiro")+(x.barbeiro_id?"":" · <b>ótica toda</b>")+(x.motivo?" · "+esc(x.motivo):"")+'</span><button class="btn g sm2" data-unbls="'+ids+'">Liberar</button></div>');k=e+1}
+ $("blprox").innerHTML=out.join("")||'<p class="sm">Nenhuma folga marcada para '+esc(bnm(BAR))+'.</p>'})}
+$("blprox").onclick=function(e){var b=e.target.closest("[data-unbls]");if(!b)return;if(!confirm("Liberar esses dias? Os clientes voltam a poder marcar."))return;
+ sb.from("oef_bloqueios").delete().in("id",b.dataset.unbls.split(",")).then(function(r){if(r.error)return toast("Erro",1);toast("Liberado ✓");loadProx();loadDay()})};
+$("blb").onclick=function(){var d1=$("bld1").value,d2=$("bld2").value||d1,i=$("bli").value,f=$("blf").value,hora=blT==="hora";
+ if(!d1)return msg("blmsg","Escolha o dia.");if(d1<hoje())return msg("blmsg","Esse dia já passou.");
+ if(hora&&(!i||!f||f<=i))return msg("blmsg","Informe o horário de início e fim.");
+ if(!hora&&d2<d1)return msg("blmsg","O dia final tem que ser depois do inicial.");
+ var dias=[],t=d1;if(hora)dias=[d1];else while(t<=d2&&dias.length<120){dias.push(t);t=add(t,1)}
+ if(!hora&&dias.length>=120)return msg("blmsg","Máximo de 120 dias de uma vez.");
+ var td=$("bltd").checked,bid=td?null:BAR,mot=$("blm").value.trim()||null,btn=this;btn.disabled=true;
+ var q=sb.from("oef_agendamentos").select("nome,dia,hora").in("dia",dias).eq("status","marcado");if(!td)q=q.eq("barbeiro_id",BAR);
+ q.then(function(c){var conf=(c.data||[]).filter(function(a){return !hora||(t5(a.hora)<f&&t5(a.hora)>=i)});
+  if(conf.length&&!confirm("Já tem "+conf.length+" cliente(s) marcado(s) nesse período (ex.: "+conf[0].nome+" dia "+pd(conf[0].dia).getDate()+"/"+(pd(conf[0].dia).getMonth()+1)+"). Bloquear mesmo assim? Os horários deles continuam, avise os clientes.")){btn.disabled=false;return}
+  sb.from("oef_bloqueios").insert(dias.map(function(d){return{dia:d,hora_ini:hora?i:null,hora_fim:hora?f:null,motivo:mot,barbeiro_id:bid}})).then(function(r){btn.disabled=false;if(r.error)return msg("blmsg","Erro: "+r.error.message);
+   msg("blmsg",(hora?"Horário bloqueado ✓":dias.length>1?"Folga de "+dias.length+" dias salva ✓":"Folga salva ✓")+" Os clientes já não conseguem marcar.",1);$("bltd").checked=false;$("blm").value="";$("bli").value="";$("blf").value="";$("bld2").value="";loadProx();loadDay()})})};
+
+/* preços */
+function renderSv(){$("svmsg").textContent="";$("svlist").innerHTML=SV.map(function(s,i){return '<div class="card svr" data-i="'+i+'"><div class="head"><input data-k="nome" value="'+esc(s.nome)+'" maxlength="60" aria-label="Nome do serviço"><label class="sw" title="Ativo no site"><input type="checkbox" data-k="ativo"'+(s.ativo?" checked":"")+' aria-label="Mostrar no site"><span></span></label></div>'+
+ '<div class="row2"><input data-k="descricao" value="'+esc(s.descricao||"")+'" maxlength="160" placeholder="Descrição (opcional)" aria-label="Descrição"><div class="pre"><input data-k="preco" inputmode="decimal" value="'+Number(s.preco).toFixed(2).replace(".",",")+'" aria-label="Preço"></div><div class="suf"><input data-k="duracao_min" inputmode="numeric" value="'+s.duracao_min+'" aria-label="Duração em minutos"></div></div>'+
+ (s.id?'':'<button class="btn g sm2" data-del="'+i+'" style="justify-self:start">Remover</button>')+'</div>'}).join("")}
+function rowOf(s,i){var p=typeof s.preco==="number"?s.preco:parseFloat(String(s.preco).replace(/\s/g,"").replace(/\.(?=\d{3}(\D|$))/g,"").replace(",",".")),d=parseInt(s.duracao_min,10);
+ if(!String(s.nome).trim())return"Todo serviço precisa de nome.";if(!(p>=0))return"Preço inválido em "+s.nome+".";if(!(d>=5&&d<=480))return"Duração de "+s.nome+" deve ser entre 5 e 480 min.";
+ var r={nome:String(s.nome).trim(),descricao:String(s.descricao||"").trim()||null,preco:p,duracao_min:d,ativo:!!s.ativo,ordem:i+1};if(s.id)r.id=s.id;return r}
+$("svlist").oninput=function(e){var c=e.target.closest(".svr"),k=e.target.dataset.k;if(!c||!k)return;var s=SV[+c.dataset.i];s[k]=k==="ativo"?e.target.checked:e.target.value;c.classList.add("dirty")};
+$("svlist").onchange=function(e){var c=e.target.closest(".svr"),k=e.target.dataset.k;if(!c||!k)return;var i=+c.dataset.i,s=SV[i];s[k]=k==="ativo"?e.target.checked:e.target.value;
+ if(!s.id)return;var r=rowOf(s,i);if(typeof r==="string")return msg("svmsg",r);
+ sb.from("oef_servicos").update(r).eq("id",s.id).select().then(function(x){if(x.error||!x.data||!x.data.length){toast("Não salvou. Toque em Salvar preços.",1);return}
+  c.classList.remove("dirty");s.preco=+x.data[0].preco;toast("✓ "+r.nome+" salvo: "+brl(r.preco)+" (já está no site)")})};
+$("svlist").onclick=function(e){var d=e.target.closest("[data-del]");if(d){SV.splice(+d.dataset.del,1);renderSv()}};
+$("svadd").onclick=function(){SV.push({nome:"",descricao:"",preco:0,duracao_min:30,ativo:true,ordem:SV.length+1});renderSv();var l=$("svlist").lastElementChild;l.scrollIntoView({behavior:"smooth",block:"center"});l.querySelector("input").focus({preventScroll:true})};
+$("svsave").onclick=function(){var rows=[],bad="";SV.forEach(function(s,i){var r=rowOf(s,i);if(typeof r==="string")bad=bad||r;else rows.push(r)});
+ if(bad)return msg("svmsg",bad);var b=this;b.disabled=true;
+ var olds=rows.filter(function(r){return r.id}),news=rows.filter(function(r){return !r.id});
+ Promise.all([olds.length?sb.from("oef_servicos").upsert(olds):Promise.resolve({}),news.length?sb.from("oef_servicos").insert(news):Promise.resolve({})]).then(function(r){b.disabled=false;
+  var er=r.filter(function(x){return x.error})[0];if(er)return msg("svmsg","Erro: "+er.error.message);loadCfg().then(function(){renderSv();msg("svmsg","Preços salvos ✓ O site já está atualizado.",1);toast("Preços salvos ✓")})})};
+
+/* horários */
+function renderCfg(){if(!CFG)return;$("cdias").innerHTML=WD.map(function(w,i){return '<label><input type="checkbox" value="'+i+'"'+(CFG.dias.indexOf(i)>=0?" checked":"")+'> '+w+'</label>'}).join("");
+ $("cab").value=t5(CFG.abre);$("cfe").value=t5(CFG.fecha);$("cai").value=t5(CFG.almoco_ini);$("caf").value=t5(CFG.almoco_fim);$("civ").value=CFG.intervalo_min;$("cme").value=CFG.meses;$("cwa").value=fone(CFG.whatsapp||"");$("cav").value=CFG.aviso||"";$("cfid").value=CFG.fidelidade_n;$("cmsg").textContent="";
+ $("cbarb").innerHTML=BB.map(function(b,i){return '<div class="brow"><input data-bi="'+i+'" value="'+esc(b.nome)+'" maxlength="40" aria-label="Nome do profissional"><label class="sw"><input type="checkbox" data-ba="'+i+'"'+(b.ativo?" checked":"")+' aria-label="Ativo"><span></span></label></div>'}).join("")}
+$("csave").onclick=function(){var dias=[].map.call(document.querySelectorAll("#cdias input:checked"),function(x){return +x.value}),ab=$("cab").value,fe=$("cfe").value,ai=$("cai").value,af=$("caf").value,wa=$("cwa").value.replace(/\D/g,"");
+ if(!dias.length)return msg("cmsg","Marque pelo menos um dia.");if(!ab||!fe||fe<=ab)return msg("cmsg","Confira o horário de abrir e fechar.");if((ai&&!af)||(!ai&&af)||(ai&&af<=ai))return msg("cmsg","Confira o horário de almoço.");
+ if(wa&&wa.length<10)return msg("cmsg","WhatsApp precisa de DDD.");if(wa&&wa.length<=11)wa="55"+wa;
+ var fid=parseInt($("cfid").value,10);if(!(fid>=0&&fid<=50))return msg("cmsg","Cartão fidelidade: use um número de 0 a 50.");
+ var bb=BB.map(function(b){return{id:b.id,nome:b.nome,ativo:b.ativo,ordem:b.ordem}});
+ if(bb.some(function(b){return !b.nome}))return msg("cmsg","Todo profissional precisa de nome.");if(!bb.some(function(b){return b.ativo}))return msg("cmsg","Deixe pelo menos um profissional ligado.");
+ var b=this;b.disabled=true;var nb=[].map.call(document.querySelectorAll("[data-bn]"),function(x){return x.value.trim()}).filter(Boolean).map(function(n,i){return{nome:n.slice(0,40),ativo:true,ordem:BB.length+i+1}});
+ (nb.length?sb.from("oef_barbeiros").insert(nb):Promise.resolve({})).then(function(ri){if(ri.error){b.disabled=false;return msg("cmsg","Erro: "+ri.error.message)}return sb.from("oef_barbeiros").upsert(bb)}).then(function(rb){if(rb.error){b.disabled=false;return msg("cmsg","Erro: "+rb.error.message)}
+ sb.from("oef_config").update({fidelidade_n:fid,dias:dias,abre:ab,fecha:fe,almoco_ini:ai||null,almoco_fim:af||null,intervalo_min:+$("civ").value,meses:+$("cme").value,whatsapp:wa||null,aviso:$("cav").value.trim()||null}).eq("id",1).then(function(r){b.disabled=false;
+  if(r.error)return msg("cmsg","Erro: "+r.error.message);msg("cmsg","Salvo ✓ O site já está atualizado.",1);loadCfg()})})};
+$("cbadd").onclick=function(){var d=document.createElement("div");d.className="brow";d.innerHTML='<input data-bn maxlength="40" placeholder="Nome do novo profissional" aria-label="Nome do novo profissional">';$("cbarb").appendChild(d);d.querySelector("input").focus();msg("cmsg","Digite o nome e toque em Salvar.",1)};
+$("npb").onclick=function(){var p=$("np").value;if(p.length<8)return msg("npm","A senha precisa de pelo menos 8 caracteres.");sb.auth.updateUser({password:p}).then(function(r){if(r.error)return msg("npm","Erro: "+r.error.message);$("np").value="";msg("npm","Senha trocada ✓ Use a nova no próximo acesso.",1)})};
+
+$("neb").onclick=function(){var e=$("ne").value.trim().toLowerCase(),p=$("nep").value,b=this;
+ if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e))return msg("nem","Digite um e-mail válido.");if(!p)return msg("nem","Digite a senha atual para confirmar.");
+ b.disabled=true;sb.rpc("oef_trocar_email",{p_email:e,p_senha:p}).then(function(r){b.disabled=false;
+  if(r.error)return msg("nem",String(r.error.message||"Erro").replace(/^.*?: /,""));
+  try{localStorage.setItem("oef_email",e)}catch(x){}$("ne").value="";$("nep").value="";
+  msg("nem","E-mail trocado ✓ Entrando com o novo e-mail…",1);
+  sb.auth.signOut().then(function(){return sb.auth.signInWithPassword({email:e,password:p})}).then(function(x){if(x&&!x.error){toast("Pronto! Agora o login é "+e);start()}else{show(false);$("le").value=e;$("lm").textContent="Entre com o novo e-mail e a mesma senha."}})})};
+
+/* faturamento */
+var per="semana",rB=0;
+function renderRbs(){$("rbs").innerHTML='<button data-b="0" aria-selected="'+(rB===0)+'">Todos<small>ótica</small></button>'+BB.map(function(b){return '<button data-b="'+b.id+'" aria-selected="'+(rB===b.id)+'">'+esc(b.nome)+'<small>só dele</small></button>'}).join("")}
+$("rdiv").oninput=function(e){var i=e.target.closest("[data-pc]");if(!i)return;var b=BB.filter(function(x){return x.id===+i.dataset.pc})[0],v=parseFloat(String(i.value).replace(",","."));if(b&&v>=0&&v<=100)b.comissao=v};
+$("rdiv").onchange=function(){loadRes()};
+$("rdsave").onclick=function(){var ins=[].slice.call(document.querySelectorAll("[data-pc]")),bad=ins.filter(function(i){var v=parseFloat(String(i.value).replace(",","."));return !(v>=0&&v<=100)});if(bad.length)return msg("rdmsg","Use porcentagens de 0 a 100.");
+ var bt=this;bt.disabled=true;Promise.all(ins.map(function(i){return sb.from("oef_barbeiros").update({comissao:parseFloat(String(i.value).replace(",","."))}).eq("id",+i.dataset.pc)})).then(function(rs){bt.disabled=false;var er=rs.filter(function(r){return r.error})[0];if(er)return msg("rdmsg","Erro: "+er.error.message);msg("rdmsg","Porcentagens salvas ✓",1);toast("Porcentagens salvas ✓");loadCfg().then(loadRes)})};
+$("rbs").onclick=function(e){var b=e.target.closest("button");if(!b)return;rB=+b.dataset.b;renderRbs();loadRes()};
+$("per").onclick=function(e){var b=e.target.closest("button");if(!b)return;per=b.dataset.p;[].forEach.call(this.children,function(x){x.setAttribute("aria-pressed",x===b)});loadRes()};
+function range(p){var h=hoje(),d=pd(h),w0=add(h,-d.getDay());
+ if(p==="hoje")return[h,h];if(p==="semana")return[w0,add(w0,6)];if(p==="semant")return[add(w0,-7),add(w0,-1)];
+ if(p==="mes")return[iso(new Date(d.getFullYear(),d.getMonth(),1)),iso(new Date(d.getFullYear(),d.getMonth()+1,0))];
+ return[iso(new Date(d.getFullYear(),d.getMonth()-1,1)),iso(new Date(d.getFullYear(),d.getMonth(),0))]}
+var PREV={hoje:null,semana:"semant",semant:null,mes:"mesant",mesant:null},PLAB={hoje:"hoje",semana:"esta semana",semant:"semana passada",mes:"este mês",mesant:"mês passado"};
+function dshort(s){var d=pd(s);return d.getDate()+"/"+(d.getMonth()+1)}
+function loadRes(){renderRbs();var r=range(per),a=r[0],b=r[1],pv=PREV[per]?range(PREV[per]):null;
+ $("rper").textContent=(a===b?WDL[pd(a).getDay()]+", "+dshort(a):dshort(a)+" a "+dshort(b))+(rB?" · "+bnm(rB):" · todos os profissionais");
+ $("rlab").textContent="Faturado "+PLAB[per]+(rB?" · "+bnm(rB):"");$("rbarc").style.display=rB?"none":"";
+ var q=sb.from("oef_agendamentos").select("dia,status,total,servicos,nome,telefone,barbeiro_id,brinde").gte("dia",pv?pv[0]:a).lte("dia",b);if(rB)q=q.eq("barbeiro_id",rB);
+ q.then(function(res){if(res.error)return toast("Erro ao carregar",1);var all=res.data,L=all.filter(function(x){return x.dia>=a}),f=0,at=0,fa=0,ar=0,sv={},cl={},pb={},dd={},pf=0;
+  BB.forEach(function(x){pb[x.id]={f:0,n:0}});
+  if(pv)all.forEach(function(x){if(x.dia<a&&x.status==="atendido")pf+= +x.total});
+  L.forEach(function(x){if(x.status==="atendido"){f+= +x.total;at++;if(pb[x.barbeiro_id]){pb[x.barbeiro_id].f+= +x.total;pb[x.barbeiro_id].n++}
+    dd[x.dia]=(dd[x.dia]||0)+ +x.total;(x.servicos||[]).forEach(function(s){sv[s.nome]=(sv[s.nome]||0)+1});var k=x.telefone;cl[k]=cl[k]||{n:x.nome,c:0};cl[k].c++}
+   else if(x.status==="faltou")fa++;else if(x.status==="marcado")ar+= +x.total});
+  $("rfat").textContent=brl(f);$("rsub").textContent=at?at+" atendimento"+(at>1?"s":"")+" · ticket médio "+brl(f/at):"Nenhum atendimento marcado como Atendido ainda.";
+  if(pv){var dif=f-pf,pc=pf?Math.round(dif/pf*100):null;$("rcmp").innerHTML=(dif>=0?'<span style="color:#8fe3b5">▲ ':'<span style="color:#ff8b80">▼ ')+brl(Math.abs(dif))+(pc!==null?" ("+(pc>=0?"+":"")+pc+"%)":"")+"</span> em relação "+(per==="semana"?"à semana passada":"ao mês passado")+" ("+brl(pf)+")"}else $("rcmp").textContent="";
+  $("r1").textContent=at;$("r2").textContent=fa;$("r4").textContent=brl(ar).replace(",00","");
+  var mx=Math.max.apply(null,BB.map(function(x){return pb[x.id].f}).concat([1]));
+  $("rbar").innerHTML=BB.map(function(x){var v=pb[x.id];return '<div class="rb"><div class="rbt"><span>'+esc(x.nome)+' <small class="sm">· '+v.n+' atend.</small></span><b>'+brl(v.f)+'</b></div><div class="rbb"><i style="width:'+Math.round(v.f/mx*100)+'%"></i></div></div>'}).join("");
+  var lst=rB?BB.filter(function(x){return x.id===rB}):BB.filter(function(x){return x.ativo||pb[x.id].f>0}),tb=0,tc=0;
+  $("rdiv").innerHTML='<div class="dv dvh"><span>Profissional</span><span>%</span><span>Dele</span><span>Ótica</span></div>'+lst.map(function(x){var v=pb[x.id].f,pc=Number(x.comissao==null?60:x.comissao),el=v*pc/100;tb+=el;tc+=v-el;
+   return '<div class="dv"><span><b>'+esc(x.nome)+'</b><small class="sm">'+brl(v)+' faturado</small></span><label class="dvp"><input data-pc="'+x.id+'" inputmode="decimal" value="'+String(pc).replace(".",",").replace(",00","")+'" aria-label="Porcentagem de '+esc(x.nome)+'">%</label><span class="dvv">'+brl(el)+'</span><span class="dvv">'+brl(v-el)+'</span></div>'}).join("")+
+   '<div class="dv dvt"><span>Total</span><span></span><span class="dvv">'+brl(tb)+'</span><span class="dvv">'+brl(tc)+'</span></div>'+
+   '<div class="dvr"><div><small>Para os profissionais</small><b>'+brl(tb)+'</b></div><div><small>Para a ótica</small><b>'+brl(tc)+'</b></div></div>';
+  var days=[],t=a;while(t<=b&&days.length<40){days.push(t);t=add(t,1)}var mxd=Math.max.apply(null,days.map(function(x){return dd[x]||0}).concat([1]));
+  $("rdia").innerHTML=days.map(function(x){var v=dd[x]||0,fut=x>hoje();return '<div class="rd'+(fut?" fut":"")+'"><span>'+WD[pd(x).getDay()]+" "+dshort(x)+'</span><div class="rbb"><i style="width:'+Math.round(v/mxd*100)+'%"></i></div><b>'+(v?brl(v).replace(",00",""):"–")+'</b></div>'}).join("");
+  var top=Object.keys(sv).sort(function(x,y){return sv[y]-sv[x]}).slice(0,6);$("rtop").innerHTML=top.length?top.map(function(k){return '<div><span>'+esc(k)+'</span><b>'+sv[k]+'x</b></div>'}).join(""):'<div><span class="sm">Ainda sem atendimentos no período.</span></div>';
+  var tc=Object.keys(cl).sort(function(x,y){return cl[y].c-cl[x].c}).slice(0,5);$("rcli").innerHTML=tc.length?tc.map(function(k){return '<div><span>'+esc(cl[k].n)+'</span><b>'+cl[k].c+'x</b></div>'}).join(""):'<div><span class="sm">—</span></div>'})}
+})();
+</script>
+</body>
+</html>
