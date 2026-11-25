@@ -221,6 +221,37 @@ footer{text-align:center;color:#7f8bb0;font-size:12px;padding:30px 18px 10px}
 @keyframes vmzoom{from{transform:scale(1.08)}to{transform:none}}
 @keyframes shine{0%{left:-60%}35%{left:130%}100%{left:130%}}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 #e3bd5700}50%{box-shadow:0 0 0 8px #e3bd5733}}
+.glx{display:block;width:100%;border:1px solid var(--line);background:radial-gradient(80% 90% at 50% 40%,#16295a 0%,#0b1838 70%);border-radius:20px;padding:16px 12px 14px;margin:0 0 14px;cursor:pointer;color:var(--tx);text-align:center;overflow:hidden}
+.glx svg{display:block;width:100%;max-width:340px;height:auto;margin:0 auto;overflow:visible}
+.glt{display:block;margin-top:8px;font:700 15px Inter,sans-serif;color:var(--gold);letter-spacing:.02em}
+.glx .gl,.glx .gb,.glx .gt,.glx .gk{transform-box:view-box}
+.glx .gtl{transform-origin:44px 60px}.glx .gtr{transform-origin:276px 60px}
+.glx .gk{transform-origin:292px 34px;opacity:0}
+.glx .gs{transform-box:view-box}
+@media (prefers-reduced-motion:no-preference){
+.glx.ready .gll{transform:translate(-190px,30px) rotate(-35deg);opacity:0}
+.glx.ready .glr{transform:translate(190px,30px) rotate(35deg);opacity:0}
+.glx.ready .gb{transform:translateY(-70px);opacity:0}
+.glx.ready .gtl{transform:rotate(-95deg);opacity:0}.glx.ready .gtr{transform:rotate(95deg);opacity:0}
+.glx.ready .gv{opacity:0}.glx.ready .glt{opacity:0;transform:translateY(8px)}
+.glx.go .gll{animation:gIn .75s cubic-bezier(.2,.8,.25,1.15) .05s both;--x:-190px;--r:-35deg}
+.glx.go .glr{animation:gIn .75s cubic-bezier(.2,.8,.25,1.15) .2s both;--x:190px;--r:35deg}
+.glx.go .gb{animation:gB .45s cubic-bezier(.3,1.4,.5,1) .85s both}
+.glx.go .gtl{animation:gTl .55s cubic-bezier(.3,1.3,.5,1) 1.2s both}.glx.go .gtr{animation:gTr .55s cubic-bezier(.3,1.3,.5,1) 1.3s both}
+.glx.go .gv{animation:gV .6s ease 1.65s both}
+.glx.go .gs{animation:gS .9s ease-in-out 2.05s both}
+.glx.go .gk{animation:gK .9s ease 2.5s both}
+.glx.go .glt{animation:gT .5s ease 2.2s both}
+}
+.glx .glt{transition:none}
+@keyframes gIn{from{transform:translate(var(--x),30px) rotate(var(--r));opacity:0}60%{opacity:1}to{transform:none;opacity:1}}
+@keyframes gB{from{transform:translateY(-70px);opacity:0}to{transform:none;opacity:1}}
+@keyframes gTl{from{transform:rotate(-95deg);opacity:0}to{transform:none;opacity:1}}
+@keyframes gTr{from{transform:rotate(95deg);opacity:0}to{transform:none;opacity:1}}
+@keyframes gV{from{opacity:0}to{opacity:1}}
+@keyframes gS{from{transform:skewX(-20deg) translateX(0)}to{transform:skewX(-20deg) translateX(420px)}}
+@keyframes gK{0%{opacity:0;transform:scale(.2) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(90deg)}100%{opacity:0;transform:scale(.6) rotate(180deg)}}
+@keyframes gT{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -247,6 +278,23 @@ footer{text-align:center;color:#7f8bb0;font-size:12px;padding:30px 18px 10px}
 <section class="wrap vit" id="vitrine" aria-label="Vitrine de óculos">
   <div class="th"><h2>Vitrine</h2><a href="https://www.instagram.com/otica_espera_feliz_/" target="_blank" rel="noopener">@otica_espera_feliz_ →</a></div>
   <p class="vsub">Toque na peça para ver de perto, chamar no WhatsApp ou agendar uma visita para experimentar.</p>
+  <button type="button" class="glx" id="glx" aria-label="Animação: óculos se montando">
+  <svg viewBox="0 0 320 150" aria-hidden="true">
+    <defs>
+      <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9ec5ff" stop-opacity=".38"/><stop offset="1" stop-color="#3b6fd8" stop-opacity=".12"/></linearGradient>
+      <linearGradient id="gd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c99a3a"/><stop offset=".5" stop-color="#f3d27a"/><stop offset="1" stop-color="#c99a3a"/></linearGradient>
+      <clipPath id="lc"><rect x="44" y="44" width="96" height="66" rx="24"/><rect x="180" y="44" width="96" height="66" rx="24"/></clipPath>
+    </defs>
+    <g class="gt gtl"><path d="M44 60 L12 52 L6 58" fill="none" stroke="url(#gd)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g class="gt gtr"><path d="M276 60 L308 52 L314 58" fill="none" stroke="url(#gd)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g class="gl gll"><rect class="gv" x="44" y="44" width="96" height="66" rx="24" fill="url(#lg)"/><rect class="gf" x="44" y="44" width="96" height="66" rx="24" fill="none" stroke="url(#gd)" stroke-width="6"/></g>
+    <g class="gl glr"><rect class="gv" x="180" y="44" width="96" height="66" rx="24" fill="url(#lg)"/><rect class="gf" x="180" y="44" width="96" height="66" rx="24" fill="none" stroke="url(#gd)" stroke-width="6"/></g>
+    <path class="gb" d="M140 64 Q160 46 180 64" fill="none" stroke="url(#gd)" stroke-width="6" stroke-linecap="round"/>
+    <g clip-path="url(#lc)"><rect class="gs" x="-60" y="20" width="34" height="120" fill="#fff" opacity=".55" transform="skewX(-20)"/></g>
+    <g class="gk"><path d="M292 22 l3 9 l9 3 l-9 3 l-3 9 l-3 -9 l-9 -3 l9 -3z" fill="#f3d27a"/></g>
+  </svg>
+  <span class="glt">Encontre o óculos com a sua cara ✨</span>
+</button>
   <div class="vtabs" id="vtabs" role="tablist"></div>
   <div class="vgrid" id="vgrid"><p class="load">Carregando vitrine…</p></div>
 </section>
@@ -483,15 +531,22 @@ addEventListener("keydown",function(e){if(e.key==="Escape")vclose()});
 function goSv(nm){function run(){if(nm){var s=D.servicos.filter(function(x){return x.nome.toLowerCase()===nm.toLowerCase()})[0];if(s&&!sel[s.id]){sel[s.id]=s;hora=null;renderSv();upd();if(dia)renderHrs()}}
   $("agendar").scrollIntoView({behavior:"smooth",block:"start"})}
  if(D)run();else{var t=setInterval(function(){if(D){clearInterval(t);run()}},200);setTimeout(function(){clearInterval(t)},8000)}}
-rpc("oef_vitrine_publica").then(function(v){VI=(v&&v.itens)||[];drawV();
+rpc("oef_vitrine_publica").then(function(v){VI=(v&&v.itens)||[];drawV();setTimeout(function(){window.__glxStart&&window.__glxStart()},50);
  if(v&&v.promo&&v.promo.img){$("promoimg").src=v.promo.img;$("promotxt").textContent=v.promo.txt||"";$("promowa").href="https://wa.me/"+WAN+"?text="+encodeURIComponent("Olá! Vi a promoção no site e quero aproveitar.");$("promo").hidden=false}
-}).catch(function(){$("vgrid").innerHTML='<p class="vempty">Não foi possível carregar a vitrine agora.</p>'});
+}).catch(function(){$("vgrid").innerHTML='<p class="vempty">Não foi possível carregar a vitrine agora.</p>';window.__glxStart&&window.__glxStart()});
 
 /* seções surgindo */
 (function(){if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
  var els=[].slice.call(document.querySelectorAll(".promo,.vit,.srv .scard,.rec,.agt,#app .step"));
  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px",threshold:.08});
  els.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight*.9)return;el.classList.add("rv");io.observe(el)})})();
+
+/* óculos se montando */
+(function(){var g=$("glx");if(!g||matchMedia("(prefers-reduced-motion: reduce)").matches)return;g.classList.add("ready");
+ function play(){g.classList.remove("go");void g.offsetWidth;g.classList.add("go")}
+ window.__glxStart=function(){if(g.dataset.obs)return;g.dataset.obs=1;setTimeout(function(){if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){play();io.disconnect()}},{threshold:.6});io.observe(g)}else play()},400)};
+ setTimeout(window.__glxStart,4000);
+ g.addEventListener("click",play)})();
 })();
 </script>
 </body>
