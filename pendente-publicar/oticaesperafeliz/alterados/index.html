@@ -203,6 +203,24 @@ footer{text-align:center;color:#7f8bb0;font-size:12px;padding:30px 18px 10px}
 @keyframes clkm{from{transform:rotate(-313.5deg)}to{transform:rotate(46.5deg)}}
 @keyframes clkh{from{transform:rotate(281.5deg)}to{transform:rotate(311.5deg)}}
 @keyframes avin{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+.pcard{position:relative}
+.vi{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}.vi img{transition:transform .5s ease}
+@media (hover:hover){.vi:hover{transform:translateY(-4px);box-shadow:0 14px 30px #0008;border-color:#e3bd5788}.vi:hover img{transform:scale(1.05)}}
+.vi:active{transform:scale(.97)}
+@media (prefers-reduced-motion:no-preference){
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.vgrid .vi{animation:vin .45s ease both}
+.vgrid .vi:nth-child(2){animation-delay:.06s}.vgrid .vi:nth-child(3){animation-delay:.12s}.vgrid .vi:nth-child(4){animation-delay:.18s}.vgrid .vi:nth-child(n+5){animation-delay:.24s}
+.vm.on .vmc{animation:vmup .35s cubic-bezier(.2,.8,.2,1) both}.vm.on .vmc img{animation:vmzoom .6s ease both}
+.pcard:after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:45%;pointer-events:none;background:linear-gradient(105deg,transparent 0,#fff0 20%,#ffe7a855 50%,#fff0 80%,transparent 100%);transform:skewX(-18deg);animation:shine 5.5s ease-in-out 1.2s infinite}
+.hcta .btn:first-child{animation:pulse 3.2s ease-in-out 2.6s infinite}
+}
+@keyframes vin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes vmup{from{transform:translateY(40px);opacity:.6}to{transform:none;opacity:1}}
+@keyframes vmzoom{from{transform:scale(1.08)}to{transform:none}}
+@keyframes shine{0%{left:-60%}35%{left:130%}100%{left:130%}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 #e3bd5700}50%{box-shadow:0 0 0 8px #e3bd5733}}
 </style>
 </head>
 <body>
@@ -468,6 +486,12 @@ function goSv(nm){function run(){if(nm){var s=D.servicos.filter(function(x){retu
 rpc("oef_vitrine_publica").then(function(v){VI=(v&&v.itens)||[];drawV();
  if(v&&v.promo&&v.promo.img){$("promoimg").src=v.promo.img;$("promotxt").textContent=v.promo.txt||"";$("promowa").href="https://wa.me/"+WAN+"?text="+encodeURIComponent("Olá! Vi a promoção no site e quero aproveitar.");$("promo").hidden=false}
 }).catch(function(){$("vgrid").innerHTML='<p class="vempty">Não foi possível carregar a vitrine agora.</p>'});
+
+/* seções surgindo */
+(function(){if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+ var els=[].slice.call(document.querySelectorAll(".promo,.vit,.srv .scard,.rec,.agt,#app .step"));
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px",threshold:.08});
+ els.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight*.9)return;el.classList.add("rv");io.observe(el)})})();
 })();
 </script>
 </body>
