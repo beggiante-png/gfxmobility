@@ -1,0 +1,91 @@
+{
+"name": "galachabarbershop",
+"project": "prj_Abhwmxwh3Y9UxAtNCtEXdIAa4JMY",
+"files": [
+{
+"file": "img/apple-touch-icon.png",
+"sha": "e5e6f9fca10c0f201868443b2c3961634e1f344e",
+"size": 38503
+},
+{
+"file": "img/bg.jpg",
+"sha": "e1270e5495aaf6853cb109622b1d4961822c86a1",
+"size": 66145
+},
+{
+"file": "img/cortes/jaca-curtinho.jpg",
+"sha": "ed7657451ce8279990166a7bbbf1f5013ee67742",
+"size": 71693
+},
+{
+"file": "img/g01.jpg",
+"sha": "cbc119b970682b40d1cb15ab9b1cdaf62ad94313",
+"size": 91986
+},
+{
+"file": "img/g02.jpg",
+"sha": "54749ce324dcd868b7d34016f8fd8c1584459d35",
+"size": 111113
+},
+{
+"file": "img/g03.jpg",
+"sha": "d8931a5c24fbe9aedf3bc5bf731f1b7086fe5e48",
+"size": 111747
+},
+{
+"file": "img/g04.jpg",
+"sha": "c8e72f7ae5f15c696f926c9afd7f65e1708661f1",
+"size": 138867
+},
+{
+"file": "img/g05.jpg",
+"sha": "d4920efd8363fd97e54a521a264c89cc783890c0",
+"size": 190131
+},
+{
+"file": "img/g06.jpg",
+"sha": "a83f95f11bd9e355f0aea1acad17b486048dcad1",
+"size": 162875
+},
+{
+"file": "img/g07.jpg",
+"sha": "2b275cb587966dfb1f5683e6ff48c80785bfea80",
+"size": 119880
+},
+{
+"file": "img/g08.jpg",
+"sha": "7c6e13646925dc0ab0b47c025f7d9a47449854e6",
+"size": 153758
+},
+{
+"file": "img/g09.jpg",
+"sha": "8f0718b2fbba62d23fd52cc2b1f0c33bd0d1adaf",
+"size": 138312
+},
+{
+"file": "img/icon-192.png",
+"sha": "95a09fc0cc5795be096b144736a9553500f7e3a2",
+"size": 42731
+},
+{
+"file": "img/og.jpg",
+"sha": "9229dadcf9f30fade1d7cf4d1a0a269409531c3f",
+"size": 124302
+},
+{
+"file": "img/perfil.jpg",
+"sha": "fc5c8ff1e066427edfba9ef44ba8964f3b34faf7",
+"size": 44926
+},
+{
+"file": "index.html",
+"sha": "780b1c500cdab47c4aa0dc8f0f23ea6bccca74cf",
+"size": 34665
+},
+{
+"file": "painel.html",
+"sha": "28b492cc5450be8bf3050d0aa047233554ef630e",
+"size": 55646
+}
+]
+}

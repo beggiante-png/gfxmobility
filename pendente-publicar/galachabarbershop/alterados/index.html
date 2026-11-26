@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Galacha Barbershop | Agende seu horário</title>
+<meta name="description" content="Galacha Barbershop, com Ruann Galacha. Agende corte, disfarce, barba, sobrancelha, pigmentação, reflexo e nevou online.">
+<meta name="theme-color" content="#0f0d0c">
+<meta property="og:title" content="Galacha Barbershop · Agende seu horário">
+<meta property="og:description" content="Escolha o serviço, o dia e o horário com o Ruann.">
+<meta property="og:image" content="https://galachabarbershop.vercel.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Wet+Paint&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0c;--bg2:#121214;--card:#18181b;--line:#303035;--tx:#f4f4f5;--mut:#a5a5ad;--red:#f1f1f1;--red2:#f0c75e;--cream:#ffffff;--gold:#f0c75e;--ok:#3fbf7f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font:16px/1.5 Inter,system-ui,sans-serif;overflow-x:hidden;padding-bottom:calc(env(safe-area-inset-bottom) + 96px)}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+h1,h2,.bebas{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:1}
+
+/* topo */
+.hero{position:relative;overflow:hidden;padding:calc(env(safe-area-inset-top) + 34px) 0 30px;text-align:center;background:radial-gradient(90% 70% at 50% 0%,#1d1d20 0%,transparent 70%),var(--bg)}
+.av{position:relative;width:150px;height:150px;margin:0 auto 16px}
+.av i{display:block;width:150px;height:150px;border-radius:50%;overflow:hidden;box-shadow:0 18px 40px #000a}
+.av img{width:100%;height:100%;object-fit:cover}
+.av .pole{position:absolute;right:-14px;bottom:4px;width:22px;height:70px;margin:0}
+.trab{padding-top:18px}
+.th{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px}
+.th h2{font-size:30px;color:var(--cream)}
+.th a{color:var(--gold);font-size:14px;font-weight:600;text-decoration:none}
+.tr{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -18px;padding:0 18px;scroll-padding:0 18px}.tr::-webkit-scrollbar{display:none}
+.tr button{flex:none;width:clamp(150px,38vw,230px);scroll-snap-align:start}
+.sw-hint{font-size:12px;color:var(--mut);margin-top:6px}
+.tr button,.hl button{border:0;background:none;padding:0;position:relative;text-align:center}
+.tr img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;display:block}
+.tr span{position:absolute;left:6px;bottom:6px;font-size:11px;font-weight:700;background:#000b;border-radius:99px;padding:3px 8px}
+.hl{display:flex;justify-content:space-around;margin-top:14px}
+.hl i{display:block;width:66px;height:66px;border-radius:50%;overflow:hidden;box-shadow:0 0 0 2px var(--bg),0 0 0 4px var(--gold);margin:0 auto 6px}
+.hl img{width:100%;height:100%;object-fit:cover;transform:scale(1.22)}
+.hl span{font-size:12px;color:var(--mut)}
+#lb{position:fixed;inset:0;z-index:40;background:#000e;display:none;flex-direction:column;align-items:center;justify-content:center;padding:20px}
+#lb.on{display:flex}
+#lb img{max-width:100%;max-height:76vh;border-radius:14px}
+#lb p{margin-top:10px;color:var(--cream);font-weight:700}
+#lb button{position:absolute;top:calc(env(safe-area-inset-top) + 12px);right:14px;width:44px;height:44px;border-radius:50%;border:1px solid #fff4;background:#fff1;font-size:24px}
+footer a{color:var(--gold);text-decoration:none}
+.pole{width:34px;height:120px;margin:0 auto 18px;border-radius:17px;position:relative;overflow:hidden;box-shadow:0 0 0 3px #26262a,0 0 0 5px var(--gold),0 14px 40px #000a;background:repeating-linear-gradient(-45deg,var(--red) 0 14px,#fff 14px 28px,#1f4fb5 28px 42px,#fff 42px 56px);background-size:100% 158px;animation:pole 2.4s linear infinite}
+.pole:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0006,#fff3 45%,#0005)}
+@keyframes pole{to{background-position:0 158px}}
+@media(prefers-reduced-motion:reduce){.pole{animation:none}html{scroll-behavior:auto}}
+.hero h1{font-size:clamp(46px,13vw,84px);color:var(--cream)}
+.hero h1 span{color:var(--red2)}
+.hero .sub{margin-top:6px;color:var(--mut);font-size:14px;letter-spacing:.18em;text-transform:uppercase}
+.hero .loc{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:14px;color:var(--cream);background:#ffffff0d;border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.next{margin:18px auto 0;max-width:420px;background:#1d2b22;border:1px solid #2f5a40;border-radius:16px;padding:12px 14px;font-size:14px;text-align:left;display:none}
+.next b{color:#8fe3b5}
+.aviso{margin:14px auto 0;max-width:520px;background:#3a2a12;border:1px solid #6b4a1c;color:#ffd99a;border-radius:14px;padding:10px 14px;font-size:14px;display:none}
+
+/* passos */
+.step{padding:26px 0 8px}
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sh i{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font:700 16px Inter;font-style:normal;background:var(--red);color:#0b0b0c}
+.sh h2{font-size:30px;color:var(--cream)}
+.sh small{display:block;font-size:13px;color:var(--mut);font-family:Inter;letter-spacing:0;margin-top:2px}
+.lock{opacity:.4;pointer-events:none}
+
+.svs{display:grid;gap:10px}
+.sv{display:flex;align-items:center;gap:12px;text-align:left;width:100%;background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:14px;transition:border-color .2s,background .2s}
+.sv .ck{flex:none;width:24px;height:24px;border-radius:7px;border:2px solid #5a4f47;display:grid;place-items:center;transition:all .2s}
+.sv .ck svg{width:14px;height:14px;opacity:0}
+.sv .tx{flex:1;min-width:0}
+.svf{position:relative;flex:none;width:68px;height:68px;border-radius:12px;overflow:hidden;border:1px solid var(--line);cursor:zoom-in}.svf img{width:100%;height:100%;object-fit:cover;display:block}.svf i{position:absolute;right:3px;bottom:3px;font-style:normal;font-size:11px;background:#000a;border-radius:6px;padding:1px 3px;line-height:1.3}
+.sv b{display:block;font-size:16px}
+.sv small{display:block;color:var(--mut);font-size:13px}
+.sv .pr{flex:none;text-align:right}
+.sv .pr b{color:var(--gold);font-size:17px}
+.sv .pr small{font-size:12px}
+.sv[aria-pressed=true]{border-color:var(--red);background:#26262a}
+.sv[aria-pressed=true] .ck{background:var(--red);border-color:var(--red)}
+.sv[aria-pressed=true] .ck svg{opacity:1}
+.bbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:10px}
+.bb{display:flex;flex-direction:column;align-items:center;gap:8px;background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:16px 10px;font-weight:700;font-size:17px}
+.bb i{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font:400 26px "Bebas Neue";font-style:normal;background:#26262a;color:var(--cream);box-shadow:0 0 0 2px var(--line)}
+.bb small{font-size:12px;font-weight:500;color:var(--mut)}
+.bb[aria-pressed=true]{border-color:var(--red);background:#26262a}
+.bb[aria-pressed=true] i{background:var(--red);color:#0b0b0c;box-shadow:none}
+.fid{background:linear-gradient(135deg,#222226,#1f1b18);border:1px solid #6b4a1c;border-radius:16px;padding:12px 14px;margin:6px 0 12px;text-align:left}
+.fid b{color:var(--gold)}
+.fid .dots{display:flex;gap:5px;margin:8px 0 4px;flex-wrap:wrap}
+.fid .dots span{width:24px;height:24px;border-radius:50%;border:1.5px dashed #6b5a44;display:grid;place-items:center;font-size:12px}
+.fid .dots span.on{border:0;background:var(--gold);color:#22180a}
+.fid small{color:var(--mut);font-size:12px}
+.fid.win{border-color:var(--ok);background:linear-gradient(135deg,#143223,#1f1b18)}
+
+/* calendário */
+.cal{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px}
+.cal-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.cal-h b{font:400 26px "Bebas Neue";letter-spacing:.04em;color:var(--cream);text-transform:capitalize}
+.nav{width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:#ffffff08;font-size:20px}
+.nav:disabled{opacity:.25;cursor:default}
+.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
+.wd{text-align:center;font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;padding:4px 0}
+.dy{position:relative;aspect-ratio:1/1;border-radius:12px;border:1px solid transparent;background:#ffffff08;font-weight:700;font-size:15px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.dy small{font-size:9px;font-weight:600;color:var(--mut);line-height:1}
+.dy.hj{border-color:#ffffff40}
+.dy:disabled{background:transparent;color:#5a524b;cursor:default}
+.dy.full{color:#6a615a;text-decoration:line-through}
+.dy.few small{color:var(--gold)}
+.dy.on{background:var(--red);color:#0b0b0c;border-color:var(--red)}
+.dy.on small{color:#0b0b0c}
+.dy.emp{visibility:hidden}
+.leg{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;font-size:12px;color:var(--mut)}
+
+/* horários */
+.hrs{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.hr{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:12px 0;font-weight:700;font-size:16px}
+.hr[aria-pressed=true]{background:var(--red);border-color:var(--red);color:#0b0b0c}
+.per{grid-column:1/-1;font-size:12px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.12em;margin-top:6px}
+.vazio{color:var(--mut);background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:16px;text-align:center;font-size:15px}
+
+/* dados */
+.f{display:block;margin-bottom:12px}
+.f span{display:block;font-size:13px;color:var(--mut);margin-bottom:6px}
+.f input{width:100%;background:var(--card);border:1.5px solid var(--line);color:var(--tx);border-radius:14px;padding:14px;font:16px Inter}
+.f input:focus{outline:none;border-color:var(--red)}
+.res{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:6px 0 14px;font-size:15px}
+.res div{display:flex;justify-content:space-between;gap:10px;padding:4px 0}
+.res div span{color:var(--mut)}
+.res .tt{border-top:1px dashed var(--line);margin-top:6px;padding-top:10px;font-weight:800}
+.res .tt b{color:var(--gold);font-size:18px}
+.err{color:#ff8b80;font-size:14px;min-height:20px;margin-bottom:8px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:0;border-radius:16px;padding:16px;font:800 16px Inter;background:var(--red);color:#0b0b0c;box-shadow:0 10px 30px -10px #ffffff33;text-decoration:none}
+.btn:disabled{opacity:.5}
+.btn.alt{background:#ffffff10;border:1px solid var(--line);box-shadow:none;color:var(--tx)}
+.btn.wa{background:#1fa855;box-shadow:0 10px 30px -10px #1fa85599}
+
+/* barra fixa */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:#0f0d0cf2;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:12px 18px calc(env(safe-area-inset-bottom) + 12px);transform:translateY(110%);transition:transform .3s}
+.bar.on{transform:none}
+.bar .in{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:12px}
+.bar .info{flex:1;min-width:0;font-size:13px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .info b{display:block;color:var(--tx);font-size:16px}
+.bar .btn{width:auto;padding:13px 20px;flex:none}
+
+/* sucesso */
+.ok{display:none;text-align:center;padding:30px 0}
+.ok .ic{width:76px;height:76px;margin:0 auto 14px;border-radius:50%;background:#1d3b2a;display:grid;place-items:center;box-shadow:0 0 0 6px #1d3b2a66}
+.ok .ic svg{width:40px;height:40px;color:var(--ok)}
+.ok h2{font-size:40px;color:var(--cream)}
+.ok p{color:var(--mut);margin:6px 0 16px}
+.ok .res{text-align:left}
+.ok .btn{margin-top:10px}
+footer{text-align:center;color:#7b7068;font-size:12px;padding:30px 18px 10px}
+.load{color:var(--mut);text-align:center;padding:20px}
+
+/* ===== Galacha: grafite + mosaico ===== */
+.hero{background:linear-gradient(180deg,#0b0b0c00 0%,#0b0b0c 96%),url(img/bg.jpg) center/cover,var(--bg)}
+.av i{box-shadow:0 0 0 4px #f4f4f5,0 0 0 7px #f0c75e,0 18px 40px #000c}
+.hero h1{font-family:"Rubik Wet Paint","Bebas Neue",Impact,sans-serif;font-size:clamp(46px,14vw,86px);color:#fff;letter-spacing:.01em;text-shadow:0 4px 0 #000,0 0 30px #0009}
+.hero h1 span{display:block;font:400 clamp(24px,7vw,36px) "Bebas Neue",sans-serif;letter-spacing:.32em;color:var(--gold);margin-top:6px;text-shadow:none}
+.sv[aria-pressed=true] .ck svg{stroke:#0b0b0c}
+.sv .pr b,.res .tt b{color:var(--gold)}
+.th a{color:var(--gold)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="av"><i><img src="img/perfil.jpg" alt="Galacha Barbershop" width="150" height="150"></i></div>
+  <h1>Galacha <span>Barbershop</span></h1>
+  <p class="sub">Ruann Galacha 💈</p>
+  <div class="aviso" id="aviso"></div>
+  <div class="next" id="next"></div>
+</header>
+
+<section class="wrap trab" aria-label="Trabalhos">
+  <div class="th"><h2>Trabalhos</h2><a href="https://www.instagram.com/galachz_barberin/" target="_blank" rel="noopener">@galachz_barberin →</a></div>
+  <div class="tr" id="tr">
+    <button type="button" data-f="g01" data-c="Low fade cacheado"><img src="img/g01.jpg" alt="Low fade cacheado" loading="lazy"><span>Low fade cacheado</span></button>
+    <button type="button" data-f="g02" data-c="Low fade na régua"><img src="img/g02.jpg" alt="Low fade na régua" loading="lazy"><span>Low fade na régua</span></button>
+    <button type="button" data-f="g03" data-c="Mid fade social"><img src="img/g03.jpg" alt="Mid fade social" loading="lazy"><span>Mid fade social</span></button>
+    <button type="button" data-f="g04" data-c="Reflexo pontilhado"><img src="img/g04.jpg" alt="Reflexo pontilhado" loading="lazy"><span>Reflexo pontilhado</span></button>
+    <button type="button" data-f="g05" data-c="Low fade"><img src="img/g05.jpg" alt="Low fade" loading="lazy"><span>Low fade</span></button>
+    <button type="button" data-f="g06" data-c="Taper fade"><img src="img/g06.jpg" alt="Taper fade" loading="lazy"><span>Taper fade</span></button>
+    <button type="button" data-f="g07" data-c="Nevou com fade"><img src="img/g07.jpg" alt="Nevou com fade" loading="lazy"><span>Nevou com fade</span></button>
+    <button type="button" data-f="g08" data-c="Taper afro"><img src="img/g08.jpg" alt="Taper afro" loading="lazy"><span>Taper afro</span></button>
+    <button type="button" data-f="g09" data-c="Mid fade texturizado"><img src="img/g09.jpg" alt="Mid fade texturizado" loading="lazy"><span>Mid fade texturizado</span></button>
+  </div>
+  <p class="sw-hint">Arraste para o lado para ver mais →</p>
+</section>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada"><button type="button" aria-label="Fechar">×</button><img alt=""><p></p></div>
+
+<main class="wrap" id="app">
+  <section class="step" id="s1">
+    <div class="sh"><i>1</i><div><h2>Escolha o serviço</h2><small>Pode marcar mais de um</small></div></div>
+    <div class="svs" id="svs"><p class="load">Carregando serviços…</p></div>
+  </section>
+
+  <section class="step lock" id="sb">
+    <div class="sh"><i>2</i><div><h2>Com quem?</h2><small>Escolha seu barbeiro</small></div></div>
+    <div class="bbs" id="bbs"></div>
+  </section>
+
+  <section class="step lock" id="s2">
+    <div class="sh"><i>3</i><div><h2>Escolha o dia</h2><small id="s2h">Primeiro escolha o serviço</small></div></div>
+    <div class="cal">
+      <div class="cal-h"><button class="nav" id="prev" type="button" aria-label="Mês anterior">‹</button><b id="mes"></b><button class="nav" id="nxt" type="button" aria-label="Próximo mês">›</button></div>
+      <div class="grid" id="wd"></div>
+      <div class="grid" id="days" style="margin-top:4px"></div>
+      <div class="leg"><span>● <b style="color:var(--gold);font-weight:600">poucos</b> = últimos horários</span><span><s>dia</s> = lotado</span></div>
+    </div>
+  </section>
+
+  <section class="step lock" id="s3">
+    <div class="sh"><i>4</i><div><h2>Escolha o horário</h2><small id="s3h">Escolha um dia no calendário</small></div></div>
+    <div class="hrs" id="hrs"></div>
+  </section>
+
+  <section class="step lock" id="s4">
+    <div class="sh"><i>5</i><div><h2>Seus dados</h2><small>Para o Ruann confirmar com você</small></div></div>
+    <label class="f"><span>Seu nome</span><input id="nome" autocomplete="name" maxlength="80" placeholder="Como te chamam?"></label>
+    <label class="f"><span>WhatsApp com DDD</span><input id="tel" inputmode="tel" autocomplete="tel" maxlength="16" placeholder="(32) 9 9999-9999"></label>
+    <div class="fid" id="fid" hidden></div>
+    <div class="res" id="res"></div>
+    <div class="err" id="err" role="alert"></div>
+    <button class="btn" id="go" type="button">Confirmar agendamento</button>
+  </section>
+</main>
+
+<section class="wrap ok" id="ok" aria-live="polite">
+  <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div>
+  <h2>Horário marcado!</h2>
+  <p>Te esperamos na Galacha. 💈</p>
+  <div class="res" id="okres"></div>
+  <div class="fid" id="okfid" hidden></div>
+  <a class="btn wa" id="okwa" target="_blank" rel="noopener" style="display:none">Avisar a barbearia no WhatsApp</a>
+  <button class="btn alt" id="okics" type="button">📅 Salvar na agenda do celular</button>
+  <button class="btn alt" id="okmais" type="button">Marcar outro horário</button>
+</section>
+
+<footer>Galacha Barbershop · Ruann Galacha<br><a href="https://wa.me/5532999998305" target="_blank" rel="noopener">WhatsApp (32) 99999-8305</a> · <a href="https://www.instagram.com/galachz_barberin/" target="_blank" rel="noopener">@galachz_barberin</a></footer>
+
+<div class="bar" id="bar"><div class="in"><div class="info" id="binfo"></div><button class="btn" id="bgo" type="button">Continuar</button></div></div>
+
+<script>
+(function(){
+var SU="https://hkqicvssabntmaoifyau.supabase.co",SK="sb_publishable_iqgTbGd-MkhvwLTQidXimA_WH6ThyPG";
+var $=function(i){return document.getElementById(i)};
+function rpc(fn,args){return fetch(SU+"/rest/v1/rpc/"+fn,{method:"POST",headers:{"apikey":SK,"Content-Type":"application/json"},body:JSON.stringify(args||{})}).then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error((j&&(j.message||j.hint))||"Erro de conexão");return j})})}
+var D=null,sel={},barb,dia=null,hora=null,ym=null,occ={ag:[],bl:[]},occKey="";
+var MES=["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],WD=["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"],WDL=["domingo","segunda","terça","quarta","quinta","sexta","sábado"];
+function brl(v){return "R$ "+Number(v).toFixed(2).replace(".",",")}
+function mm(t){var p=t.split(":");return +p[0]*60+ +p[1]}
+function hh(m){return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0")}
+function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function pd(s){var p=s.split("-");return new Date(+p[0],+p[1]-1,+p[2])}
+function dlong(s){var d=pd(s);return WDL[d.getDay()]+", "+d.getDate()+" de "+MES[d.getMonth()]}
+function durSel(){var t=0;Object.keys(sel).forEach(function(k){t+=sel[k].duracao});var iv=D.config.intervalo;return Math.ceil(t/iv)*iv}
+function totSel(){var t=0;Object.keys(sel).forEach(function(k){t+=+sel[k].preco});return t}
+function nSel(){return Object.keys(sel).length}
+function store(k,v){try{v===null?localStorage.removeItem(k):localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function read(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}}
+
+/* próximo horário salvo neste celular */
+function showNext(){var n=read("glc_prox");if(!n||!D)return;if(n.dia<D.hoje){store("glc_prox",null);return}
+ var el=$("next");el.innerHTML="Seu próximo horário: <b>"+dlong(n.dia)+" às "+n.hora+"</b><br>"+n.serv;el.style.display="block"}
+
+/* serviços */
+function renderSv(){var h="";D.servicos.forEach(function(s){
+ h+='<button type="button" class="sv" aria-pressed="'+(!!sel[s.id])+'" data-id="'+s.id+'"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#0b0b0c" stroke-width="4"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>'+(s.foto?'<span class="svf" data-zoom="'+esc(s.foto)+'" data-zc="'+esc(s.nome)+'" title="Ver o modelo"><img src="'+esc(s.foto)+'" alt="Modelo: '+esc(s.nome)+'" loading="lazy"><i>🔍</i></span>':'')+'<span class="tx"><b>'+esc(s.nome)+'</b><small>'+esc(s.descricao||"")+'</small></span><span class="pr"><b>'+(Number(s.preco)>0?brl(s.preco):"A combinar")+'</b><small>'+s.duracao+' min</small></span></button>'});
+ $("svs").innerHTML=h||'<p class="vazio">Nenhum serviço disponível no momento.</p>'}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+$("svs").addEventListener("click",function(e){var z=e.target.closest("[data-zoom]");if(z){var L=$("lb");L.querySelector("img").src=z.dataset.zoom;L.querySelector("p").textContent=z.dataset.zc;L.classList.add("on");return}var b=e.target.closest(".sv");if(!b)return;var id=b.dataset.id,s=D.servicos.filter(function(x){return String(x.id)===id})[0];
+ if(sel[id])delete sel[id];else sel[id]=s;b.setAttribute("aria-pressed",!!sel[id]);hora=null;upd();if(dia)renderHrs()});
+
+/* barbeiro */
+function bname(){if(barb===undefined)return"";if(!barb)return"Primeiro disponível";var b=D.barbeiros.filter(function(x){return x.id===barb})[0];return b?b.nome:""}
+function renderBb(){var h="";D.barbeiros.forEach(function(b){h+='<button type="button" class="bb" data-b="'+b.id+'" aria-pressed="'+(barb===b.id)+'"><i>'+esc(b.nome.charAt(0))+'</i>'+esc(b.nome)+'<small>Barbeiro</small></button>'});
+ if(D.barbeiros.length>1)h+='<button type="button" class="bb" data-b="0" aria-pressed="'+(barb===0)+'"><i>✂</i>Tanto faz<small>Primeiro horário livre</small></button>';$("bbs").innerHTML=h}
+$("bbs").addEventListener("click",function(e){var b=e.target.closest(".bb");if(!b)return;barb=+b.dataset.b;hora=null;renderBb();upd();if(dia)renderHrs();
+ setTimeout(function(){$("s2").scrollIntoView({behavior:"smooth",block:"start"})},120)});
+
+/* calendário (js) */
+function lim(){var h=pd(D.hoje);return new Date(h.getFullYear(),h.getMonth()+D.config.meses,h.getDate())}
+function loadOcc(){var a=new Date(ym.y,ym.m,1),b=new Date(ym.y,ym.m+1,0),key=iso(a);occKey=key;
+ return rpc("glc_ocupados",{p_ini:iso(a),p_fim:iso(b)}).then(function(o){if(occKey===key){occ=o;renderCal();if(dia)renderHrs()}}).catch(function(){})}
+function slots(ds){if(!D||!nSel()||barb===undefined)return[];var c=D.config,d=pd(ds),dur=durSel();if(c.dias.indexOf(d.getDay())<0)return[];
+ var a=mm(c.abre),f=mm(c.fecha),li=c.almoco_ini?mm(c.almoco_ini):null,lf=c.almoco_fim?mm(c.almoco_fim):null,out=[];
+ var B=barb?[barb]:D.barbeiros.map(function(x){return x.id}),busy={},blk={};B.forEach(function(id){busy[id]=[];blk[id]=[]});
+ occ.ag.forEach(function(x){if(x.d===ds&&busy[x.b])busy[x.b].push([mm(x.h),mm(x.h)+x.m])});
+ occ.bl.forEach(function(x){if(x.d!==ds)return;var r=x.i?[mm(x.i),mm(x.f)]:[0,1440];B.forEach(function(id){if(!x.b||x.b===id)blk[id].push(r)})});
+ var now=ds===D.hoje?mm(D.agora):-1;
+ for(var t=a;t+dur<=f;t+=c.intervalo){var e=t+dur;if(t<=now)continue;if(li!==null&&lf!==null&&t<lf&&e>li)continue;
+  if(B.some(function(id){return !busy[id].some(function(b){return t<b[1]&&e>b[0]})&&!blk[id].some(function(b){return t<b[1]&&e>b[0]})}))out.push(t)}
+ return out}
+function renderCal(){var c=D.config,first=new Date(ym.y,ym.m,1),n=new Date(ym.y,ym.m+1,0).getDate(),h="",hoje=D.hoje,L=lim();
+ $("mes").textContent=MES[ym.m]+" "+ym.y;
+ var hj=pd(hoje);$("prev").disabled=ym.y===hj.getFullYear()&&ym.m===hj.getMonth();$("nxt").disabled=ym.y>L.getFullYear()||(ym.y===L.getFullYear()&&ym.m>=L.getMonth());
+ for(var i=0;i<first.getDay();i++)h+='<span class="dy emp"></span>';
+ for(var d=1;d<=n;d++){var dt=new Date(ym.y,ym.m,d),ds=iso(dt),cls="dy",lab="",dis=false;
+  if(ds<hoje||dt>L){dis=true}else if(c.dias.indexOf(dt.getDay())<0){dis=true;lab="fechado"}
+  else if(nSel()&&barb!==undefined){var s=slots(ds).length;if(!s){cls+=" full";dis=true;lab=ds===hoje?"encerrado":(barb&&occ.bl.some(function(x){return x.d===ds&&!x.i&&x.b===barb}))?"folga":"lotado"}else if(s<=3){cls+=" few";lab="poucos"}}
+  if(ds===hoje)cls+=" hj";if(ds===dia)cls+=" on";
+  h+='<button type="button" class="'+cls+'" data-d="'+ds+'"'+(dis?" disabled":"")+' aria-label="'+dlong(ds)+(lab?", "+lab:"")+'">'+d+(lab?'<small>'+lab+'</small>':"")+'</button>'}
+ $("days").innerHTML=h}
+$("days").addEventListener("click",function(e){var b=e.target.closest(".dy");if(!b||b.disabled)return;dia=b.dataset.d;hora=null;renderCal();renderHrs();upd();
+ setTimeout(function(){$("s3").scrollIntoView({behavior:"smooth",block:"start"})},120)});
+$("prev").onclick=function(){ym.m--;if(ym.m<0){ym.m=11;ym.y--}renderCal();loadOcc()};
+$("nxt").onclick=function(){ym.m++;if(ym.m>11){ym.m=0;ym.y++}renderCal();loadOcc()};
+
+/* horários */
+function renderHrs(){if(!dia){$("hrs").innerHTML="";return}var s=slots(dia);$("s3h").textContent=dlong(dia).replace(/^./,function(c){return c.toUpperCase()})+" · "+durSel()+" min";
+ if(!s.length){$("hrs").innerHTML='<p class="vazio" style="grid-column:1/-1">Sem horários livres nesse dia para o serviço escolhido. Tente outro dia.</p>';return}
+ var h="",lp="";s.forEach(function(t){var p=t<720?"Manhã":t<1080?"Tarde":"Noite";if(p!==lp){h+='<div class="per">'+p+'</div>';lp=p}
+  h+='<button type="button" class="hr" data-t="'+hh(t)+'" aria-pressed="'+(hora===hh(t))+'">'+hh(t)+'</button>'});$("hrs").innerHTML=h}
+$("hrs").addEventListener("click",function(e){var b=e.target.closest(".hr");if(!b)return;hora=b.dataset.t;renderHrs();upd();
+ setTimeout(function(){$("s4").scrollIntoView({behavior:"smooth",block:"start"})},120)});
+
+/* resumo e barra */
+function resumo(){var h="";Object.keys(sel).forEach(function(k){h+='<div><span>'+esc(sel[k].nome)+'</span><span>'+(Number(sel[k].preco)>0?brl(sel[k].preco):"A combinar")+'</span></div>'});
+ if(barb!==undefined)h+='<div><span>Barbeiro</span><span>'+esc(bname())+'</span></div>';
+ if(dia&&hora)h+='<div><span>Quando</span><span>'+dlong(dia)+" · "+hora+'</span></div>';h+='<div class="tt"><span>Total</span><b>'+brl(totSel())+'</b></div>';return h}
+function upd(){var n=nSel(),bk=barb===undefined;$("sb").classList.toggle("lock",!n);$("s2").classList.toggle("lock",!n||bk);$("s3").classList.toggle("lock",!n||bk||!dia);$("s4").classList.toggle("lock",!n||bk||!dia||!hora);
+ $("s2h").textContent=!n?"Primeiro escolha o serviço":bk?"Primeiro escolha o barbeiro":"Os dias riscados estão lotados";if(!dia)$("s3h").textContent="Escolha um dia no calendário";
+ if(D)renderCal();$("res").innerHTML=resumo();
+ var bar=$("bar"),info=$("binfo"),bt=$("bgo");bar.classList.toggle("on",n>0&&$("ok").style.display!=="block");
+ info.innerHTML="<b>"+brl(totSel())+"</b>"+n+" serviço"+(n>1?"s":"")+" · "+durSel()+" min"+(dia&&hora?" · "+pd(dia).getDate()+"/"+(pd(dia).getMonth()+1)+" "+hora:"");
+ bt.textContent=bk?"Escolher barbeiro":!dia?"Escolher dia":!hora?"Escolher horário":"Confirmar"}
+$("bgo").onclick=function(){var t=barb===undefined?"sb":!dia?"s2":!hora?"s3":"s4";$(t).scrollIntoView({behavior:"smooth",block:"start"});if(t==="s4")setTimeout(function(){($("nome").value?$("tel"):$("nome")).focus({preventScroll:true})},500)};
+
+/* telefone */
+$("tel").addEventListener("input",function(){var d=this.value.replace(/\D/g,"").slice(0,11),o=d;
+ if(d.length>2)o="("+d.slice(0,2)+") "+d.slice(2);if(d.length>7)o="("+d.slice(0,2)+") "+d.slice(2,d.length-4)+"-"+d.slice(-4);this.value=o});
+/* cartão fidelidade */
+function fidHtml(f,extra){var m=f.meta,n=f.n,d="";if(!m)return"";for(var i=1;i<=m;i++)d+='<span class="'+(i<=n?"on":"")+'">'+(i<=n?"✂":i)+'</span>';d+='<span class="'+(n>=m?"on":"")+'">🎁</span>';
+ var t=f.brinde_marcado?"🎁 Seu corte grátis já está reservado no próximo horário!":n>=m?"🎉 <b>Parabéns!</b> Você completou o cartão: este corte é <b>GRÁTIS</b>.":"<b>Cartão fidelidade:</b> "+n+" de "+m+" · faltam "+(m-n)+" para ganhar 1 corte grátis";
+ return t+'<div class="dots">'+d+'</div><small>'+(extra||"A cada "+m+" atendimentos, o próximo corte é por nossa conta.")+'</small>'}
+var fidT=0;function fidCheck(){clearTimeout(fidT);var t=$("tel").value.replace(/\D/g,""),el=$("fid");if(t.length<10||!D||!D.config.fidelidade){el.hidden=true;return}
+ fidT=setTimeout(function(){rpc("glc_fidelidade",{p_tel:t}).then(function(f){if(!f.meta){el.hidden=true;return}el.innerHTML=fidHtml(f);el.className="fid"+(f.n>=f.meta&&!f.brinde_marcado?" win":"");el.hidden=false}).catch(function(){el.hidden=true})},400)}
+$("tel").addEventListener("input",fidCheck);
+var me=read("glc_eu");if(me){$("nome").value=me.nome||"";$("tel").value=me.tel||""}
+
+/* confirmar */
+$("go").onclick=function(){var nome=$("nome").value.trim(),tel=$("tel").value.replace(/\D/g,""),err=$("err");err.textContent="";
+ if(nome.length<2){err.textContent="Informe seu nome.";$("nome").focus();return}
+ if(tel.length<10){err.textContent="Informe seu WhatsApp com DDD.";$("tel").focus();return}
+ var b=this;b.disabled=true;b.textContent="Confirmando…";
+ rpc("glc_agendar",{p_dia:dia,p_hora:hora,p_servicos:Object.keys(sel).map(Number),p_nome:nome,p_tel:tel,p_barb:barb||null}).then(function(r){
+  store("glc_eu",{nome:nome,tel:$("tel").value});
+  var serv=r.servicos.map(function(s){return s.nome}).join(" + ");store("glc_prox",{dia:r.dia,hora:r.hora,serv:serv});
+  $("okres").innerHTML='<div><span>Serviço</span><span>'+esc(serv)+'</span></div><div><span>Barbeiro</span><span>'+esc(r.barbeiro)+'</span></div><div><span>Dia</span><span>'+dlong(r.dia)+'</span></div><div><span>Horário</span><span>'+r.hora+' às '+r.fim+'</span></div><div class="tt"><span>Total</span><b>'+brl(r.total)+'</b></div>'+(r.brinde?'<div><span>🎁 Corte grátis (fidelidade)</span><span>-'+brl(r.desconto)+'</span></div>':"");
+  if(D.config.fidelidade){rpc("glc_fidelidade",{p_tel:tel}).then(function(f){var el=$("okfid");el.innerHTML=r.brinde?"🎁 <b>Corte grátis garantido!</b> Seu cartão recomeça depois desse atendimento.":fidHtml(f,"O selo deste corte entra no cartão quando você for atendido.");el.className="fid"+(r.brinde?" win":"");el.hidden=false}).catch(function(){})}
+  var wa=D.config.whatsapp;if(wa){var t="Olá, "+r.barbeiro+"! Acabei de agendar pelo site:\n✂️ "+serv+"\n📅 "+dlong(r.dia)+" às "+r.hora+"\n🙋 "+nome+(r.brinde?"\n🎁 Corte grátis do cartão fidelidade":"");$("okwa").href="https://wa.me/"+wa.replace(/\D/g,"")+"?text="+encodeURIComponent(t);$("okwa").style.display="flex"}
+  last={dia:r.dia,hora:r.hora,fim:r.fim,serv:serv};
+  $("app").style.display="none";$("ok").style.display="block";$("bar").classList.remove("on");scrollTo({top:$("ok").offsetTop-20,behavior:"smooth"});showNext();
+ }).catch(function(e){err.textContent=e.message;b.disabled=false;b.textContent="Confirmar agendamento";hora=null;loadOcc().then(upd)})};
+var last=null;
+$("okics").onclick=function(){if(!last)return;var f=function(d,t){return d.replace(/-/g,"")+"T"+t.replace(":","")+"00"};
+ var ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//GalachaBarbershop//PT","BEGIN:VEVENT","UID:"+Date.now()+"@galachabarbershop","DTSTAMP:"+new Date().toISOString().replace(/[-:]/g,"").slice(0,15)+"Z",
+  "DTSTART;TZID=America/Sao_Paulo:"+f(last.dia,last.hora),"DTEND;TZID=America/Sao_Paulo:"+f(last.dia,last.fim),"SUMMARY:Galacha Barbershop - "+last.serv,"LOCATION:Galacha Barbershop",
+  "BEGIN:VALARM","TRIGGER:-PT1H","ACTION:DISPLAY","DESCRIPTION:Barbearia em 1 hora","END:VALARM","END:VEVENT","END:VCALENDAR"].join("\r\n");
+ var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([ics],{type:"text/calendar"}));a.download="galacha-barbershop.ics";document.body.appendChild(a);a.click();setTimeout(function(){a.remove()},500)};
+$("okmais").onclick=function(){sel={};barb=undefined;renderBb();$("okfid").hidden=true;dia=null;hora=null;$("ok").style.display="none";$("app").style.display="block";renderSv();loadOcc().then(upd);upd();$("go").disabled=false;$("go").textContent="Confirmar agendamento";scrollTo({top:0,behavior:"smooth"})};
+
+/* galeria */
+var lb=$("lb");document.querySelector(".trab").addEventListener("click",function(e){var b=e.target.closest("[data-f]");if(!b)return;lb.querySelector("img").src="img/"+b.dataset.f+".jpg";lb.querySelector("p").textContent=b.dataset.c;lb.classList.add("on")});
+lb.addEventListener("click",function(e){if(e.target===lb||e.target.tagName==="BUTTON")lb.classList.remove("on")});
+addEventListener("keydown",function(e){if(e.key==="Escape")lb.classList.remove("on")});
+
+/* início */
+$("wd").innerHTML=WD.map(function(w){return '<span class="wd">'+w+'</span>'}).join("");
+rpc("glc_publico").then(function(d){D=d;var h=pd(d.hoje);ym={y:h.getFullYear(),m:h.getMonth()};
+ if(d.config.aviso){$("aviso").textContent=d.config.aviso;$("aviso").style.display="block"}
+ renderSv();renderBb();if(D.barbeiros.length===1){barb=D.barbeiros[0].id;$("sb").hidden=true;["s2","s3","s4"].forEach(function(id,i){var n=$(id).querySelector(".sh i");if(n)n.textContent=String(i+2)})}renderCal();upd();showNext();loadOcc();fidCheck();
+ function refresh(){if(document.hidden||$("ok").style.display==="block")return;rpc("glc_publico").then(function(n){var ch=JSON.stringify(n.servicos)!==JSON.stringify(D.servicos)||JSON.stringify(n.barbeiros)!==JSON.stringify(D.barbeiros);D=n;
+  Object.keys(sel).forEach(function(k){var s=n.servicos.filter(function(x){return String(x.id)===k})[0];if(s)sel[k]=s;else delete sel[k]});if(ch){renderSv();renderBb()}upd()}).catch(function(){});loadOcc()}
+ setInterval(refresh,30000);document.addEventListener("visibilitychange",function(){if(!document.hidden)refresh()});
+}).catch(function(){$("svs").innerHTML='<p class="vazio">Não foi possível carregar. Verifique sua internet e recarregue a página.</p>'});
+})();
+</script>
+</body>
+</html>
