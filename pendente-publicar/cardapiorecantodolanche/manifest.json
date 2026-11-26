@@ -429,8 +429,8 @@
 },
 {
 "file": ".vercel/output/static/painel.html",
-"sha": "09fa6fadcf5fa4bffb4bb352ee5d7fa817a2eb77",
-"size": 197807
+"sha": "e53dfe4960acef2492d57615dd03697e405dc38b",
+"size": 202598
 },
 {
 "file": ".vercel/output/static/painel.webmanifest",
@@ -449,7 +449,7 @@
 },
 {
 "file": ".vercel/output/static/sw.js",
-"sha": "05647e729041c83becb8c5896e86cb907f473ce0",
+"sha": "23b00bf861d26c0f0035c4cb24c476980c04ac54",
 "size": 1073
 },
 {
