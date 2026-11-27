@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Painel · Boecher Desbloqueios</title>
+<meta name="theme-color" content="#08080a">
+<link rel="icon" href="img/icon-192.png"><link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#08080a;--card:#141418;--card2:#1a1a1f;--line:#2a2a31;--tx:#f5f5f7;--mut:#9a9aa3;--gold:#1fb97f;--gold2:#5cf0b8;--ok:#2fbf71;--red:#ff6b62}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);font:15px/1.45 Inter,system-ui,sans-serif;padding-bottom:calc(env(safe-area-inset-bottom) + 84px)}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:900px;margin:0 auto;padding:0 16px}
+.goth{font-family:"UnifrakturMaguntia",serif;font-weight:400}
+.top{position:sticky;top:0;z-index:20;background:#08080ae6;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:10px;height:58px}.top img{width:34px;height:34px;border-radius:50%}.top b{font-size:22px}
+.top .sm{margin-left:auto}
+.sm{font-size:12.5px;color:var(--mut)}
+.btn{border:0;border-radius:12px;padding:11px 15px;font-weight:800;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#032016}
+.btn.g{background:#ffffff0d;border:1px solid var(--line);color:var(--tx)}.btn.s{padding:7px 11px;font-size:13px}.btn.del{color:var(--red)}.btn.wa{background:#1fa855;color:#fff;text-decoration:none;display:inline-block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:12px}
+h2{font-size:24px;margin:18px 0 10px}
+.f{display:block;margin-top:10px}.f span{display:block;font-size:12.5px;color:var(--mut);margin-bottom:4px;font-weight:600}
+input,select,textarea{width:100%;background:#0b0b0e;border:1px solid var(--line);color:#fff;border-radius:10px;padding:10px;font:inherit;font-size:16px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+#login{max-width:380px;margin:60px auto;padding:0 16px;text-align:center}#login img{width:120px;border-radius:50%}
+.msg{font-size:13.5px;margin-top:8px;min-height:18px}.msg.e{color:var(--red)}.msg.o{color:var(--ok)}
+.seg{display:inline-flex;background:#ffffff0a;border:1px solid var(--line);border-radius:12px;padding:4px;gap:4px;margin-bottom:12px}
+.seg button{border:0;background:none;padding:8px 14px;border-radius:9px;font-weight:800;color:var(--mut)}.seg button[aria-pressed=true]{background:#fff;color:#000}
+.it{display:grid;gap:8px}
+.it .h{display:flex;gap:10px;align-items:center}.it .h b{font-size:16px;flex:1}
+.it .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.it .g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:560px){.it .g3{grid-template-columns:1fr 1fr}}
+.sw{position:relative;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--mut);font-weight:700}
+.sw input{width:40px;height:22px;appearance:none;-webkit-appearance:none;background:#33333a;border:0;border-radius:99px;padding:0;position:relative;transition:background .2s}
+.sw input::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:left .2s}
+.sw input:checked{background:var(--ok)}.sw input:checked::after{left:21px}
+.off{opacity:.5}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.ld{display:grid;gap:6px}.ld .h{display:flex;justify-content:space-between;gap:8px}.ld .t{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:3px 8px;border-radius:99px;background:#d8b25b22;color:var(--gold2)}.ld .t.a{background:#3b82f622;color:#93c5fd}
+.ld.done{opacity:.5}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}.kp div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}.kp b{display:block;font-size:22px}.kp span{font-size:12px;color:var(--mut)}
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;background:#0d0d10f2;backdrop-filter:blur(10px);border-top:1px solid var(--line);display:flex;padding:6px 8px calc(env(safe-area-inset-bottom) + 6px)}
+.tabs button{flex:1;border:0;background:none;padding:8px 2px;border-radius:12px;font-size:12px;font-weight:700;color:var(--mut);display:flex;flex-direction:column;align-items:center;gap:2px}
+.tabs button i{font-style:normal;font-size:19px}.tabs button[aria-selected=true]{color:#fff;background:#ffffff10}
+.tabs button .n{background:var(--red);color:#fff;border-radius:99px;font-size:10px;padding:1px 6px;margin-left:3px}
+.pane{display:none}.pane.on{display:block}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#fff;color:#000;font-weight:700;padding:10px 16px;border-radius:12px;z-index:50;opacity:0;transition:opacity .2s;pointer-events:none}.toast.on{opacity:1}
+.fos{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px}.sl{flex:none;width:112px;display:flex;flex-direction:column;gap:5px;align-items:stretch;text-align:center}.sl img,.sl>span{width:112px;height:112px;border-radius:14px;object-fit:cover;background:#0b0b0e;border:1px solid var(--line)}.sl>span{display:grid;place-items:center;font-size:22px;color:var(--mut);line-height:1.1}.sl>span small{font-size:11px}.sl b{font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sl label{cursor:pointer;justify-content:center;display:block}.sl .btn{padding:6px 8px;font-size:12px}
+.fo{display:flex;gap:12px;align-items:center}.fo img,.fo>span{flex:none;width:86px;height:86px;border-radius:14px;object-fit:cover;background:#0b0b0e;border:1px solid var(--line)}.fo>span{display:grid;place-items:center;text-align:center;font-size:12px;color:var(--mut);line-height:1.2;padding:4px}.fo small{font-size:10.5px}.fb{display:flex;flex-direction:column;gap:6px;align-items:flex-start}.fb label{cursor:pointer}
+[hidden]{display:none!important}
+.agd{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:6px}
+.agd button{flex:none;min-width:70px;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:8px 6px;display:flex;flex-direction:column;align-items:center;font-weight:800;position:relative}
+.agd button small{font-size:11px;color:var(--mut);font-weight:700;text-transform:capitalize}
+.agd button[aria-pressed=true]{border-color:var(--gold2);background:#1fb97f18}
+.agd button.fx{opacity:.45}
+.agd button i{position:absolute;top:-6px;right:-4px;font-style:normal;background:var(--gold);color:#032016;font-size:11px;border-radius:99px;padding:0 6px}
+.sl2{display:grid;grid-template-columns:62px 1fr;gap:10px;align-items:start;padding:10px 12px;margin-bottom:8px;border-radius:14px;border:1px solid var(--line);background:var(--card)}
+.sl2>b{font:800 16px "JetBrains Mono",ui-monospace,monospace;padding-top:2px}
+.sl2.lv{background:none;border-style:dashed}.sl2.lv>div{display:flex;gap:8px;align-items:center;flex-wrap:wrap;color:var(--mut);font-size:13px}
+.sl2.bq{opacity:.55;background:none}.sl2 .ld{gap:4px}
+.dws label{display:inline-flex;align-items:center;gap:5px;background:#ffffff0a;border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-size:13px;font-weight:700}
+.dws input{width:auto}
+.mk{display:grid;gap:6px;margin-top:6px}.mk .g2{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+</style>
+</head>
+<body>
+<div id="login" hidden>
+  <img src="img/logo.jpg" alt=""><h1 class="goth" style="font-size:40px;margin-top:8px">Boecher</h1><p class="sm">Painel de desbloqueios</p>
+  <form class="card" id="lf" style="text-align:left;margin-top:16px">
+    <label class="f"><span>E-mail</span><input id="le" type="email" autocomplete="username" required></label>
+    <label class="f"><span>Senha</span><input id="lp" type="password" autocomplete="current-password" required></label>
+    <button class="btn" style="width:100%;margin-top:14px" id="lb">Entrar</button><p class="msg e" id="lm"></p>
+  </form>
+</div>
+<div id="app" hidden>
+  <div class="top"><div class="wrap"><img src="img/logo.jpg" alt=""><b class="goth">Boecher</b><span class="sm" id="sync"></span><button class="btn g s" id="sair">Sair</button></div></div>
+  <div class="wrap">
+    <section class="pane on" id="p-sol">
+      <h2>Solicitações</h2>
+      <div class="kp"><div><b id="k1">0</b><span>novas</span></div><div><b id="k2">0</b><span>em andamento</span></div><div><b id="k3">0</b><span>concluídas no mês</span></div></div>
+      <div class="seg" id="sseg"><button data-f="abertas" aria-pressed="true">Em aberto</button><button data-f="todas" aria-pressed="false">Todas</button></div>
+      <div id="leads"></div>
+    </section>
+    <section class="pane" id="p-ag">
+      <div class="row" style="justify-content:space-between"><h2>Agenda</h2><button class="btn g s" id="agcfgb">⚙️ Horários</button></div>
+      <div class="card" id="agcfg" hidden><b>Horário de atendimento</b>
+        <label class="sw" style="margin-top:10px"><input type="checkbox" id="ag-on"> Agendamento pelo site ligado</label>
+        <div class="it"><div class="g3"><label class="f"><span>Abre às</span><select id="ag-ab"></select></label><label class="f"><span>Fecha às</span><select id="ag-fe"></select></label><label class="f"><span>Cada horário dura</span><select id="ag-in"><option value="15">15 min</option><option value="20">20 min</option><option value="30">30 min</option><option value="45">45 min</option><option value="60">1 hora</option><option value="90">1h30</option><option value="120">2 horas</option></select></label></div></div>
+        <span class="f"><span>Dias de atendimento</span></span><div class="row" id="ag-ds"></div>
+        <label class="f"><span>Cliente pode agendar com até quantos dias de antecedência</span><input id="ag-ja" inputmode="numeric" maxlength="2"></label>
+        <button class="btn" id="ag-sv" style="margin-top:12px">Salvar horários</button><p class="msg" id="ag-m"></p></div>
+      <div class="agd" id="agd"></div>
+      <div class="row" style="justify-content:space-between;margin:4px 0 10px"><b id="agt"></b><button class="btn g s" id="agdia"></button></div>
+      <div id="agl"></div>
+    </section>
+    <section class="pane" id="p-sv">
+      <div class="row" style="justify-content:space-between"><h2>Serviços</h2><button class="btn s" id="add">+ Novo serviço</button></div>
+      <p class="sm" style="margin-bottom:10px">Edite nome, prazo, valor e o que o cliente precisa levar. Valor vazio aparece como "sob consulta". Desligue <b>No site</b> para esconder.</p>
+      <div id="list"></div>
+    </section>
+    <section class="pane" id="p-aj">
+      <h2>Ajustes</h2>
+      <div class="card"><b>Loja</b>
+        <label class="f"><span>WhatsApp que recebe os pedidos</span><input id="awa" inputmode="tel"></label>
+        <label class="f"><span>Aviso no site (opcional)</span><input id="aav" maxlength="200" placeholder="Ex.: Atendimento até 20h nesta semana!"></label>
+        <button class="btn" id="asv" style="margin-top:12px">Salvar</button><p class="msg" id="am"></p></div>
+      <div class="card"><b>Acesso</b><p class="sm">Entrou como <span id="curmail"></span></p>
+        <label class="f"><span>Nova senha</span><input id="np" type="password" autocomplete="new-password" minlength="8"></label>
+        <button class="btn g" id="npb" style="margin-top:10px">Trocar senha</button><p class="msg" id="npm"></p>
+        <label class="f" style="margin-top:14px"><span>Novo e-mail de login</span><input id="ne" type="email"></label>
+        <label class="f"><span>Senha atual</span><input id="nep" type="password"></label>
+        <button class="btn g" id="neb" style="margin-top:10px">Trocar e-mail</button><p class="msg" id="nem"></p></div>
+    </section>
+  </div>
+  <nav class="tabs"><button aria-selected="true" data-t="sol"><i>🔓</i><span>Solicitações<span class="n" id="nb" hidden></span></span></button><button aria-selected="false" data-t="ag"><i>📅</i>Agenda</button><button aria-selected="false" data-t="sv"><i>🛠</i>Serviços</button><button aria-selected="false" data-t="aj"><i>⚙️</i>Ajustes</button></nav>
+</div>
+<div class="toast" id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+(function(){
+var SU="https://hkqicvssabntmaoifyau.supabase.co",SK="sb_publishable_iqgTbGd-MkhvwLTQidXimA_WH6ThyPG",EMAIL="beggiante@gmail.com";
+var sb=supabase.createClient(SU,SK),$=function(i){return document.getElementById(i)},P=[],L=[],lf="abertas";
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function brl(v){return Number(v||0).toLocaleString("pt-BR",{style:"currency",currency:"BRL"})}
+function num(v){v=String(v||"").replace(/[^\d,\.]/g,"");if(v.indexOf(",")>=0)v=v.replace(/\./g,"").replace(",",".");return parseFloat(v)||0}
+function toast(m){var t=$("toast");t.textContent=m;t.classList.add("on");clearTimeout(t._t);t._t=setTimeout(function(){t.classList.remove("on")},2400)}
+function msg(id,t,ok){var e=$(id);e.textContent=t;e.className="msg "+(ok?"o":"e")}
+function show(on){$("login").hidden=on;$("app").hidden=!on}
+(function(){var m=EMAIL;try{m=localStorage.getItem("bcd_email")||EMAIL}catch(e){}$("le").value=m})();
+$("lf").onsubmit=function(e){e.preventDefault();$("lb").disabled=true;sb.auth.signInWithPassword({email:$("le").value.trim(),password:$("lp").value}).then(function(r){$("lb").disabled=false;
+ if(r.error){$("lm").textContent="E-mail ou senha incorretos.";return}try{localStorage.setItem("bcd_email",$("le").value.trim().toLowerCase())}catch(x){}start()})};
+$("sair").onclick=function(){sb.auth.signOut().then(function(){show(false)})};
+sb.auth.getSession().then(function(r){if(r.data.session)start();else show(false)});
+var poll=0;
+function start(){show(true);sb.auth.getUser().then(function(r){var u=r.data&&r.data.user;if(u)$("curmail").textContent=u.email});loadP();loadL();loadAj();loadAg();clearInterval(poll);poll=setInterval(function(){loadL();if($("p-ag").classList.contains("on")&&!AGX)loadAg()},30000)}
+document.querySelector(".tabs").onclick=function(e){var b=e.target.closest("button");if(!b)return;[].forEach.call(this.children,function(x){x.setAttribute("aria-selected",x===b)});
+ document.querySelectorAll(".pane").forEach(function(p){p.classList.toggle("on",p.id==="p-"+b.dataset.t)});scrollTo(0,0);if(b.dataset.t==="sol")loadL();if(b.dataset.t==="sv")loadP();if(b.dataset.t==="ag")loadAg()};
+/* solicitações */
+var ST={novo:["Nova","#3b82f6"],andamento:["Em andamento","#f59e0b"],concluido:["Concluída","#16a34a"],recusado:["Recusada","#ff6b62"],cancelado:["Cancelada","#9a9aa3"]};
+function loadL(){return sb.from("bcd_pedidos").select("*").order("created_at",{ascending:false}).limit(400).then(function(r){if(r.error)return toast("Sem permissão. Entre de novo.");L=r.data||[];drawL()})}
+function drawL(){var m=new Date();m.setDate(1);m.setHours(0,0,0,0);var nv=L.filter(function(x){return x.status==="novo"}).length;$("nb").hidden=!nv;$("nb").textContent=nv;$("k1").textContent=nv;
+ $("k2").textContent=L.filter(function(x){return x.status==="andamento"}).length;$("k3").textContent=L.filter(function(x){return x.status==="concluido"&&new Date(x.created_at)>=m}).length;
+ var l=lf==="abertas"?L.filter(function(x){return x.status==="novo"||x.status==="andamento"}):L;
+ $("leads").innerHTML=l.length?l.map(function(x){var tel=String(x.telefone).replace(/\D/g,""),w=tel.length<=11?"55"+tel:tel,nm=x.nome.split(" ")[0],s=ST[x.status];
+  var m1="Olá, "+nm+"! Aqui é da Boecher Desbloqueios 🔓 Recebemos sua solicitação #"+x.id+" ("+(x.servico||"desbloqueio")+(x.modelo?" · "+x.modelo:"")+"). ";
+  return '<div class="card ld"><div class="h"><b>#'+x.id+' · '+esc(x.nome)+'</b><span class="t" style="background:'+s[1]+'22;color:'+s[1]+'">'+s[0]+'</span></div>'+
+  '<span class="sm">'+new Date(x.created_at).toLocaleString("pt-BR",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"})+' · '+esc(x.telefone)+'</span>'+
+  '<span>📱 '+esc((x.marca||"")+(x.modelo?" · "+x.modelo:""))+'</span><span>🔓 '+esc(x.servico||"")+'</span>'+(x.agenda_data?'<span><b>📅 '+dTxt(x.agenda_data)+' às '+h5(x.agenda_hora)+'</b></span>':'')+''+(x.imei?'<span class="sm">🔢 IMEI '+esc(x.imei)+' · <a href="https://www.consultaaparelhoimpedido.com.br/" target="_blank" rel="noopener" style="color:var(--gold2)">consultar restrição</a></span>':'')+(x.detalhes?'<span>📝 '+esc(x.detalhes)+'</span>':'')+
+  '<div class="row">'+["andamento","concluido","recusado"].map(function(k){return'<button class="btn g s" data-st="'+k+'" data-id="'+x.id+'"'+(x.status===k?' style="border-color:'+ST[k][1]+';color:'+ST[k][1]+'"':'')+'>'+ST[k][0]+'</button>'}).join("")+'</div>'+
+  '<div class="row"><a class="btn wa s" target="_blank" rel="noopener" href="https://wa.me/'+w+'?text='+encodeURIComponent(m1+"Pode me mandar uma foto da nota fiscal ou da caixa do aparelho?")+'">💬 WhatsApp</a></div></div>'}).join(""):'<p class="sm">Nenhuma solicitação '+(lf==="abertas"?"em aberto":"ainda")+'.</p>'}
+function stMsg(x,s){var nm=x.nome.split(" ")[0];if(s==="andamento")return"Olá, "+nm+"! 🔓 Aqui é da Boecher. Seu serviço #"+x.id+" ("+(x.servico||"desbloqueio")+") já está em andamento. Avisamos assim que ficar pronto!";
+ if(s==="concluido")return"Olá, "+nm+"! ✅ Seu aparelho"+(x.modelo?" "+x.modelo:"")+" está liberado e pronto para retirada na Boecher (Av. Arthur Bina da Silva, 509). Obrigado pela confiança!";return""}
+$("sseg").onclick=function(e){var b=e.target.closest("button");if(!b)return;lf=b.dataset.f;[].forEach.call(this.children,function(x){x.setAttribute("aria-pressed",x===b)});drawL()};
+$("leads").onclick=function(e){var b=e.target.closest("[data-st]");if(!b)return;var x=L.filter(function(y){return y.id===+b.dataset.id})[0],s=b.dataset.st,t=x&&stMsg(x,s);
+ if(t){var tel=String(x.telefone).replace(/\D/g,"");if(tel.length<=11)tel="55"+tel;window.open("https://wa.me/"+tel+"?text="+encodeURIComponent(t),"_blank","noopener")}
+ sb.from("bcd_pedidos").update({status:s}).eq("id",+b.dataset.id).then(function(r){if(r.error)return toast("Erro ao salvar");toast(ST[s][0]+" ✓");loadL()})};
+/* serviços */
+var CATS=["iPhone","Android","Financeira","Operadora","Dados e sistema"];
+function loadP(){return sb.from("bcd_servicos").select("*").order("ordem").order("id").then(function(r){if(r.error)return;P=r.data||[];drawP()})}
+function drawP(){$("list").innerHTML=P.map(function(p){return '<div class="card it'+(p.ativo?"":" off")+'" data-id="'+p.id+'"><div class="h"><b>'+esc(p.icone||"🔓")+' '+esc(p.nome)+'</b><label class="sw"><input type="checkbox" data-k="ativo"'+(p.ativo?" checked":"")+'>No site</label></div>'+
+ '<div class="g2"><label class="f"><span>Nome</span><input data-k="nome" maxlength="70" value="'+esc(p.nome)+'"></label><label class="f"><span>Categoria</span><select data-k="categoria">'+CATS.map(function(c){return'<option'+(c===p.categoria?" selected":"")+'>'+c+'</option>'}).join("")+'</select></label></div>'+
+ '<label class="f"><span>Descrição</span><textarea data-k="descricao" rows="2" maxlength="240">'+esc(p.descricao||"")+'</textarea></label>'+
+ '<div class="g3"><label class="f"><span>Prazo</span><input data-k="prazo" maxlength="40" value="'+esc(p.prazo||"")+'"></label><label class="f"><span>A partir de (R$)</span><input data-k="preco" inputmode="decimal" placeholder="sob consulta" value="'+(p.preco==null?"":String(p.preco).replace(".",","))+'"></label><label class="f"><span>Ícone</span><input data-k="icone" maxlength="8" value="'+esc(p.icone||"")+'"></label></div>'+
+ '<label class="f"><span>O que o cliente precisa levar</span><input data-k="requisitos" maxlength="200" value="'+esc(p.requisitos||"")+'"></label>'+
+ '<div class="row" style="margin-top:4px"><button class="btn s" data-save>Salvar</button><button class="btn g s del" data-del>Excluir</button></div></div>'}).join("")}
+function vals(c){var o={};c.querySelectorAll("[data-k]").forEach(function(i){var k=i.dataset.k,v=i.type==="checkbox"?i.checked:i.value.trim();if(k==="preco")v=v===""?null:num(v);else if(v==="")v=k==="nome"?"":null;o[k]=v});return o}
+$("list").addEventListener("change",function(e){if(e.target.dataset.k!=="ativo")return;var c=e.target.closest("[data-id]");sb.from("bcd_servicos").update({ativo:e.target.checked}).eq("id",+c.dataset.id).then(function(r){if(r.error)return toast("Erro");toast(e.target.checked?"No site ✓":"Escondido ✓");loadP()})});
+$("list").onclick=function(e){var c=e.target.closest("[data-id]");if(!c)return;var id=+c.dataset.id;
+ if(e.target.closest("[data-save]")){var o=vals(c);if(!o.nome)return toast("Informe o nome.");sb.from("bcd_servicos").update(o).eq("id",id).then(function(r){if(r.error)return toast("Erro: "+r.error.message);toast("Salvo ✓ O site já está atualizado.");loadP()});return}
+ var d=e.target.closest("[data-del]");if(d){if(!d.dataset.armed){d.dataset.armed="1";d.textContent="Confirmar exclusão";return}sb.from("bcd_servicos").delete().eq("id",id).then(function(){toast("Excluído");loadP()})}};
+$("add").onclick=function(){sb.from("bcd_servicos").insert({nome:"Novo serviço",categoria:"iPhone",icone:"🔓",ativo:false,ordem:-1}).then(function(r){if(r.error)return toast("Erro: "+r.error.message);toast("Serviço criado: preencha e ligue No site");loadP().then(function(){var f=document.querySelector("#list [data-id]");if(f){f.scrollIntoView({block:"center"});f.querySelector("[data-k=nome]").select()}})})};
+/* agenda */
+var AGC={ag_ativo:true,ag_abre:10,ag_fecha:23,ag_intervalo:60,ag_dias:[0,1,2,3,4,5,6],ag_janela:14},AGP=[],AGB=[],AGD="",AGX=null,DSW=["dom","seg","ter","qua","qui","sex","sáb"];
+function pad(n){return(n<10?"0":"")+n}function iso(d){return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())}
+function hm(m){return pad(Math.floor(m/60))+":"+pad(m%60)}function h5(t){return String(t||"").slice(0,5)}
+function dParse(ds){var p=ds.split("-");return new Date(+p[0],p[1]-1,+p[2])}
+function dTxt(ds){var x=dParse(ds),i=Math.round((x-dParse(iso(new Date())))/864e5);return(i===0?"Hoje":i===1?"Amanhã":i===-1?"Ontem":DSW[x.getDay()])+", "+pad(x.getDate())+"/"+pad(x.getMonth()+1)}
+function agGrid(){var r=[];for(var m=AGC.ag_abre*60;m+AGC.ag_intervalo<=AGC.ag_fecha*60;m+=AGC.ag_intervalo)r.push(hm(m));return r}
+function agAtivos(){return AGP.filter(function(x){return x.status!=="recusado"&&x.status!=="cancelado"})}
+function loadAg(){var d0=new Date();d0.setDate(d0.getDate()-1);
+ return Promise.all([sb.from("bcd_config").select("ag_ativo,ag_abre,ag_fecha,ag_intervalo,ag_dias,ag_janela").eq("id",1).single(),
+  sb.from("bcd_pedidos").select("*").gte("agenda_data",iso(d0)).order("agenda_data").order("agenda_hora").limit(1000),
+  sb.from("bcd_bloqueios").select("*").gte("data",iso(d0))]).then(function(r){if(r[0].data)AGC=r[0].data;AGP=r[1].data||[];AGB=r[2].data||[];if(!AGD)AGD=iso(new Date());drawAg()})}
+function drawAg(){var t=new Date(),ds=[],A=agAtivos();for(var i=-1;i<=Math.max(AGC.ag_janela,7)+7;i++){var x=new Date(t.getFullYear(),t.getMonth(),t.getDate()+i);ds.push(x)}
+ $("agd").innerHTML=ds.map(function(x){var s=iso(x),n=A.filter(function(p){return p.agenda_data===s}).length,fx=AGC.ag_dias.indexOf(x.getDay())<0||AGB.some(function(b){return b.data===s&&!b.hora});
+  return'<button data-d="'+s+'" aria-pressed="'+(s===AGD)+'" class="'+(fx?"fx":"")+'"><small>'+(s===iso(t)?"hoje":DSW[x.getDay()])+'</small>'+pad(x.getDate())+'/'+pad(x.getMonth()+1)+(n?'<i>'+n+'</i>':'')+'</button>'}).join("");
+ var on=document.querySelector('#agd [aria-pressed=true]');if(on&&!drawAg._s){on.scrollIntoView({inline:"center",block:"nearest"});drawAg._s=1}
+ var dia=AGB.filter(function(b){return b.data===AGD&&!b.hora})[0],fechadoSem=AGC.ag_dias.indexOf(dParse(AGD).getDay())<0;
+ $("agt").textContent=dTxt(AGD)+(dia?" · dia fechado":fechadoSem?" · não atende neste dia":"");
+ $("agdia").textContent=dia?"Abrir o dia":"Fechar o dia";$("agdia").hidden=fechadoSem&&!dia;
+ var bk=A.filter(function(p){return p.agenda_data===AGD}),hs=agGrid();bk.forEach(function(p){if(hs.indexOf(h5(p.agenda_hora))<0)hs.push(h5(p.agenda_hora))});hs.sort();
+ var agora=iso(t)===AGD?t.getHours()*60+t.getMinutes():(AGD<iso(t)?1e9:-1);
+ $("agl").innerHTML=hs.map(function(h){var p=bk.filter(function(x){return h5(x.agenda_hora)===h})[0],bq=AGB.filter(function(b){return b.data===AGD&&h5(b.hora)===h})[0],
+   pass=(+h.slice(0,2)*60+ +h.slice(3))<=agora;
+  if(p){var s=ST[p.status]||ST.novo,tel=String(p.telefone).replace(/\D/g,""),w=tel.length<=11?"55"+tel:tel,nm=p.nome.split(" ")[0];
+   var cf="Olá, "+nm+"! Aqui é da Boecher Desbloqueios 🔓 Seu horário está confirmado: "+dTxt(AGD).toLowerCase()+" às "+h+" ("+(p.servico||"desbloqueio")+"). Endereço: Av. Arthur Bina da Silva, 509. Traga o aparelho, a nota fiscal ou caixa e um documento com foto. Até lá!";
+   return'<div class="sl2"><b>'+h+'</b><div class="ld"><div class="h"><b>'+esc(p.nome)+'</b><span class="t" style="background:'+s[1]+'22;color:'+s[1]+'">'+s[0]+'</span></div>'+
+    '<span>🔓 '+esc(p.servico||"")+(p.marca||p.modelo?' · 📱 '+esc((p.marca||"")+(p.modelo?" "+p.modelo:"")):'')+'</span>'+(p.detalhes?'<span class="sm">📝 '+esc(p.detalhes)+'</span>':'')+'<span class="sm">'+esc(p.telefone)+' · pedido #'+p.id+'</span>'+
+    '<div class="row"><a class="btn wa s" target="_blank" rel="noopener" href="https://wa.me/'+w+'?text='+encodeURIComponent(cf)+'">💬 Confirmar</a><button class="btn g s" data-ast="andamento" data-id="'+p.id+'">Atendendo</button><button class="btn g s" data-ast="concluido" data-id="'+p.id+'">Concluído</button><button class="btn g s" data-rem="'+p.id+'">Remarcar</button><button class="btn g s del" data-can="'+p.id+'">Cancelar</button></div>'+
+    (AGX&&AGX.rem===p.id?'<div class="mk"><div class="g2"><input type="date" id="rm-d" value="'+AGD+'"><select id="rm-h">'+agGrid().map(function(x){return'<option'+(x===h?" selected":"")+'>'+x+'</option>'}).join("")+'</select></div><div class="row"><button class="btn s" data-remok="'+p.id+'">Salvar novo horário</button><button class="btn g s" data-x>Fechar</button></div></div>':'')+'</div></div>'}
+  if(bq)return'<div class="sl2 bq"><b>'+h+'</b><div class="row"><span class="sm">🚫 Bloqueado'+(bq.motivo?" · "+esc(bq.motivo):"")+'</span><button class="btn g s" data-lib="'+bq.id+'">Liberar</button></div></div>';
+  if(dia||fechadoSem)return'';
+  return'<div class="sl2 lv'+(pass?" off":"")+'"><b>'+h+'</b><div>'+(pass?'<span>Livre (já passou)</span>':'<span>Livre</span><button class="btn g s" data-mk="'+h+'">+ Marcar</button><button class="btn g s" data-bq="'+h+'">Bloquear</button>')+
+   (AGX&&AGX.mk===h?'<div class="mk" style="width:100%"><div class="g2"><input id="mk-n" maxlength="80" placeholder="Nome do cliente"><input id="mk-t" inputmode="tel" maxlength="16" placeholder="WhatsApp com DDD"></div><input id="mk-s" maxlength="100" placeholder="Serviço (ex.: Conta Google)" list="mk-sl"><datalist id="mk-sl">'+P.map(function(x){return'<option value="'+esc(x.nome)+'">'}).join("")+'<option value="Outros"></datalist><div class="row"><button class="btn s" data-mkok="'+h+'">Marcar horário</button><button class="btn g s" data-x>Fechar</button></div></div>':'')+'</div></div>'}).join("")||
+  '<p class="sm">'+(dia?"Dia fechado. Toque em Abrir o dia para liberar os horários.":fechadoSem?"Você não atende neste dia da semana. Mude em ⚙️ Horários.":"Nenhum horário.")+'</p>'}
+$("agd").onclick=function(e){var b=e.target.closest("[data-d]");if(!b)return;AGD=b.dataset.d;AGX=null;drawAg()};
+$("agdia").onclick=function(){var d=AGB.filter(function(b){return b.data===AGD&&!b.hora})[0];
+ if(!d&&agAtivos().some(function(p){return p.agenda_data===AGD})&&!confirm("Tem cliente marcado neste dia. Fechar mesmo assim? Os horários marcados continuam e você avisa os clientes."))return;
+ (d?sb.from("bcd_bloqueios").delete().eq("id",d.id):sb.from("bcd_bloqueios").insert({data:AGD})).then(function(r){if(r.error)return toast("Erro: "+r.error.message);toast(d?"Dia aberto ✓":"Dia fechado ✓");loadAg()})};
+$("agl").onclick=function(e){var b;
+ if(e.target.closest("[data-x]")){AGX=null;drawAg();return}
+ if((b=e.target.closest("[data-mk]"))){AGX={mk:b.dataset.mk};drawAg();var n=$("mk-n");if(n)n.focus();return}
+ if((b=e.target.closest("[data-rem]"))){AGX={rem:+b.dataset.rem};drawAg();return}
+ if((b=e.target.closest("[data-bq]"))){sb.from("bcd_bloqueios").insert({data:AGD,hora:b.dataset.bq}).then(function(r){if(r.error)return toast("Erro: "+r.error.message);toast("Horário bloqueado ✓");loadAg()});return}
+ if((b=e.target.closest("[data-lib]"))){sb.from("bcd_bloqueios").delete().eq("id",+b.dataset.lib).then(function(r){if(r.error)return toast("Erro");toast("Horário liberado ✓");loadAg()});return}
+ if((b=e.target.closest("[data-mkok]"))){var n=$("mk-n").value.trim(),t=$("mk-t").value.replace(/\D/g,""),s=$("mk-s").value.trim();if(n.length<2)return toast("Informe o nome.");if(t.length<10)return toast("WhatsApp com DDD.");
+  sb.from("bcd_pedidos").insert({nome:n,telefone:t,servico:s||null,agenda_data:AGD,agenda_hora:b.dataset.mkok,status:"novo"}).then(function(r){if(r.error)return toast(/duplicate|unique/i.test(r.error.message)?"Esse horário já está ocupado.":"Erro: "+r.error.message);AGX=null;toast("Horário marcado ✓");loadAg();loadL()});return}
+ if((b=e.target.closest("[data-remok]"))){var d=$("rm-d").value,h=$("rm-h").value;if(!d)return toast("Escolha o dia.");
+  sb.from("bcd_pedidos").update({agenda_data:d,agenda_hora:h}).eq("id",+b.dataset.remok).then(function(r){if(r.error)return toast(/duplicate|unique/i.test(r.error.message)?"Esse horário já está ocupado.":"Erro: "+r.error.message);
+   var p=AGP.filter(function(x){return x.id===+b.dataset.remok})[0];AGX=null;AGD=d;toast("Remarcado ✓");loadAg();loadL();
+   if(p){var tel=String(p.telefone).replace(/\D/g,"");if(tel.length<=11)tel="55"+tel;window.open("https://wa.me/"+tel+"?text="+encodeURIComponent("Olá, "+p.nome.split(" ")[0]+"! Aqui é da Boecher Desbloqueios. Seu horário foi remarcado para "+dTxt(d).toLowerCase()+" às "+h+". Qualquer coisa, é só chamar!"),"_blank","noopener")}});return}
+ if((b=e.target.closest("[data-can]"))){if(!b.dataset.armed){b.dataset.armed="1";b.textContent="Confirmar cancelamento";return}
+  sb.from("bcd_pedidos").update({status:"cancelado"}).eq("id",+b.dataset.can).then(function(r){if(r.error)return toast("Erro");toast("Cancelado. O horário ficou livre.");loadAg();loadL()});return}
+ if((b=e.target.closest("[data-ast]"))){var x=AGP.filter(function(y){return y.id===+b.dataset.id})[0],st=b.dataset.ast,tx=x&&stMsg(x,st);
+  if(tx){var tl=String(x.telefone).replace(/\D/g,"");if(tl.length<=11)tl="55"+tl;window.open("https://wa.me/"+tl+"?text="+encodeURIComponent(tx),"_blank","noopener")}
+  sb.from("bcd_pedidos").update({status:st}).eq("id",+b.dataset.id).then(function(r){if(r.error)return toast("Erro");toast(ST[st][0]+" ✓");loadAg();loadL()})}};
+$("agcfgb").onclick=function(){var c=$("agcfg");c.hidden=!c.hidden;if(c.hidden)return;
+ var o="";for(var i=0;i<=23;i++)o+='<option value="'+i+'">'+i+'h</option>';$("ag-ab").innerHTML=o;o="";for(i=1;i<=24;i++)o+='<option value="'+i+'">'+(i===24?"meia-noite":i+"h")+'</option>';$("ag-fe").innerHTML=o;
+ $("ag-on").checked=AGC.ag_ativo;$("ag-ab").value=AGC.ag_abre;$("ag-fe").value=AGC.ag_fecha;$("ag-in").value=AGC.ag_intervalo;$("ag-ja").value=AGC.ag_janela;
+ $("ag-ds").className="row dws";$("ag-ds").innerHTML=DSW.map(function(d,i){return'<label><input type="checkbox" value="'+i+'"'+(AGC.ag_dias.indexOf(i)>=0?" checked":"")+'>'+d+'</label>'}).join("");$("ag-m").textContent=""};
+$("ag-sv").onclick=function(){var o={ag_ativo:$("ag-on").checked,ag_abre:+$("ag-ab").value,ag_fecha:+$("ag-fe").value,ag_intervalo:+$("ag-in").value,ag_janela:Math.min(60,Math.max(1,parseInt($("ag-ja").value,10)||14)),
+  ag_dias:[].map.call($("ag-ds").querySelectorAll("input:checked"),function(x){return+x.value})};
+ if(o.ag_fecha*60-o.ag_abre*60<o.ag_intervalo)return msg("ag-m","O horário de fechar precisa ser depois do de abrir.");if(!o.ag_dias.length)return msg("ag-m","Marque pelo menos um dia.");
+ sb.from("bcd_config").update(o).eq("id",1).then(function(r){if(r.error)return msg("ag-m","Erro: "+r.error.message);msg("ag-m","Salvo ✓ O site já mostra os novos horários.",1);AGC=o;drawAg()})};
+/* ajustes */
+function loadAj(){sb.from("bcd_config").select("*").eq("id",1).single().then(function(r){var c=r.data||{};$("awa").value=c.whatsapp||"";$("aav").value=c.aviso||""})}
+$("asv").onclick=function(){var w=$("awa").value.replace(/\D/g,"");if(w&&w.length<10)return msg("am","WhatsApp precisa de DDD.");if(w&&w.length<=11)w="55"+w;
+ sb.from("bcd_config").update({whatsapp:w||null,aviso:$("aav").value.trim()||null}).eq("id",1).then(function(r){msg("am",r.error?"Erro: "+r.error.message:"Salvo ✓",!r.error)})};
+$("npb").onclick=function(){var p=$("np").value;if(p.length<8)return msg("npm","A senha precisa de pelo menos 8 caracteres.");sb.auth.updateUser({password:p}).then(function(r){if(r.error)return msg("npm","Erro: "+r.error.message);$("np").value="";msg("npm","Senha trocada ✓",1)})};
+$("neb").onclick=function(){var e=$("ne").value.trim().toLowerCase(),p=$("nep").value;if(!/^\S+@\S+\.\S+$/.test(e))return msg("nem","Informe um e-mail válido.");if(!p)return msg("nem","Informe a senha atual.");
+ sb.rpc("bcd_trocar_email",{p_email:e,p_senha:p}).then(function(r){if(r.error)return msg("nem",r.error.message);try{localStorage.setItem("bcd_email",e)}catch(x){}
+  sb.auth.signOut().then(function(){return sb.auth.signInWithPassword({email:e,password:p})}).then(function(x){if(x&&!x.error){toast("Pronto! Agora o login é "+e);start()}else{show(false);$("le").value=e;$("lm").textContent="Entre com o novo e-mail e a mesma senha."}})})};
+})();
+</script>
+</body>
+</html>

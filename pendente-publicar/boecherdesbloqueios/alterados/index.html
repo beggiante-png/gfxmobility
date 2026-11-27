@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Boecher Desbloqueios | iPhone e Android em Espera Feliz</title>
+<meta name="description" content="Celular bloqueado? Esqueceu a senha, conta Google após formatar, desbloqueio de operadora, ID Apple e consulta de IMEI. iPhone e Android, com segurança e garantia. Espera Feliz - MG.">
+<meta name="theme-color" content="#07070a">
+<meta property="og:title" content="Boecher Desbloqueios · Celular bloqueado? A gente resolve.">
+<meta property="og:description" content="Desbloqueios de iPhone e Android para o dono do aparelho, com segurança e garantia.">
+<meta property="og:image" content="https://boecherdesbloqueios.vercel.app/img/og.jpg">
+<link rel="icon" href="img/icon-192.png"><link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07070a;--bg2:#0d0d12;--card:#13131a;--line:#25252f;--tx:#f4f4f7;--mut:#9898a6;--gold:#d8b25b;--gold2:#f1d48a;--neon:#34e3a0;--neon2:#1fb97f;--red:#ff6b62}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--tx);font:16px/1.5 Inter,system-ui,-apple-system,sans-serif;overflow-x:hidden}
+a{color:inherit}button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+.goth{font-family:"UnifrakturMaguntia",serif;font-weight:400}.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.top{position:sticky;top:0;z-index:30;background:#07070acc;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #ffffff10}
+.top .wrap{display:flex;align-items:center;gap:10px;height:62px}.top img{width:38px;height:38px;border-radius:50%}
+.top b{font-size:22px}.top b small{font:700 10.5px Inter;color:var(--neon);margin-left:6px;letter-spacing:.14em}
+.top nav{margin-left:auto;display:flex;gap:4px}.top nav a{text-decoration:none;font-size:14px;font-weight:600;color:var(--mut);padding:8px 10px;border-radius:10px}
+@media(max-width:760px){.top nav a:not(.cta){display:none}}
+.top .cta{background:linear-gradient(180deg,#5cf0b8,var(--neon2));color:#032016!important}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;padding:14px 20px;font-weight:800;font-size:15px;text-decoration:none;transition:transform .15s,filter .15s}
+.btn:active{transform:scale(.98)}.btn:disabled{opacity:.45}
+.btn.neon{background:linear-gradient(180deg,#5cf0b8,var(--neon2));color:#032016;box-shadow:0 10px 30px -10px #34e3a099}
+.btn.ghost{background:#ffffff0d;border:1px solid #ffffff22;color:#fff}.btn.wa{background:#1fa855;color:#fff}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:54px 0 36px;background:radial-gradient(50% 50% at 75% 35%,#0f3b2b 0%,transparent 70%),radial-gradient(40% 40% at 15% 0%,#2a2416 0%,transparent 70%)}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:38px 38px;-webkit-mask:radial-gradient(70% 70% at 60% 40%,#000 30%,transparent 80%);mask:radial-gradient(70% 70% at 60% 40%,#000 30%,transparent 80%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:30px;align-items:center}@media(min-width:900px){.hero .wrap{grid-template-columns:1.15fr .85fr}}
+.kick{display:inline-flex;gap:8px;align-items:center;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--neon);background:#34e3a012;border:1px solid #34e3a040;padding:6px 12px;border-radius:99px}
+.kick i{width:8px;height:8px;border-radius:50%;background:var(--neon);box-shadow:0 0 0 0 #34e3a088;animation:ping 1.8s infinite}@keyframes ping{70%{box-shadow:0 0 0 9px #34e3a000}}
+.hero h1{font-size:clamp(38px,8.6vw,70px);line-height:1;margin:16px 0 14px;letter-spacing:-.035em;font-weight:900}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#7bf5c6,var(--neon),#d8f5ea);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{color:#c4c4cf;font-size:17px;max-width:560px}
+.hero .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.chips span{font-size:13px;font-weight:700;background:#ffffff0a;border:1px solid #ffffff16;border-radius:99px;padding:6px 11px;color:#d7d7df}
+/* cadeado animado */
+.lockwrap{justify-self:center;position:relative;width:min(70vw,330px);aspect-ratio:9/16}
+.phone{position:absolute;inset:0;border-radius:44px;background:linear-gradient(160deg,#1c1c24,#0b0b10);box-shadow:inset 0 0 0 2px #ffffff22,inset 0 0 0 9px #050507,0 40px 90px -30px #000,0 0 90px -30px #34e3a066;overflow:hidden}
+.phone::before{content:"";position:absolute;top:16px;left:50%;width:30%;height:22px;transform:translateX(-50%);background:#000;border-radius:20px}
+.scr{position:absolute;inset:9px;border-radius:36px;background:radial-gradient(80% 60% at 50% 30%,#123a2c,#06120d 70%);display:grid;place-items:center;align-content:center;gap:14px;text-align:center;transition:background .8s}
+.scr .tm{font:800 54px Inter;letter-spacing:-.02em;color:#fff}.scr .dt{font-size:13px;color:#b5c9c0;margin-top:-10px}
+.lock{width:84px;height:96px;position:relative;margin-top:14px}
+.lock .sh{position:absolute;left:16px;top:0;width:52px;height:52px;border:9px solid #e9e9ee;border-bottom:0;border-radius:30px 30px 0 0;transform-origin:85% 100%;transition:transform .7s cubic-bezier(.3,1.6,.5,1)}
+.lock .bd{position:absolute;left:0;bottom:0;width:84px;height:58px;border-radius:14px;background:linear-gradient(180deg,#f4f4f7,#c9c9d3);box-shadow:0 10px 30px #000a}
+.lock .bd::after{content:"";position:absolute;left:50%;top:18px;width:10px;height:20px;border-radius:5px;background:#2a2a33;transform:translateX(-50%)}
+.dots{display:flex;gap:10px;margin-top:4px}.dots i{width:12px;height:12px;border-radius:50%;border:2px solid #ffffffaa;transition:background .2s}.dots i.on{background:#fff}
+.msg{font-size:13px;font-weight:700;color:#cfe;min-height:20px}
+.open .lock .sh{transform:translateY(-14px) rotate(-38deg)}.open .scr{background:radial-gradient(80% 60% at 50% 30%,#1d7a55,#062014 75%)}.open .lock .bd{background:linear-gradient(180deg,#7bf5c6,#21b47c)}
+.shake{animation:sh .45s}@keyframes sh{20%,60%{transform:translateX(-7px)}40%,80%{transform:translateX(7px)}}
+@media(prefers-reduced-motion:reduce){.kick i{animation:none}}
+/* seções */
+.sec{padding:60px 0 6px}.k{font-size:12.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--neon)}
+.sec h2{font-size:clamp(28px,6vw,44px);letter-spacing:-.025em;line-height:1.08;margin:8px 0;font-weight:900}.sub{color:var(--mut);max-width:640px}
+.aviso{margin:18px 0 0;background:#34e3a012;border:1px solid #34e3a050;color:#9ff3cf;border-radius:14px;padding:10px 14px;font-size:14px}
+/* assistente */
+.wz{margin-top:24px;background:linear-gradient(180deg,#14141c,#0f0f15);border:1px solid var(--line);border-radius:26px;padding:20px;position:relative;overflow:hidden}
+.wz::before{content:"";position:absolute;inset:-1px;border-radius:26px;padding:1px;background:linear-gradient(135deg,#34e3a066,transparent 40%,transparent 60%,#d8b25b55);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.prog{display:flex;gap:6px;margin-bottom:16px}.prog i{flex:1;height:5px;border-radius:9px;background:#ffffff14;transition:background .3s}.prog i.on{background:linear-gradient(90deg,var(--neon2),var(--neon))}
+.wz h3{font-size:21px;margin-bottom:4px}.wz .s{color:var(--mut);font-size:14px;margin-bottom:14px}
+.opt{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr));gap:10px}
+.opt button{background:#0b0b10;border:1.5px solid var(--line);border-radius:18px;padding:16px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;font-weight:700;transition:border-color .2s,transform .2s}
+.opt button:hover{border-color:#34e3a080;transform:translateY(-2px)}.opt button[aria-pressed=true]{border-color:var(--neon);background:#34e3a012}
+.opt button em{font-style:normal;font-size:30px}.opt button small{font-weight:500;color:var(--mut);font-size:12.5px;line-height:1.3}
+.opt.list{grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr))}.opt.list button{flex-direction:row;text-align:left;align-items:flex-start;gap:12px;padding:14px}.opt.list button em{font-size:24px}
+.f{display:block;margin-top:12px}.f span{display:block;font-size:13px;color:var(--mut);margin-bottom:5px;font-weight:600}
+.f input,.f textarea{width:100%;background:#0b0b10;border:1px solid var(--line);color:#fff;border-radius:12px;padding:12px;font:inherit;font-size:16px}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--neon)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}@media(max-width:520px){.g2{grid-template-columns:1fr}}
+.res{background:#0b0b10;border:1px solid var(--line);border-radius:16px;padding:14px;margin-top:4px;display:grid;gap:6px;font-size:14.5px}
+.res b{color:#fff}.res .rq{color:#ffd88a}
+.wnav{display:flex;justify-content:space-between;gap:10px;margin-top:16px}
+.chk{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:13.5px;color:#cfcfda}.chk input{margin-top:3px;width:18px;height:18px;accent-color:var(--neon);flex:none}
+.err{color:var(--red);font-size:14px;margin-top:10px;min-height:18px}
+/* serviços */
+.tabs{display:flex;gap:6px;overflow-x:auto;margin:22px 0 14px;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;border:1px solid var(--line);background:#ffffff08;border-radius:99px;padding:9px 15px;font-weight:800;font-size:14px;color:var(--mut)}.tabs button[aria-selected=true]{background:#fff;color:#000;border-color:#fff}
+.svs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:12px}
+.sv{background:linear-gradient(180deg,#15151d,#101016);border:1px solid var(--line);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.sv .h{display:flex;gap:12px;align-items:center}.sv .h i{font-style:normal;flex:none;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:24px;background:#34e3a010;border:1px solid #34e3a030}
+.sv b{font-size:16.5px;line-height:1.25}.sv p{font-size:14px;color:#bdbdc9}
+.sv .tg{display:flex;gap:6px;flex-wrap:wrap}.sv .tg span{font-size:12px;font-weight:700;border-radius:99px;padding:4px 9px;background:#ffffff0c;border:1px solid #ffffff14}.sv .tg .p{color:var(--gold2);border-color:#d8b25b40;background:#d8b25b12}.sv .tg .t{color:#9ff3cf;border-color:#34e3a040;background:#34e3a012}
+.sv .rq{font-size:12.5px;color:#ffd88a}
+.sv .btn{margin-top:auto;padding:11px 14px;font-size:14px}
+/* IMEI */
+.imei{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin-top:24px}.box{min-width:0}@media(min-width:880px){.imei{grid-template-columns:1fr 1fr}}
+.box{background:linear-gradient(180deg,#14141c,#0f0f15);border:1px solid var(--line);border-radius:22px;padding:20px}
+.box h3{font-size:19px;margin-bottom:6px}
+.ii{display:flex;gap:8px;margin-top:12px}.ii input{flex:1;min-width:0;width:100%;background:#0b0b10;border:1px solid var(--line);color:#fff;border-radius:12px;padding:13px;font:700 18px "JetBrains Mono",monospace;letter-spacing:.06em}
+.ir{margin-top:12px;border-radius:14px;padding:12px 14px;font-size:14px;display:none}.ir.ok{display:block;background:#34e3a012;border:1px solid #34e3a050;color:#bff7df}.ir.no{display:block;background:#ff6b6214;border:1px solid #ff6b6255;color:#ffc2bd}
+.ir a{color:#fff;font-weight:800}
+.code{display:inline-block;font:700 15px "JetBrains Mono",monospace;background:#000;border:1px solid #34e3a055;color:var(--neon);border-radius:8px;padding:2px 8px}
+/* compromisso */
+.pol{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:12px;margin-top:24px}
+.pol div{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px}.pol i{font-style:normal;font-size:24px}.pol b{display:block;margin:6px 0 2px}.pol span{font-size:13.5px;color:var(--mut)}
+.steps{list-style:none;counter-reset:s;display:grid;gap:12px;margin-top:22px}@media(min-width:880px){.steps{grid-template-columns:repeat(4,1fr)}}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;font-size:14px;color:#cfcfda}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:32px;height:32px;border-radius:50%;margin-bottom:10px;font-weight:900;background:#34e3a018;color:var(--neon);border:1px solid #34e3a055}
+.steps b{display:block;color:#fff;margin-bottom:2px}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin-top:10px}
+summary{font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px}summary::-webkit-details-marker{display:none}summary::after{content:"+";color:var(--neon);font-size:20px;line-height:1}details[open] summary::after{content:"–"}
+details p{color:#bdbdc9;font-size:14.5px;margin-top:8px}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+footer{margin-top:64px;border-top:1px solid var(--line);padding:30px 0 calc(env(safe-area-inset-bottom) + 90px);color:var(--mut);font-size:14px}
+footer .wrap{display:grid;gap:14px}@media(min-width:760px){footer .wrap{grid-template-columns:1.3fr 1fr 1fr}}footer b{color:#fff;display:block;margin-bottom:4px}footer a{color:var(--neon);text-decoration:none}
+.fab{position:fixed;right:16px;bottom:calc(env(safe-area-inset-bottom) + 16px);z-index:40;width:58px;height:58px;border-radius:50%;background:#1fa855;display:grid;place-items:center;box-shadow:0 12px 30px #0008}.fab svg{width:30px;height:30px;fill:#fff}
+[hidden]{display:none!important}
+.days{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 10px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.days button{flex:none;min-width:84px;background:#0b0b10;border:1.5px solid var(--line);border-radius:16px;padding:10px 8px;display:flex;flex-direction:column;align-items:center;gap:2px;font-weight:800;font-size:15px}
+.days button small{font-weight:600;color:var(--mut);font-size:12px;text-transform:capitalize}
+.days button[aria-pressed=true]{border-color:var(--neon);background:#34e3a012}
+.days button:disabled{opacity:.35;cursor:not-allowed}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(82px,1fr));gap:8px;margin-top:6px}
+.slots button{background:#0b0b10;border:1.5px solid var(--line);border-radius:12px;padding:11px 4px;font:700 15px "JetBrains Mono",ui-monospace,monospace}
+.slots button[aria-pressed=true]{border-color:var(--neon);background:#34e3a01c;color:#9ff3cf}
+.slots button:disabled{opacity:.3;text-decoration:line-through;cursor:not-allowed}
+.agok{margin-top:12px;font-size:14.5px;color:#9ff3cf}
+.sv.out{border-style:dashed;border-color:#34e3a055}
+.sv.out textarea{width:100%;background:#0b0b10;border:1px solid var(--line);border-radius:12px;color:var(--tx);padding:10px 12px;font:inherit;font-size:14.5px;resize:vertical}
+.sv .bt{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}.sv .bt .btn{flex:1;justify-content:center}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <img src="img/logo.jpg" alt="Boecher"><b class="goth">Boecher<small>DESBLOQUEIOS</small></b>
+  <nav><a href="#caso">Meu caso</a><a href="#servicos">Serviços</a><a href="#imei">IMEI</a><a href="#duvidas">Dúvidas</a><a class="cta" href="#caso">Desbloquear</a></nav>
+</div></header>
+
+<section class="hero"><div class="grid-bg"></div><div class="wrap">
+  <div>
+    <span class="kick"><i></i> iPhone · Android · Operadora</span>
+    <h1>Celular bloqueado?<br><em>A gente resolve.</em></h1>
+    <p class="lead">Esqueceu a senha, formatou e pediu a conta Google, iPhone indisponível ou preso na operadora? Diagnóstico rápido, serviço seguro e garantia, sempre para o <b>dono do aparelho</b>.</p>
+    <div class="row"><a class="btn neon" href="#caso">🔓 Descobrir meu caso</a><a class="btn ghost" href="#imei">🔎 Consultar IMEI</a></div>
+    <div class="chips"><span>⚡ Muitos casos no mesmo dia</span><span>🛡️ Com garantia</span><span>🔒 Dados preservados</span><span>📅 Com hora marcada · <b class="hrs">10h às 23h</b></span><span>📍 Espera Feliz - MG</span></div>
+  </div>
+  <div class="lockwrap" aria-hidden="true"><div class="phone"><div class="scr" id="scr">
+    <div><div class="tm" id="hora">9:41</div><div class="dt" id="data"></div></div>
+    <div class="lock" id="lk"><div class="sh"></div><div class="bd"></div></div>
+    <div class="dots" id="dots"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="msg" id="lmsg">Digite a senha</div>
+  </div></div></div>
+</div></section>
+
+<div class="wrap"><p class="aviso" id="aviso" hidden></p></div>
+
+<section class="sec" id="caso"><div class="wrap">
+  <div class="k">Assistente</div>
+  <h2>Qual é o seu caso?</h2>
+  <p class="sub">Responda algumas perguntas rápidas, veja o serviço indicado, o prazo e o que levar, e já escolha o dia e o horário do seu atendimento.</p>
+  <div class="wz rv" id="wz"><div class="prog"><i class="on"></i><i></i><i></i><i></i><i></i></div><div id="wzb"></div></div>
+</div></section>
+
+<section class="sec" id="servicos"><div class="wrap">
+  <div class="k">Serviços</div>
+  <h2>Desbloqueios e soluções</h2>
+  <p class="sub">Trabalhamos com as principais marcas: Apple, Samsung, Motorola, Xiaomi, LG, Realme e outras.</p>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div class="svs" id="svs"><p class="sub">Carregando serviços…</p></div>
+</div></section>
+
+<section class="sec" id="imei"><div class="wrap">
+  <div class="k">Ferramenta grátis</div>
+  <h2>Verificador de IMEI</h2>
+  <p class="sub">O IMEI é a "identidade" do celular. Confira se o número é válido e, antes de comprar um usado, consulte se ele tem restrição.</p>
+  <div class="imei">
+    <div class="box rv">
+      <h3>1. Confira o número</h3>
+      <p class="sub" style="font-size:14px">No celular, disque <span class="code">*#06#</span> ou veja em Ajustes › Geral › Sobre (iPhone) ou Configurações › Sobre o telefone (Android).</p>
+      <div class="ii"><input id="im" inputmode="numeric" maxlength="17" placeholder="15 dígitos" aria-label="IMEI"><button class="btn neon" id="imb" type="button">Verificar</button></div>
+      <div class="ir" id="ir"></div>
+    </div>
+    <div class="box rv">
+      <h3>2. Consulte restrição</h3>
+      <p class="sub" style="font-size:14px">A consulta oficial de aparelhos com restrição de roubo, furto ou extravio é gratuita e feita no site da ABR Telecom, entidade das operadoras.</p>
+      <a class="btn ghost" style="margin-top:14px" href="https://www.consultaaparelhoimpedido.com.br/" target="_blank" rel="noopener">🔎 Consultar aparelho impedido</a>
+      <p class="sub" style="font-size:13px;margin-top:12px">⚠️ Não compre celular usado sem nota fiscal e sem consultar o IMEI. Se quiser, a gente faz a consulta e a vistoria do aparelho para você.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="k">Nosso compromisso</div>
+  <h2>Desbloqueio com responsabilidade</h2>
+  <div class="pol">
+    <div class="rv"><i>🪪</i><b>Somente para o dono</b><span>Pedimos nota fiscal, caixa ou comprovante no seu nome, e documento com foto.</span></div>
+    <div class="rv"><i>🚫</i><b>Aparelho com restrição, não</b><span>Não atendemos celulares com bloqueio por roubo, furto ou perda. Consultamos o IMEI antes.</span></div>
+    <div class="rv"><i>🔒</i><b>Seus dados em sigilo</b><span>Não acessamos fotos, conversas ou contas. Quando possível, fazemos backup antes.</span></div>
+    <div class="rv"><i>🛡️</i><b>Garantia no serviço</b><span>Serviço testado na sua frente e com garantia. Sem solução, sem cobrança do serviço.</span></div>
+  </div>
+  <ol class="steps">
+    <li class="rv"><b>Conte o seu caso</b>Pelo assistente acima ou pelo WhatsApp.</li>
+    <li class="rv"><b>Diagnóstico</b>Avaliamos o modelo e passamos prazo e valor antes de começar.</li>
+    <li class="rv"><b>Comprovação</b>Conferimos a documentação e o IMEI do aparelho.</li>
+    <li class="rv"><b>Aparelho liberado</b>Você testa na hora e sai com garantia.</li>
+  </ol>
+</div></section>
+
+<section class="sec" id="duvidas"><div class="wrap">
+  <div class="k">Dúvidas</div>
+  <h2>Perguntas frequentes</h2>
+  <details class="rv"><summary>Vou perder minhas fotos e conversas?</summary><p>Depende do caso. Na senha esquecida do iPhone, a Apple só permite liberar restaurando o aparelho. Se você tem backup no iCloud ou no Google, tudo volta. Antes de começar, a gente explica exatamente o que será mantido.</p></details>
+  <details class="rv"><summary>Vocês desbloqueiam iCloud de aparelho que não é meu?</summary><p>Não. Só atendemos o dono do aparelho, com comprovação. Para o ID Apple, ajudamos a recuperar o acesso pelo processo oficial da Apple, com documento e nota fiscal.</p></details>
+  <details class="rv"><summary>Precisa agendar?</summary><p>Sim. O atendimento é com hora marcada, das <b class="hrs">10h às 23h</b>. Escolha o dia e o horário no assistente "Qual é o seu caso?" e a gente confirma pelo WhatsApp.</p></details>
+  <details class="rv"><summary>Quanto tempo demora?</summary><p>Senha e conta Google costumam sair no mesmo dia. Desbloqueio de operadora leva de 1 a 5 dias e a recuperação de ID Apple depende do prazo da Apple. Você recebe o prazo antes de começar.</p></details>
+  <details class="rv"><summary>Atendem aparelhos de outras cidades?</summary><p>Sim. Atendemos Espera Feliz e região, e alguns serviços (como desbloqueio de operadora) podem ser feitos à distância pelo IMEI. Chama no WhatsApp.</p></details>
+  <details class="rv"><summary>E se não der para desbloquear?</summary><p>Se o serviço não tiver solução, você não paga pelo serviço. Simples assim.</p></details>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b class="goth" style="font-size:26px">Boecher</b>Desbloqueios de iPhone e Android com segurança, para o dono do aparelho. Desde 2022.</div>
+  <div><b>Contato</b><a href="#" data-wa="Olá, Boecher! Vim pelo site de desbloqueios.">WhatsApp (32) 99804-9354</a><br><a href="https://www.instagram.com/boecherphoness/" target="_blank" rel="noopener">@boecherphoness</a></div>
+  <div><b>Onde estamos</b><a href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+Arthur+Bina+da+Silva+509+Espera+Feliz+MG" target="_blank" rel="noopener">Av. Arthur Bina da Silva, 509<br>Espera Feliz - MG</a><br><span style="color:var(--mut)">Atendimento com hora marcada<br><b class="hrs">10h às 23h</b></span><br><a href="https://boecheriphones.vercel.app" target="_blank" rel="noopener">Loja de iPhones →</a></div>
+</div></footer>
+<a class="fab" href="#" data-wa="Olá, Boecher! Meu celular está bloqueado e preciso de ajuda." aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2z"/></svg></a>
+
+<script>
+(function(){
+var SU="https://hkqicvssabntmaoifyau.supabase.co",SK="sb_publishable_iqgTbGd-MkhvwLTQidXimA_WH6ThyPG",WA="5532998049354";
+var $=function(i){return document.getElementById(i)},SV=[],CAT="Todos",AG={ativo:true,abre:10,fecha:23,intervalo:60,dias:[0,1,2,3,4,5,6],janela:14},OC=[],BQ=[],HOJE="";
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function brl(v){return Number(v||0).toLocaleString("pt-BR",{style:"currency",currency:"BRL"})}
+function rpc(fn,a){return fetch(SU+"/rest/v1/rpc/"+fn,{method:"POST",headers:{apikey:SK,"Content-Type":"application/json"},body:JSON.stringify(a||{})}).then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error((j&&j.message)||"Erro de conexão");return j})})}
+function wa(t){return"https://wa.me/"+WA+"?text="+encodeURIComponent(t)}
+function bindWa(){document.querySelectorAll("[data-wa]").forEach(function(a){a.href=wa(a.dataset.wa);a.target="_blank";a.rel="noopener"})}bindWa();
+/* tela do celular: digita a senha, erra, depois destrava */
+(function(){var d=new Date();$("data").textContent=d.toLocaleDateString("pt-BR",{weekday:"long",day:"numeric",month:"long"});$("hora").textContent=d.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});
+ if(matchMedia("(prefers-reduced-motion: reduce)").matches){$("scr").classList.add("open");$("lmsg").textContent="Desbloqueado ✓";return}
+ var dots=[].slice.call($("dots").children),scr=$("scr");
+ function fill(n){dots.forEach(function(x,i){x.classList.toggle("on",i<n)})}
+ function cycle(){scr.classList.remove("open");$("lmsg").textContent="Digite a senha";fill(0);var i=0,t=setInterval(function(){fill(++i);if(i===6){clearInterval(t);setTimeout(function(){$("lk").parentNode.classList.add("shake");$("lmsg").textContent="iPhone indisponível 😬";fill(0);
+   setTimeout(function(){$("lk").parentNode.classList.remove("shake");$("lmsg").textContent="Boecher resolvendo…";setTimeout(function(){scr.classList.add("open");$("lmsg").textContent="Desbloqueado ✓";setTimeout(cycle,3600)},1400)},1300)},350)}},260)}
+ setTimeout(cycle,700)})();
+/* serviços */
+var ICO={"iPhone":"🍏","Android":"🤖","Financeira":"💳","Operadora":"📶","Dados e sistema":"💾"};
+function drawTabs(){var cs=["Todos"].concat(["iPhone","Android","Financeira","Operadora","Dados e sistema"].filter(function(c){return SV.some(function(s){return s.categoria===c})}));
+ $("tabs").innerHTML=cs.map(function(c){return'<button role="tab" data-c="'+c+'" aria-selected="'+(c===CAT)+'">'+(ICO[c]?ICO[c]+" ":"")+c+'</button>'}).join("")}
+function drawSv(){var L=SV.filter(function(s){return CAT==="Todos"||s.categoria===CAT});
+ $("svs").innerHTML=L.map(function(s){return'<article class="sv rv in"><div class="h"><i>'+esc(s.icone||"🔓")+'</i><b>'+esc(s.nome)+'</b></div><p>'+esc(s.descricao||"")+'</p><div class="tg"><span>'+esc(s.categoria)+'</span>'+(s.prazo?'<span class="t">⏱ '+esc(s.prazo)+'</span>':'')+'<span class="p">'+(s.preco?"a partir de "+brl(s.preco):"Valor sob consulta")+'</span></div>'+(s.requisitos?'<p class="rq">📋 '+esc(s.requisitos)+'</p>':'')+
+  '<div class="bt"><button class="btn neon" type="button" data-ag="'+s.id+'">📅 Agendar</button><a class="btn ghost" target="_blank" rel="noopener" href="'+wa("Olá, Boecher! Quero saber sobre: *"+s.nome+"*.")+'">Dúvidas</a></div></article>'}).join("")+
+  '<article class="sv out rv in"><div class="h"><i>💬</i><b>Outros</b></div><p>Não achou o seu caso? Escreva o que você precisa e agende um horário.</p><textarea id="out-tx" rows="3" maxlength="400" placeholder="Escreva aqui o que é. Ex.: meu Motorola pede a senha da conta antiga"></textarea><div class="bt"><button class="btn neon" type="button" data-ag="0">📅 Agendar</button></div></article>'}
+$("svs").onclick=function(e){var b=e.target.closest("[data-ag]");if(!b)return;var id=+b.dataset.ag,s=SV.filter(function(x){return x.id===id})[0]||null;
+ W={step:0,marca:"",cat:"",sv:s,pre:true,modelo:"",imei:"",det:id?"":$("out-tx").value.trim()};
+ if(s&&s.categoria==="iPhone"){W.marca="iPhone";W.step=2}wz();$("caso").scrollIntoView({behavior:"smooth"})};
+$("tabs").onclick=function(e){var b=e.target.closest("button");if(!b)return;CAT=b.dataset.c;drawTabs();drawSv()};
+/* assistente */
+var W={step:0,marca:"",cat:"",sv:null,modelo:"",imei:"",det:""};
+/* agenda: dias e horários livres */
+var DS=["dom","seg","ter","qua","qui","sex","sáb"];
+function pad(n){return(n<10?"0":"")+n}
+function iso(d){return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())}
+function hojeD(){var h=HOJE?HOJE.slice(0,10).split("-"):null;return h?new Date(+h[0],h[1]-1,+h[2]):new Date()}
+function agoraMin(){if(HOJE){var t=HOJE.slice(11).split(":");return +t[0]*60+ +t[1]}var d=new Date();return d.getHours()*60+d.getMinutes()}
+function hm(m){return pad(Math.floor(m/60))+":"+pad(m%60)}
+function slots(ds){var r=[],h0=iso(hojeD());if(BQ.indexOf(ds)>=0)return r;
+ for(var m=AG.abre*60;m+AG.intervalo<=AG.fecha*60;m+=AG.intervalo){var t=hm(m),k=ds+" "+t;r.push({t:t,ok:!(ds===h0&&m<=agoraMin())&&OC.indexOf(k)<0&&BQ.indexOf(k)<0})}return r}
+function dias(){var r=[],d=hojeD();for(var i=0;i<=AG.janela;i++){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate()+i);if(AG.dias.indexOf(x.getDay())<0)continue;
+ var ds=iso(x),sl=slots(ds);r.push({ds:ds,i:i,dw:x.getDay(),dd:pad(x.getDate())+"/"+pad(x.getMonth()+1),livre:sl.some(function(z){return z.ok})})}return r}
+function diaTxt(ds){var p=ds.split("-"),x=new Date(+p[0],p[1]-1,+p[2]),i=Math.round((x-hojeD())/864e5);return(i===0?"hoje":i===1?"amanhã":DS[x.getDay()])+", "+pad(x.getDate())+"/"+pad(x.getMonth()+1)}
+function hrsTxt(){return AG.abre+"h às "+AG.fecha+"h"}
+var MARCAS=[["iPhone","🍏","Apple"],["Samsung","📱","Galaxy"],["Motorola","📱","Moto"],["Xiaomi","📱","Redmi / Poco"],["Outra marca","❓","LG, Realme…"]];
+function prog(){[].forEach.call(document.querySelectorAll(".prog i"),function(x,i){x.classList.toggle("on",i<=W.step)});var p=document.querySelector(".prog");if(p&&!AG.ativo&&p.children.length===5)p.removeChild(p.lastChild)}
+function opts(){var a=W.marca==="iPhone"?["iPhone","Operadora","Dados e sistema"]:["Android","Financeira","Operadora","Dados e sistema"];return SV.filter(function(s){return a.indexOf(s.categoria)>=0&&!/consulta de imei/i.test(s.nome)})}
+function wz(){prog();var h="";
+ if(W.step===0){h='<h3>Qual é o aparelho?</h3><p class="s">Escolha a marca.</p><div class="opt">'+MARCAS.map(function(m){return'<button type="button" data-m="'+m[0]+'" aria-pressed="'+(W.marca===m[0])+'"><em>'+m[1]+'</em>'+m[0]+'<small>'+m[2]+'</small></button>'}).join("")+'</div>'}
+ else if(W.step===1){var L=opts();h='<h3>O que está acontecendo?</h3><p class="s">Toque na opção mais parecida com o seu caso.</p><div class="opt list">'+L.map(function(s){return'<button type="button" data-s="'+s.id+'" aria-pressed="'+(W.sv&&W.sv.id===s.id)+'"><em>'+esc(s.icone||"🔓")+'</em><span><b style="display:block">'+esc(s.nome)+'</b><small>'+esc(s.descricao||"")+'</small></span></button>'}).join("")+'<button type="button" data-s="0" aria-pressed="'+(W.step===1&&W.sv===null&&W.outros?"true":"false")+'"><em>💬</em><span><b style="display:block">Outros</b><small>Não achei meu caso. Vou escrever o que é.</small></span></button></div>'+nav(false)}
+ else if(W.step===2){var s=W.sv;h='<h3>'+(s?esc(s.nome):"Outros")+'</h3>'+(s?'<div class="res"><span>⏱ Prazo: <b>'+esc(s.prazo||"a combinar")+'</b></span><span>💰 Valor: <b>'+(s.preco?"a partir de "+brl(s.preco):"sob consulta, informado antes de começar")+'</b></span>'+(s.requisitos?'<span class="rq">📋 Leve: '+esc(s.requisitos)+'</span>':'')+'</div>':'<p class="s">Escreva abaixo o que você precisa.</p>')+
+  '<div class="g2"><label class="f"><span>Modelo do aparelho</span><input id="w-mo" maxlength="60" placeholder="'+(W.marca==="iPhone"?"Ex.: iPhone 13 Pro":"Ex.: Galaxy A54")+'" value="'+esc(W.modelo)+'"></label><label class="f"><span>IMEI (opcional)</span><input id="w-im" inputmode="numeric" maxlength="17" placeholder="Disque *#06#" value="'+esc(W.imei)+'"></label></div>'+
+  '<label class="f"><span>'+(s?"Conte mais (opcional)":"O que é? Escreva aqui")+'</span><textarea id="w-de" rows="'+(s?2:3)+'" maxlength="400" placeholder="'+(s?"Ex.: formatei e agora pede a conta Google antiga":"Ex.: meu celular pede a senha de uma conta antiga")+'">'+esc(W.det||"")+'</textarea></label><div class="err" id="w-er2"></div>'+nav(true,AG.ativo?"Escolher horário":"Continuar")}
+ else if(W.step===3){var D=dias();if(!W.dia||!D.some(function(x){return x.ds===W.dia&&x.livre})){var f=D.filter(function(x){return x.livre})[0];W.dia=f?f.ds:"";W.hora=""}
+  h='<h3>Escolha o dia e o horário</h3><p class="s">Atendimento com hora marcada, das '+hrsTxt()+'.</p>'+
+  (D.length?'<div class="days">'+D.map(function(x){return'<button type="button" data-dia="'+x.ds+'" aria-pressed="'+(x.ds===W.dia)+'"'+(x.livre?'':' disabled')+'><small>'+(x.i===0?"hoje":x.i===1?"amanhã":DS[x.dw])+'</small>'+x.dd+'</button>'}).join("")+'</div>':'')+
+  (W.dia?'<div class="slots">'+slots(W.dia).map(function(z){return'<button type="button" data-hr="'+z.t+'" aria-pressed="'+(z.t===W.hora)+'"'+(z.ok?'':' disabled')+'>'+z.t+'</button>'}).join("")+'</div>':'<p class="s">Sem horários livres nos próximos dias. Chame no WhatsApp que a gente encaixa você.</p>')+
+  (W.hora?'<p class="agok">✅ '+diaTxt(W.dia)+' às <b>'+W.hora+'</b></p>':'')+'<div class="err" id="w-er3"></div>'+nav(true,"Continuar")}
+ else{h='<h3>Quase lá! Seus dados</h3><p class="s">'+(W.hora?'📅 '+diaTxt(W.dia)+' às <b>'+W.hora+'</b>. ':'')+'Para a gente confirmar no WhatsApp.</p><div class="g2"><label class="f"><span>Seu nome</span><input id="w-no" maxlength="80" autocomplete="name"></label><label class="f"><span>Seu WhatsApp</span><input id="w-te" maxlength="16" inputmode="tel" autocomplete="tel" placeholder="(32) 9 9999-9999"></label></div>'+
+  '<label class="chk"><input type="checkbox" id="w-ok"> Declaro que sou o dono do aparelho (ou responsável legal) e apresentarei comprovante na entrega.</label><div class="err" id="w-er"></div>'+
+  '<div class="wnav"><button class="btn ghost" type="button" data-back>← Voltar</button><button class="btn wa" type="button" id="w-go">'+(W.hora?"Agendar e enviar":"Enviar pelo WhatsApp")+'</button></div>'}
+ $("wzb").innerHTML=h}
+function nav(next,lbl){return'<div class="wnav"><button class="btn ghost" type="button" data-back>← Voltar</button>'+(next?'<button class="btn neon" type="button" data-next>'+(lbl||"Continuar")+' →</button>':'<span></span>')+'</div>'}
+function keep2(){W.modelo=$("w-mo").value.trim();W.imei=$("w-im").value.replace(/\D/g,"");W.det=$("w-de").value.trim()}
+function reload(){return rpc("bcd_publico").then(function(d){OC=d.ocupados||[];BQ=d.bloqueios||[];HOJE=d.hoje||HOJE})}
+$("wzb").onclick=function(e){var b;
+ if((b=e.target.closest("[data-m]"))){W.marca=b.dataset.m;if(W.pre&&(W.sv===null||W.sv.categoria!=="iPhone")){W.step=2}else{W.sv=null;W.step=1}W.pre=false;wz();return}
+ if((b=e.target.closest("[data-s]"))){W.sv=SV.filter(function(s){return s.id===+b.dataset.s})[0]||null;W.outros=!W.sv;W.step=2;wz();return}
+ if((b=e.target.closest("[data-dia]"))){W.dia=b.dataset.dia;W.hora="";wz();return}
+ if((b=e.target.closest("[data-hr]"))){W.hora=b.dataset.hr;wz();return}
+ if(e.target.closest("[data-back]")){if(W.step===2)keep2();W.step=W.step===4&&!AG.ativo?2:Math.max(0,W.step-1);if(W.step===1&&W.pre)W.step=0;wz();return}
+ if(e.target.closest("[data-next]")){
+  if(W.step===2){keep2();if(!W.sv&&W.det.length<3){$("w-er2").textContent="Escreva o que você precisa.";return}if(AG.ativo){W.step=3;wz();reload().then(function(){if(W.step===3)wz()}).catch(function(){})}else{W.step=4;wz()}return}
+  if(W.step===3){if(!W.hora){$("w-er3").textContent="Escolha um horário.";return}W.step=4;wz();return}}
+ if(e.target.closest("#w-go")){var n=$("w-no").value.trim(),t=$("w-te").value,er=$("w-er"),go=e.target.closest("#w-go");er.textContent="";
+  if(n.length<2)return er.textContent="Informe seu nome.";if(t.replace(/\D/g,"").length<10)return er.textContent="Informe seu WhatsApp com DDD.";if(!$("w-ok").checked)return er.textContent="Confirme que você é o dono do aparelho.";
+  var sv=W.sv?W.sv.nome:"Outros",ag=AG.ativo&&W.hora,msg="Olá, Boecher! Preciso de um desbloqueio.\n\n📱 Aparelho: "+W.marca+(W.modelo?" · "+W.modelo:"")+"\n🔓 Serviço: "+sv+(W.imei?"\n🔢 IMEI: "+W.imei:"")+(W.det?"\n📝 "+W.det:"")+(ag?"\n📅 Horário: "+diaTxt(W.dia)+" às "+W.hora:"")+"\n🙋 "+n+"\n\n✅ Sou o dono do aparelho e levo o comprovante.";
+  var pl={nome:n,telefone:t,marca:W.marca,modelo:W.modelo,servico:sv,imei:W.imei,detalhes:W.det};if(ag){pl.agenda_data=W.dia;pl.agenda_hora=W.hora}
+  go.disabled=true;rpc("bcd_pedir",{p:pl}).then(function(r){return r},function(x){if(x instanceof TypeError)return null;throw x}).then(function(r){
+   $("wzb").innerHTML='<div style="text-align:center;padding:14px 0"><div style="font-size:54px">'+(ag?"📅":"🔓")+'</div><h3>'+(ag?"Horário reservado":"Solicitação enviada")+(r&&r.num?' #'+r.num:'')+'!</h3>'+(ag?'<p class="s"><b>'+diaTxt(W.dia)+' às '+W.hora+'</b><br>Av. Arthur Bina da Silva, 509 · Espera Feliz</p>':'')+'<p class="s">Continue a conversa no WhatsApp para a gente confirmar.</p><a class="btn wa" target="_blank" rel="noopener" href="'+wa(msg)+'">Abrir WhatsApp</a><p style="margin-top:12px"><button class="btn ghost" type="button" data-reset>Nova consulta</button></p></div>';
+   [].forEach.call(document.querySelectorAll(".prog i"),function(x){x.classList.add("on")});try{window.open(wa(msg),"_blank","noopener")}catch(x){}
+   if(ag)reload().catch(function(){})},function(x){go.disabled=false;var m=x&&x.message||"Não foi possível enviar. Tente de novo.";
+   if(/horário|dia/i.test(m)&&ag){reload().catch(function(){}).then(function(){W.step=3;W.hora="";wz();var e3=$("w-er3");if(e3)e3.textContent=m})}else er.textContent=m})}
+ if(e.target.closest("[data-reset]")){W={step:0,marca:"",cat:"",sv:null,modelo:"",imei:"",det:""};wz()}};
+/* IMEI */
+function luhn(s){var t=0;for(var i=0;i<s.length;i++){var d=+s[s.length-1-i];if(i%2){d*=2;if(d>9)d-=9}t+=d}return t%10===0}
+$("im").oninput=function(){this.value=this.value.replace(/\D/g,"").slice(0,15)};
+function chk(){var v=$("im").value.replace(/\D/g,""),r=$("ir");
+ if(v.length!==15){r.className="ir no";r.innerHTML="O IMEI tem <b>15 dígitos</b>. Você digitou "+v.length+".";return}
+ if(!luhn(v)){r.className="ir no";r.innerHTML="❌ Este número <b>não é um IMEI válido</b> (o dígito verificador não confere). Confira digitando <span class='code'>*#06#</span>. IMEI inválido em aparelho é sinal de alerta.";return}
+ var tac=v.slice(0,8);r.className="ir ok";r.innerHTML="✅ <b>IMEI com formato válido.</b><br>Código do modelo (TAC): <span class='code'>"+tac+"</span><br>Agora consulte se há restrição no site oficial ao lado, ou <a target='_blank' rel='noopener' href='"+wa("Olá, Boecher! Quero uma consulta/vistoria do IMEI "+v+".")+"'>peça para a Boecher consultar</a>."}
+$("imb").onclick=chk;$("im").addEventListener("keydown",function(e){if(e.key==="Enter")chk()});
+rpc("bcd_publico").then(function(d){SV=d.servicos||[];OC=d.ocupados||[];BQ=d.bloqueios||[];HOJE=d.hoje||"";if(d.config){if(d.config.agenda)AG=d.config.agenda;document.querySelectorAll(".hrs").forEach(function(x){x.textContent=hrsTxt()});if(d.config.whatsapp)WA=d.config.whatsapp;if(d.config.aviso){$("aviso").hidden=false;$("aviso").textContent=d.config.aviso}}bindWa();drawTabs();drawSv();wz()})
+ .catch(function(){$("svs").innerHTML='<p class="sub">Não foi possível carregar. Chame no WhatsApp.</p>';wz()});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}})},{rootMargin:"0px 0px -8% 0px"});
+document.querySelectorAll(".rv").forEach(function(x){io.observe(x)});
+})();
+</script>
+</body>
+</html>

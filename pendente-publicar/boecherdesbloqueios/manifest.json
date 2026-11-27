@@ -1,0 +1,36 @@
+{
+ "name": "boecherdesbloqueios",
+ "project": "prj_krPbeb1bLG7iFyo1ExTQeHG0J8CZ",
+ "files": [
+  {
+   "file": "index.html",
+   "sha": "5d9eb29c6f069a1f85573c655ebe7b2936d7cf7b",
+   "size": 39931
+  },
+  {
+   "file": "painel.html",
+   "sha": "4bf6a4601f1c81eeaac1370d91c38551636f339f",
+   "size": 34047
+  },
+  {
+   "file": "img/og.jpg",
+   "sha": "afc917138a85a44d78fa7e83894b43eb2086f6b5",
+   "size": 67265
+  },
+  {
+   "file": "img/logo.jpg",
+   "sha": "fc4ee02afe3f1a9e810118f2275551ff2b280074",
+   "size": 95091
+  },
+  {
+   "file": "img/icon-192.png",
+   "sha": "62254b40826bba5919d11d09c02b609da17441f5",
+   "size": 61000
+  },
+  {
+   "file": "img/apple-touch-icon.png",
+   "sha": "1ab21faa21788c73db5ddb387853730c4bf0e737",
+   "size": 54481
+  }
+ ]
+}
